@@ -133,15 +133,16 @@ const PRICES = [
   },
 ];
 
+// ── Galerie: Soft Rosé + Champagne Gold Verläufe ──────────────────────────────
 const GALLERY = [
-  { id: 1, label: "Gelmodellage", src: null, g: "linear-gradient(145deg,#F8EEF5,#F6B7DB 55%,#E85BBE)" },
-  { id: 2, label: "Shellac", src: null, g: "linear-gradient(145deg,#FFF9FC,#F2C8E8)" },
-  { id: 3, label: "Pediküre", src: null, g: "linear-gradient(145deg,#F8EEF5,#e8d4b0 60%,#D8B66A)" },
-  { id: 4, label: "Wimpernlifting", src: null, g: "linear-gradient(145deg,#FFF9FC,#E85BBE 55%,#D8B66A)" },
-  { id: 5, label: "Waxing", src: null, g: "linear-gradient(145deg,#F8EEF5,#c8a0c8)" },
-  { id: 6, label: "Make-up", src: null, g: "linear-gradient(145deg,#FFF9FC,#F6B7DB 45%,#e8d4a8)" },
-  { id: 7, label: "Maniküre", src: null, g: "linear-gradient(145deg,#F8EEF5,#E85BBE)" },
-  { id: 8, label: "Gesichtsbehandlung", src: null, g: "linear-gradient(145deg,#FFF9FC,#D8B66A 40%,#E85BBE)" },
+  { id: 1, label: "Gelmodellage", src: null, g: "linear-gradient(145deg,#FBEAF3,#F3C6DC 55%,#DFA7C6)" },
+  { id: 2, label: "Shellac", src: null, g: "linear-gradient(145deg,#FFF7FA,#F3C6DC)" },
+  { id: 3, label: "Pediküre", src: null, g: "linear-gradient(145deg,#FBEAF3,#e8d4b0 60%,#D6B76D)" },
+  { id: 4, label: "Wimpernlifting", src: null, g: "linear-gradient(145deg,#FFF7FA,#DFA7C6 55%,#D6B76D)" },
+  { id: 5, label: "Waxing", src: null, g: "linear-gradient(145deg,#FBEAF3,#d4b0c8)" },
+  { id: 6, label: "Make-up", src: null, g: "linear-gradient(145deg,#FFF7FA,#F3C6DC 45%,#ead5a8)" },
+  { id: 7, label: "Maniküre", src: null, g: "linear-gradient(145deg,#FBEAF3,#DFA7C6)" },
+  { id: 8, label: "Gesichtsbehandlung", src: null, g: "linear-gradient(145deg,#FFF7FA,#D6B76D 40%,#DFA7C6)" },
 ];
 
 const REVIEWS = [
@@ -201,11 +202,14 @@ const REVIEWS = [
   },
 ];
 
+// ══════════════════════════════════════════════════════════════════════════════
+// CSS — Soft Rosé + Champagne Gold
+// ══════════════════════════════════════════════════════════════════════════════
 const CSS = `
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap');
 
 html { scroll-behavior: smooth; }
-body { overflow-x: hidden; background: #FFF9FC; }
+body { overflow-x: hidden; background: #FFF7FA; }
 *, *::before, *::after { box-sizing: border-box; }
 
 .pf { font-family: 'Playfair Display', Georgia, serif; }
@@ -242,8 +246,9 @@ body { overflow-x: hidden; background: #FFF9FC; }
 .dv-fadeup  { animation: dv-fadeup .9s ease both; }
 .dv-softglow{ animation: dv-softglow 5s ease-in-out infinite; border-radius: 50%; }
 
+/* ── Champagne Gold Shimmer Text ──────────────────────────────────────────── */
 .dv-gold {
-  background: linear-gradient(90deg,#D8B66A,#f0d494,#D8B66A,#e8ca7a,#D8B66A);
+  background: linear-gradient(90deg,#D6B76D,#f0d494,#D6B76D,#e8ca7a,#D6B76D);
   background-size: 250% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -251,67 +256,90 @@ body { overflow-x: hidden; background: #FFF9FC; }
   animation: dv-shimmer 3.5s linear infinite;
 }
 
+/* ── Luxury Cards — hell, weiß, goldene Hover-Border ─────────────────────── */
 .lux-card {
-  background: rgba(255,255,255,0.88);
+  background: rgba(255,255,255,0.95);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(232,91,190,0.1);
-  box-shadow: 0 4px 28px rgba(184,56,152,0.06);
+  border: 1px solid rgba(223,167,198,0.12);
+  box-shadow: 0 4px 24px rgba(185,130,165,0.07);
   transition: transform .4s cubic-bezier(.4,0,.2,1),
               box-shadow .4s cubic-bezier(.4,0,.2,1),
               border-color .3s;
 }
 .lux-card:hover {
   transform: translateY(-7px);
-  box-shadow: 0 22px 55px rgba(184,56,152,0.13);
-  border-color: rgba(232,91,190,0.22);
+  box-shadow: 0 22px 52px rgba(185,130,165,0.12);
+  border-color: rgba(214,183,109,0.22);
 }
 
+/* ── Featured Review ─────────────────────────────────────────────────────── */
 .rev-feat {
-  background: linear-gradient(135deg,#FFFFFF 0%,#FFF9FC 60%,#F8EEF5 100%);
-  border: 1px solid rgba(232,91,190,0.14);
-  box-shadow: 0 12px 50px rgba(184,56,152,0.09);
+  background: linear-gradient(135deg,#FFFFFF 0%,#FFF7FA 60%,#FBEAF3 100%);
+  border: 1px solid rgba(214,183,109,0.16);
+  box-shadow: 0 12px 48px rgba(185,130,165,0.09);
   transition: transform .4s, box-shadow .4s;
 }
-.rev-feat:hover { transform: translateY(-5px); box-shadow: 0 28px 70px rgba(184,56,152,0.15); }
+.rev-feat:hover { transform: translateY(-5px); box-shadow: 0 28px 68px rgba(185,130,165,0.15); }
 
+/* ── Small Reviews ───────────────────────────────────────────────────────── */
 .rev-sm {
   background: #FFFFFF;
-  border: 1px solid rgba(232,91,190,0.09);
-  box-shadow: 0 4px 20px rgba(184,56,152,0.05);
+  border: 1px solid rgba(223,167,198,0.11);
+  box-shadow: 0 4px 18px rgba(185,130,165,0.06);
   transition: all .35s;
 }
 .rev-sm:hover {
-  border-color: rgba(232,91,190,0.22);
-  box-shadow: 0 16px 48px rgba(184,56,152,0.11);
+  border-color: rgba(214,183,109,0.2);
+  box-shadow: 0 16px 44px rgba(185,130,165,0.11);
   transform: translateY(-5px);
 }
 
+/* ── Primary Button — Soft Rosé + Champagne Gold accent ─────────────────── */
 .btn-pk {
-  background: linear-gradient(135deg,#E85BBE,#c044a0);
-  box-shadow: 0 4px 22px rgba(232,91,190,0.3);
-  color: #fff; border: none; cursor: pointer;
-  transition: box-shadow .3s, transform .3s;
+  background: linear-gradient(135deg,#DFA7C6,#C989AA);
+  box-shadow: 0 4px 20px rgba(223,167,198,0.32);
+  border-bottom: 1.5px solid rgba(214,183,109,0.35);
+  color: #fff; border-top: none; border-left: none; border-right: none;
+  cursor: pointer;
+  transition: box-shadow .3s, transform .3s, background .3s;
   font-family: 'DM Sans', sans-serif;
 }
-.btn-pk:hover { box-shadow: 0 10px 38px rgba(232,91,190,0.48); transform: translateY(-2px); }
+.btn-pk:hover {
+  box-shadow: 0 10px 36px rgba(223,167,198,0.44), 0 2px 0 rgba(214,183,109,0.5);
+  background: linear-gradient(135deg,#D49EBD,#BE82A2);
+  transform: translateY(-2px);
+}
 
+/* ── Outline Button (on dark bg) ─────────────────────────────────────────── */
 .btn-ol-dark {
   border: 1.5px solid rgba(255,255,255,0.35);
   color: rgba(255,255,255,0.85); background: transparent;
   cursor: pointer; transition: all .3s;
   font-family: 'DM Sans', sans-serif;
 }
-.btn-ol-dark:hover { border-color: #E85BBE; color: #E85BBE; background: rgba(232,91,190,0.08); transform: translateY(-2px); }
+.btn-ol-dark:hover {
+  border-color: #DFA7C6;
+  color: #DFA7C6;
+  background: rgba(223,167,198,0.08);
+  transform: translateY(-2px);
+}
 
+/* ── Outline Button (on light bg) ────────────────────────────────────────── */
 .btn-ol-light {
-  border: 1.5px solid rgba(232,91,190,0.45);
-  color: #E85BBE; background: transparent;
+  border: 1.5px solid rgba(223,167,198,0.45);
+  color: #C989AA; background: transparent;
   cursor: pointer; transition: all .3s;
   font-family: 'DM Sans', sans-serif;
 }
-.btn-ol-light:hover { border-color: #E85BBE; background: rgba(232,91,190,0.06); transform: translateY(-2px); }
+.btn-ol-light:hover {
+  border-color: rgba(214,183,109,0.5);
+  color: #B8893A;
+  background: rgba(214,183,109,0.06);
+  transform: translateY(-2px);
+}
 
+/* ── Nav Links ───────────────────────────────────────────────────────────── */
 .dv-nav-link {
   position: relative; color: rgba(255,255,255,0.65);
   font-family: 'DM Sans', sans-serif; font-size: 14px;
@@ -320,41 +348,59 @@ body { overflow-x: hidden; background: #FFF9FC; }
 }
 .dv-nav-link::after {
   content: ''; position: absolute; bottom: -3px; left: 0;
-  width: 0; height: 1px; background: #E85BBE; transition: width .3s;
+  width: 0; height: 1px;
+  background: linear-gradient(90deg,#DFA7C6,#D6B76D);
+  transition: width .3s;
 }
-.dv-nav-link:hover { color: #F6B7DB; }
+.dv-nav-link:hover { color: #F3C6DC; }
 .dv-nav-link:hover::after { width: 100%; }
 
+/* ── Price Rows ──────────────────────────────────────────────────────────── */
 .dv-prow {
   display: flex; justify-content: space-between; align-items: center;
-  padding: 10px 0; border-bottom: 1px solid rgba(232,91,190,0.07);
+  padding: 10px 0; border-bottom: 1px solid rgba(223,167,198,0.09);
   transition: all .2s;
 }
-.dv-prow:hover { background: rgba(232,91,190,0.04); border-radius: 8px; padding-left: 8px; }
-.dv-prow:hover .dv-pv { color: #D8B66A !important; }
+.dv-prow:hover {
+  background: rgba(214,183,109,0.05);
+  border-radius: 8px;
+  padding-left: 8px;
+}
+.dv-prow:hover .dv-pv { color: #D6B76D !important; }
 
+/* ── Gallery Cards ───────────────────────────────────────────────────────── */
 .dv-gcard {
   flex-shrink: 0; border-radius: 20px; overflow: hidden;
   cursor: pointer; position: relative;
-  border: 1px solid rgba(232,91,190,0.12);
+  border: 1px solid rgba(214,183,109,0.14);
   transition: transform .35s, box-shadow .35s;
 }
-.dv-gcard:hover { transform: scale(1.04); box-shadow: 0 18px 50px rgba(184,56,152,0.18); }
+.dv-gcard:hover { transform: scale(1.04); box-shadow: 0 18px 48px rgba(185,130,165,0.18); }
 
+/* ── Footer Links ────────────────────────────────────────────────────────── */
 .dv-flink {
   background: none; border: none; cursor: pointer; display: block;
   font-family: 'DM Sans', sans-serif; text-align: left;
   color: rgba(255,255,255,0.45); font-size: 14px; padding: 4px 0;
   transition: color .2s;
 }
-.dv-flink:hover { color: #F6B7DB; }
+.dv-flink:hover { color: #F3C6DC; }
 
-.dv-lrow { display: flex; flex-wrap: wrap; gap: 14px; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.dv-lrow {
+  display: flex; flex-wrap: wrap; gap: 14px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
 
+/* ── Scrollbar ───────────────────────────────────────────────────────────── */
 ::-webkit-scrollbar { width: 4px; }
-::-webkit-scrollbar-track { background: #FFF9FC; }
-::-webkit-scrollbar-thumb { background: linear-gradient(#E85BBE,#D8B66A); border-radius: 2px; }
+::-webkit-scrollbar-track { background: #FFF7FA; }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#DFA7C6,#D6B76D);
+  border-radius: 2px;
+}
 
+/* ── Layout Grids ────────────────────────────────────────────────────────── */
 .dv-hero-g    { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
 .dv-about-g   { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
 .dv-contact-g { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; }
@@ -402,18 +448,21 @@ export default function App() {
     setMenuOpen(false);
   };
 
+  // ── Farbpalette: Soft Rosé + Champagne Gold + Ivory ──────────────────────
   const C = {
-    bg1: "#FFF9FC",
-    bg2: "#F8EEF5",
+    bg1: "#FFF7FA", // Ivory Rosé (hell)
+    bg2: "#FBEAF3", // Soft Rosé (hell)
     white: "#FFFFFF",
-    dark1: "#120B12",
-    dark2: "#1C111C",
-    pink: "#E85BBE",
-    soft: "#F6B7DB",
-    gold: "#D8B66A",
-    text: "#241A22",
-    muted: "#7A6070",
+    dark1: "#1A1016", // Logo-Dunkel
+    dark2: "#2A1824", // Plum-Dark
+    pink: "#DFA7C6", // Soft Rosé (kein Magenta!)
+    soft: "#F3C6DC", // Helles Rosé
+    gold: "#D6B76D", // Champagne Gold
+    text: "#2B2027", // Warm Dark
+    muted: "#806B76", // Gedämpftes Rosé-Grau
   };
+
+  // ── Kleine Hilfkomponenten ────────────────────────────────────────────────
 
   const Stars = ({ n = 5 }) => (
     <span style={{ color: C.gold, letterSpacing: 2, fontSize: 14 }}>
@@ -429,11 +478,11 @@ export default function App() {
         height: size,
         borderRadius: "50%",
         flexShrink: 0,
-        background: "linear-gradient(135deg,#F6B7DB,#E85BBE)",
+        background: "linear-gradient(135deg,#F3C6DC,#DFA7C6)",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        boxShadow: "0 4px 14px rgba(232,91,190,0.22)",
+        boxShadow: "0 4px 14px rgba(223,167,198,0.28)",
       }}
     >
       <span className="pf" style={{ color: "#fff", fontSize: size * 0.38 }}>
@@ -442,11 +491,12 @@ export default function App() {
     </div>
   );
 
+  // Divider mit mehr Gold
   const Divider = () => (
-    <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 14, marginBottom: 68 }}>
-      <div style={{ width: 52, height: 1, background: "linear-gradient(90deg,transparent,#D8B66A)" }} />
-      <span style={{ color: C.gold, fontSize: 13, opacity: 0.9 }}>✦</span>
-      <div style={{ width: 52, height: 1, background: "linear-gradient(90deg,#D8B66A,transparent)" }} />
+    <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 12, marginBottom: 68 }}>
+      <div style={{ width: 60, height: 1, background: "linear-gradient(90deg,transparent,#D6B76D)" }} />
+      <span style={{ color: C.gold, fontSize: 11, opacity: 0.9, letterSpacing: 6 }}>✦ ✦ ✦</span>
+      <div style={{ width: 60, height: 1, background: "linear-gradient(90deg,#D6B76D,transparent)" }} />
     </div>
   );
 
@@ -463,16 +513,36 @@ export default function App() {
     <div style={{ maxWidth: 1280, margin: "0 auto", padding: pad, ...style }}>{children}</div>
   );
 
+  // Kategorie-Heading in Preiskarten mit Gold-Underline
+  const PriceHeading = ({ children }) => (
+    <h3
+      className="pf"
+      style={{
+        color: C.text,
+        fontSize: 17,
+        marginBottom: 16,
+        paddingBottom: 12,
+        borderBottom: "1px solid rgba(214,183,109,0.22)",
+        display: "flex",
+        alignItems: "center",
+        gap: 8,
+      }}
+    >
+      <span style={{ color: C.gold, fontSize: 10 }}>✦</span>
+      {children}
+    </h3>
+  );
+
   const NAV = ["Leistungen", "Galerie", "Preise", "Bewertungen", "Kontakt"];
 
   return (
     <div className="dm" style={{ background: C.bg1, color: C.text, minHeight: "100vh", overflowX: "hidden" }}>
-      {/* NAVIGATION */}
+      {/* ── NAVIGATION ────────────────────────────────────────────────────── */}
       <nav
         style={{
-          background: "rgba(18,11,18,0.95)",
+          background: "rgba(26,16,22,0.96)",
           backdropFilter: "blur(24px)",
-          borderBottom: "1px solid rgba(232,91,190,0.1)",
+          borderBottom: "1px solid rgba(214,183,109,0.12)",
           position: "fixed",
           top: 0,
           left: 0,
@@ -502,7 +572,7 @@ export default function App() {
                 flexDirection: "column",
                 alignItems: "center",
                 justifyContent: "center",
-                boxShadow: "0 0 14px rgba(232,91,190,0.28)",
+                boxShadow: "0 0 14px rgba(223,167,198,0.26)",
               }}
             >
               <span
@@ -514,7 +584,7 @@ export default function App() {
               <span style={{ color: C.gold, fontSize: 9, lineHeight: 1 }}>✦</span>
             </div>
             <div>
-              <div className="pf" style={{ color: C.pink, fontSize: 16, fontWeight: 600, lineHeight: 1.1 }}>
+              <div className="pf" style={{ color: C.soft, fontSize: 16, fontWeight: 600, lineHeight: 1.1 }}>
                 Divine Beauty
               </div>
               <div
@@ -549,11 +619,11 @@ export default function App() {
               className="dv-nb"
               style={{
                 background: "none",
-                border: "1px solid rgba(232,91,190,0.32)",
+                border: "1px solid rgba(223,167,198,0.32)",
                 borderRadius: 8,
                 padding: "8px 12px",
                 cursor: "pointer",
-                color: C.pink,
+                color: C.soft,
                 fontSize: 18,
                 alignItems: "center",
                 justifyContent: "center",
@@ -567,7 +637,7 @@ export default function App() {
         {menuOpen && (
           <div
             style={{
-              background: "rgba(18,11,18,0.98)",
+              background: "rgba(26,16,22,0.98)",
               borderTop: "1px solid rgba(255,255,255,0.05)",
               padding: "18px 24px 26px",
             }}
@@ -604,7 +674,7 @@ export default function App() {
         )}
       </nav>
 
-      {/* HERO */}
+      {/* ── HERO — Rosé-Plum-Verlauf (darf dunkel bleiben) ────────────────── */}
       <section
         id="home"
         style={{
@@ -614,9 +684,10 @@ export default function App() {
           alignItems: "center",
           position: "relative",
           overflow: "hidden",
-          background: "linear-gradient(140deg,#120B12 0%,#1C111C 52%,#271325 100%)",
+          background: "linear-gradient(140deg,#1A1016 0%,#2A1824 45%,#4A243D 100%)",
         }}
       >
+        {/* Soft Glow Blobs */}
         <div
           className="dv-softglow"
           style={{
@@ -626,7 +697,7 @@ export default function App() {
             width: 520,
             height: 520,
             pointerEvents: "none",
-            background: "radial-gradient(circle,rgba(232,91,190,0.1) 0%,transparent 65%)",
+            background: "radial-gradient(circle,rgba(223,167,198,0.12) 0%,transparent 65%)",
           }}
         />
         <div
@@ -638,10 +709,11 @@ export default function App() {
             width: 420,
             height: 420,
             pointerEvents: "none",
-            background: "radial-gradient(circle,rgba(216,182,106,0.07) 0%,transparent 65%)",
+            background: "radial-gradient(circle,rgba(214,183,109,0.09) 0%,transparent 65%)",
             animationDelay: "2.5s",
           }}
         />
+        {/* Dekorative Gold-Sterne */}
         <div
           style={{
             position: "absolute",
@@ -649,7 +721,7 @@ export default function App() {
             right: "10%",
             color: C.gold,
             fontSize: 9,
-            opacity: 0.35,
+            opacity: 0.4,
             letterSpacing: 18,
           }}
         >
@@ -662,7 +734,7 @@ export default function App() {
             left: "7%",
             color: C.soft,
             fontSize: 7,
-            opacity: 0.25,
+            opacity: 0.22,
             letterSpacing: 14,
           }}
         >
@@ -676,14 +748,14 @@ export default function App() {
                   display: "inline-flex",
                   alignItems: "center",
                   gap: 10,
-                  background: "rgba(232,91,190,0.09)",
-                  border: "1px solid rgba(232,91,190,0.2)",
+                  background: "rgba(223,167,198,0.1)",
+                  border: "1px solid rgba(223,167,198,0.22)",
                   borderRadius: 999,
                   padding: "8px 18px",
                   marginBottom: 30,
                 }}
               >
-                <div style={{ width: 5, height: 5, borderRadius: "50%", background: C.pink }} />
+                <div style={{ width: 5, height: 5, borderRadius: "50%", background: C.soft }} />
                 <span
                   className="dm"
                   style={{ color: C.soft, fontSize: 11, letterSpacing: "2.5px", textTransform: "uppercase" }}
@@ -695,7 +767,7 @@ export default function App() {
                 className="pf"
                 style={{ fontSize: "clamp(2.6rem,5vw,4rem)", lineHeight: 1.15, color: "#FFFFFF", margin: "0 0 22px" }}
               >
-                Die Kunst der <em style={{ color: C.pink }}>Schönheit</em>
+                Die Kunst der <em style={{ color: C.soft }}>Schönheit</em>
                 <br />
                 in deinen <span className="dv-gold">Händen.</span>
               </h1>
@@ -735,7 +807,7 @@ export default function App() {
                     className="dm"
                     style={{
                       background: "rgba(255,255,255,0.06)",
-                      border: "1px solid rgba(255,255,255,0.09)",
+                      border: "1px solid rgba(255,255,255,0.1)",
                       borderRadius: 999,
                       padding: "6px 14px",
                       fontSize: 12,
@@ -752,19 +824,18 @@ export default function App() {
                 style={{
                   height: 560,
                   borderRadius: 28,
-                  background: "linear-gradient(148deg,#1C111C 0%,#261328 48%,rgba(232,91,190,0.28) 100%)",
+                  background: "linear-gradient(148deg,#2A1824 0%,#3A1F30 48%,rgba(223,167,198,0.22) 100%)",
                   position: "relative",
                   overflow: "hidden",
-                  border: "1px solid rgba(232,91,190,0.18)",
-                  boxShadow: "0 40px 80px rgba(0,0,0,0.45)",
+                  border: "1px solid rgba(223,167,198,0.18)",
+                  boxShadow: "0 40px 80px rgba(0,0,0,0.4)",
                 }}
               >
-                {/* ↓ Ersetzen mit: <img src="URL" alt="Studio" style={{width:"100%",height:"100%",objectFit:"cover"}} /> */}
                 <div
                   style={{
                     position: "absolute",
                     inset: 0,
-                    background: "radial-gradient(ellipse at 68% 28%,rgba(232,91,190,0.22) 0%,transparent 58%)",
+                    background: "radial-gradient(ellipse at 68% 28%,rgba(223,167,198,0.18) 0%,transparent 58%)",
                   }}
                 />
                 <div
@@ -792,23 +863,24 @@ export default function App() {
                   </span>
                 </div>
               </div>
+              {/* Floating Info-Card */}
               <div
                 className="dv-float"
                 style={{
                   position: "absolute",
                   bottom: -24,
                   left: -28,
-                  background: "rgba(255,249,252,0.97)",
+                  background: "rgba(255,247,250,0.97)",
                   borderRadius: 20,
                   padding: "18px 24px",
-                  boxShadow: "0 20px 50px rgba(184,56,152,0.18)",
-                  border: "1px solid rgba(232,91,190,0.12)",
+                  boxShadow: "0 20px 50px rgba(185,130,165,0.16)",
+                  border: "1px solid rgba(214,183,109,0.18)",
                 }}
               >
                 <div
                   className="dm"
                   style={{
-                    color: C.pink,
+                    color: C.gold,
                     fontSize: 10,
                     letterSpacing: "1.5px",
                     textTransform: "uppercase",
@@ -824,6 +896,7 @@ export default function App() {
                   1200 Wien
                 </div>
               </div>
+              {/* Gold Dot */}
               <div
                 style={{
                   position: "absolute",
@@ -832,8 +905,8 @@ export default function App() {
                   width: 22,
                   height: 22,
                   borderRadius: "50%",
-                  background: "linear-gradient(135deg,#D8B66A,#f0d090)",
-                  boxShadow: "0 0 14px rgba(216,182,106,0.5)",
+                  background: "linear-gradient(135deg,#D6B76D,#f0d090)",
+                  boxShadow: "0 0 16px rgba(214,183,109,0.55)",
                 }}
               />
             </div>
@@ -841,7 +914,7 @@ export default function App() {
         </W>
       </section>
 
-      {/* LEISTUNGEN */}
+      {/* ── LEISTUNGEN — hell ─────────────────────────────────────────────── */}
       <section id="leistungen" style={{ padding: "108px 0", background: C.bg1 }}>
         <W>
           <Divider />
@@ -854,7 +927,11 @@ export default function App() {
           </p>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(280px,1fr))", gap: 20 }}>
             {SERVICES.map((s) => (
-              <div key={s.title} className="lux-card" style={{ padding: "28px 26px", borderRadius: 22 }}>
+              <div
+                key={s.title}
+                className="lux-card"
+                style={{ padding: "28px 26px", borderRadius: 22, background: C.white }}
+              >
                 <div style={{ fontSize: 34, marginBottom: 14 }}>{s.icon}</div>
                 <h3 className="pf" style={{ color: C.text, fontSize: 19, marginBottom: 10 }}>
                   {s.title}
@@ -862,7 +939,7 @@ export default function App() {
                 <p className="dm" style={{ color: C.muted, fontSize: 14, lineHeight: 1.78 }}>
                   {s.desc}
                 </p>
-                <div className="dm" style={{ marginTop: 20, color: C.pink, fontSize: 13 }}>
+                <div className="dm" style={{ marginTop: 20, color: C.gold, fontSize: 13 }}>
                   Mehr erfahren →
                 </div>
               </div>
@@ -871,7 +948,7 @@ export default function App() {
         </W>
       </section>
 
-      {/* GALERIE */}
+      {/* ── GALERIE — hell, Ivory ─────────────────────────────────────────── */}
       <section id="galerie" style={{ padding: "108px 0 80px", background: C.white, overflow: "hidden" }}>
         <W style={{ marginBottom: 52 }}>
           <Divider />
@@ -906,7 +983,7 @@ export default function App() {
                     }}
                   >
                     <span style={{ fontSize: 38 }}>📸</span>
-                    <span className="dm" style={{ color: "rgba(36,26,34,0.38)", fontSize: 11, letterSpacing: "1px" }}>
+                    <span className="dm" style={{ color: "rgba(43,32,39,0.4)", fontSize: 11, letterSpacing: "1px" }}>
                       {img.label}
                     </span>
                   </div>
@@ -918,7 +995,7 @@ export default function App() {
                     left: 0,
                     right: 0,
                     padding: "28px 16px 14px",
-                    background: "linear-gradient(transparent,rgba(36,26,34,0.45))",
+                    background: "linear-gradient(transparent,rgba(43,32,39,0.38))",
                   }}
                 >
                   <span className="dm" style={{ color: "#fff", fontSize: 13 }}>
@@ -931,7 +1008,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* ÜBER UNS */}
+      {/* ── ÜBER UNS — Rosé hell ──────────────────────────────────────────── */}
       <section
         id="über-uns"
         style={{ padding: "108px 0", background: C.bg2, position: "relative", overflow: "hidden" }}
@@ -944,7 +1021,7 @@ export default function App() {
             width: 380,
             height: 380,
             borderRadius: "50%",
-            background: "radial-gradient(circle,rgba(246,183,219,0.28) 0%,transparent 70%)",
+            background: "radial-gradient(circle,rgba(243,198,220,0.3) 0%,transparent 70%)",
             pointerEvents: "none",
           }}
         />
@@ -955,14 +1032,13 @@ export default function App() {
                 style={{
                   height: 500,
                   borderRadius: 28,
-                  background: "linear-gradient(148deg,#F8EEF5,#F6B7DB 55%,rgba(232,91,190,0.55) 100%)",
+                  background: "linear-gradient(148deg,#FBEAF3,#F3C6DC 55%,rgba(223,167,198,0.5) 100%)",
                   position: "relative",
                   overflow: "hidden",
-                  border: "1px solid rgba(232,91,190,0.14)",
-                  boxShadow: "0 20px 60px rgba(184,56,152,0.14)",
+                  border: "1px solid rgba(214,183,109,0.16)",
+                  boxShadow: "0 20px 60px rgba(185,130,165,0.12)",
                 }}
               >
-                {/* ↓ Ersetzen mit: <img src="URL" alt="Studio" style={{width:"100%",height:"100%",objectFit:"cover"}} /> */}
                 <div
                   style={{
                     position: "absolute",
@@ -978,7 +1054,7 @@ export default function App() {
                   <span
                     className="dm"
                     style={{
-                      color: "rgba(36,26,34,0.35)",
+                      color: "rgba(43,32,39,0.35)",
                       fontSize: 11,
                       letterSpacing: "2px",
                       textTransform: "uppercase",
@@ -997,8 +1073,8 @@ export default function App() {
                   background: C.white,
                   borderRadius: 18,
                   padding: "16px 20px",
-                  boxShadow: "0 14px 36px rgba(184,56,152,0.12)",
-                  border: "1px solid rgba(232,91,190,0.1)",
+                  boxShadow: "0 14px 36px rgba(185,130,165,0.12)",
+                  border: "1px solid rgba(214,183,109,0.18)",
                 }}
               >
                 <div style={{ color: C.gold, fontSize: 20, marginBottom: 6 }}>✦</div>
@@ -1040,7 +1116,7 @@ export default function App() {
         </W>
       </section>
 
-      {/* WARUM DIVINE */}
+      {/* ── WARUM DIVINE — hell, weiß ─────────────────────────────────────── */}
       <section style={{ padding: "108px 0", background: C.white }}>
         <W>
           <div style={{ textAlign: "center", marginBottom: 64 }}>
@@ -1076,7 +1152,7 @@ export default function App() {
               <div
                 key={a.title}
                 className="lux-card"
-                style={{ padding: "36px 28px", borderRadius: 22, textAlign: "center" }}
+                style={{ padding: "36px 28px", borderRadius: 22, textAlign: "center", background: C.white }}
               >
                 <div style={{ fontSize: 36, marginBottom: 18 }}>{a.icon}</div>
                 <h3 className="pf" style={{ color: C.text, fontSize: 18, marginBottom: 12 }}>
@@ -1091,7 +1167,7 @@ export default function App() {
         </W>
       </section>
 
-      {/* ABLAUF */}
+      {/* ── ABLAUF — Ivory Rosé ───────────────────────────────────────────── */}
       <section style={{ padding: "108px 0", background: C.bg1 }}>
         <W>
           <Divider />
@@ -1117,15 +1193,22 @@ export default function App() {
                 desc: "Lehn dich zurück, genieße die Atmosphäre und verlass das Studio mit einem strahlenden Lächeln.",
               },
             ].map((s) => (
-              <div key={s.num} className="lux-card" style={{ padding: "36px 30px", borderRadius: 22 }}>
+              <div
+                key={s.num}
+                className="lux-card"
+                style={{ padding: "36px 30px", borderRadius: 22, background: C.white }}
+              >
+                {/* Große Zahl in Gold */}
                 <div
                   className="cg"
                   style={{
                     fontSize: 80,
-                    color: "rgba(232,91,190,0.1)",
                     lineHeight: 0.9,
                     fontWeight: 300,
                     marginBottom: 16,
+                    background: "linear-gradient(135deg,rgba(214,183,109,0.18),rgba(214,183,109,0.06))",
+                    WebkitBackgroundClip: "text",
+                    color: "rgba(214,183,109,0.35)",
                   }}
                 >
                   {s.num}
@@ -1142,7 +1225,7 @@ export default function App() {
         </W>
       </section>
 
-      {/* PREISE */}
+      {/* ── PREISE — hell, weiße Cards, goldene Details ───────────────────── */}
       <section id="preise" style={{ padding: "108px 0", background: C.bg2 }}>
         <W>
           <Divider />
@@ -1161,22 +1244,11 @@ export default function App() {
                   background: C.white,
                   borderRadius: 20,
                   padding: "24px 22px",
-                  boxShadow: "0 4px 22px rgba(184,56,152,0.06)",
-                  border: "1px solid rgba(232,91,190,0.09)",
+                  boxShadow: "0 4px 22px rgba(185,130,165,0.07)",
+                  border: "1px solid rgba(214,183,109,0.12)",
                 }}
               >
-                <h3
-                  className="pf"
-                  style={{
-                    color: C.pink,
-                    fontSize: 18,
-                    marginBottom: 16,
-                    paddingBottom: 12,
-                    borderBottom: "1px solid rgba(232,91,190,0.1)",
-                  }}
-                >
-                  {cat.category}
-                </h3>
+                <PriceHeading>{cat.category}</PriceHeading>
                 {cat.items.map((item) => (
                   <div key={item.name} className="dv-prow">
                     <span className="dm" style={{ color: C.muted, fontSize: 14 }}>
@@ -1196,11 +1268,12 @@ export default function App() {
         </W>
       </section>
 
-      {/* BEWERTUNGEN */}
+      {/* ── BEWERTUNGEN — hell, weiß ──────────────────────────────────────── */}
       <section
         id="bewertungen"
         style={{ padding: "108px 0", background: C.white, position: "relative", overflow: "hidden" }}
       >
+        {/* Dekorative Soft-Blobs */}
         <div
           style={{
             position: "absolute",
@@ -1209,7 +1282,7 @@ export default function App() {
             width: 340,
             height: 340,
             borderRadius: "50%",
-            background: "radial-gradient(circle,rgba(246,183,219,0.18) 0%,transparent 70%)",
+            background: "radial-gradient(circle,rgba(243,198,220,0.2) 0%,transparent 70%)",
             pointerEvents: "none",
           }}
         />
@@ -1221,7 +1294,7 @@ export default function App() {
             width: 280,
             height: 280,
             borderRadius: "50%",
-            background: "radial-gradient(circle,rgba(216,182,106,0.1) 0%,transparent 70%)",
+            background: "radial-gradient(circle,rgba(214,183,109,0.1) 0%,transparent 70%)",
             pointerEvents: "none",
           }}
         />
@@ -1258,8 +1331,8 @@ export default function App() {
                     gap: 8,
                     padding: "8px 16px",
                     borderRadius: 999,
-                    background: C.bg2,
-                    border: "1px solid rgba(232,91,190,0.13)",
+                    background: C.bg1,
+                    border: "1px solid rgba(214,183,109,0.16)",
                     fontSize: 12,
                     color: C.muted,
                   }}
@@ -1291,8 +1364,8 @@ export default function App() {
                       fontFamily: "Georgia,serif",
                       fontSize: 88,
                       lineHeight: 0.72,
-                      color: C.pink,
-                      opacity: 0.18,
+                      color: C.gold,
+                      opacity: 0.22,
                       marginBottom: 14,
                       userSelect: "none",
                     }}
@@ -1329,8 +1402,8 @@ export default function App() {
                       <span
                         className="dm"
                         style={{
-                          background: "rgba(216,182,106,0.1)",
-                          border: "1px solid rgba(216,182,106,0.28)",
+                          background: "rgba(214,183,109,0.1)",
+                          border: "1px solid rgba(214,183,109,0.3)",
                           borderRadius: 999,
                           padding: "4px 14px",
                           color: C.gold,
@@ -1367,8 +1440,8 @@ export default function App() {
                     <span
                       className="dm"
                       style={{
-                        background: "rgba(232,91,190,0.07)",
-                        border: "1px solid rgba(232,91,190,0.14)",
+                        background: "rgba(223,167,198,0.09)",
+                        border: "1px solid rgba(223,167,198,0.18)",
                         borderRadius: 999,
                         padding: "3px 10px",
                         color: C.pink,
@@ -1385,7 +1458,7 @@ export default function App() {
         </W>
       </section>
 
-      {/* KONTAKT */}
+      {/* ── KONTAKT — Ivory Rosé ──────────────────────────────────────────── */}
       <section id="kontakt" style={{ padding: "108px 0", background: C.bg1 }}>
         <W>
           <Divider />
@@ -1456,30 +1529,32 @@ export default function App() {
                 </a>
               </div>
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
+                {/* Adresse */}
                 <div
                   style={{
                     background: C.white,
                     borderRadius: 18,
                     padding: 20,
-                    boxShadow: "0 4px 20px rgba(184,56,152,0.06)",
-                    border: "1px solid rgba(232,91,190,0.09)",
+                    boxShadow: "0 4px 20px rgba(185,130,165,0.07)",
+                    border: "1px solid rgba(214,183,109,0.14)",
                   }}
                 >
-                  <div style={{ color: C.pink, fontSize: 20, marginBottom: 10 }}>📍</div>
+                  <div style={{ color: C.gold, fontSize: 20, marginBottom: 10 }}>📍</div>
                   <div className="dm" style={{ color: C.muted, fontSize: 13, lineHeight: 1.65 }}>
                     {STUDIO.address}
                   </div>
                 </div>
+                {/* Öffnungszeiten */}
                 <div
                   style={{
                     background: C.white,
                     borderRadius: 18,
                     padding: 20,
-                    boxShadow: "0 4px 20px rgba(184,56,152,0.06)",
-                    border: "1px solid rgba(232,91,190,0.09)",
+                    boxShadow: "0 4px 20px rgba(185,130,165,0.07)",
+                    border: "1px solid rgba(214,183,109,0.14)",
                   }}
                 >
-                  <div style={{ color: C.pink, fontSize: 20, marginBottom: 10 }}>🕐</div>
+                  <div style={{ color: C.gold, fontSize: 20, marginBottom: 10 }}>🕐</div>
                   {Object.entries(STUDIO.hours).map(([d, t]) => (
                     <div
                       key={d}
@@ -1499,14 +1574,15 @@ export default function App() {
                 </div>
               </div>
             </div>
+            {/* Map Placeholder */}
             <div
               style={{
                 height: "100%",
                 minHeight: 420,
                 borderRadius: 26,
-                background: "linear-gradient(148deg,#F8EEF5,#F6B7DB 55%,rgba(232,91,190,0.28) 100%)",
-                border: "1px solid rgba(232,91,190,0.14)",
-                boxShadow: "0 14px 48px rgba(184,56,152,0.1)",
+                background: "linear-gradient(148deg,#FBEAF3,#F3C6DC 55%,rgba(214,183,109,0.2) 100%)",
+                border: "1px solid rgba(214,183,109,0.18)",
+                boxShadow: "0 14px 48px rgba(185,130,165,0.1)",
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
@@ -1516,7 +1592,6 @@ export default function App() {
                 overflow: "hidden",
               }}
             >
-              {/* ↓ Ersetzen mit Google Maps iframe */}
               <span style={{ fontSize: 46 }}>🗺️</span>
               <span className="dm" style={{ color: C.muted, fontSize: 14 }}>
                 Google Maps einbetten
@@ -1529,12 +1604,12 @@ export default function App() {
         </W>
       </section>
 
-      {/* FOOTER */}
-      <footer style={{ background: C.dark1, borderTop: "1px solid rgba(232,91,190,0.1)" }}>
+      {/* ── FOOTER — dunkel (bleibt dunkel) ──────────────────────────────── */}
+      <footer style={{ background: C.dark1, borderTop: "1px solid rgba(214,183,109,0.14)" }}>
         <W pad="64px 24px 40px">
           <div className="dv-footer-g">
             <div>
-              <div className="pf" style={{ color: C.pink, fontSize: 26, marginBottom: 4 }}>
+              <div className="pf" style={{ color: C.soft, fontSize: 26, marginBottom: 4 }}>
                 Divine Beauty
               </div>
               <div
@@ -1572,7 +1647,7 @@ export default function App() {
                   gap: 8,
                   color: C.soft,
                   textDecoration: "none",
-                  border: "1px solid rgba(246,183,219,0.2)",
+                  border: "1px solid rgba(243,198,220,0.22)",
                   borderRadius: 999,
                   padding: "8px 16px",
                   fontSize: 13,
@@ -1620,10 +1695,12 @@ export default function App() {
               ))}
             </div>
           </div>
+          {/* Gold-Rosé Divider Line */}
           <div
             style={{
               height: 1,
-              background: "linear-gradient(90deg,transparent,rgba(232,91,190,0.18),rgba(216,182,106,0.12),transparent)",
+              background:
+                "linear-gradient(90deg,transparent,rgba(214,183,109,0.28),rgba(243,198,220,0.18),transparent)",
               marginBottom: 24,
             }}
           />
@@ -1632,26 +1709,26 @@ export default function App() {
               © {new Date().getFullYear()} Divine Beauty &amp; Nails Studio · Wien · Alle Rechte vorbehalten
             </span>
             <span className="dm" style={{ color: "rgba(255,255,255,0.28)", fontSize: 12 }}>
-              Made with <span style={{ color: C.pink }}>♥</span> in Wien
+              Made with <span style={{ color: C.soft }}>♥</span> in Wien
             </span>
           </div>
         </W>
       </footer>
 
-      {/* IMPRESSUM */}
+      {/* ── IMPRESSUM — dunkel (bleibt dunkel) ───────────────────────────── */}
       <section
         id="impressum"
-        style={{ padding: "80px 0", background: "#0d080d", borderTop: "1px solid rgba(232,91,190,0.07)" }}
+        style={{ padding: "80px 0", background: "#0d080d", borderTop: "1px solid rgba(223,167,198,0.07)" }}
       >
         <div style={{ maxWidth: 860, margin: "0 auto", padding: "0 24px" }}>
-          <h2 className="pf" style={{ color: C.pink, fontSize: 28, marginBottom: 10 }}>
+          <h2 className="pf" style={{ color: C.soft, fontSize: 28, marginBottom: 10 }}>
             Impressum
           </h2>
           <div
             className="dm"
             style={{
-              background: "rgba(232,91,190,0.07)",
-              border: "1px solid rgba(232,91,190,0.14)",
+              background: "rgba(223,167,198,0.07)",
+              border: "1px solid rgba(223,167,198,0.14)",
               borderRadius: 10,
               padding: "12px 16px",
               color: "rgba(255,255,255,0.45)",
@@ -1689,20 +1766,20 @@ export default function App() {
         </div>
       </section>
 
-      {/* DATENSCHUTZ */}
+      {/* ── DATENSCHUTZ — dunkel (bleibt dunkel) ─────────────────────────── */}
       <section
         id="datenschutz"
-        style={{ padding: "80px 0 120px", background: "#0a060a", borderTop: "1px solid rgba(232,91,190,0.05)" }}
+        style={{ padding: "80px 0 120px", background: "#0a060a", borderTop: "1px solid rgba(223,167,198,0.05)" }}
       >
         <div style={{ maxWidth: 860, margin: "0 auto", padding: "0 24px" }}>
-          <h2 className="pf" style={{ color: C.pink, fontSize: 28, marginBottom: 10 }}>
+          <h2 className="pf" style={{ color: C.soft, fontSize: 28, marginBottom: 10 }}>
             Datenschutzerklärung
           </h2>
           <div
             className="dm"
             style={{
-              background: "rgba(232,91,190,0.07)",
-              border: "1px solid rgba(232,91,190,0.14)",
+              background: "rgba(223,167,198,0.07)",
+              border: "1px solid rgba(223,167,198,0.14)",
               borderRadius: 10,
               padding: "12px 16px",
               color: "rgba(255,255,255,0.45)",
@@ -1742,7 +1819,7 @@ export default function App() {
             },
           ].map((s) => (
             <div key={s.t} style={{ marginBottom: 28 }}>
-              <h3 className="pf" style={{ color: "rgba(246,183,219,0.7)", fontSize: 16, marginBottom: 10 }}>
+              <h3 className="pf" style={{ color: "rgba(243,198,220,0.7)", fontSize: 16, marginBottom: 10 }}>
                 {s.t}
               </h3>
               <p className="dm" style={{ color: "rgba(255,255,255,0.38)", fontSize: 13, lineHeight: 1.88 }}>
