@@ -678,7 +678,7 @@ export default function App() {
         )}
       </nav>
 
-      {/* ── HERO — Rosé-Plum-Verlauf (darf dunkel bleiben) ────────────────── */}
+      {/* ── HERO — hell, Ivory + Soft Cream + Rosé ───────────────────────── */}
       <section
         id="home"
         style={{
@@ -688,7 +688,7 @@ export default function App() {
           alignItems: "center",
           position: "relative",
           overflow: "hidden",
-          background: "linear-gradient(140deg,#1A1016 0%,#2A1824 45%,#4A243D 100%)",
+          background: "linear-gradient(135deg,#FFF7F2 0%,#F7EDE7 45%,#FBEAF3 100%)",
         }}
       >
         {/* Soft Glow Blobs */}
@@ -701,7 +701,7 @@ export default function App() {
             width: 520,
             height: 520,
             pointerEvents: "none",
-            background: "radial-gradient(circle,rgba(223,167,198,0.12) 0%,transparent 65%)",
+            background: "radial-gradient(circle,rgba(233,184,200,0.45) 0%,transparent 65%)",
           }}
         />
         <div
@@ -713,7 +713,7 @@ export default function App() {
             width: 420,
             height: 420,
             pointerEvents: "none",
-            background: "radial-gradient(circle,rgba(214,183,109,0.09) 0%,transparent 65%)",
+            background: "radial-gradient(circle,rgba(214,183,109,0.22) 0%,transparent 65%)",
             animationDelay: "2.5s",
           }}
         />
@@ -725,7 +725,7 @@ export default function App() {
             right: "10%",
             color: C.gold,
             fontSize: 9,
-            opacity: 0.4,
+            opacity: 0.55,
             letterSpacing: 18,
           }}
         >
@@ -736,9 +736,9 @@ export default function App() {
             position: "absolute",
             bottom: "22%",
             left: "7%",
-            color: C.soft,
+            color: C.pink,
             fontSize: 7,
-            opacity: 0.22,
+            opacity: 0.35,
             letterSpacing: 14,
           }}
         >
@@ -752,33 +752,34 @@ export default function App() {
                   display: "inline-flex",
                   alignItems: "center",
                   gap: 10,
-                  background: "rgba(223,167,198,0.1)",
-                  border: "1px solid rgba(223,167,198,0.22)",
+                  background: "rgba(255,255,255,0.7)",
+                  border: "1px solid rgba(217,143,168,0.28)",
                   borderRadius: 999,
                   padding: "8px 18px",
                   marginBottom: 30,
+                  backdropFilter: "blur(8px)",
                 }}
               >
-                <div style={{ width: 5, height: 5, borderRadius: "50%", background: C.soft }} />
+                <div style={{ width: 5, height: 5, borderRadius: "50%", background: C.pink }} />
                 <span
                   className="dm"
-                  style={{ color: C.soft, fontSize: 11, letterSpacing: "2.5px", textTransform: "uppercase" }}
+                  style={{ color: C.dark1, fontSize: 11, letterSpacing: "2.5px", textTransform: "uppercase" }}
                 >
                   Nagelstudio &amp; Beauty · Wien
                 </span>
               </div>
               <h1
                 className="pf"
-                style={{ fontSize: "clamp(2.6rem,5vw,4rem)", lineHeight: 1.15, color: "#FFFFFF", margin: "0 0 22px" }}
+                style={{ fontSize: "clamp(2.6rem,5vw,4rem)", lineHeight: 1.15, color: C.dark1, margin: "0 0 22px" }}
               >
-                Die Kunst der <em style={{ color: C.soft }}>Schönheit</em>
+                Die Kunst der <em style={{ color: C.pink, fontWeight: 400 }}>Schönheit</em>
                 <br />
                 in deinen <span className="dv-gold">Händen.</span>
               </h1>
               <p
                 className="dm"
                 style={{
-                  color: "rgba(255,255,255,0.58)",
+                  color: C.muted,
                   fontSize: 17,
                   lineHeight: 1.88,
                   maxWidth: 480,
@@ -794,10 +795,10 @@ export default function App() {
                   style={{ padding: "14px 32px", borderRadius: 999, fontSize: 15, fontWeight: 500 }}
                   onClick={() => go("kontakt")}
                 >
-                  ✦ Termin anfragen
+                  <span style={{ color: C.gold, marginRight: 6 }}>✦</span> Termin anfragen
                 </button>
                 <button
-                  className="btn-ol-dark"
+                  className="btn-ol-light"
                   style={{ padding: "14px 28px", borderRadius: 999, fontSize: 15 }}
                   onClick={() => go("leistungen")}
                 >
@@ -810,12 +811,12 @@ export default function App() {
                     key={b}
                     className="dm"
                     style={{
-                      background: "rgba(255,255,255,0.06)",
-                      border: "1px solid rgba(255,255,255,0.1)",
+                      background: "rgba(255,255,255,0.75)",
+                      border: "1px solid rgba(214,183,109,0.22)",
                       borderRadius: 999,
                       padding: "6px 14px",
                       fontSize: 12,
-                      color: "rgba(255,255,255,0.55)",
+                      color: C.text,
                     }}
                   >
                     {b}
@@ -828,20 +829,33 @@ export default function App() {
                 style={{
                   height: 560,
                   borderRadius: 28,
-                  background: "linear-gradient(148deg,#2A1824 0%,#3A1F30 48%,rgba(223,167,198,0.22) 100%)",
+                  background: "linear-gradient(155deg,#FFF7F2 0%,#F7EDE7 35%,#F3C6DC 75%,#E9B8C8 100%)",
                   position: "relative",
                   overflow: "hidden",
-                  border: "1px solid rgba(223,167,198,0.18)",
-                  boxShadow: "0 40px 80px rgba(0,0,0,0.4)",
+                  border: "1px solid rgba(214,183,109,0.28)",
+                  boxShadow: "0 30px 70px rgba(185,130,165,0.18)",
                 }}
               >
                 <div
                   style={{
                     position: "absolute",
                     inset: 0,
-                    background: "radial-gradient(ellipse at 68% 28%,rgba(223,167,198,0.18) 0%,transparent 58%)",
+                    background: "radial-gradient(ellipse at 68% 28%,rgba(255,255,255,0.65) 0%,transparent 58%)",
                   }}
                 />
+                {/* Warme dekorative Akzente */}
+                <div
+                  style={{
+                    position: "absolute",
+                    top: "12%",
+                    left: "10%",
+                    color: C.gold,
+                    fontSize: 14,
+                    opacity: 0.5,
+                  }}
+                >
+                  ✦
+                </div>
                 <div
                   style={{
                     position: "absolute",
@@ -850,14 +864,14 @@ export default function App() {
                     flexDirection: "column",
                     alignItems: "center",
                     justifyContent: "center",
-                    gap: 12,
+                    gap: 14,
                   }}
                 >
                   <span style={{ fontSize: 64 }}>💅</span>
                   <span
                     className="dm"
                     style={{
-                      color: "rgba(255,255,255,0.32)",
+                      color: "rgba(58,48,52,0.5)",
                       fontSize: 11,
                       letterSpacing: "2.5px",
                       textTransform: "uppercase",
@@ -874,11 +888,11 @@ export default function App() {
                   position: "absolute",
                   bottom: -24,
                   left: -28,
-                  background: "rgba(255,247,250,0.97)",
+                  background: "rgba(255,255,255,0.98)",
                   borderRadius: 20,
                   padding: "18px 24px",
-                  boxShadow: "0 20px 50px rgba(185,130,165,0.16)",
-                  border: "1px solid rgba(214,183,109,0.18)",
+                  boxShadow: "0 20px 50px rgba(185,130,165,0.18)",
+                  border: "1px solid rgba(214,183,109,0.22)",
                 }}
               >
                 <div
@@ -910,7 +924,7 @@ export default function App() {
                   height: 22,
                   borderRadius: "50%",
                   background: "linear-gradient(135deg,#D6B76D,#f0d090)",
-                  boxShadow: "0 0 16px rgba(214,183,109,0.55)",
+                  boxShadow: "0 0 16px rgba(214,183,109,0.65)",
                 }}
               />
             </div>
