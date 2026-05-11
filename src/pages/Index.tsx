@@ -1733,23 +1733,23 @@ export default function App() {
         </W>
       </footer>
 
-      {/* ── IMPRESSUM — dunkel (bleibt dunkel) ───────────────────────────── */}
+      {/* ── IMPRESSUM — hell ─────────────────────────────────────────────── */}
       <section
         id="impressum"
-        style={{ padding: "80px 0", background: "#0d080d", borderTop: "1px solid rgba(223,167,198,0.07)" }}
+        style={{ padding: "80px 0", background: C.bg2, borderTop: "1px solid rgba(214,183,109,0.18)" }}
       >
         <div style={{ maxWidth: 860, margin: "0 auto", padding: "0 24px" }}>
-          <h2 className="pf" style={{ color: C.soft, fontSize: 28, marginBottom: 10 }}>
+          <h2 className="pf" style={{ color: C.text, fontSize: 28, marginBottom: 10 }}>
             Impressum
           </h2>
           <div
             className="dm"
             style={{
-              background: "rgba(223,167,198,0.07)",
-              border: "1px solid rgba(223,167,198,0.14)",
+              background: "rgba(255,255,255,0.7)",
+              border: "1px solid rgba(214,183,109,0.22)",
               borderRadius: 10,
               padding: "12px 16px",
-              color: "rgba(255,255,255,0.45)",
+              color: C.muted,
               fontSize: 12,
               lineHeight: 1.6,
               marginBottom: 32,
@@ -1768,16 +1768,25 @@ export default function App() {
             ["Berufsrecht", "Gewerbeordnung 1994 (GewO) – www.ris.bka.gv.at"],
             ["Gewerbe", "Kosmetikgewerbe / Nagelstudio / Beauty-Dienstleistungen"],
           ].map(([k, v]) => (
-            <div key={k} className="dv-lrow">
-              <span className="dm" style={{ color: "rgba(255,255,255,0.35)", fontSize: 13, minWidth: 200 }}>
+            <div
+              key={k}
+              style={{
+                display: "flex",
+                flexWrap: "wrap",
+                gap: 14,
+                padding: "10px 0",
+                borderBottom: "1px solid rgba(42,37,40,0.07)",
+              }}
+            >
+              <span className="dm" style={{ color: C.muted, fontSize: 13, minWidth: 200 }}>
                 {k}
               </span>
-              <span className="dm" style={{ color: "rgba(255,255,255,0.75)", fontSize: 13 }}>
+              <span className="dm" style={{ color: C.text, fontSize: 13 }}>
                 {v}
               </span>
             </div>
           ))}
-          <p className="dm" style={{ color: "rgba(255,255,255,0.35)", fontSize: 13, lineHeight: 1.8, marginTop: 28 }}>
+          <p className="dm" style={{ color: C.muted, fontSize: 13, lineHeight: 1.8, marginTop: 28 }}>
             Trotz sorgfältiger Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt
             verlinkter Seiten sind ausschließlich deren Betreiber verantwortlich.
           </p>
