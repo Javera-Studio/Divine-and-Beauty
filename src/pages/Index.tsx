@@ -1793,23 +1793,23 @@ export default function App() {
         </div>
       </section>
 
-      {/* ── DATENSCHUTZ — dunkel (bleibt dunkel) ─────────────────────────── */}
+      {/* ── DATENSCHUTZ — hell ───────────────────────────────────────────── */}
       <section
         id="datenschutz"
-        style={{ padding: "80px 0 120px", background: "#0a060a", borderTop: "1px solid rgba(223,167,198,0.05)" }}
+        style={{ padding: "80px 0 120px", background: C.bg1, borderTop: "1px solid rgba(214,183,109,0.14)" }}
       >
         <div style={{ maxWidth: 860, margin: "0 auto", padding: "0 24px" }}>
-          <h2 className="pf" style={{ color: C.soft, fontSize: 28, marginBottom: 10 }}>
+          <h2 className="pf" style={{ color: C.text, fontSize: 28, marginBottom: 10 }}>
             Datenschutzerklärung
           </h2>
           <div
             className="dm"
             style={{
-              background: "rgba(223,167,198,0.07)",
-              border: "1px solid rgba(223,167,198,0.14)",
+              background: "rgba(255,255,255,0.7)",
+              border: "1px solid rgba(214,183,109,0.22)",
               borderRadius: 10,
               padding: "12px 16px",
-              color: "rgba(255,255,255,0.45)",
+              color: C.muted,
               fontSize: 12,
               lineHeight: 1.6,
               marginBottom: 36,
@@ -1846,10 +1846,10 @@ export default function App() {
             },
           ].map((s) => (
             <div key={s.t} style={{ marginBottom: 28 }}>
-              <h3 className="pf" style={{ color: "rgba(243,198,220,0.7)", fontSize: 16, marginBottom: 10 }}>
+              <h3 className="pf" style={{ color: C.pink, fontSize: 16, marginBottom: 10 }}>
                 {s.t}
               </h3>
-              <p className="dm" style={{ color: "rgba(255,255,255,0.38)", fontSize: 13, lineHeight: 1.88 }}>
+              <p className="dm" style={{ color: C.muted, fontSize: 13, lineHeight: 1.88 }}>
                 {s.c}
               </p>
             </div>
