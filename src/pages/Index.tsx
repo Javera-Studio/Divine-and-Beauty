@@ -575,7 +575,7 @@ export default function App() {
         >
           <div onClick={() => go("home")} style={{ display: "flex", alignItems: "center", gap: 12, cursor: "pointer" }}>
             <img
-  src="/logo.png"
+  src={logo}
   alt="Divine Beauty Logo"
   style={{ width: 44, height: 44, borderRadius: "50%", objectFit: "cover" }}
 />
