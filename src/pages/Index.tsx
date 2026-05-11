@@ -512,7 +512,7 @@ export default function App() {
     </div>
   );
 
-  const W = ({ children, pad = "0 24px", style }) => (
+  const W = ({ children, pad = "0 24px", style = {} }: any) => (
     <div style={{ maxWidth: 1280, margin: "0 auto", padding: pad, ...style }}>{children}</div>
   );
 
