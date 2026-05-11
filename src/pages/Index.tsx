@@ -22,57 +22,57 @@ const STUDIO = {
 const SERVICES = [
   {
     icon: "💅",
-    img: "/images/Gelmodellage.jpg",
+    img: "/Gelmodellage.jpg",
     title: "Gelmodellage",
-    desc: "Individuelle Nagelmodellage mit hochwertigem Gel – von klassisch-elegant bis kreativ-extravagant. Langanhaltend und auf Wunsch mit feinstem Nail-Art.",
+    ...
   },
   {
     icon: "✨",
-    img: "/images/Nachfuellung.jpg",
+    img: "/Nachfuellung.jpg",
     title: "Nachfüllung",
-    desc: "Professionelle Auffrischung deiner bestehenden Gelmodellage. In kurzer Zeit wieder perfekt gepflegt und wunderschön.",
+    ...
   },
   {
     icon: "🌸",
-    img: "/images/Shellac.jpg",
+    img: "/Shellac.jpg",
     title: "Shellac",
-    desc: "Der Klassiker mit Hochglanz-Finish und bis zu drei Wochen Haltbarkeit – ohne Abstumpfung, ohne Chips.",
+    ...
   },
   {
     icon: "🦶",
-    img: "/images/Pedikuere.jpg",
+    img: "/Pedikuere.jpg",
     title: "Pediküre",
-    desc: "Verwöhnende Fußpflege mit Peeling, intensiver Pflege und eleganter Lackierung – für gepflegte, schöne Füße.",
+    ...
   },
   {
     icon: "🤍",
-    img: "/images/Manikuere.jpg",
+    img: "/Manikuere.jpg",
     title: "Maniküre",
-    desc: "Klassische oder moderne Handpflege: Nagelformung, Nagelhautpflege und Lackierung nach deinem Wunsch.",
+    ...
   },
   {
     icon: "👁️",
-    img: "/images/Wimpernlifting.jpg",
+    img: "/Wimpernlifting.jpg",
     title: "Wimpernlifting",
-    desc: "Natürlich geschwungene Wimpern durch professionelles Lifting – kein Extensions, nur dein natürlicher Look, perfektioniert.",
+    ...
   },
   {
     icon: "🌿",
-    img: "/images/Waxing.jpg",
+    img: "/Waxing.jpg",
     title: "Waxing",
-    desc: "Sanfte, präzise Haarentfernung mit Warmwachs für dauerhaft glatte Haut – schonend für Gesicht und Körper.",
+    ...
   },
   {
     icon: "🧖",
-    img: "/images/Gesichtsbehandlung.jpg",
+    img: "/Gesichtsbehandlung.jpg",
     title: "Gesichtsbehandlung",
-    desc: "Individuelle Pflegebehandlungen für strahlende, gepflegte Haut – genau auf deinen Hauttyp abgestimmt.",
+    ...
   },
   {
     icon: "💄",
-    img: "/images/Make-up.jpg",
+    img: "/Make-up.jpg",
     title: "Make-up",
-    desc: "Professionelles Make-up für jeden Anlass – natürlich, elegant oder glamourös. Dein perfekter Look für unvergessliche Momente.",
+    ...
   },
 ];
 
