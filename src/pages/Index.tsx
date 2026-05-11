@@ -209,7 +209,7 @@ const CSS = `
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap');
 
 html { scroll-behavior: smooth; }
-body { overflow-x: hidden; background: #FFF7FA; }
+body { overflow-x: hidden; background: #FFF7F2; }
 *, *::before, *::after { box-sizing: border-box; }
 
 .pf { font-family: 'Playfair Display', Georgia, serif; }
@@ -295,23 +295,24 @@ body { overflow-x: hidden; background: #FFF7FA; }
   transform: translateY(-5px);
 }
 
-/* ── Primary Button — Soft Rosé + Champagne Gold accent ─────────────────── */
+/* ── Primary Button — Anthrazit mit Gold-Akzent ──────────────────────────── */
 .btn-pk {
-  background: linear-gradient(135deg,#DFA7C6,#C989AA);
-  box-shadow: 0 4px 20px rgba(223,167,198,0.32);
-  border-bottom: 1.5px solid rgba(214,183,109,0.35);
+  background: #2A2528;
+  box-shadow: 0 4px 18px rgba(42,37,40,0.22);
+  border-bottom: 1.5px solid rgba(214,183,109,0.55);
   color: #fff; border-top: none; border-left: none; border-right: none;
   cursor: pointer;
-  transition: box-shadow .3s, transform .3s, background .3s;
+  transition: box-shadow .3s, transform .3s, background .3s, border-color .3s;
   font-family: 'DM Sans', sans-serif;
 }
 .btn-pk:hover {
-  box-shadow: 0 10px 36px rgba(223,167,198,0.44), 0 2px 0 rgba(214,183,109,0.5);
-  background: linear-gradient(135deg,#D49EBD,#BE82A2);
+  background: #1F1B1D;
+  box-shadow: 0 12px 34px rgba(42,37,40,0.32), 0 0 0 1px rgba(214,183,109,0.5);
+  border-bottom-color: #D6B76D;
   transform: translateY(-2px);
 }
 
-/* ── Outline Button (on dark bg) ─────────────────────────────────────────── */
+/* ── Outline Button (auf dunklem Footer) ─────────────────────────────────── */
 .btn-ol-dark {
   border: 1.5px solid rgba(255,255,255,0.35);
   color: rgba(255,255,255,0.85); background: transparent;
@@ -319,40 +320,41 @@ body { overflow-x: hidden; background: #FFF7FA; }
   font-family: 'DM Sans', sans-serif;
 }
 .btn-ol-dark:hover {
-  border-color: #DFA7C6;
-  color: #DFA7C6;
-  background: rgba(223,167,198,0.08);
+  border-color: #D6B76D;
+  color: #D6B76D;
+  background: rgba(214,183,109,0.08);
   transform: translateY(-2px);
 }
 
-/* ── Outline Button (on light bg) ────────────────────────────────────────── */
+/* ── Outline Button (hell, mit Dusty-Rose-Border) ────────────────────────── */
 .btn-ol-light {
-  border: 1.5px solid rgba(223,167,198,0.45);
-  color: #C989AA; background: transparent;
+  border: 1.5px solid rgba(217,143,168,0.55);
+  color: #2A2528; background: rgba(255,255,255,0.6);
   cursor: pointer; transition: all .3s;
   font-family: 'DM Sans', sans-serif;
 }
 .btn-ol-light:hover {
-  border-color: rgba(214,183,109,0.5);
-  color: #B8893A;
-  background: rgba(214,183,109,0.06);
+  border-color: #D6B76D;
+  color: #2A2528;
+  background: rgba(255,255,255,0.95);
+  box-shadow: 0 8px 24px rgba(42,37,40,0.08);
   transform: translateY(-2px);
 }
 
-/* ── Nav Links ───────────────────────────────────────────────────────────── */
+/* ── Nav Links — Anthrazit auf hell, Dusty Rose Hover ────────────────────── */
 .dv-nav-link {
-  position: relative; color: rgba(255,255,255,0.65);
+  position: relative; color: #3A3034;
   font-family: 'DM Sans', sans-serif; font-size: 14px;
   letter-spacing: .3px; background: none; border: none; cursor: pointer;
   transition: color .3s;
 }
 .dv-nav-link::after {
-  content: ''; position: absolute; bottom: -3px; left: 0;
-  width: 0; height: 1px;
-  background: linear-gradient(90deg,#DFA7C6,#D6B76D);
+  content: ''; position: absolute; bottom: -5px; left: 0;
+  width: 0; height: 1.5px;
+  background: linear-gradient(90deg,#D98FA8,#D6B76D);
   transition: width .3s;
 }
-.dv-nav-link:hover { color: #F3C6DC; }
+.dv-nav-link:hover { color: #D98FA8; }
 .dv-nav-link:hover::after { width: 100%; }
 
 /* ── Price Rows ──────────────────────────────────────────────────────────── */
@@ -394,7 +396,7 @@ body { overflow-x: hidden; background: #FFF7FA; }
 
 /* ── Scrollbar ───────────────────────────────────────────────────────────── */
 ::-webkit-scrollbar { width: 4px; }
-::-webkit-scrollbar-track { background: #FFF7FA; }
+::-webkit-scrollbar-track { background: #FFF7F2; }
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(#DFA7C6,#D6B76D);
   border-radius: 2px;
@@ -448,18 +450,19 @@ export default function App() {
     setMenuOpen(false);
   };
 
-  // ── Farbpalette: Soft Rosé + Champagne Gold + Ivory ──────────────────────
+  // ── Farbpalette: Ivory + Soft Cream + Dusty Rose + Anthrazit + Gold ──────
   const C = {
-    bg1: "#FFF7FA", // Ivory Rosé (hell)
-    bg2: "#FBEAF3", // Soft Rosé (hell)
+    bg1: "#FFF7F2", // Ivory
+    bg2: "#F7EDE7", // Soft Cream
     white: "#FFFFFF",
-    dark1: "#1A1016", // Logo-Dunkel
-    dark2: "#2A1824", // Plum-Dark
-    pink: "#DFA7C6", // Soft Rosé (kein Magenta!)
-    soft: "#F3C6DC", // Helles Rosé
+    dark1: "#2A2528", // Anthrazit (Footer, CTAs)
+    dark2: "#1F1B1D", // Anthrazit dunkler (Datenschutz)
+    pink: "#D98FA8", // Dusty Rose
+    soft: "#E9B8C8", // Blush Rosé
+    softer: "#F3C6DC", // Soft Pink
     gold: "#D6B76D", // Champagne Gold
-    text: "#2B2027", // Warm Dark
-    muted: "#806B76", // Gedämpftes Rosé-Grau
+    text: "#3A3034", // Soft Text
+    muted: "#7D6B70", // Muted Text
   };
 
   // ── Kleine Hilfkomponenten ────────────────────────────────────────────────
