@@ -936,7 +936,7 @@ export default function App() {
           <p className="dm" style={{ color: C.muted, fontSize: 16, maxWidth: 480, lineHeight: 1.8, marginBottom: 60 }}>
             Von Nageldesign bis Gesichtsbehandlung – professionell, präzise, mit Liebe fürs Detail.
           </p>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(280px,1fr))", gap: 20 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 20 }}>
             {SERVICES.map((s) => (
               <div
                 key={s.title}
