@@ -565,28 +565,11 @@ export default function App() {
           }}
         >
           <div onClick={() => go("home")} style={{ display: "flex", alignItems: "center", gap: 12, cursor: "pointer" }}>
-            <div
-              style={{
-                width: 44,
-                height: 44,
-                borderRadius: "50%",
-                background: C.dark1,
-                border: `1.5px solid ${C.gold}`,
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "center",
-                boxShadow: "0 4px 14px rgba(42,37,40,0.18)",
-              }}
-            >
-              <span
-                className="pf"
-                style={{ color: C.pink, fontSize: 7, fontWeight: 700, letterSpacing: 1, lineHeight: 1.2 }}
-              >
-                DIVINE
-              </span>
-              <span style={{ color: C.gold, fontSize: 9, lineHeight: 1 }}>✦</span>
-            </div>
+            <img
+  src="/logo.png"
+  alt="Divine Beauty Logo"
+  style={{ width: 44, height: 44, borderRadius: "50%", objectFit: "cover" }}
+/>
             <div>
               <div className="pf" style={{ color: C.text, fontSize: 16, fontWeight: 600, lineHeight: 1.1 }}>
                 Divine Beauty
