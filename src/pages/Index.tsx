@@ -543,9 +543,10 @@ export default function App() {
       {/* ── NAVIGATION ────────────────────────────────────────────────────── */}
       <nav
         style={{
-          background: "rgba(26,16,22,0.96)",
-          backdropFilter: "blur(24px)",
-          borderBottom: "1px solid rgba(214,183,109,0.12)",
+          background: "rgba(255,247,242,0.88)",
+          backdropFilter: "blur(20px)",
+          WebkitBackdropFilter: "blur(20px)",
+          borderBottom: "1px solid rgba(42,37,40,0.08)",
           position: "fixed",
           top: 0,
           left: 0,
@@ -570,12 +571,12 @@ export default function App() {
                 height: 44,
                 borderRadius: "50%",
                 background: C.dark1,
-                border: `2px solid ${C.pink}`,
+                border: `1.5px solid ${C.gold}`,
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
                 justifyContent: "center",
-                boxShadow: "0 0 14px rgba(223,167,198,0.26)",
+                boxShadow: "0 4px 14px rgba(42,37,40,0.18)",
               }}
             >
               <span
@@ -587,13 +588,13 @@ export default function App() {
               <span style={{ color: C.gold, fontSize: 9, lineHeight: 1 }}>✦</span>
             </div>
             <div>
-              <div className="pf" style={{ color: C.soft, fontSize: 16, fontWeight: 600, lineHeight: 1.1 }}>
+              <div className="pf" style={{ color: C.text, fontSize: 16, fontWeight: 600, lineHeight: 1.1 }}>
                 Divine Beauty
               </div>
               <div
                 className="dm"
                 style={{
-                  color: "rgba(255,255,255,0.38)",
+                  color: C.muted,
                   fontSize: 9,
                   letterSpacing: "2.5px",
                   textTransform: "uppercase",
@@ -616,17 +617,17 @@ export default function App() {
               style={{ padding: "10px 22px", borderRadius: 999, fontSize: 13, fontWeight: 500 }}
               onClick={() => go("kontakt")}
             >
-              ✦ Termin anfragen
+              <span style={{ color: C.gold, marginRight: 6 }}>✦</span> Termin anfragen
             </button>
             <button
               className="dv-nb"
               style={{
-                background: "none",
-                border: "1px solid rgba(223,167,198,0.32)",
+                background: "rgba(255,255,255,0.7)",
+                border: `1px solid ${C.dark1}`,
                 borderRadius: 8,
                 padding: "8px 12px",
                 cursor: "pointer",
-                color: C.soft,
+                color: C.dark1,
                 fontSize: 18,
                 alignItems: "center",
                 justifyContent: "center",
@@ -640,8 +641,8 @@ export default function App() {
         {menuOpen && (
           <div
             style={{
-              background: "rgba(26,16,22,0.98)",
-              borderTop: "1px solid rgba(255,255,255,0.05)",
+              background: "rgba(255,247,242,0.98)",
+              borderTop: "1px solid rgba(42,37,40,0.06)",
               padding: "18px 24px 26px",
             }}
           >
@@ -656,10 +657,10 @@ export default function App() {
                   background: "none",
                   border: "none",
                   cursor: "pointer",
-                  color: "rgba(255,255,255,0.6)",
+                  color: C.text,
                   fontSize: 16,
                   padding: "13px 0",
-                  borderBottom: "1px solid rgba(255,255,255,0.05)",
+                  borderBottom: "1px solid rgba(42,37,40,0.06)",
                 }}
                 onClick={() => go(n.toLowerCase())}
               >
@@ -671,7 +672,7 @@ export default function App() {
               style={{ width: "100%", padding: 14, borderRadius: 12, marginTop: 20, fontSize: 15 }}
               onClick={() => go("kontakt")}
             >
-              ✦ Termin anfragen
+              <span style={{ color: C.gold, marginRight: 6 }}>✦</span> Termin anfragen
             </button>
           </div>
         )}
