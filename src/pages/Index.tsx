@@ -209,7 +209,7 @@ const CSS = `
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap');
 
 html { scroll-behavior: smooth; }
-body { overflow-x: hidden; background: #FFF7FA; }
+body { overflow-x: hidden; background: #FFF7F2; }
 *, *::before, *::after { box-sizing: border-box; }
 
 .pf { font-family: 'Playfair Display', Georgia, serif; }
@@ -295,23 +295,24 @@ body { overflow-x: hidden; background: #FFF7FA; }
   transform: translateY(-5px);
 }
 
-/* ── Primary Button — Soft Rosé + Champagne Gold accent ─────────────────── */
+/* ── Primary Button — Anthrazit mit Gold-Akzent ──────────────────────────── */
 .btn-pk {
-  background: linear-gradient(135deg,#DFA7C6,#C989AA);
-  box-shadow: 0 4px 20px rgba(223,167,198,0.32);
-  border-bottom: 1.5px solid rgba(214,183,109,0.35);
+  background: #2A2528;
+  box-shadow: 0 4px 18px rgba(42,37,40,0.22);
+  border-bottom: 1.5px solid rgba(214,183,109,0.55);
   color: #fff; border-top: none; border-left: none; border-right: none;
   cursor: pointer;
-  transition: box-shadow .3s, transform .3s, background .3s;
+  transition: box-shadow .3s, transform .3s, background .3s, border-color .3s;
   font-family: 'DM Sans', sans-serif;
 }
 .btn-pk:hover {
-  box-shadow: 0 10px 36px rgba(223,167,198,0.44), 0 2px 0 rgba(214,183,109,0.5);
-  background: linear-gradient(135deg,#D49EBD,#BE82A2);
+  background: #1F1B1D;
+  box-shadow: 0 12px 34px rgba(42,37,40,0.32), 0 0 0 1px rgba(214,183,109,0.5);
+  border-bottom-color: #D6B76D;
   transform: translateY(-2px);
 }
 
-/* ── Outline Button (on dark bg) ─────────────────────────────────────────── */
+/* ── Outline Button (auf dunklem Footer) ─────────────────────────────────── */
 .btn-ol-dark {
   border: 1.5px solid rgba(255,255,255,0.35);
   color: rgba(255,255,255,0.85); background: transparent;
@@ -319,40 +320,41 @@ body { overflow-x: hidden; background: #FFF7FA; }
   font-family: 'DM Sans', sans-serif;
 }
 .btn-ol-dark:hover {
-  border-color: #DFA7C6;
-  color: #DFA7C6;
-  background: rgba(223,167,198,0.08);
+  border-color: #D6B76D;
+  color: #D6B76D;
+  background: rgba(214,183,109,0.08);
   transform: translateY(-2px);
 }
 
-/* ── Outline Button (on light bg) ────────────────────────────────────────── */
+/* ── Outline Button (hell, mit Dusty-Rose-Border) ────────────────────────── */
 .btn-ol-light {
-  border: 1.5px solid rgba(223,167,198,0.45);
-  color: #C989AA; background: transparent;
+  border: 1.5px solid rgba(217,143,168,0.55);
+  color: #2A2528; background: rgba(255,255,255,0.6);
   cursor: pointer; transition: all .3s;
   font-family: 'DM Sans', sans-serif;
 }
 .btn-ol-light:hover {
-  border-color: rgba(214,183,109,0.5);
-  color: #B8893A;
-  background: rgba(214,183,109,0.06);
+  border-color: #D6B76D;
+  color: #2A2528;
+  background: rgba(255,255,255,0.95);
+  box-shadow: 0 8px 24px rgba(42,37,40,0.08);
   transform: translateY(-2px);
 }
 
-/* ── Nav Links ───────────────────────────────────────────────────────────── */
+/* ── Nav Links — Anthrazit auf hell, Dusty Rose Hover ────────────────────── */
 .dv-nav-link {
-  position: relative; color: rgba(255,255,255,0.65);
+  position: relative; color: #3A3034;
   font-family: 'DM Sans', sans-serif; font-size: 14px;
   letter-spacing: .3px; background: none; border: none; cursor: pointer;
   transition: color .3s;
 }
 .dv-nav-link::after {
-  content: ''; position: absolute; bottom: -3px; left: 0;
-  width: 0; height: 1px;
-  background: linear-gradient(90deg,#DFA7C6,#D6B76D);
+  content: ''; position: absolute; bottom: -5px; left: 0;
+  width: 0; height: 1.5px;
+  background: linear-gradient(90deg,#D98FA8,#D6B76D);
   transition: width .3s;
 }
-.dv-nav-link:hover { color: #F3C6DC; }
+.dv-nav-link:hover { color: #D98FA8; }
 .dv-nav-link:hover::after { width: 100%; }
 
 /* ── Price Rows ──────────────────────────────────────────────────────────── */
@@ -394,7 +396,7 @@ body { overflow-x: hidden; background: #FFF7FA; }
 
 /* ── Scrollbar ───────────────────────────────────────────────────────────── */
 ::-webkit-scrollbar { width: 4px; }
-::-webkit-scrollbar-track { background: #FFF7FA; }
+::-webkit-scrollbar-track { background: #FFF7F2; }
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(#DFA7C6,#D6B76D);
   border-radius: 2px;
@@ -448,18 +450,19 @@ export default function App() {
     setMenuOpen(false);
   };
 
-  // ── Farbpalette: Soft Rosé + Champagne Gold + Ivory ──────────────────────
+  // ── Farbpalette: Ivory + Soft Cream + Dusty Rose + Anthrazit + Gold ──────
   const C = {
-    bg1: "#FFF7FA", // Ivory Rosé (hell)
-    bg2: "#FBEAF3", // Soft Rosé (hell)
+    bg1: "#FFF7F2", // Ivory
+    bg2: "#F7EDE7", // Soft Cream
     white: "#FFFFFF",
-    dark1: "#1A1016", // Logo-Dunkel
-    dark2: "#2A1824", // Plum-Dark
-    pink: "#DFA7C6", // Soft Rosé (kein Magenta!)
-    soft: "#F3C6DC", // Helles Rosé
+    dark1: "#2A2528", // Anthrazit (Footer, CTAs)
+    dark2: "#1F1B1D", // Anthrazit dunkler (Datenschutz)
+    pink: "#D98FA8", // Dusty Rose
+    soft: "#E9B8C8", // Blush Rosé
+    softer: "#F3C6DC", // Soft Pink
     gold: "#D6B76D", // Champagne Gold
-    text: "#2B2027", // Warm Dark
-    muted: "#806B76", // Gedämpftes Rosé-Grau
+    text: "#3A3034", // Soft Text
+    muted: "#7D6B70", // Muted Text
   };
 
   // ── Kleine Hilfkomponenten ────────────────────────────────────────────────
@@ -509,7 +512,7 @@ export default function App() {
     </div>
   );
 
-  const W = ({ children, pad = "0 24px", style }) => (
+  const W = ({ children, pad = "0 24px", style = {} }: any) => (
     <div style={{ maxWidth: 1280, margin: "0 auto", padding: pad, ...style }}>{children}</div>
   );
 
@@ -540,9 +543,10 @@ export default function App() {
       {/* ── NAVIGATION ────────────────────────────────────────────────────── */}
       <nav
         style={{
-          background: "rgba(26,16,22,0.96)",
-          backdropFilter: "blur(24px)",
-          borderBottom: "1px solid rgba(214,183,109,0.12)",
+          background: "rgba(255,247,242,0.88)",
+          backdropFilter: "blur(20px)",
+          WebkitBackdropFilter: "blur(20px)",
+          borderBottom: "1px solid rgba(42,37,40,0.08)",
           position: "fixed",
           top: 0,
           left: 0,
@@ -567,12 +571,12 @@ export default function App() {
                 height: 44,
                 borderRadius: "50%",
                 background: C.dark1,
-                border: `2px solid ${C.pink}`,
+                border: `1.5px solid ${C.gold}`,
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
                 justifyContent: "center",
-                boxShadow: "0 0 14px rgba(223,167,198,0.26)",
+                boxShadow: "0 4px 14px rgba(42,37,40,0.18)",
               }}
             >
               <span
@@ -584,13 +588,13 @@ export default function App() {
               <span style={{ color: C.gold, fontSize: 9, lineHeight: 1 }}>✦</span>
             </div>
             <div>
-              <div className="pf" style={{ color: C.soft, fontSize: 16, fontWeight: 600, lineHeight: 1.1 }}>
+              <div className="pf" style={{ color: C.text, fontSize: 16, fontWeight: 600, lineHeight: 1.1 }}>
                 Divine Beauty
               </div>
               <div
                 className="dm"
                 style={{
-                  color: "rgba(255,255,255,0.38)",
+                  color: C.muted,
                   fontSize: 9,
                   letterSpacing: "2.5px",
                   textTransform: "uppercase",
@@ -613,17 +617,17 @@ export default function App() {
               style={{ padding: "10px 22px", borderRadius: 999, fontSize: 13, fontWeight: 500 }}
               onClick={() => go("kontakt")}
             >
-              ✦ Termin anfragen
+              <span style={{ color: C.gold, marginRight: 6 }}>✦</span> Termin anfragen
             </button>
             <button
               className="dv-nb"
               style={{
-                background: "none",
-                border: "1px solid rgba(223,167,198,0.32)",
+                background: "rgba(255,255,255,0.7)",
+                border: `1px solid ${C.dark1}`,
                 borderRadius: 8,
                 padding: "8px 12px",
                 cursor: "pointer",
-                color: C.soft,
+                color: C.dark1,
                 fontSize: 18,
                 alignItems: "center",
                 justifyContent: "center",
@@ -637,8 +641,8 @@ export default function App() {
         {menuOpen && (
           <div
             style={{
-              background: "rgba(26,16,22,0.98)",
-              borderTop: "1px solid rgba(255,255,255,0.05)",
+              background: "rgba(255,247,242,0.98)",
+              borderTop: "1px solid rgba(42,37,40,0.06)",
               padding: "18px 24px 26px",
             }}
           >
@@ -653,10 +657,10 @@ export default function App() {
                   background: "none",
                   border: "none",
                   cursor: "pointer",
-                  color: "rgba(255,255,255,0.6)",
+                  color: C.text,
                   fontSize: 16,
                   padding: "13px 0",
-                  borderBottom: "1px solid rgba(255,255,255,0.05)",
+                  borderBottom: "1px solid rgba(42,37,40,0.06)",
                 }}
                 onClick={() => go(n.toLowerCase())}
               >
@@ -668,13 +672,13 @@ export default function App() {
               style={{ width: "100%", padding: 14, borderRadius: 12, marginTop: 20, fontSize: 15 }}
               onClick={() => go("kontakt")}
             >
-              ✦ Termin anfragen
+              <span style={{ color: C.gold, marginRight: 6 }}>✦</span> Termin anfragen
             </button>
           </div>
         )}
       </nav>
 
-      {/* ── HERO — Rosé-Plum-Verlauf (darf dunkel bleiben) ────────────────── */}
+      {/* ── HERO — hell, Ivory + Soft Cream + Rosé ───────────────────────── */}
       <section
         id="home"
         style={{
@@ -684,7 +688,7 @@ export default function App() {
           alignItems: "center",
           position: "relative",
           overflow: "hidden",
-          background: "linear-gradient(140deg,#1A1016 0%,#2A1824 45%,#4A243D 100%)",
+          background: "linear-gradient(135deg,#FFF7F2 0%,#F7EDE7 45%,#FBEAF3 100%)",
         }}
       >
         {/* Soft Glow Blobs */}
@@ -697,7 +701,7 @@ export default function App() {
             width: 520,
             height: 520,
             pointerEvents: "none",
-            background: "radial-gradient(circle,rgba(223,167,198,0.12) 0%,transparent 65%)",
+            background: "radial-gradient(circle,rgba(233,184,200,0.45) 0%,transparent 65%)",
           }}
         />
         <div
@@ -709,7 +713,7 @@ export default function App() {
             width: 420,
             height: 420,
             pointerEvents: "none",
-            background: "radial-gradient(circle,rgba(214,183,109,0.09) 0%,transparent 65%)",
+            background: "radial-gradient(circle,rgba(214,183,109,0.22) 0%,transparent 65%)",
             animationDelay: "2.5s",
           }}
         />
@@ -721,7 +725,7 @@ export default function App() {
             right: "10%",
             color: C.gold,
             fontSize: 9,
-            opacity: 0.4,
+            opacity: 0.55,
             letterSpacing: 18,
           }}
         >
@@ -732,9 +736,9 @@ export default function App() {
             position: "absolute",
             bottom: "22%",
             left: "7%",
-            color: C.soft,
+            color: C.pink,
             fontSize: 7,
-            opacity: 0.22,
+            opacity: 0.35,
             letterSpacing: 14,
           }}
         >
@@ -748,33 +752,34 @@ export default function App() {
                   display: "inline-flex",
                   alignItems: "center",
                   gap: 10,
-                  background: "rgba(223,167,198,0.1)",
-                  border: "1px solid rgba(223,167,198,0.22)",
+                  background: "rgba(255,255,255,0.7)",
+                  border: "1px solid rgba(217,143,168,0.28)",
                   borderRadius: 999,
                   padding: "8px 18px",
                   marginBottom: 30,
+                  backdropFilter: "blur(8px)",
                 }}
               >
-                <div style={{ width: 5, height: 5, borderRadius: "50%", background: C.soft }} />
+                <div style={{ width: 5, height: 5, borderRadius: "50%", background: C.pink }} />
                 <span
                   className="dm"
-                  style={{ color: C.soft, fontSize: 11, letterSpacing: "2.5px", textTransform: "uppercase" }}
+                  style={{ color: C.dark1, fontSize: 11, letterSpacing: "2.5px", textTransform: "uppercase" }}
                 >
                   Nagelstudio &amp; Beauty · Wien
                 </span>
               </div>
               <h1
                 className="pf"
-                style={{ fontSize: "clamp(2.6rem,5vw,4rem)", lineHeight: 1.15, color: "#FFFFFF", margin: "0 0 22px" }}
+                style={{ fontSize: "clamp(2.6rem,5vw,4rem)", lineHeight: 1.15, color: C.dark1, margin: "0 0 22px" }}
               >
-                Die Kunst der <em style={{ color: C.soft }}>Schönheit</em>
+                Die Kunst der <em style={{ color: C.pink, fontWeight: 400 }}>Schönheit</em>
                 <br />
                 in deinen <span className="dv-gold">Händen.</span>
               </h1>
               <p
                 className="dm"
                 style={{
-                  color: "rgba(255,255,255,0.58)",
+                  color: C.muted,
                   fontSize: 17,
                   lineHeight: 1.88,
                   maxWidth: 480,
@@ -790,10 +795,10 @@ export default function App() {
                   style={{ padding: "14px 32px", borderRadius: 999, fontSize: 15, fontWeight: 500 }}
                   onClick={() => go("kontakt")}
                 >
-                  ✦ Termin anfragen
+                  <span style={{ color: C.gold, marginRight: 6 }}>✦</span> Termin anfragen
                 </button>
                 <button
-                  className="btn-ol-dark"
+                  className="btn-ol-light"
                   style={{ padding: "14px 28px", borderRadius: 999, fontSize: 15 }}
                   onClick={() => go("leistungen")}
                 >
@@ -806,12 +811,12 @@ export default function App() {
                     key={b}
                     className="dm"
                     style={{
-                      background: "rgba(255,255,255,0.06)",
-                      border: "1px solid rgba(255,255,255,0.1)",
+                      background: "rgba(255,255,255,0.75)",
+                      border: "1px solid rgba(214,183,109,0.22)",
                       borderRadius: 999,
                       padding: "6px 14px",
                       fontSize: 12,
-                      color: "rgba(255,255,255,0.55)",
+                      color: C.text,
                     }}
                   >
                     {b}
@@ -824,20 +829,33 @@ export default function App() {
                 style={{
                   height: 560,
                   borderRadius: 28,
-                  background: "linear-gradient(148deg,#2A1824 0%,#3A1F30 48%,rgba(223,167,198,0.22) 100%)",
+                  background: "linear-gradient(155deg,#FFF7F2 0%,#F7EDE7 35%,#F3C6DC 75%,#E9B8C8 100%)",
                   position: "relative",
                   overflow: "hidden",
-                  border: "1px solid rgba(223,167,198,0.18)",
-                  boxShadow: "0 40px 80px rgba(0,0,0,0.4)",
+                  border: "1px solid rgba(214,183,109,0.28)",
+                  boxShadow: "0 30px 70px rgba(185,130,165,0.18)",
                 }}
               >
                 <div
                   style={{
                     position: "absolute",
                     inset: 0,
-                    background: "radial-gradient(ellipse at 68% 28%,rgba(223,167,198,0.18) 0%,transparent 58%)",
+                    background: "radial-gradient(ellipse at 68% 28%,rgba(255,255,255,0.65) 0%,transparent 58%)",
                   }}
                 />
+                {/* Warme dekorative Akzente */}
+                <div
+                  style={{
+                    position: "absolute",
+                    top: "12%",
+                    left: "10%",
+                    color: C.gold,
+                    fontSize: 14,
+                    opacity: 0.5,
+                  }}
+                >
+                  ✦
+                </div>
                 <div
                   style={{
                     position: "absolute",
@@ -846,14 +864,14 @@ export default function App() {
                     flexDirection: "column",
                     alignItems: "center",
                     justifyContent: "center",
-                    gap: 12,
+                    gap: 14,
                   }}
                 >
                   <span style={{ fontSize: 64 }}>💅</span>
                   <span
                     className="dm"
                     style={{
-                      color: "rgba(255,255,255,0.32)",
+                      color: "rgba(58,48,52,0.5)",
                       fontSize: 11,
                       letterSpacing: "2.5px",
                       textTransform: "uppercase",
@@ -870,11 +888,11 @@ export default function App() {
                   position: "absolute",
                   bottom: -24,
                   left: -28,
-                  background: "rgba(255,247,250,0.97)",
+                  background: "rgba(255,255,255,0.98)",
                   borderRadius: 20,
                   padding: "18px 24px",
-                  boxShadow: "0 20px 50px rgba(185,130,165,0.16)",
-                  border: "1px solid rgba(214,183,109,0.18)",
+                  boxShadow: "0 20px 50px rgba(185,130,165,0.18)",
+                  border: "1px solid rgba(214,183,109,0.22)",
                 }}
               >
                 <div
@@ -906,7 +924,7 @@ export default function App() {
                   height: 22,
                   borderRadius: "50%",
                   background: "linear-gradient(135deg,#D6B76D,#f0d090)",
-                  boxShadow: "0 0 16px rgba(214,183,109,0.55)",
+                  boxShadow: "0 0 16px rgba(214,183,109,0.65)",
                 }}
               />
             </div>
@@ -1715,23 +1733,23 @@ export default function App() {
         </W>
       </footer>
 
-      {/* ── IMPRESSUM — dunkel (bleibt dunkel) ───────────────────────────── */}
+      {/* ── IMPRESSUM — hell ─────────────────────────────────────────────── */}
       <section
         id="impressum"
-        style={{ padding: "80px 0", background: "#0d080d", borderTop: "1px solid rgba(223,167,198,0.07)" }}
+        style={{ padding: "80px 0", background: C.bg2, borderTop: "1px solid rgba(214,183,109,0.18)" }}
       >
         <div style={{ maxWidth: 860, margin: "0 auto", padding: "0 24px" }}>
-          <h2 className="pf" style={{ color: C.soft, fontSize: 28, marginBottom: 10 }}>
+          <h2 className="pf" style={{ color: C.text, fontSize: 28, marginBottom: 10 }}>
             Impressum
           </h2>
           <div
             className="dm"
             style={{
-              background: "rgba(223,167,198,0.07)",
-              border: "1px solid rgba(223,167,198,0.14)",
+              background: "rgba(255,255,255,0.7)",
+              border: "1px solid rgba(214,183,109,0.22)",
               borderRadius: 10,
               padding: "12px 16px",
-              color: "rgba(255,255,255,0.45)",
+              color: C.muted,
               fontSize: 12,
               lineHeight: 1.6,
               marginBottom: 32,
@@ -1750,39 +1768,48 @@ export default function App() {
             ["Berufsrecht", "Gewerbeordnung 1994 (GewO) – www.ris.bka.gv.at"],
             ["Gewerbe", "Kosmetikgewerbe / Nagelstudio / Beauty-Dienstleistungen"],
           ].map(([k, v]) => (
-            <div key={k} className="dv-lrow">
-              <span className="dm" style={{ color: "rgba(255,255,255,0.35)", fontSize: 13, minWidth: 200 }}>
+            <div
+              key={k}
+              style={{
+                display: "flex",
+                flexWrap: "wrap",
+                gap: 14,
+                padding: "10px 0",
+                borderBottom: "1px solid rgba(42,37,40,0.07)",
+              }}
+            >
+              <span className="dm" style={{ color: C.muted, fontSize: 13, minWidth: 200 }}>
                 {k}
               </span>
-              <span className="dm" style={{ color: "rgba(255,255,255,0.75)", fontSize: 13 }}>
+              <span className="dm" style={{ color: C.text, fontSize: 13 }}>
                 {v}
               </span>
             </div>
           ))}
-          <p className="dm" style={{ color: "rgba(255,255,255,0.35)", fontSize: 13, lineHeight: 1.8, marginTop: 28 }}>
+          <p className="dm" style={{ color: C.muted, fontSize: 13, lineHeight: 1.8, marginTop: 28 }}>
             Trotz sorgfältiger Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt
             verlinkter Seiten sind ausschließlich deren Betreiber verantwortlich.
           </p>
         </div>
       </section>
 
-      {/* ── DATENSCHUTZ — dunkel (bleibt dunkel) ─────────────────────────── */}
+      {/* ── DATENSCHUTZ — hell ───────────────────────────────────────────── */}
       <section
         id="datenschutz"
-        style={{ padding: "80px 0 120px", background: "#0a060a", borderTop: "1px solid rgba(223,167,198,0.05)" }}
+        style={{ padding: "80px 0 120px", background: C.bg1, borderTop: "1px solid rgba(214,183,109,0.14)" }}
       >
         <div style={{ maxWidth: 860, margin: "0 auto", padding: "0 24px" }}>
-          <h2 className="pf" style={{ color: C.soft, fontSize: 28, marginBottom: 10 }}>
+          <h2 className="pf" style={{ color: C.text, fontSize: 28, marginBottom: 10 }}>
             Datenschutzerklärung
           </h2>
           <div
             className="dm"
             style={{
-              background: "rgba(223,167,198,0.07)",
-              border: "1px solid rgba(223,167,198,0.14)",
+              background: "rgba(255,255,255,0.7)",
+              border: "1px solid rgba(214,183,109,0.22)",
               borderRadius: 10,
               padding: "12px 16px",
-              color: "rgba(255,255,255,0.45)",
+              color: C.muted,
               fontSize: 12,
               lineHeight: 1.6,
               marginBottom: 36,
@@ -1819,10 +1846,10 @@ export default function App() {
             },
           ].map((s) => (
             <div key={s.t} style={{ marginBottom: 28 }}>
-              <h3 className="pf" style={{ color: "rgba(243,198,220,0.7)", fontSize: 16, marginBottom: 10 }}>
+              <h3 className="pf" style={{ color: C.pink, fontSize: 16, marginBottom: 10 }}>
                 {s.t}
               </h3>
-              <p className="dm" style={{ color: "rgba(255,255,255,0.38)", fontSize: 13, lineHeight: 1.88 }}>
+              <p className="dm" style={{ color: C.muted, fontSize: 13, lineHeight: 1.88 }}>
                 {s.c}
               </p>
             </div>
