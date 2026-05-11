@@ -942,7 +942,11 @@ export default function App() {
                 className="lux-card"
                 style={{ padding: "28px 26px", borderRadius: 22, background: C.white }}
               >
-                <div style={{ fontSize: 34, marginBottom: 14 }}>{s.icon}</div>
+              {s.img ? (
+  <img src={s.img} alt={s.title} style={{ width: "100%", height: 160, objectFit: "cover", borderRadius: 14, marginBottom: 14 }} />
+) : (
+  <div style={{ fontSize: 34, marginBottom: 14 }}>{s.icon}</div>
+)}
                 <h3 className="pf" style={{ color: C.text, fontSize: 19, marginBottom: 10 }}>
                   {s.title}
                 </h3>
