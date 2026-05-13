@@ -1900,6 +1900,41 @@ export default function App() {
           ))}
         </div>
       </section>
+
+      {/* ── Sticky WhatsApp CTA — nur mobil ─────────────────────────────── */}
+      <a
+        href={WA_URL}
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Termin via WhatsApp anfragen"
+        className="dv-sticky-wa"
+        style={{
+          position: "fixed",
+          bottom: 16,
+          left: "50%",
+          transform: "translateX(-50%)",
+          zIndex: 60,
+          display: "none",
+          alignItems: "center",
+          gap: 8,
+          padding: "11px 20px",
+          borderRadius: 999,
+          background: "rgba(42,37,40,0.92)",
+          color: "#fff",
+          textDecoration: "none",
+          fontSize: 13,
+          fontFamily: "'DM Sans', sans-serif",
+          fontWeight: 500,
+          letterSpacing: 0.2,
+          backdropFilter: "blur(10px)",
+          WebkitBackdropFilter: "blur(10px)",
+          border: "1px solid rgba(214,183,109,0.45)",
+          boxShadow: "0 6px 24px rgba(0,0,0,0.18)",
+        }}
+      >
+        <span style={{ color: C.gold }}>✦</span>
+        <span>Termin anfragen</span>
+      </a>
     </div>
   );
 }
