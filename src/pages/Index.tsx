@@ -419,6 +419,8 @@ body { overflow-x: hidden; background: #FFF7F2; }
 .dv-footer-g  { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 60px; margin-bottom: 56px; }
 .dv-rev-g     { display: grid; grid-template-columns: 5fr 7fr; gap: 24px; }
 .dv-reg-rev   { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.dv-svc-g     { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+@media (max-width: 768px) { .dv-svc-g { grid-template-columns: 1fr 1fr !important; gap: 14px !important; } }
 
 @media (max-width: 900px) {
   .dv-rev-g   { grid-template-columns: 1fr; }
