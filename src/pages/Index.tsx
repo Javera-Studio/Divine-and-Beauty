@@ -791,13 +791,15 @@ export default function App() {
                 Frauen, die das Beste verdienen.
               </p>
               <div style={{ display: "flex", flexWrap: "wrap", gap: 14, marginBottom: 38 }}>
-                <button
+                <a
+                  href={WA_URL}
+                  target="_blank"
+                  rel="noreferrer"
                   className="btn-pk"
-                  style={{ padding: "14px 32px", borderRadius: 999, fontSize: 15, fontWeight: 500 }}
-                  onClick={() => go("kontakt")}
+                  style={{ padding: "14px 32px", borderRadius: 999, fontSize: 15, fontWeight: 500, textDecoration: "none", display: "inline-flex", alignItems: "center" }}
                 >
                   <span style={{ color: C.gold, marginRight: 6 }}>✦</span> Termin anfragen
-                </button>
+                </a>
                 <button
                   className="btn-ol-light"
                   style={{ padding: "14px 28px", borderRadius: 999, fontSize: 15 }}
