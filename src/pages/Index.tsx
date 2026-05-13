@@ -1192,6 +1192,11 @@ export default function App() {
             ))}
           </div>
         </W>
+        <div style={{ marginTop: 48, display: "flex", justifyContent: "center", padding: "0 24px" }}>
+          <a href={WA_URL} target="_blank" rel="noreferrer" className="btn-pk" style={{ padding: "13px 30px", borderRadius: 999, fontSize: 14, fontWeight: 500, textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 8 }}>
+            <span style={{ color: C.gold }}>✦</span> Termin anfragen via WhatsApp
+          </a>
+        </div>
       </section>
 
       {/* ── ABLAUF — Ivory Rosé ───────────────────────────────────────────── */}
