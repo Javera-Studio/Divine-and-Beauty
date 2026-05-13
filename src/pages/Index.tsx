@@ -1129,13 +1129,15 @@ export default function App() {
                 Wir arbeiten mit Sorgfalt, Präzision und echter Begeisterung für das Handwerk – damit du dich rundum
                 schön und verwöhnt fühlst.
               </p>
-              <button
+              <a
+                href={WA_URL}
+                target="_blank"
+                rel="noreferrer"
                 className="btn-pk"
-                style={{ padding: "14px 30px", borderRadius: 999, fontSize: 15, fontWeight: 500 }}
-                onClick={() => go("kontakt")}
+                style={{ padding: "14px 30px", borderRadius: 999, fontSize: 15, fontWeight: 500, textDecoration: "none", display: "inline-flex", alignItems: "center" }}
               >
                 Termin vereinbaren →
-              </button>
+              </a>
             </div>
           </div>
         </W>
