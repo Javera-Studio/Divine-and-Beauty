@@ -609,13 +609,15 @@ export default function App() {
             ))}
           </div>
           <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-            <button
+            <a
+              href={WA_URL}
+              target="_blank"
+              rel="noreferrer"
               className="btn-pk dv-nc"
-              style={{ padding: "10px 22px", borderRadius: 999, fontSize: 13, fontWeight: 500 }}
-              onClick={() => go("kontakt")}
+              style={{ padding: "10px 22px", borderRadius: 999, fontSize: 13, fontWeight: 500, textDecoration: "none", display: "inline-flex", alignItems: "center" }}
             >
               <span style={{ color: C.gold, marginRight: 6 }}>✦</span> Termin anfragen
-            </button>
+            </a>
             <button
               className="dv-nb"
               style={{
