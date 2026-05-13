@@ -434,6 +434,7 @@ body { overflow-x: hidden; background: #FFF7F2; }
   .dv-nd { display: none !important; }
   .dv-nc { display: none !important; }
   .dv-nb { display: flex !important; }
+  .dv-sticky-wa { display: inline-flex !important; }
 }
 @media (min-width: 769px) {
   .dv-nd { display: flex !important; }
