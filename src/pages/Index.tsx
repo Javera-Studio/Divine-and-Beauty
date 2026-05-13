@@ -420,7 +420,7 @@ body { overflow-x: hidden; background: #FFF7F2; }
 .dv-rev-g     { display: grid; grid-template-columns: 5fr 7fr; gap: 24px; }
 .dv-reg-rev   { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .dv-svc-g     { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
-@media (max-width: 768px) { .dv-svc-g { grid-template-columns: 1fr 1fr !important; gap: 14px !important; } }
+@media (max-width: 768px) { .dv-svc-g { grid-template-columns: 1fr !important; gap: 20px !important; max-width: 360px; margin: 0 auto; text-align: center; } .dv-svc-g .lux-card { text-align: center; } }
 
 @media (max-width: 900px) {
   .dv-rev-g   { grid-template-columns: 1fr; }
