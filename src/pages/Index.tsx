@@ -19,6 +19,8 @@ const STUDIO = {
   },
 };
 
+const WA_URL = "https://wa.me/4367636333721?text=" + encodeURIComponent("Hallo Divine Beauty & Nails Studio, ich möchte gerne einen Termin anfragen.");
+
 const SERVICES = [
   {
     icon: "💅",
@@ -432,6 +434,7 @@ body { overflow-x: hidden; background: #FFF7F2; }
   .dv-nd { display: none !important; }
   .dv-nc { display: none !important; }
   .dv-nb { display: flex !important; }
+  .dv-sticky-wa { display: inline-flex !important; }
 }
 @media (min-width: 769px) {
   .dv-nd { display: flex !important; }
@@ -607,13 +610,15 @@ export default function App() {
             ))}
           </div>
           <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-            <button
+            <a
+              href={WA_URL}
+              target="_blank"
+              rel="noreferrer"
               className="btn-pk dv-nc"
-              style={{ padding: "10px 22px", borderRadius: 999, fontSize: 13, fontWeight: 500 }}
-              onClick={() => go("kontakt")}
+              style={{ padding: "10px 22px", borderRadius: 999, fontSize: 13, fontWeight: 500, textDecoration: "none", display: "inline-flex", alignItems: "center" }}
             >
               <span style={{ color: C.gold, marginRight: 6 }}>✦</span> Termin anfragen
-            </button>
+            </a>
             <button
               className="dv-nb"
               style={{
@@ -662,13 +667,15 @@ export default function App() {
                 {n}
               </button>
             ))}
-            <button
+            <a
+              href={WA_URL}
+              target="_blank"
+              rel="noreferrer"
               className="btn-pk dm"
-              style={{ width: "100%", padding: 14, borderRadius: 12, marginTop: 20, fontSize: 15 }}
-              onClick={() => go("kontakt")}
+              style={{ width: "100%", padding: 14, borderRadius: 12, marginTop: 20, fontSize: 15, textDecoration: "none", display: "inline-flex", alignItems: "center", justifyContent: "center" }}
             >
               <span style={{ color: C.gold, marginRight: 6 }}>✦</span> Termin anfragen
-            </button>
+            </a>
           </div>
         )}
       </nav>
@@ -785,13 +792,15 @@ export default function App() {
                 Frauen, die das Beste verdienen.
               </p>
               <div style={{ display: "flex", flexWrap: "wrap", gap: 14, marginBottom: 38 }}>
-                <button
+                <a
+                  href={WA_URL}
+                  target="_blank"
+                  rel="noreferrer"
                   className="btn-pk"
-                  style={{ padding: "14px 32px", borderRadius: 999, fontSize: 15, fontWeight: 500 }}
-                  onClick={() => go("kontakt")}
+                  style={{ padding: "14px 32px", borderRadius: 999, fontSize: 15, fontWeight: 500, textDecoration: "none", display: "inline-flex", alignItems: "center" }}
                 >
                   <span style={{ color: C.gold, marginRight: 6 }}>✦</span> Termin anfragen
-                </button>
+                </a>
                 <button
                   className="btn-ol-light"
                   style={{ padding: "14px 28px", borderRadius: 999, fontSize: 15 }}
@@ -963,6 +972,11 @@ export default function App() {
             ))}
           </div>
         </W>
+        <div style={{ marginTop: 48, display: "flex", justifyContent: "center", padding: "0 24px" }}>
+          <a href={WA_URL} target="_blank" rel="noreferrer" className="btn-pk" style={{ padding: "13px 30px", borderRadius: 999, fontSize: 14, fontWeight: 500, textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 8 }}>
+            <span style={{ color: C.gold }}>✦</span> Termin anfragen via WhatsApp
+          </a>
+        </div>
       </section>
 
       {/* ── GALERIE — hell, Ivory ─────────────────────────────────────────── */}
@@ -1022,6 +1036,11 @@ export default function App() {
               </div>
             ))}
           </div>
+        </div>
+        <div style={{ marginTop: 48, display: "flex", justifyContent: "center", padding: "0 24px" }}>
+          <a href={WA_URL} target="_blank" rel="noreferrer" className="btn-pk" style={{ padding: "13px 30px", borderRadius: 999, fontSize: 14, fontWeight: 500, textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 8 }}>
+            <span style={{ color: C.gold }}>✦</span> Termin anfragen via WhatsApp
+          </a>
         </div>
       </section>
 
@@ -1121,16 +1140,23 @@ export default function App() {
                 Wir arbeiten mit Sorgfalt, Präzision und echter Begeisterung für das Handwerk – damit du dich rundum
                 schön und verwöhnt fühlst.
               </p>
-              <button
+              <a
+                href={WA_URL}
+                target="_blank"
+                rel="noreferrer"
                 className="btn-pk"
-                style={{ padding: "14px 30px", borderRadius: 999, fontSize: 15, fontWeight: 500 }}
-                onClick={() => go("kontakt")}
+                style={{ padding: "14px 30px", borderRadius: 999, fontSize: 15, fontWeight: 500, textDecoration: "none", display: "inline-flex", alignItems: "center" }}
               >
                 Termin vereinbaren →
-              </button>
+              </a>
             </div>
           </div>
         </W>
+        <div style={{ marginTop: 48, display: "flex", justifyContent: "center", padding: "0 24px" }}>
+          <a href={WA_URL} target="_blank" rel="noreferrer" className="btn-pk" style={{ padding: "13px 30px", borderRadius: 999, fontSize: 14, fontWeight: 500, textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 8 }}>
+            <span style={{ color: C.gold }}>✦</span> Termin anfragen via WhatsApp
+          </a>
+        </div>
       </section>
 
       {/* ── WARUM DIVINE — hell, weiß ─────────────────────────────────────── */}
@@ -1182,6 +1208,11 @@ export default function App() {
             ))}
           </div>
         </W>
+        <div style={{ marginTop: 48, display: "flex", justifyContent: "center", padding: "0 24px" }}>
+          <a href={WA_URL} target="_blank" rel="noreferrer" className="btn-pk" style={{ padding: "13px 30px", borderRadius: 999, fontSize: 14, fontWeight: 500, textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 8 }}>
+            <span style={{ color: C.gold }}>✦</span> Termin anfragen via WhatsApp
+          </a>
+        </div>
       </section>
 
       {/* ── ABLAUF — Ivory Rosé ───────────────────────────────────────────── */}
@@ -1240,6 +1271,11 @@ export default function App() {
             ))}
           </div>
         </W>
+        <div style={{ marginTop: 48, display: "flex", justifyContent: "center", padding: "0 24px" }}>
+          <a href={WA_URL} target="_blank" rel="noreferrer" className="btn-pk" style={{ padding: "13px 30px", borderRadius: 999, fontSize: 14, fontWeight: 500, textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 8 }}>
+            <span style={{ color: C.gold }}>✦</span> Termin anfragen via WhatsApp
+          </a>
+        </div>
       </section>
 
       {/* ── PREISE — hell, weiße Cards, goldene Details ───────────────────── */}
@@ -1283,6 +1319,11 @@ export default function App() {
             ))}
           </div>
         </W>
+        <div style={{ marginTop: 48, display: "flex", justifyContent: "center", padding: "0 24px" }}>
+          <a href={WA_URL} target="_blank" rel="noreferrer" className="btn-pk" style={{ padding: "13px 30px", borderRadius: 999, fontSize: 14, fontWeight: 500, textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 8 }}>
+            <span style={{ color: C.gold }}>✦</span> Termin anfragen via WhatsApp
+          </a>
+        </div>
       </section>
 
       {/* ── BEWERTUNGEN — hell, weiß ──────────────────────────────────────── */}
@@ -1473,6 +1514,11 @@ export default function App() {
             </div>
           </div>
         </W>
+        <div style={{ marginTop: 48, display: "flex", justifyContent: "center", padding: "0 24px" }}>
+          <a href={WA_URL} target="_blank" rel="noreferrer" className="btn-pk" style={{ padding: "13px 30px", borderRadius: 999, fontSize: 14, fontWeight: 500, textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 8 }}>
+            <span style={{ color: C.gold }}>✦</span> Termin anfragen via WhatsApp
+          </a>
+        </div>
       </section>
 
       {/* ── KONTAKT — Ivory Rosé ──────────────────────────────────────────── */}
@@ -1855,6 +1901,41 @@ export default function App() {
           ))}
         </div>
       </section>
+
+      {/* ── Sticky WhatsApp CTA — nur mobil ─────────────────────────────── */}
+      <a
+        href={WA_URL}
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Termin via WhatsApp anfragen"
+        className="dv-sticky-wa"
+        style={{
+          position: "fixed",
+          bottom: 16,
+          left: "50%",
+          transform: "translateX(-50%)",
+          zIndex: 60,
+          display: "none",
+          alignItems: "center",
+          gap: 8,
+          padding: "11px 20px",
+          borderRadius: 999,
+          background: "rgba(42,37,40,0.92)",
+          color: "#fff",
+          textDecoration: "none",
+          fontSize: 13,
+          fontFamily: "'DM Sans', sans-serif",
+          fontWeight: 500,
+          letterSpacing: 0.2,
+          backdropFilter: "blur(10px)",
+          WebkitBackdropFilter: "blur(10px)",
+          border: "1px solid rgba(214,183,109,0.45)",
+          boxShadow: "0 6px 24px rgba(0,0,0,0.18)",
+        }}
+      >
+        <span style={{ color: C.gold }}>✦</span>
+        <span>Termin anfragen</span>
+      </a>
     </div>
   );
 }
