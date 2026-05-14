@@ -772,12 +772,28 @@ export default function App() {
               </div>
               <h1
                 className="pf"
-                style={{ fontSize: "clamp(2.6rem,5vw,4rem)", lineHeight: 1.15, color: C.dark1, margin: "0 0 22px" }}
+                style={{ fontSize: "clamp(2.6rem,5vw,4rem)", lineHeight: 1.15, color: C.dark1, margin: "0 0 18px" }}
               >
                 Die Kunst der <em style={{ color: C.pink, fontWeight: 400 }}>Schönheit</em>
                 <br />
                 in deinen <span className="dv-gold">Händen.</span>
               </h1>
+              <p
+                className="pf"
+                style={{
+                  fontStyle: "italic",
+                  color: C.pink,
+                  fontSize: "clamp(1.05rem,1.6vw,1.4rem)",
+                  margin: "0 0 22px",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 12,
+                }}
+              >
+                <span style={{ flex: "0 0 28px", height: 1, background: "linear-gradient(90deg,transparent,#D6B76D)" }} />
+                Schöne Nägel sind kein Zufall.
+                <span style={{ color: C.gold, fontSize: 12 }}>✦</span>
+              </p>
               <p
                 className="dm"
                 style={{
@@ -934,6 +950,70 @@ export default function App() {
             </div>
           </div>
         </W>
+      </section>
+
+      {/* ── ZITAT-BAND — Deine Auszeit ──────────────────────────────────── */}
+      <section
+        style={{
+          position: "relative",
+          padding: "80px 24px",
+          background: "linear-gradient(135deg,#2A2528 0%,#3a3033 100%)",
+          overflow: "hidden",
+        }}
+      >
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            background:
+              "radial-gradient(ellipse at 20% 50%,rgba(214,183,109,0.12) 0%,transparent 55%),radial-gradient(ellipse at 80% 50%,rgba(217,143,168,0.14) 0%,transparent 55%)",
+            pointerEvents: "none",
+          }}
+        />
+        <div style={{ position: "relative", maxWidth: 900, margin: "0 auto", textAlign: "center" }}>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: 14,
+              marginBottom: 22,
+              color: C.gold,
+              opacity: 0.85,
+            }}
+          >
+            <span style={{ width: 40, height: 1, background: "linear-gradient(90deg,transparent,#D6B76D)" }} />
+            <span style={{ fontSize: 12, letterSpacing: "3px" }}>✦ ✦ ✦</span>
+            <span style={{ width: 40, height: 1, background: "linear-gradient(90deg,#D6B76D,transparent)" }} />
+          </div>
+          <p
+            className="pf"
+            style={{
+              fontStyle: "italic",
+              fontSize: "clamp(1.6rem,3.6vw,2.8rem)",
+              lineHeight: 1.4,
+              color: "#FFF7F2",
+              margin: 0,
+              fontWeight: 300,
+            }}
+          >
+            Deine <span style={{ color: "#E9B8C8" }}>Auszeit</span>.
+            Deine <span className="dv-gold">Schönheit</span>.
+            Dein <span style={{ color: "#E9B8C8" }}>Moment</span>.
+          </p>
+          <p
+            className="dm"
+            style={{
+              marginTop: 18,
+              color: "rgba(255,247,242,0.55)",
+              fontSize: 12,
+              letterSpacing: "3px",
+              textTransform: "uppercase",
+            }}
+          >
+            Divine Beauty &amp; Nails Studio
+          </p>
+        </div>
       </section>
 
       {/* ── LEISTUNGEN — hell ─────────────────────────────────────────────── */}
