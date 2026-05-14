@@ -772,12 +772,28 @@ export default function App() {
               </div>
               <h1
                 className="pf"
-                style={{ fontSize: "clamp(2.6rem,5vw,4rem)", lineHeight: 1.15, color: C.dark1, margin: "0 0 22px" }}
+                style={{ fontSize: "clamp(2.6rem,5vw,4rem)", lineHeight: 1.15, color: C.dark1, margin: "0 0 18px" }}
               >
                 Die Kunst der <em style={{ color: C.pink, fontWeight: 400 }}>Schönheit</em>
                 <br />
                 in deinen <span className="dv-gold">Händen.</span>
               </h1>
+              <p
+                className="pf"
+                style={{
+                  fontStyle: "italic",
+                  color: C.pink,
+                  fontSize: "clamp(1.05rem,1.6vw,1.4rem)",
+                  margin: "0 0 22px",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 12,
+                }}
+              >
+                <span style={{ flex: "0 0 28px", height: 1, background: "linear-gradient(90deg,transparent,#D6B76D)" }} />
+                Schöne Nägel sind kein Zufall.
+                <span style={{ color: C.gold, fontSize: 12 }}>✦</span>
+              </p>
               <p
                 className="dm"
                 style={{
