@@ -1735,6 +1735,7 @@ export default function App() {
             </div>
             {/* Map Placeholder */}
             <div
+              className="dv-map"
               style={{
                 height: "100%",
                 minHeight: 420,
