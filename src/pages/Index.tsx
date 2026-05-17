@@ -435,6 +435,22 @@ body { overflow-x: hidden; background: #FFF7F2; }
   .dv-nc { display: none !important; }
   .dv-nb { display: flex !important; }
   .dv-sticky-wa { display: inline-flex !important; }
+
+  /* Kontakt-Section mobil edler */
+  #kontakt { padding: 64px 0 120px !important; }
+  #kontakt .btn-pk, #kontakt .btn-ol-light {
+    width: 100% !important;
+    justify-content: center !important;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 14px 18px !important;
+  }
+  #kontakt .btn-pk > span:last-child { width: 100%; opacity: 0.7 !important; font-size: 12px; margin-top: 2px; }
+  #kontakt .dv-kcards { grid-template-columns: 1fr !important; gap: 14px !important; }
+  #kontakt .dv-kcards .dm { font-size: 14px !important; }
+  #kontakt .dv-kcards .dv-hours-row { display: grid !important; grid-template-columns: 90px 1fr !important; gap: 8px; font-size: 13px !important; }
+  #kontakt .dv-map { min-height: 240px !important; }
+  body { padding-bottom: 80px; }
 }
 @media (min-width: 769px) {
   .dv-nd { display: flex !important; }
@@ -1671,7 +1687,7 @@ export default function App() {
                   <span>{STUDIO.email}</span>
                 </a>
               </div>
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
+              <div className="dv-kcards" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
                 {/* Adresse */}
                 <div
                   style={{
@@ -1701,7 +1717,7 @@ export default function App() {
                   {Object.entries(STUDIO.hours).map(([d, t]) => (
                     <div
                       key={d}
-                      className="dm"
+                      className="dm dv-hours-row"
                       style={{
                         display: "flex",
                         justifyContent: "space-between",
@@ -1719,6 +1735,7 @@ export default function App() {
             </div>
             {/* Map Placeholder */}
             <div
+              className="dv-map"
               style={{
                 height: "100%",
                 minHeight: 420,
