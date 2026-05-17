@@ -1687,7 +1687,7 @@ export default function App() {
                   <span>{STUDIO.email}</span>
                 </a>
               </div>
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
+              <div className="dv-kcards" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
                 {/* Adresse */}
                 <div
                   style={{
