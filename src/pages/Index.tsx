@@ -1717,7 +1717,7 @@ export default function App() {
                   {Object.entries(STUDIO.hours).map(([d, t]) => (
                     <div
                       key={d}
-                      className="dm"
+                      className="dm dv-hours-row"
                       style={{
                         display: "flex",
                         justifyContent: "space-between",
