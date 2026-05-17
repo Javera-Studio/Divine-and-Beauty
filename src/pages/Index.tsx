@@ -1715,7 +1715,8 @@ export default function App() {
                 >
                   <div style={{ color: C.gold, fontSize: 20, marginBottom: 10 }}>🕐</div>
                   {Object.entries(STUDIO.hours).map(([d, t]) => (
-                    <div
+            <div
+              className="dv-map"
                       key={d}
                       className="dm dv-hours-row"
                       style={{
