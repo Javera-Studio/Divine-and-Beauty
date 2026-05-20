@@ -2052,10 +2052,13 @@ export default function App() {
               >
                 Rechtliches
               </div>
-              {["Impressum", "Datenschutz"].map((n) => (
-                <button key={n} className="dv-flink" onClick={() => go(n.toLowerCase())}>
+              {[
+                { n: "Impressum", to: "/impressum" },
+                { n: "Datenschutz", to: "/datenschutz" },
+              ].map(({ n, to }) => (
+                <Link key={n} to={to} className="dv-flink">
                   {n}
-                </button>
+                </Link>
               ))}
             </div>
           </div>
