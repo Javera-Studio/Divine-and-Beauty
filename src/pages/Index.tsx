@@ -642,7 +642,13 @@ export default function App() {
     </h3>
   );
 
-  const NAV = ["Leistungen", "Galerie", "Preise", "Bewertungen", "Kontakt"];
+  const NAV: { l: string; id: string }[] = [
+    { l: "Home", id: "home" },
+    { l: "Über uns", id: "ueber" },
+    { l: "Leistungen", id: "leistungen" },
+    { l: "Galerie", id: "galerie" },
+    { l: "Kontakt", id: "kontakt" },
+  ];
 
   return (
     <div className="dm" style={{ background: C.bg1, color: C.text, minHeight: "100vh", overflowX: "hidden" }}>
