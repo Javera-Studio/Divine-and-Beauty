@@ -457,6 +457,77 @@ body { overflow-x: hidden; background: #FFF7F2; }
   .dv-nc { display: block !important; }
   .dv-nb { display: none !important; }
 }
+
+/* ===== Luxury floating service tags ===== */
+.lux-tags {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 6px 0;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%);
+          mask-image: linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%);
+}
+.lux-tags-track {
+  display: flex;
+  gap: 14px;
+  width: max-content;
+  will-change: transform;
+  animation: luxScroll linear infinite;
+}
+.lux-tags-row-a .lux-tags-track { animation-duration: 52s; animation-direction: normal; }
+.lux-tags-row-b .lux-tags-track { animation-duration: 68s; animation-direction: reverse; }
+.lux-tags-row-c .lux-tags-track { animation-duration: 58s; animation-direction: normal; }
+
+@keyframes luxScroll {
+  from { transform: translate3d(0,0,0); }
+  to   { transform: translate3d(-50%,0,0); }
+}
+
+.lux-tag {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 10px 22px;
+  border-radius: 999px;
+  font-family: 'Inter', 'Helvetica Neue', sans-serif;
+  font-weight: 300;
+  font-size: 13.5px;
+  letter-spacing: 0.07em;
+  color: #4a3f44;
+  background: rgba(255, 248, 242, 0.55);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  border: 1px solid rgba(214, 183, 109, 0.18);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.6) inset, 0 6px 22px -14px rgba(58,48,52,0.18);
+  transition: transform .5s cubic-bezier(.2,.7,.2,1), background .4s ease, box-shadow .4s ease;
+  white-space: nowrap;
+}
+.lux-tag .lux-dot {
+  width: 4px; height: 4px; border-radius: 999px;
+  background: #D6B76D;
+  box-shadow: 0 0 8px rgba(214,183,109,0.55);
+}
+.lux-tag.is-lg { font-size: 15px; padding: 12px 26px; letter-spacing: 0.09em; }
+.lux-tag.is-sm { font-size: 12px; padding: 8px 18px; opacity: 0.88; }
+.lux-tag.is-nude  { background: rgba(247, 237, 231, 0.55); }
+.lux-tag.is-cham  { background: rgba(243, 230, 210, 0.5); }
+.lux-tag.is-blush { background: rgba(243, 198, 220, 0.32); }
+.lux-tag.is-ivory { background: rgba(255, 255, 255, 0.45); }
+
+.lux-tag:hover {
+  transform: translateY(-1px) scale(1.04);
+  background: rgba(255, 251, 246, 0.85);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.7) inset,
+              0 10px 30px -10px rgba(214,183,109,0.35),
+              0 0 0 1px rgba(214,183,109,0.28);
+}
+
+.lux-tags:hover .lux-tags-track { animation-play-state: paused; }
+
+@media (prefers-reduced-motion: reduce) {
+  .lux-tags-track { animation: none; }
+}
 `;
 
 export default function App() {
@@ -841,23 +912,45 @@ export default function App() {
                   Leistungen ansehen →
                 </button>
               </div>
-              <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
-                {["💅 Nageldesign", "🌿 Waxing", "🦶 Pediküre", "💄 Make-up", "👁️ Wimpernlifting"].map((b) => (
-                  <span
-                    key={b}
-                    className="dm"
-                    style={{
-                      background: "rgba(255,255,255,0.75)",
-                      border: "1px solid rgba(214,183,109,0.22)",
-                      borderRadius: 999,
-                      padding: "6px 14px",
-                      fontSize: 12,
-                      color: C.text,
-                    }}
-                  >
-                    {b}
-                  </span>
-                ))}
+              <div style={{ marginLeft: -8, marginRight: -8 }}>
+                {(() => {
+                  const SVC = [
+                    { l: "Nageldesign", s: "lg" },
+                    { l: "Waxing" },
+                    { l: "Pediküre", s: "sm", v: "nude" },
+                    { l: "Make-up", v: "cham" },
+                    { l: "Wimpernlifting", s: "lg", v: "ivory" },
+                    { l: "PMU", s: "sm" },
+                    { l: "Laser", v: "blush" },
+                    { l: "Facials", v: "nude" },
+                    { l: "Brows", s: "sm" },
+                    { l: "Lashes", v: "cham" },
+                    { l: "Skin Treatments", s: "lg", v: "ivory" },
+                    { l: "Academy", v: "blush" },
+                  ];
+                  const rows = [
+                    { cls: "lux-tags-row-a", items: [0, 3, 6, 9, 1, 4, 7, 10] },
+                    { cls: "lux-tags-row-b", items: [2, 5, 8, 11, 0, 4, 9, 6] },
+                  ];
+                  return rows.map((row, ri) => (
+                    <div key={ri} className={`lux-tags ${row.cls}`} style={{ marginTop: ri === 0 ? 0 : 10 }}>
+                      <div className="lux-tags-track">
+                        {[0, 1].map((dup) =>
+                          row.items.map((i, idx) => {
+                            const t = SVC[i];
+                            const cls = ["lux-tag", t.s ? `is-${t.s}` : "", t.v ? `is-${t.v}` : ""].join(" ");
+                            return (
+                              <span key={`${dup}-${idx}`} className={cls} aria-hidden={dup === 1 ? true : undefined}>
+                                <span className="lux-dot" />
+                                {t.l}
+                              </span>
+                            );
+                          })
+                        )}
+                      </div>
+                    </div>
+                  ));
+                })()}
               </div>
             </div>
             <div className="dv-hero-img" style={{ position: "relative" }}>
