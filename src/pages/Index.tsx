@@ -1,5 +1,5 @@
 import logo from "@/assets/logo.png";
-import studioHero from "@/assets/studio-hero.jpg";
+import studioHero from "@/assets/divinesalon.png";
 import { useState, useEffect } from "react";
 
 // ══════════════════════════════════════════════════════════════════════════════
