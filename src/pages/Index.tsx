@@ -1004,27 +1004,32 @@ export default function App() {
                 })()}
               </div>
             </div>
-            <div className="dv-hero-img" style={{ position: "relative" }}>
+            <div className="dv-hero-img" style={{ position: "relative", marginTop: -80, marginBottom: -80, minWidth: 0 }}>
               <div
                 style={{
-                  height: 580,
+                  height: 820,
                   position: "relative",
                   overflow: "visible",
+                  width: "100%",
                 }}
               >
                 <img
                   src={studioHero}
                   alt="Divine Beauty & Nails Studio Interieur"
                   style={{
-                    width: "100%",
+                    position: "absolute",
+                    top: 0,
+                    right: 0,
+                    bottom: 0,
                     height: "100%",
-                    objectFit: "contain",
-                    objectPosition: "right center",
+                    width: "auto",
+                    maxWidth: "none",
                     display: "block",
+                    pointerEvents: "none",
                     WebkitMaskImage:
-                      "linear-gradient(to right, transparent 0%, rgba(0,0,0,0.15) 12%, #000 35%)",
+                      "linear-gradient(to right, transparent 0%, transparent 40%, rgba(0,0,0,0.35) 58%, #000 78%)",
                     maskImage:
-                      "linear-gradient(to right, transparent 0%, rgba(0,0,0,0.15) 12%, #000 35%)",
+                      "linear-gradient(to right, transparent 0%, transparent 40%, rgba(0,0,0,0.35) 58%, #000 78%)",
                   }}
                 />
               </div>
