@@ -1,4 +1,5 @@
 import logo from "@/assets/logo.png";
+import studioHero from "@/assets/studio-hero.jpg";
 import { useState, useEffect } from "react";
 
 // ══════════════════════════════════════════════════════════════════════════════
