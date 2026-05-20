@@ -1,5 +1,5 @@
 import logo from "@/assets/logo.png";
-const studioHero = "/divinesalon.png";
+import studioHero from "@/assets/divinesalon.png";
 import { useState, useEffect } from "react";
 
 // ══════════════════════════════════════════════════════════════════════════════
@@ -434,7 +434,7 @@ body { overflow-x: hidden; background: #FFF7F2; }
 @media (max-width: 768px) {
   .dv-hero-g, .dv-about-g, .dv-contact-g, .dv-footer-g { grid-template-columns: 1fr !important; gap: 40px !important; }
   .dv-reg-rev { grid-template-columns: 1fr; }
-  .dv-hero-img { display: none !important; }
+  .dv-hero-img { display: block !important; }
   .dv-nd { display: none !important; }
   .dv-nc { display: none !important; }
   .dv-nb { display: flex !important; }
