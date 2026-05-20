@@ -912,23 +912,45 @@ export default function App() {
                   Leistungen ansehen →
                 </button>
               </div>
-              <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
-                {["💅 Nageldesign", "🌿 Waxing", "🦶 Pediküre", "💄 Make-up", "👁️ Wimpernlifting"].map((b) => (
-                  <span
-                    key={b}
-                    className="dm"
-                    style={{
-                      background: "rgba(255,255,255,0.75)",
-                      border: "1px solid rgba(214,183,109,0.22)",
-                      borderRadius: 999,
-                      padding: "6px 14px",
-                      fontSize: 12,
-                      color: C.text,
-                    }}
-                  >
-                    {b}
-                  </span>
-                ))}
+              <div style={{ marginLeft: -8, marginRight: -8 }}>
+                {(() => {
+                  const SVC = [
+                    { l: "Nageldesign", s: "lg" },
+                    { l: "Waxing" },
+                    { l: "Pediküre", s: "sm", v: "nude" },
+                    { l: "Make-up", v: "cham" },
+                    { l: "Wimpernlifting", s: "lg", v: "ivory" },
+                    { l: "PMU", s: "sm" },
+                    { l: "Laser", v: "blush" },
+                    { l: "Facials", v: "nude" },
+                    { l: "Brows", s: "sm" },
+                    { l: "Lashes", v: "cham" },
+                    { l: "Skin Treatments", s: "lg", v: "ivory" },
+                    { l: "Academy", v: "blush" },
+                  ];
+                  const rows = [
+                    { cls: "lux-tags-row-a", items: [0, 3, 6, 9, 1, 4, 7, 10] },
+                    { cls: "lux-tags-row-b", items: [2, 5, 8, 11, 0, 4, 9, 6] },
+                  ];
+                  return rows.map((row, ri) => (
+                    <div key={ri} className={`lux-tags ${row.cls}`} style={{ marginTop: ri === 0 ? 0 : 10 }}>
+                      <div className="lux-tags-track">
+                        {[0, 1].map((dup) =>
+                          row.items.map((i, idx) => {
+                            const t = SVC[i];
+                            const cls = ["lux-tag", t.s ? `is-${t.s}` : "", t.v ? `is-${t.v}` : ""].join(" ");
+                            return (
+                              <span key={`${dup}-${idx}`} className={cls} aria-hidden={dup === 1 ? true : undefined}>
+                                <span className="lux-dot" />
+                                {t.l}
+                              </span>
+                            );
+                          })
+                        )}
+                      </div>
+                    </div>
+                  ));
+                })()}
               </div>
             </div>
             <div className="dv-hero-img" style={{ position: "relative" }}>
