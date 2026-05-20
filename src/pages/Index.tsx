@@ -957,59 +957,28 @@ export default function App() {
             <div className="dv-hero-img" style={{ position: "relative" }}>
               <div
                 style={{
-                  height: 560,
+                  height: 580,
                   borderRadius: 28,
-                  background: "linear-gradient(155deg,#FFF7F2 0%,#F7EDE7 35%,#F3C6DC 75%,#E9B8C8 100%)",
                   position: "relative",
                   overflow: "hidden",
                   border: "1px solid rgba(214,183,109,0.28)",
-                  boxShadow: "0 30px 70px rgba(185,130,165,0.18)",
+                  boxShadow: "0 30px 70px rgba(185,130,165,0.22)",
                 }}
               >
+                <img
+                  src={studioHero}
+                  alt="Divine Beauty & Nails Studio Interieur"
+                  style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                />
                 <div
                   style={{
                     position: "absolute",
                     inset: 0,
-                    background: "radial-gradient(ellipse at 68% 28%,rgba(255,255,255,0.65) 0%,transparent 58%)",
+                    background:
+                      "linear-gradient(180deg,rgba(255,247,242,0) 55%,rgba(255,247,242,0.25) 100%)",
+                    pointerEvents: "none",
                   }}
                 />
-                {/* Warme dekorative Akzente */}
-                <div
-                  style={{
-                    position: "absolute",
-                    top: "12%",
-                    left: "10%",
-                    color: C.gold,
-                    fontSize: 14,
-                    opacity: 0.5,
-                  }}
-                >
-                  ✦
-                </div>
-                <div
-                  style={{
-                    position: "absolute",
-                    inset: 0,
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    gap: 14,
-                  }}
-                >
-                  <span style={{ fontSize: 64 }}>💅</span>
-                  <span
-                    className="dm"
-                    style={{
-                      color: "rgba(58,48,52,0.5)",
-                      fontSize: 11,
-                      letterSpacing: "2.5px",
-                      textTransform: "uppercase",
-                    }}
-                  >
-                    Studiofoto hier einfügen
-                  </span>
-                </div>
               </div>
               {/* Floating Info-Card */}
               <div
@@ -1061,6 +1030,97 @@ export default function App() {
           </div>
         </W>
       </section>
+
+      {/* ── FEATURED SERVICE CARDS — direkt unter Hero (wie Referenz) ───── */}
+      <section style={{ background: C.bg1, padding: "72px 0 32px" }}>
+        <W>
+          <div
+            className="dv-feat-g"
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(4,1fr)",
+              gap: 22,
+            }}
+          >
+            {[
+              { title: "Pediküre", img: "/Pedikuere.jpg", desc: "Gepflegte Füße, glatte Haut und perfekte Nägel." },
+              { title: "Wimpernlifting", img: "/Wimpernlifting.jpg", desc: "Schöner Schwung, mehr Länge und ein wacher Blick." },
+              { title: "Waxing", img: "/Waxing.jpg", desc: "Sanfte Haarentfernung für seidig glatte Haut." },
+              { title: "Nägel", img: "/Gelmodellage.jpg", desc: "Maniküre, Gel-Nägel, Acrylnägel, Nail-Art & mehr." },
+            ].map((s) => (
+              <div
+                key={s.title}
+                className="lux-card"
+                style={{
+                  borderRadius: 22,
+                  overflow: "hidden",
+                  background: C.white,
+                  display: "flex",
+                  flexDirection: "column",
+                }}
+              >
+                <div style={{ position: "relative", height: 180, overflow: "hidden" }}>
+                  <img
+                    src={s.img}
+                    alt={s.title}
+                    loading="lazy"
+                    style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                  />
+                  <div
+                    style={{
+                      position: "absolute",
+                      inset: 0,
+                      background:
+                        "linear-gradient(180deg,rgba(255,247,242,0) 55%,rgba(255,247,242,0.35) 100%)",
+                    }}
+                  />
+                </div>
+                <div style={{ padding: "20px 22px 24px", textAlign: "center" }}>
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      gap: 8,
+                      marginBottom: 8,
+                    }}
+                  >
+                    <span style={{ width: 18, height: 1, background: "linear-gradient(90deg,transparent,#D6B76D)" }} />
+                    <span style={{ color: C.gold, fontSize: 9 }}>✦</span>
+                    <span style={{ width: 18, height: 1, background: "linear-gradient(90deg,#D6B76D,transparent)" }} />
+                  </div>
+                  <h3
+                    className="pf"
+                    style={{ color: C.text, fontSize: 18, margin: "0 0 6px", letterSpacing: "1.5px", textTransform: "uppercase" }}
+                  >
+                    {s.title}
+                  </h3>
+                  <p
+                    className="dm"
+                    style={{ color: C.muted, fontSize: 13, lineHeight: 1.6, margin: "0 0 16px", minHeight: 42 }}
+                  >
+                    {s.desc}
+                  </p>
+                  <button
+                    className="btn-pk"
+                    onClick={() => go("leistungen")}
+                    style={{
+                      padding: "10px 22px",
+                      borderRadius: 999,
+                      fontSize: 12,
+                      letterSpacing: "1.5px",
+                      textTransform: "uppercase",
+                    }}
+                  >
+                    Mehr erfahren
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </W>
+      </section>
+
 
       {/* ── ZITAT-BAND — Deine Auszeit ──────────────────────────────────── */}
       <section
