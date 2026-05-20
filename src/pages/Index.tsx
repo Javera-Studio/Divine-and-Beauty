@@ -1016,15 +1016,18 @@ export default function App() {
                   src={studioHero}
                   alt="Divine Beauty & Nails Studio Interieur"
                   style={{
-                    width: "100%",
+                    position: "absolute",
+                    top: 0,
+                    right: 0,
+                    bottom: 0,
                     height: "100%",
-                    objectFit: "contain",
-                    objectPosition: "right center",
+                    width: "auto",
+                    maxWidth: "none",
                     display: "block",
                     WebkitMaskImage:
-                      "linear-gradient(to right, transparent 0%, rgba(0,0,0,0.15) 12%, #000 35%)",
+                      "linear-gradient(to right, transparent 0%, rgba(0,0,0,0.15) 14%, #000 38%)",
                     maskImage:
-                      "linear-gradient(to right, transparent 0%, rgba(0,0,0,0.15) 12%, #000 35%)",
+                      "linear-gradient(to right, transparent 0%, rgba(0,0,0,0.15) 14%, #000 38%)",
                   }}
                 />
               </div>
