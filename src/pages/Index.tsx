@@ -20,7 +20,7 @@ const STUDIO = {
   },
 };
 
-const WA_URL = "https://wa.me/4367636333721?text=" + encodeURIComponent("Hallo Divine Beauty & Nails Studio, ich möchte gerne einen Termin anfragen.");
+const WA_URL = "https://wa.me/436763633721?text=" + encodeURIComponent("Hallo Divine Beauty & Nails Studio, ich möchte gerne einen Termin anfragen.");
 
 const SERVICES = [
   {
