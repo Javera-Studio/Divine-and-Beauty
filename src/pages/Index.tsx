@@ -712,9 +712,10 @@ export default function App() {
               target="_blank"
               rel="noreferrer"
               className="btn-pk dv-nc"
-              style={{ padding: "10px 22px", borderRadius: 999, fontSize: 13, fontWeight: 500, textDecoration: "none", display: "inline-flex", alignItems: "center" }}
+              style={{ padding: "11px 22px", borderRadius: 999, fontSize: 12, fontWeight: 500, letterSpacing: "1.8px", textTransform: "uppercase", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 8 }}
             >
-              <span style={{ color: C.gold, marginRight: 6 }}>✦</span> Termin anfragen
+              <span aria-hidden style={{ width: 18, height: 18, borderRadius: "50%", background: "rgba(255,255,255,0.15)", display: "inline-flex", alignItems: "center", justifyContent: "center", fontSize: 10 }}>💬</span>
+              Termin buchen
             </a>
             <button
               className="dv-nb"
