@@ -1025,10 +1025,11 @@ export default function App() {
                     width: "auto",
                     maxWidth: "none",
                     display: "block",
+                    pointerEvents: "none",
                     WebkitMaskImage:
-                      "linear-gradient(to right, transparent 0%, rgba(0,0,0,0.15) 14%, #000 38%)",
+                      "linear-gradient(to right, transparent 0%, transparent 40%, rgba(0,0,0,0.35) 58%, #000 78%)",
                     maskImage:
-                      "linear-gradient(to right, transparent 0%, rgba(0,0,0,0.15) 14%, #000 38%)",
+                      "linear-gradient(to right, transparent 0%, transparent 40%, rgba(0,0,0,0.35) 58%, #000 78%)",
                   }}
                 />
               </div>
