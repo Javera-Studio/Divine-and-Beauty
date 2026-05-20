@@ -1,4 +1,5 @@
 import logo from "@/assets/logo.png";
+import { Link } from "react-router-dom";
 import studioHero from "@/assets/divinesalon.png";
 import { useState, useEffect } from "react";
 
