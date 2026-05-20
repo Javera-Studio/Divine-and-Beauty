@@ -219,7 +219,7 @@ const REVIEWS = [
 // CSS — Soft Rosé + Champagne Gold
 // ══════════════════════════════════════════════════════════════════════════════
 const CSS = `
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=Great+Vibes&display=swap");
 
 html { scroll-behavior: smooth; }
 body { overflow-x: hidden; background: #FFF7F2; }
@@ -228,6 +228,7 @@ body { overflow-x: hidden; background: #FFF7F2; }
 .pf { font-family: 'Playfair Display', Georgia, serif; }
 .cg { font-family: 'Cormorant Garamond', Georgia, serif; }
 .dm { font-family: 'DM Sans', system-ui, sans-serif; }
+.gv { font-family: 'Great Vibes', 'Playfair Display', cursive; }
 
 @keyframes dv-marquee {
   from { transform: translateX(0); }
@@ -641,7 +642,13 @@ export default function App() {
     </h3>
   );
 
-  const NAV = ["Leistungen", "Galerie", "Preise", "Bewertungen", "Kontakt"];
+  const NAV: { l: string; id: string }[] = [
+    { l: "Home", id: "home" },
+    { l: "Über uns", id: "ueber" },
+    { l: "Leistungen", id: "leistungen" },
+    { l: "Galerie", id: "galerie" },
+    { l: "Kontakt", id: "kontakt" },
+  ];
 
   return (
     <div className="dm" style={{ background: C.bg1, color: C.text, minHeight: "100vh", overflowX: "hidden" }}>
@@ -694,8 +701,8 @@ export default function App() {
           </div>
           <div className="dv-nd" style={{ gap: 32 }}>
             {NAV.map((n) => (
-              <button key={n} className="dv-nav-link" onClick={() => go(n.toLowerCase())}>
-                {n}
+              <button key={n.id} className="dv-nav-link" onClick={() => go(n.id)}>
+                {n.l}
               </button>
             ))}
           </div>
@@ -705,9 +712,10 @@ export default function App() {
               target="_blank"
               rel="noreferrer"
               className="btn-pk dv-nc"
-              style={{ padding: "10px 22px", borderRadius: 999, fontSize: 13, fontWeight: 500, textDecoration: "none", display: "inline-flex", alignItems: "center" }}
+              style={{ padding: "11px 22px", borderRadius: 999, fontSize: 12, fontWeight: 500, letterSpacing: "1.8px", textTransform: "uppercase", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 8 }}
             >
-              <span style={{ color: C.gold, marginRight: 6 }}>✦</span> Termin anfragen
+              <span aria-hidden style={{ width: 18, height: 18, borderRadius: "50%", background: "rgba(255,255,255,0.15)", display: "inline-flex", alignItems: "center", justifyContent: "center", fontSize: 10 }}>💬</span>
+              Termin buchen
             </a>
             <button
               className="dv-nb"
@@ -738,7 +746,7 @@ export default function App() {
           >
             {NAV.map((n) => (
               <button
-                key={n}
+                key={n.id}
                 className="dm"
                 style={{
                   display: "block",
@@ -752,9 +760,9 @@ export default function App() {
                   padding: "13px 0",
                   borderBottom: "1px solid rgba(42,37,40,0.06)",
                 }}
-                onClick={() => go(n.toLowerCase())}
+                onClick={() => go(n.id)}
               >
-                {n}
+                {n.l}
               </button>
             ))}
             <a
@@ -840,80 +848,119 @@ export default function App() {
           <div className="dv-hero-g">
             <div className="dv-fadeup">
               <div
+                className="dm"
                 style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: 10,
-                  background: "rgba(255,255,255,0.7)",
-                  border: "1px solid rgba(217,143,168,0.28)",
-                  borderRadius: 999,
-                  padding: "8px 18px",
-                  marginBottom: 30,
-                  backdropFilter: "blur(8px)",
+                  color: C.muted,
+                  fontSize: 12,
+                  letterSpacing: "4px",
+                  textTransform: "uppercase",
+                  marginBottom: 8,
                 }}
               >
-                <div style={{ width: 5, height: 5, borderRadius: "50%", background: C.pink }} />
-                <span
-                  className="dm"
-                  style={{ color: C.dark1, fontSize: 11, letterSpacing: "2.5px", textTransform: "uppercase" }}
-                >
-                  Nagelstudio &amp; Beauty · Wien
-                </span>
+                Willkommen bei
               </div>
               <h1
                 className="pf"
-                style={{ fontSize: "clamp(2.6rem,5vw,4rem)", lineHeight: 1.15, color: C.dark1, margin: "0 0 18px" }}
+                style={{ margin: "0 0 4px", color: C.dark1, lineHeight: 0.95 }}
               >
-                Die Kunst der <em style={{ color: C.pink, fontWeight: 400 }}>Schönheit</em>
-                <br />
-                in deinen <span className="dv-gold">Händen.</span>
+                <span
+                  className="gv"
+                  style={{
+                    display: "block",
+                    color: C.pink,
+                    fontSize: "clamp(4rem,9vw,7.5rem)",
+                    lineHeight: 1,
+                    fontWeight: 400,
+                  }}
+                >
+                  Divine
+                </span>
+                <span
+                  style={{
+                    display: "block",
+                    fontSize: "clamp(1.6rem,3vw,2.4rem)",
+                    fontWeight: 400,
+                    letterSpacing: "0.5px",
+                    marginTop: 4,
+                  }}
+                >
+                  Beauty &amp; Nails Studio
+                </span>
               </h1>
               <p
                 className="pf"
                 style={{
                   fontStyle: "italic",
                   color: C.pink,
-                  fontSize: "clamp(1.05rem,1.6vw,1.4rem)",
-                  margin: "0 0 22px",
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 12,
+                  fontSize: "clamp(1rem,1.4vw,1.2rem)",
+                  margin: "22px 0 18px",
                 }}
               >
-                <span style={{ flex: "0 0 28px", height: 1, background: "linear-gradient(90deg,transparent,#D6B76D)" }} />
-                Schöne Nägel sind kein Zufall.
-                <span style={{ color: C.gold, fontSize: 12 }}>✦</span>
+                Deine Auszeit. Deine Schönheit. Dein Moment.
               </p>
               <p
                 className="dm"
                 style={{
                   color: C.muted,
-                  fontSize: 17,
-                  lineHeight: 1.88,
-                  maxWidth: 480,
-                  marginBottom: 38,
+                  fontSize: 15.5,
+                  lineHeight: 1.75,
+                  maxWidth: 460,
+                  marginBottom: 30,
                 }}
               >
-                Nageldesign, Waxing, Wimpernlifting, Pediküre &amp; Beauty-Behandlungen – in einem stilvollen Studio für
-                Frauen, die das Beste verdienen.
+                Wir bieten dir die erstklassige Behandlungen für Nägel, Waxing,
+                Wimpernlifting und Pediküre in stilvollem Ambiente.
               </p>
-              <div style={{ display: "flex", flexWrap: "wrap", gap: 14, marginBottom: 38 }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 18, flexWrap: "wrap", marginBottom: 36 }}>
                 <a
                   href={WA_URL}
                   target="_blank"
                   rel="noreferrer"
                   className="btn-pk"
-                  style={{ padding: "14px 32px", borderRadius: 999, fontSize: 15, fontWeight: 500, textDecoration: "none", display: "inline-flex", alignItems: "center" }}
+                  style={{
+                    padding: "14px 30px",
+                    borderRadius: 999,
+                    fontSize: 13,
+                    fontWeight: 500,
+                    letterSpacing: "2px",
+                    textTransform: "uppercase",
+                    textDecoration: "none",
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: 10,
+                  }}
                 >
-                  <span style={{ color: C.gold, marginRight: 6 }}>✦</span> Termin anfragen
+                  <span
+                    aria-hidden
+                    style={{
+                      width: 22,
+                      height: 22,
+                      borderRadius: "50%",
+                      background: "rgba(255,255,255,0.12)",
+                      display: "inline-flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      fontSize: 12,
+                    }}
+                  >
+                    💬
+                  </span>
+                  Termin buchen
                 </a>
-                <button
-                  className="btn-ol-light"
-                  style={{ padding: "14px 28px", borderRadius: 999, fontSize: 15 }}
-                  onClick={() => go("leistungen")}
+                <span
+                  className="gv"
+                  style={{
+                    color: C.pink,
+                    fontSize: 22,
+                    opacity: 0.85,
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: 8,
+                  }}
                 >
-                  Leistungen ansehen →
-                </button>
+                  <span style={{ fontSize: 14, color: C.gold }}>↝</span>
+                  Direkt über WhatsApp
+                </span>
               </div>
               <div style={{ marginLeft: -8, marginRight: -8 }}>
                 {(() => {
@@ -1296,7 +1343,7 @@ export default function App() {
 
       {/* ── ÜBER UNS — Rosé hell ──────────────────────────────────────────── */}
       <section
-        id="über-uns"
+        id="ueber"
         style={{ padding: "108px 0", background: C.bg2, position: "relative", overflow: "hidden" }}
       >
         <div
@@ -1984,8 +2031,8 @@ export default function App() {
                 Navigation
               </div>
               {NAV.map((n) => (
-                <button key={n} className="dv-flink" onClick={() => go(n.toLowerCase())}>
-                  {n}
+                <button key={n.id} className="dv-flink" onClick={() => go(n.id)}>
+                  {n.l}
                 </button>
               ))}
             </div>
