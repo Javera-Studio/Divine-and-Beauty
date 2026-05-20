@@ -1004,11 +1004,10 @@ export default function App() {
                 })()}
               </div>
             </div>
-            <div className="dv-hero-img" style={{ position: "relative", alignSelf: "stretch", marginTop: -80, marginBottom: -80, display: "flex" }}>
+            <div className="dv-hero-img" style={{ position: "relative", marginTop: -80, marginBottom: -80 }}>
               <div
                 style={{
-                  flex: 1,
-                  minHeight: 760,
+                  height: 820,
                   position: "relative",
                   overflow: "visible",
                 }}
