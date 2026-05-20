@@ -1,4 +1,5 @@
 import logo from "@/assets/logo.png";
+import { Link } from "react-router-dom";
 import studioHero from "@/assets/divinesalon.png";
 import { useState, useEffect } from "react";
 
@@ -20,7 +21,7 @@ const STUDIO = {
   },
 };
 
-const WA_URL = "https://wa.me/4367636333721?text=" + encodeURIComponent("Hallo Divine Beauty & Nails Studio, ich möchte gerne einen Termin anfragen.");
+const WA_URL = "https://wa.me/436763633721?text=" + encodeURIComponent("Hallo Divine Beauty & Nails Studio, ich möchte gerne einen Termin anfragen.");
 
 const SERVICES = [
   {
@@ -948,20 +949,6 @@ export default function App() {
                   </span>
                   Termin buchen
                 </a>
-                <span
-                  className="gv"
-                  style={{
-                    color: C.pink,
-                    fontSize: 22,
-                    opacity: 0.85,
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: 8,
-                  }}
-                >
-                  <span style={{ fontSize: 14, color: C.gold }}>↝</span>
-                  Direkt über WhatsApp
-                </span>
               </div>
               <div style={{ marginLeft: -8, marginRight: -8 }}>
                 {(() => {
@@ -2065,10 +2052,13 @@ export default function App() {
               >
                 Rechtliches
               </div>
-              {["Impressum", "Datenschutz"].map((n) => (
-                <button key={n} className="dv-flink" onClick={() => go(n.toLowerCase())}>
+              {[
+                { n: "Impressum", to: "/impressum" },
+                { n: "Datenschutz", to: "/datenschutz" },
+              ].map(({ n, to }) => (
+                <Link key={n} to={to} className="dv-flink">
                   {n}
-                </button>
+                </Link>
               ))}
             </div>
           </div>
@@ -2092,129 +2082,7 @@ export default function App() {
         </W>
       </footer>
 
-      {/* ── IMPRESSUM — hell ─────────────────────────────────────────────── */}
-      <section
-        id="impressum"
-        style={{ padding: "80px 0", background: C.bg2, borderTop: "1px solid rgba(214,183,109,0.18)" }}
-      >
-        <div style={{ maxWidth: 860, margin: "0 auto", padding: "0 24px" }}>
-          <h2 className="pf" style={{ color: C.text, fontSize: 28, marginBottom: 10 }}>
-            Impressum
-          </h2>
-          <div
-            className="dm"
-            style={{
-              background: "rgba(255,255,255,0.7)",
-              border: "1px solid rgba(214,183,109,0.22)",
-              borderRadius: 10,
-              padding: "12px 16px",
-              color: C.muted,
-              fontSize: 12,
-              lineHeight: 1.6,
-              marginBottom: 32,
-            }}
-          >
-            ⚠️ Platzhalter – bitte vor Veröffentlichung rechtlich prüfen lassen (österreichisches Recht / Wien).
-          </div>
-          {[
-            ["Unternehmensname", "Divine Beauty & Nails Studio"],
-            ["Inhaberin", "[VORNAME NACHNAME eintragen]"],
-            ["Adresse", "Klosterneuburgerstraße 98, 1200 Wien, Österreich"],
-            ["Telefon", "+43 676 3633721"],
-            ["E-Mail", "divine.beauty.nails@gmail.com"],
-            ["UID-Nummer", "[ATU XXXXXXXX – falls vorhanden, sonst weglassen]"],
-            ["Gewerbebehörde", "Magistrat der Stadt Wien / Wirtschaftskammer Wien (WKW)"],
-            ["Berufsrecht", "Gewerbeordnung 1994 (GewO) – www.ris.bka.gv.at"],
-            ["Gewerbe", "Kosmetikgewerbe / Nagelstudio / Beauty-Dienstleistungen"],
-          ].map(([k, v]) => (
-            <div
-              key={k}
-              style={{
-                display: "flex",
-                flexWrap: "wrap",
-                gap: 14,
-                padding: "10px 0",
-                borderBottom: "1px solid rgba(42,37,40,0.07)",
-              }}
-            >
-              <span className="dm" style={{ color: C.muted, fontSize: 13, minWidth: 200 }}>
-                {k}
-              </span>
-              <span className="dm" style={{ color: C.text, fontSize: 13 }}>
-                {v}
-              </span>
-            </div>
-          ))}
-          <p className="dm" style={{ color: C.muted, fontSize: 13, lineHeight: 1.8, marginTop: 28 }}>
-            Trotz sorgfältiger Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt
-            verlinkter Seiten sind ausschließlich deren Betreiber verantwortlich.
-          </p>
-        </div>
-      </section>
 
-      {/* ── DATENSCHUTZ — hell ───────────────────────────────────────────── */}
-      <section
-        id="datenschutz"
-        style={{ padding: "80px 0 120px", background: C.bg1, borderTop: "1px solid rgba(214,183,109,0.14)" }}
-      >
-        <div style={{ maxWidth: 860, margin: "0 auto", padding: "0 24px" }}>
-          <h2 className="pf" style={{ color: C.text, fontSize: 28, marginBottom: 10 }}>
-            Datenschutzerklärung
-          </h2>
-          <div
-            className="dm"
-            style={{
-              background: "rgba(255,255,255,0.7)",
-              border: "1px solid rgba(214,183,109,0.22)",
-              borderRadius: 10,
-              padding: "12px 16px",
-              color: C.muted,
-              fontSize: 12,
-              lineHeight: 1.6,
-              marginBottom: 36,
-            }}
-          >
-            ⚠️ Platzhalter – bitte vor Veröffentlichung rechtlich prüfen lassen (DSGVO / österreichisches DSG). Stand:
-            [DATUM einfügen].
-          </div>
-          {[
-            {
-              t: "1. Verantwortliche Person",
-              c: "Divine Beauty & Nails Studio, Klosterneuburgerstraße 98, 1200 Wien – Inhaberin: [VORNAME NACHNAME eintragen] – divine.beauty.nails@gmail.com – ist verantwortliche Person im Sinne der DSGVO.",
-            },
-            {
-              t: "2. Erhobene Daten & Zweck",
-              c: "Beim Besuch werden technisch notwendige Daten erhoben. Bei freiwilliger Kontaktaufnahme (E-Mail, Instagram) werden die Daten ausschließlich zur Terminvergabe verwendet.",
-            },
-            {
-              t: "3. Rechtsgrundlage",
-              c: "Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung) sowie Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an sicherer Website-Bereitstellung).",
-            },
-            { t: "4. Datenweitergabe", c: "Keine Weitergabe an Dritte, soweit nicht gesetzlich verpflichtet." },
-            {
-              t: "5. Deine Rechte (DSGVO)",
-              c: "Auskunft (Art. 15), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung (Art. 18), Übertragbarkeit (Art. 20), Widerspruch (Art. 21). Kontakt: divine.beauty.nails@gmail.com",
-            },
-            {
-              t: "6. Instagram / Social Media",
-              c: "Verlinkungen zu Instagram (Meta Platforms Ireland Ltd.) – beim Klick gelten die Datenschutzbestimmungen von Meta.",
-            },
-            {
-              t: "7. Beschwerderecht",
-              c: "Österreichische Datenschutzbehörde: Barichgasse 40–42, 1030 Wien – dsb.gv.at",
-            },
-          ].map((s) => (
-            <div key={s.t} style={{ marginBottom: 28 }}>
-              <h3 className="pf" style={{ color: C.pink, fontSize: 16, marginBottom: 10 }}>
-                {s.t}
-              </h3>
-              <p className="dm" style={{ color: C.muted, fontSize: 13, lineHeight: 1.88 }}>
-                {s.c}
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
 
       {/* ── Sticky WhatsApp CTA — nur mobil ─────────────────────────────── */}
       <a
