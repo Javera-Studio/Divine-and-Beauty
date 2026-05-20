@@ -898,7 +898,7 @@ export default function App() {
                   margin: "22px 0 18px",
                 }}
               >
-                Deine Auszeit. Deine Schönheit. Dein Moment.
+                Schöne Nägel sind kein Zufall.
               </p>
               <p
                 className="dm"
@@ -910,8 +910,8 @@ export default function App() {
                   marginBottom: 30,
                 }}
               >
-                Wir bieten dir die erstklassige Behandlungen für Nägel, Waxing,
-                Wimpernlifting und Pediküre in stilvollem Ambiente.
+                Deine Haut. Deine Nägel. Dein Moment. Erstklassige Behandlungen in stilvollem
+                Ambiente — weil du es verdienst.
               </p>
               <div style={{ display: "flex", alignItems: "center", gap: 18, flexWrap: "wrap", marginBottom: 36 }}>
                 <a
