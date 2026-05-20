@@ -418,6 +418,7 @@ body { overflow-x: hidden; background: #FFF7F2; }
 
 /* ── Layout Grids ────────────────────────────────────────────────────────── */
 .dv-hero-g    { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.dv-hero-g > * { min-width: 0; }
 .dv-about-g   { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
 .dv-contact-g { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; }
 .dv-footer-g  { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 60px; margin-bottom: 56px; }
