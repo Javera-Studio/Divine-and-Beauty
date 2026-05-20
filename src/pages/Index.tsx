@@ -1008,28 +1008,27 @@ export default function App() {
               <div
                 style={{
                   height: 580,
-                  borderRadius: 28,
                   position: "relative",
-                  overflow: "hidden",
-                  border: "1px solid rgba(214,183,109,0.28)",
-                  boxShadow: "0 30px 70px rgba(185,130,165,0.22)",
+                  overflow: "visible",
                 }}
               >
                 <img
                   src={studioHero}
                   alt="Divine Beauty & Nails Studio Interieur"
-                  style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
-                />
-                <div
                   style={{
-                    position: "absolute",
-                    inset: 0,
-                    background:
-                      "linear-gradient(180deg,rgba(255,247,242,0) 55%,rgba(255,247,242,0.25) 100%)",
-                    pointerEvents: "none",
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "contain",
+                    objectPosition: "right center",
+                    display: "block",
+                    WebkitMaskImage:
+                      "linear-gradient(to right, transparent 0%, rgba(0,0,0,0.15) 12%, #000 35%)",
+                    maskImage:
+                      "linear-gradient(to right, transparent 0%, rgba(0,0,0,0.15) 12%, #000 35%)",
                   }}
                 />
               </div>
+
               {/* Floating Info-Card */}
               <div
                 className="dv-float"
