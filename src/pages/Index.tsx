@@ -910,8 +910,7 @@ export default function App() {
                   marginBottom: 30,
                 }}
               >
-                Deine Haut. Deine Nägel. Dein Moment. Erstklassige Behandlungen in stilvollem
-                Ambiente — weil du es verdienst.
+                Erstklassige Behandlungen in stilvollem Ambiente — weil du es verdienst.
               </p>
               <div style={{ display: "flex", alignItems: "center", gap: 18, flexWrap: "wrap", marginBottom: 36 }}>
                 <a
