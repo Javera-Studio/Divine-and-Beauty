@@ -948,20 +948,6 @@ export default function App() {
                   </span>
                   Termin buchen
                 </a>
-                <span
-                  className="gv"
-                  style={{
-                    color: C.pink,
-                    fontSize: 22,
-                    opacity: 0.85,
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: 8,
-                  }}
-                >
-                  <span style={{ fontSize: 14, color: C.gold }}>↝</span>
-                  Direkt über WhatsApp
-                </span>
               </div>
               <div style={{ marginLeft: -8, marginRight: -8 }}>
                 {(() => {
