@@ -1303,7 +1303,7 @@ export default function App() {
 
       {/* ── ÜBER UNS — Rosé hell ──────────────────────────────────────────── */}
       <section
-        id="über-uns"
+        id="ueber"
         style={{ padding: "108px 0", background: C.bg2, position: "relative", overflow: "hidden" }}
       >
         <div
