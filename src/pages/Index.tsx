@@ -701,8 +701,8 @@ export default function App() {
           </div>
           <div className="dv-nd" style={{ gap: 32 }}>
             {NAV.map((n) => (
-              <button key={n} className="dv-nav-link" onClick={() => go(n.toLowerCase())}>
-                {n}
+              <button key={n.id} className="dv-nav-link" onClick={() => go(n.id)}>
+                {n.l}
               </button>
             ))}
           </div>
@@ -745,7 +745,7 @@ export default function App() {
           >
             {NAV.map((n) => (
               <button
-                key={n}
+                key={n.id}
                 className="dm"
                 style={{
                   display: "block",
@@ -759,9 +759,9 @@ export default function App() {
                   padding: "13px 0",
                   borderBottom: "1px solid rgba(42,37,40,0.06)",
                 }}
-                onClick={() => go(n.toLowerCase())}
+                onClick={() => go(n.id)}
               >
-                {n}
+                {n.l}
               </button>
             ))}
             <a
@@ -1991,8 +1991,8 @@ export default function App() {
                 Navigation
               </div>
               {NAV.map((n) => (
-                <button key={n} className="dv-flink" onClick={() => go(n.toLowerCase())}>
-                  {n}
+                <button key={n.id} className="dv-flink" onClick={() => go(n.id)}>
+                  {n.l}
                 </button>
               ))}
             </div>
