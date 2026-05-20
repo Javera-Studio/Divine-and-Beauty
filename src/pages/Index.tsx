@@ -1262,9 +1262,20 @@ export default function App() {
                 <p className="dm" style={{ color: C.muted, fontSize: 14, lineHeight: 1.78 }}>
                   {s.desc}
                 </p>
-                <div className="dm" style={{ marginTop: 20, color: C.gold, fontSize: 13 }}>
-                  Mehr erfahren →
-                </div>
+                <button
+                  className="btn-pk"
+                  onClick={() => go("leistungen")}
+                  style={{
+                    marginTop: 20,
+                    padding: "10px 22px",
+                    borderRadius: 999,
+                    fontSize: 12,
+                    letterSpacing: "1.5px",
+                    textTransform: "uppercase",
+                  }}
+                >
+                  Mehr erfahren
+                </button>
               </div>
             ))}
           </div>
