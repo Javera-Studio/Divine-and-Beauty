@@ -219,7 +219,7 @@ const REVIEWS = [
 // CSS — Soft Rosé + Champagne Gold
 // ══════════════════════════════════════════════════════════════════════════════
 const CSS = `
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=Great+Vibes&display=swap");
 
 html { scroll-behavior: smooth; }
 body { overflow-x: hidden; background: #FFF7F2; }
@@ -228,6 +228,7 @@ body { overflow-x: hidden; background: #FFF7F2; }
 .pf { font-family: 'Playfair Display', Georgia, serif; }
 .cg { font-family: 'Cormorant Garamond', Georgia, serif; }
 .dm { font-family: 'DM Sans', system-ui, sans-serif; }
+.gv { font-family: 'Great Vibes', 'Playfair Display', cursive; }
 
 @keyframes dv-marquee {
   from { transform: translateX(0); }
