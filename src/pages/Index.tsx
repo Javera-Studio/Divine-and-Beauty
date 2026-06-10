@@ -637,11 +637,12 @@ export default function App() {
     </h3>
   );
 
-  const NAV: { l: string; id: string }[] = [
+  const NAV: { l: string; id?: string; href?: string }[] = [
     { l: "Home", id: "home" },
     { l: "Über uns", id: "ueber" },
     { l: "Leistungen", id: "leistungen" },
     { l: "Galerie", id: "galerie" },
+    { l: "Preise", href: "/preise" },
     { l: "Kontakt", id: "kontakt" },
   ];
 
@@ -695,11 +696,17 @@ export default function App() {
             </div>
           </div>
           <div className="dv-nd" style={{ gap: 32 }}>
-            {NAV.map((n) => (
-              <button key={n.id} className="dv-nav-link" onClick={() => go(n.id)}>
-                {n.l}
-              </button>
-            ))}
+            {NAV.map((n) =>
+              n.href ? (
+                <Link key={n.href} to={n.href} className="dv-nav-link" style={{ textDecoration: "none" }}>
+                  {n.l}
+                </Link>
+              ) : (
+                <button key={n.id} className="dv-nav-link" onClick={() => go(n.id!)}>
+                  {n.l}
+                </button>
+              )
+            )}
           </div>
           <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
             <a
@@ -739,27 +746,46 @@ export default function App() {
               padding: "18px 24px 26px",
             }}
           >
-            {NAV.map((n) => (
-              <button
-                key={n.id}
-                className="dm"
-                style={{
-                  display: "block",
-                  width: "100%",
-                  textAlign: "left",
-                  background: "none",
-                  border: "none",
-                  cursor: "pointer",
-                  color: C.text,
-                  fontSize: 16,
-                  padding: "13px 0",
-                  borderBottom: "1px solid rgba(42,37,40,0.06)",
-                }}
-                onClick={() => go(n.id)}
-              >
-                {n.l}
-              </button>
-            ))}
+            {NAV.map((n) =>
+              n.href ? (
+                <Link
+                  key={n.href}
+                  to={n.href}
+                  className="dm"
+                  style={{
+                    display: "block",
+                    color: C.text,
+                    fontSize: 16,
+                    padding: "13px 0",
+                    borderBottom: "1px solid rgba(42,37,40,0.06)",
+                    textDecoration: "none",
+                  }}
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {n.l}
+                </Link>
+              ) : (
+                <button
+                  key={n.id}
+                  className="dm"
+                  style={{
+                    display: "block",
+                    width: "100%",
+                    textAlign: "left",
+                    background: "none",
+                    border: "none",
+                    cursor: "pointer",
+                    color: C.text,
+                    fontSize: 16,
+                    padding: "13px 0",
+                    borderBottom: "1px solid rgba(42,37,40,0.06)",
+                  }}
+                  onClick={() => go(n.id!)}
+                >
+                  {n.l}
+                </button>
+              )
+            )}
             <a
               href={WA_URL}
               target="_blank"
@@ -1508,52 +1534,28 @@ export default function App() {
         </div>
       </section>
 
-      {/* ── PREISE — hell, weiße Cards, goldene Details ───────────────────── */}
-      <section id="preise" style={{ padding: "96px 0", background: C.bg2 }}>
+      {/* ── PREISE CTA ────────────────────────────────────────────────────── */}
+      <section style={{ padding: "80px 0", background: C.bg2 }}>
         <W>
-          <Divider />
-          <Label>Transparente Preise</Label>
-          <h2 className="pf" style={{ fontSize: "clamp(2rem,4vw,3rem)", color: C.text, marginBottom: 14 }}>
-            Unsere <em style={{ color: C.pink }}>Preise</em>
-          </h2>
-          <p className="dm" style={{ color: C.muted, fontSize: 13, maxWidth: 500, lineHeight: 1.75, marginBottom: 52 }}>
-            * Preisänderungen vorbehalten. Bei individuellen Wünschen oder Sonderwünschen gerne direkt anfragen.
-          </p>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(280px,1fr))", gap: 18 }}>
-            {PRICES.map((cat) => (
-              <div
-                key={cat.category}
-                style={{
-                  background: C.white,
-                  borderRadius: 20,
-                  padding: "24px 22px",
-                  boxShadow: "0 4px 22px rgba(185,130,165,0.07)",
-                  border: "1px solid rgba(214,183,109,0.12)",
-                }}
-              >
-                <PriceHeading>{cat.category}</PriceHeading>
-                {cat.items.map((item) => (
-                  <div key={item.name} className="dv-prow">
-                    <span className="dm" style={{ color: C.muted, fontSize: 14 }}>
-                      {item.name}
-                    </span>
-                    <span
-                      className="dm dv-pv"
-                      style={{ color: C.gold, fontSize: 14, fontWeight: 600, transition: "color .2s" }}
-                    >
-                      {item.price}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            ))}
+          <div style={{ textAlign: "center" }}>
+            <Divider />
+            <Label>Transparente Preise</Label>
+            <h2 className="pf" style={{ fontSize: "clamp(1.6rem,3vw,2.4rem)", color: C.text, marginBottom: 14 }}>
+              Alle Preise auf einen <em style={{ color: C.pink }}>Blick</em>
+            </h2>
+            <p className="dm" style={{ color: C.muted, fontSize: 15, maxWidth: 420, margin: "0 auto 32px", lineHeight: 1.75 }}>
+              Von Gelmodellage bis Waxing – unsere vollständige Preisliste auf einer eigenen Seite.
+            </p>
+            <Link
+              to="/preise"
+              className="btn-pk"
+              style={{ padding: "14px 34px", borderRadius: 999, fontSize: 13, fontWeight: 500, letterSpacing: "1.8px", textTransform: "uppercase", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 10 }}
+            >
+              <span style={{ color: C.gold }}>✦</span>
+              Preise ansehen
+            </Link>
           </div>
         </W>
-        <div style={{ marginTop: 48, display: "flex", justifyContent: "center", padding: "0 24px" }}>
-          <a href={WA_URL} target="_blank" rel="noreferrer" className="btn-pk" style={{ padding: "13px 30px", borderRadius: 999, fontSize: 14, fontWeight: 500, textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 8 }}>
-            <span style={{ color: C.gold }}>✦</span> Termin anfragen via WhatsApp
-          </a>
-        </div>
       </section>
 
       {/* ── BEWERTUNGEN — hell, weiß ──────────────────────────────────────── */}
@@ -1953,11 +1955,17 @@ export default function App() {
               >
                 Navigation
               </div>
-              {NAV.map((n) => (
-                <button key={n.id} className="dv-flink" onClick={() => go(n.id)}>
-                  {n.l}
-                </button>
-              ))}
+              {NAV.map((n) =>
+                n.href ? (
+                  <Link key={n.href} to={n.href} className="dv-flink" style={{ textDecoration: "none" }}>
+                    {n.l}
+                  </Link>
+                ) : (
+                  <button key={n.id} className="dv-flink" onClick={() => go(n.id!)}>
+                    {n.l}
+                  </button>
+                )
+              )}
             </div>
             <div>
               <div

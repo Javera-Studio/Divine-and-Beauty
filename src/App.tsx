@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import AudienceWindow from "./pages/AudienceWindow";
 import Impressum from "./pages/Impressum";
 import Datenschutz from "./pages/Datenschutz";
+import Preise from "./pages/Preise";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -22,6 +23,7 @@ const App = () => (
           <Route path="/audience" element={<AudienceWindow />} />
           <Route path="/impressum" element={<Impressum />} />
           <Route path="/datenschutz" element={<Datenschutz />} />
+          <Route path="/preise" element={<Preise />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
