@@ -715,7 +715,7 @@ export default function App() {
             <img
   src={logo}
   alt="Divine Beauty Logo"
-  style={{ width: 57, height: 57, borderRadius: "50%", objectFit: "cover" }}
+  style={{ width: 68, height: 68, borderRadius: "50%", objectFit: "cover" }}
 />
             <div>
               <div className="pf" style={{ color: C.text, fontSize: 16, fontWeight: 600, lineHeight: 1.1 }}>
@@ -844,8 +844,9 @@ export default function App() {
         style={{
           minHeight: "100vh",
           paddingTop: 80,
+          paddingBottom: 80,
           display: "flex",
-          alignItems: "center",
+          alignItems: "flex-end",
           position: "relative",
           overflow: "hidden",
           background: "linear-gradient(135deg,#FFF7F2 0%,#F7EDE7 45%,#FBEAF3 100%)",
@@ -905,7 +906,7 @@ export default function App() {
           · · · · ·
         </div>
         <W pad="80px 24px" style={{ width: "100%" }}>
-          <div className="dv-hero-g">
+          <div className="dv-hero-g" style={{ alignItems: "flex-end" }}>
             <div className="dv-fadeup">
               <div
                 className="dm"
@@ -1031,9 +1032,9 @@ export default function App() {
                     display: "block",
                     pointerEvents: "none",
                     WebkitMaskImage:
-                      "linear-gradient(to right, transparent 0%, transparent 40%, rgba(0,0,0,0.35) 58%, #000 78%)",
+                      "linear-gradient(to right, rgba(0,0,0,0.12) 0%, rgba(0,0,0,0.5) 22%, rgba(0,0,0,0.8) 42%, #000 62%)",
                     maskImage:
-                      "linear-gradient(to right, transparent 0%, transparent 40%, rgba(0,0,0,0.35) 58%, #000 78%)",
+                      "linear-gradient(to right, rgba(0,0,0,0.12) 0%, rgba(0,0,0,0.5) 22%, rgba(0,0,0,0.8) 42%, #000 62%)",
                   }}
                 />
               </div>
