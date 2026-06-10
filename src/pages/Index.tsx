@@ -533,6 +533,15 @@ body { overflow-x: hidden; background: #FFF7F2; }
   .lux-tags-track { animation: none; }
 }
 
+/* ── Team Section ────────────────────────────────────────────────────────── */
+.team-card { transition: box-shadow .35s, transform .35s; }
+.team-card:hover { transform: translateY(-5px); box-shadow: 0 20px 56px rgba(185,130,165,0.14) !important; }
+.team-card .team-img { transition: transform .5s cubic-bezier(.4,0,.2,1); }
+.team-card:hover .team-img { transform: scale(1.05); }
+.dv-team-g { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+@media (max-width: 900px) { .dv-team-g { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 560px) { .dv-team-g { grid-template-columns: 1fr; max-width: 380px; margin: 0 auto; } }
+
 /* ── Scroll Reveal ───────────────────────────────────────────────────────── */
 [data-r] {
   opacity: 0;
@@ -1034,97 +1043,6 @@ export default function App() {
         </W>
       </section>
 
-      {/* ── FEATURED SERVICE CARDS — direkt unter Hero (wie Referenz) ───── */}
-      <section style={{ background: C.bg1, padding: "96px 0" }}>
-        <W>
-          <div
-            className="dv-feat-g"
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(4,1fr)",
-              gap: 22,
-            }}
-          >
-            {[
-              { title: "Pediküre", img: "/Pedikuere.jpg", desc: "Gepflegte Füße, glatte Haut und perfekte Nägel." },
-              { title: "Wimpernlifting", img: "/Wimpernlifting.jpg", desc: "Schöner Schwung, mehr Länge und ein wacher Blick." },
-              { title: "Waxing", img: "/Waxing.jpg", desc: "Sanfte Haarentfernung für seidig glatte Haut." },
-              { title: "Nägel", img: "/Gelmodellage.jpg", desc: "Maniküre, Gel-Nägel, Acrylnägel, Nail-Art & mehr." },
-            ].map((s, i) => (
-              <div
-                key={s.title}
-                data-r
-                data-d={i}
-                className="lux-card"
-                style={{
-                  borderRadius: 22,
-                  overflow: "hidden",
-                  background: C.white,
-                  display: "flex",
-                  flexDirection: "column",
-                }}
-              >
-                <div style={{ position: "relative", height: 180, overflow: "hidden" }}>
-                  <img
-                    src={s.img}
-                    alt={s.title}
-                    loading="lazy"
-                    style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
-                  />
-                  <div
-                    style={{
-                      position: "absolute",
-                      inset: 0,
-                      background:
-                        "linear-gradient(180deg,rgba(255,247,242,0) 55%,rgba(255,247,242,0.35) 100%)",
-                    }}
-                  />
-                </div>
-                <div style={{ padding: "20px 22px 24px", textAlign: "center" }}>
-                  <div
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      gap: 8,
-                      marginBottom: 8,
-                    }}
-                  >
-                    <span style={{ width: 18, height: 1, background: "linear-gradient(90deg,transparent,#D6B76D)" }} />
-                    <span style={{ color: C.gold, fontSize: 9 }}>✦</span>
-                    <span style={{ width: 18, height: 1, background: "linear-gradient(90deg,#D6B76D,transparent)" }} />
-                  </div>
-                  <h3
-                    className="pf"
-                    style={{ color: C.text, fontSize: 18, margin: "0 0 6px", letterSpacing: "1.5px", textTransform: "uppercase" }}
-                  >
-                    {s.title}
-                  </h3>
-                  <p
-                    className="dm"
-                    style={{ color: C.muted, fontSize: 13, lineHeight: 1.6, margin: "0 0 16px", minHeight: 42 }}
-                  >
-                    {s.desc}
-                  </p>
-                  <button
-                    className="btn-pk"
-                    onClick={() => go("leistungen")}
-                    style={{
-                      padding: "10px 22px",
-                      borderRadius: 999,
-                      fontSize: 12,
-                      letterSpacing: "1.5px",
-                      textTransform: "uppercase",
-                    }}
-                  >
-                    Mehr erfahren
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </W>
-      </section>
 
 
       {/* ── ZITAT-BAND — Deine Auszeit ──────────────────────────────────── */}
@@ -1187,111 +1105,6 @@ export default function App() {
             <span style={{ fontSize: 12, letterSpacing: "3px" }}>✦ ✦ ✦</span>
             <span style={{ width: 40, height: 1, background: "linear-gradient(90deg,#D6B76D,transparent)" }} />
           </div>
-        </div>
-      </section>
-
-      {/* ── LEISTUNGEN — hell ─────────────────────────────────────────────── */}
-      <section id="leistungen" style={{ padding: "48px 0 96px", background: C.bg1 }}>
-        <W>
-          <Divider />
-          <Label>Was wir für dich tun</Label>
-          <h2 className="pf" style={{ fontSize: "clamp(2rem,4vw,3rem)", color: C.text, marginBottom: 14 }}>
-            Unsere <em style={{ color: C.pink }}>Leistungen</em>
-          </h2>
-          <p className="dm" style={{ color: C.muted, fontSize: 16, maxWidth: 480, lineHeight: 1.8, marginBottom: 60 }}>
-            Von Nageldesign bis Gesichtsbehandlung – professionell, präzise, mit Liebe fürs Detail.
-          </p>
-          <div className="dv-svc-g">
-            {SERVICES.map((s, i) => (
-              <div
-                key={s.title}
-                data-r
-                data-d={i % 3}
-                className="lux-card"
-                style={{ padding: "28px 26px", borderRadius: 22, background: C.white }}
-              >
-              {s.img && (
-                <img src={s.img} alt={s.title} style={{ width: "100%", height: 160, objectFit: "cover", borderRadius: 14, marginBottom: 14 }} />
-              )}
-                <h3 className="pf" style={{ color: C.text, fontSize: 19, marginBottom: 10 }}>
-                  {s.title}
-                </h3>
-                <p className="dm" style={{ color: C.muted, fontSize: 14, lineHeight: 1.78 }}>
-                  {s.desc}
-                </p>
-                <button
-                  className="btn-pk"
-                  onClick={() => go("leistungen")}
-                  style={{
-                    marginTop: 20,
-                    padding: "10px 22px",
-                    borderRadius: 999,
-                    fontSize: 12,
-                    letterSpacing: "1.5px",
-                    textTransform: "uppercase",
-                  }}
-                >
-                  Mehr erfahren
-                </button>
-              </div>
-            ))}
-          </div>
-        </W>
-        <div style={{ marginTop: 48, display: "flex", justifyContent: "center", padding: "0 24px" }}>
-          <a href={WA_URL} target="_blank" rel="noreferrer" className="btn-pk" style={{ padding: "13px 30px", borderRadius: 999, fontSize: 14, fontWeight: 500, textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 8 }}>
-            <span style={{ color: C.gold }}>✦</span> Termin anfragen via WhatsApp
-          </a>
-        </div>
-      </section>
-
-      {/* ── GALERIE — hell, Ivory ─────────────────────────────────────────── */}
-      <section id="galerie" style={{ padding: "96px 0", background: C.white, overflow: "hidden" }}>
-        <W style={{ marginBottom: 52 }}>
-          <Divider />
-          <Label>Portfolio</Label>
-          <h2 className="pf" style={{ fontSize: "clamp(2rem,4vw,3rem)", color: C.text, marginBottom: 14 }}>
-            Unsere <em style={{ color: C.pink }}>Galerie</em>
-          </h2>
-          <p className="dm" style={{ color: C.muted, fontSize: 16, maxWidth: 440, lineHeight: 1.8 }}>
-            Einblicke in unsere Arbeit – jedes Ergebnis ein kleines Kunstwerk.
-          </p>
-        </W>
-        <div className="dv-marquee-wrap" style={{ overflow: "hidden", padding: "10px 0" }}>
-          <div className="dv-marquee-track">
-            {[...GALLERY, ...GALLERY].map((img, i) => (
-              <div
-                key={`${img.id}-${i}`}
-                className="dv-gcard"
-                style={{ width: 260, height: 340, background: img.g, flexShrink: 0 }}
-              >
-                {img.src ? (
-                  <img src={img.src} alt={img.label} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
-                ) : (
-                  <div
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                      display: "flex",
-                      flexDirection: "column",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      gap: 10,
-                    }}
-                  >
-                    <span style={{ fontSize: 38 }}>📸</span>
-                    <span className="dm" style={{ color: "rgba(43,32,39,0.4)", fontSize: 11, letterSpacing: "1px" }}>
-                      {img.label}
-                    </span>
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-        <div style={{ marginTop: 48, display: "flex", justifyContent: "center", padding: "0 24px" }}>
-          <a href={WA_URL} target="_blank" rel="noreferrer" className="btn-pk" style={{ padding: "13px 30px", borderRadius: 999, fontSize: 14, fontWeight: 500, textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 8 }}>
-            <span style={{ color: C.gold }}>✦</span> Termin anfragen via WhatsApp
-          </a>
         </div>
       </section>
 
@@ -1458,6 +1271,258 @@ export default function App() {
             ))}
           </div>
         </W>
+        <div style={{ marginTop: 48, display: "flex", justifyContent: "center", padding: "0 24px" }}>
+          <a href={WA_URL} target="_blank" rel="noreferrer" className="btn-pk" style={{ padding: "13px 30px", borderRadius: 999, fontSize: 14, fontWeight: 500, textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 8 }}>
+            <span style={{ color: C.gold }}>✦</span> Termin anfragen via WhatsApp
+          </a>
+        </div>
+      </section>
+
+      {/* ── TEAM ─────────────────────────────────────────────────────────── */}
+      <section
+        id="team"
+        style={{ padding: "96px 0", background: C.bg1, position: "relative", overflow: "hidden" }}
+      >
+        {/* Aquarell texture */}
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            backgroundImage: "url('/daca3.png')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            opacity: 0.06,
+            filter: "blur(24px) saturate(130%)",
+            transform: "scale(1.08)",
+            zIndex: 0,
+            pointerEvents: "none",
+          }}
+        />
+        <W style={{ zIndex: 1 }}>
+          {/* Header */}
+          <div style={{ textAlign: "center", marginBottom: 56 }}>
+            <Divider />
+            <Label>Unser Team</Label>
+            <h2 className="pf" style={{ fontSize: "clamp(2rem,4vw,3rem)", color: C.text }}>
+              Lerne unser <em style={{ color: C.pink }}>Team</em> kennen
+            </h2>
+            <p className="dm" style={{ color: C.muted, fontSize: 16, lineHeight: 1.8, maxWidth: 560, margin: "20px auto 0" }}>
+              Hinter Divine Beauty steht ein herzliches Team aus erfahrenen Beauty-Expertinnen mit Leidenschaft für Schönheit, Präzision und Wohlbefinden.
+            </p>
+          </div>
+
+          {/* Team hero photo */}
+          <div
+            data-r
+            style={{
+              margin: "0 auto 64px",
+              maxWidth: 780,
+              borderRadius: 28,
+              overflow: "hidden",
+              boxShadow: "0 24px 80px rgba(185,130,165,0.14)",
+              border: "1px solid rgba(214,183,109,0.13)",
+            }}
+          >
+            <img
+              src="/team.jpg"
+              alt="Das Team von Divine Beauty & Nails Studio"
+              style={{ width: "100%", height: "auto", display: "block" }}
+            />
+          </div>
+
+          {/* Person cards */}
+          <div className="dv-team-g" style={{ marginBottom: 48 }}>
+            {[
+              {
+                img: "/daca1.jpg",
+                name: "Danijela",
+                role: "Inhaberin & Beauty-Expertin",
+                text: "Mit viel Leidenschaft, Präzision und Liebe zum Detail führt Danijela Divine Beauty – und sorgt dafür, dass sich jede Kundin rundum wohlfühlt.",
+              },
+              {
+                img: "/gloria1.jpg",
+                name: "Gloria",
+                role: "Beauty-Expertin",
+                text: "Gloria begeistert mit ihrer freundlichen Art und ihrem Gespür für schöne, natürliche Ergebnisse – stets mit einem Lächeln.",
+              },
+              {
+                img: "/nina1.jpg",
+                name: "Nina",
+                role: "Beauty-Expertin",
+                text: "Nina arbeitet mit viel Feingefühl und Präzision – und bringt mit ihrer ruhigen, aufmerksamen Art das Beste in jeder Behandlung heraus.",
+              },
+            ].map((p, i) => (
+              <div
+                key={p.name}
+                data-r
+                data-d={i}
+                className="team-card"
+                style={{
+                  background: C.white,
+                  borderRadius: 24,
+                  overflow: "hidden",
+                  boxShadow: "0 8px 32px rgba(185,130,165,0.08)",
+                  border: "1px solid rgba(214,183,109,0.1)",
+                }}
+              >
+                <div style={{ width: "100%", aspectRatio: "4/5", overflow: "hidden" }}>
+                  <img
+                    src={p.img}
+                    alt={p.name}
+                    className="team-img"
+                    style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top center", display: "block" }}
+                  />
+                </div>
+                <div style={{ padding: "20px 22px 24px" }}>
+                  <div className="dm" style={{ color: C.pink, fontSize: 10.5, letterSpacing: "2.5px", textTransform: "uppercase", marginBottom: 6 }}>
+                    {p.role}
+                  </div>
+                  <h3 className="pf" style={{ color: C.text, fontSize: 21, marginBottom: 10 }}>
+                    {p.name}
+                  </h3>
+                  <p className="dm" style={{ color: C.muted, fontSize: 14, lineHeight: 1.78 }}>
+                    {p.text}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Highlight values */}
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fill,minmax(210px,1fr))",
+              gap: 14,
+              background: "rgba(255,255,255,0.65)",
+              borderRadius: 22,
+              padding: "30px 26px",
+              border: "1px solid rgba(214,183,109,0.12)",
+            }}
+          >
+            {[
+              { Icon: Award, text: "Über 5 Jahre Erfahrung" },
+              { Icon: Heart, text: "Hunderte zufriedene Kundinnen" },
+              { Icon: MessageCircle, text: "Persönliche Beratung" },
+              { Icon: Sparkles, text: "Liebe zum Detail" },
+            ].map((h, i) => (
+              <div
+                key={h.text}
+                data-r
+                data-d={i % 3}
+                style={{ display: "flex", alignItems: "center", gap: 12, padding: "8px 4px" }}
+              >
+                <div
+                  style={{
+                    width: 38,
+                    height: 38,
+                    borderRadius: 12,
+                    background: "rgba(251,234,243,0.7)",
+                    border: "1px solid rgba(223,167,198,0.15)",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    flexShrink: 0,
+                  }}
+                >
+                  <h.Icon size={16} strokeWidth={1.5} color={C.gold} />
+                </div>
+                <span className="dm" style={{ color: C.text, fontSize: 14, fontWeight: 500 }}>
+                  {h.text}
+                </span>
+              </div>
+            ))}
+          </div>
+        </W>
+      </section>
+
+      {/* ── LEISTUNGEN — hell ─────────────────────────────────────────────── */}
+      <section id="leistungen" style={{ padding: "96px 0", background: C.bg1 }}>
+        <W>
+          <Divider />
+          <Label>Was wir für dich tun</Label>
+          <h2 className="pf" style={{ fontSize: "clamp(2rem,4vw,3rem)", color: C.text, marginBottom: 14 }}>
+            Unsere <em style={{ color: C.pink }}>Leistungen</em>
+          </h2>
+          <p className="dm" style={{ color: C.muted, fontSize: 16, maxWidth: 480, lineHeight: 1.8, marginBottom: 60 }}>
+            Von Nageldesign bis Gesichtsbehandlung – professionell, präzise, mit Liebe fürs Detail.
+          </p>
+          <div className="dv-svc-g">
+            {SERVICES.map((s, i) => (
+              <div
+                key={s.title}
+                data-r
+                data-d={i % 3}
+                className="lux-card"
+                style={{ padding: "28px 26px", borderRadius: 22, background: C.white, textAlign: "center" }}
+              >
+                {s.img && (
+                  <img src={s.img} alt={s.title} style={{ width: "100%", height: 160, objectFit: "cover", borderRadius: 14, marginBottom: 14 }} />
+                )}
+                <h3 className="pf" style={{ color: C.text, fontSize: 19, marginBottom: 10 }}>
+                  {s.title}
+                </h3>
+                <p className="dm" style={{ color: C.muted, fontSize: 14, lineHeight: 1.78 }}>
+                  {s.desc}
+                </p>
+                <div style={{ display: "flex", justifyContent: "center", marginTop: 20 }}>
+                  <button
+                    className="btn-pk"
+                    onClick={() => go("leistungen")}
+                    style={{
+                      padding: "10px 22px",
+                      borderRadius: 999,
+                      fontSize: 12,
+                      letterSpacing: "1.5px",
+                      textTransform: "uppercase",
+                    }}
+                  >
+                    Mehr erfahren
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </W>
+        <div style={{ marginTop: 48, display: "flex", justifyContent: "center", padding: "0 24px" }}>
+          <a href={WA_URL} target="_blank" rel="noreferrer" className="btn-pk" style={{ padding: "13px 30px", borderRadius: 999, fontSize: 14, fontWeight: 500, textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 8 }}>
+            <span style={{ color: C.gold }}>✦</span> Termin anfragen via WhatsApp
+          </a>
+        </div>
+      </section>
+
+      {/* ── GALERIE — hell, Ivory ─────────────────────────────────────────── */}
+      <section id="galerie" style={{ padding: "96px 0", background: C.white, overflow: "hidden" }}>
+        <W style={{ marginBottom: 52 }}>
+          <Divider />
+          <Label>Portfolio</Label>
+          <h2 className="pf" style={{ fontSize: "clamp(2rem,4vw,3rem)", color: C.text, marginBottom: 14 }}>
+            Unsere <em style={{ color: C.pink }}>Galerie</em>
+          </h2>
+          <p className="dm" style={{ color: C.muted, fontSize: 16, maxWidth: 440, lineHeight: 1.8 }}>
+            Einblicke in unsere Arbeit – jedes Ergebnis ein kleines Kunstwerk.
+          </p>
+        </W>
+        <div className="dv-marquee-wrap" style={{ overflow: "hidden", padding: "10px 0" }}>
+          <div className="dv-marquee-track">
+            {[...GALLERY, ...GALLERY].map((img, i) => (
+              <div
+                key={`${img.id}-${i}`}
+                className="dv-gcard"
+                style={{ width: 260, height: 340, background: img.g, flexShrink: 0 }}
+              >
+                {img.src ? (
+                  <img src={img.src} alt={img.label} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                ) : (
+                  <div style={{ width: "100%", height: "100%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 10 }}>
+                    <span style={{ fontSize: 38 }}>📸</span>
+                    <span className="dm" style={{ color: "rgba(43,32,39,0.4)", fontSize: 11, letterSpacing: "1px" }}>{img.label}</span>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
         <div style={{ marginTop: 48, display: "flex", justifyContent: "center", padding: "0 24px" }}>
           <a href={WA_URL} target="_blank" rel="noreferrer" className="btn-pk" style={{ padding: "13px 30px", borderRadius: 999, fontSize: 14, fontWeight: 500, textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 8 }}>
             <span style={{ color: C.gold }}>✦</span> Termin anfragen via WhatsApp
