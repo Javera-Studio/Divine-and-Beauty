@@ -1071,7 +1071,7 @@ export default function App() {
               alignItems: "center",
               justifyContent: "center",
               gap: 14,
-              marginBottom: 20,
+              marginBottom: 24,
               color: C.gold,
               opacity: 0.85,
             }}
@@ -1081,16 +1081,17 @@ export default function App() {
             <span style={{ width: 40, height: 1, background: "linear-gradient(90deg,#D6B76D,transparent)" }} />
           </div>
           <p
-            className="dm"
+            className="pf"
             style={{
-              color: "rgba(255,247,242,0.55)",
-              fontSize: 12,
-              letterSpacing: "3px",
-              textTransform: "uppercase",
-              margin: "0 0 20px",
+              color: "rgba(255,247,242,0.88)",
+              fontSize: "clamp(1.4rem,3vw,2rem)",
+              fontStyle: "italic",
+              letterSpacing: "0.5px",
+              lineHeight: 1.6,
+              margin: "0 0 24px",
             }}
           >
-            Divine Beauty &amp; Nails Studio
+            Deine Auszeit. Deine Schönheit. Dein Moment.
           </p>
           <div
             style={{
