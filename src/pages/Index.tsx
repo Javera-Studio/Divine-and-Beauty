@@ -1300,6 +1300,21 @@ export default function App() {
         id="ueber"
         style={{ padding: "96px 0", background: C.bg2, position: "relative", overflow: "hidden" }}
       >
+        {/* Aquarell-Wandtextur — sehr dezent, 7 % Deckkraft */}
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            backgroundImage: "url('/daca3.png')",
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            opacity: 0.07,
+            filter: "blur(22px) saturate(140%)",
+            transform: "scale(1.08)",
+            pointerEvents: "none",
+            zIndex: 0,
+          }}
+        />
         <div
           style={{
             position: "absolute",
@@ -1310,46 +1325,26 @@ export default function App() {
             borderRadius: "50%",
             background: "radial-gradient(circle,rgba(243,198,220,0.3) 0%,transparent 70%)",
             pointerEvents: "none",
+            zIndex: 0,
           }}
         />
-        <W>
+        <W style={{ position: "relative", zIndex: 1 }}>
           <div className="dv-about-g">
             <div data-r style={{ position: "relative" }}>
               <div
                 style={{
                   height: 500,
                   borderRadius: 28,
-                  background: "linear-gradient(148deg,#FBEAF3,#F3C6DC 55%,rgba(223,167,198,0.5) 100%)",
-                  position: "relative",
                   overflow: "hidden",
                   border: "1px solid rgba(214,183,109,0.16)",
                   boxShadow: "0 20px 60px rgba(185,130,165,0.12)",
                 }}
               >
-                <div
-                  style={{
-                    position: "absolute",
-                    inset: 0,
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    gap: 12,
-                  }}
-                >
-                  <span style={{ fontSize: 72 }}>🌸</span>
-                  <span
-                    className="dm"
-                    style={{
-                      color: "rgba(43,32,39,0.35)",
-                      fontSize: 11,
-                      letterSpacing: "2px",
-                      textTransform: "uppercase",
-                    }}
-                  >
-                    Studiofoto einfügen
-                  </span>
-                </div>
+                <img
+                  src="/daca3.png"
+                  alt="Danijela — Divine Beauty & Nails Studio"
+                  style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top center", display: "block" }}
+                />
               </div>
               <div
                 className="dv-float"
@@ -1683,8 +1678,23 @@ export default function App() {
       </section>
 
       {/* ── KONTAKT — Ivory Rosé ──────────────────────────────────────────── */}
-      <section id="kontakt" style={{ padding: "96px 0", background: C.bg1 }}>
-        <W>
+      <section id="kontakt" style={{ padding: "96px 0", background: C.bg1, position: "relative", overflow: "hidden" }}>
+        {/* Aquarell-Wandtextur — noch dezenter, 5 % */}
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            backgroundImage: "url('/daca3.png')",
+            backgroundSize: "cover",
+            backgroundPosition: "bottom center",
+            opacity: 0.05,
+            filter: "blur(28px) saturate(120%)",
+            transform: "scale(1.08) scaleX(-1)",
+            pointerEvents: "none",
+            zIndex: 0,
+          }}
+        />
+        <W style={{ position: "relative", zIndex: 1 }}>
           <Divider />
           <div className="dv-contact-g">
             <div>
