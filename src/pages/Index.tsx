@@ -1159,7 +1159,7 @@ export default function App() {
       <section
         style={{
           position: "relative",
-          padding: "96px 24px",
+          padding: "52px 24px",
           background: "linear-gradient(135deg,#2A2528 0%,#3a3033 100%)",
           overflow: "hidden",
         }}
@@ -1180,7 +1180,7 @@ export default function App() {
               alignItems: "center",
               justifyContent: "center",
               gap: 14,
-              marginBottom: 22,
+              marginBottom: 20,
               color: C.gold,
               opacity: 0.85,
             }}
@@ -1190,32 +1190,31 @@ export default function App() {
             <span style={{ width: 40, height: 1, background: "linear-gradient(90deg,#D6B76D,transparent)" }} />
           </div>
           <p
-            className="pf"
-            style={{
-              fontStyle: "italic",
-              fontSize: "clamp(1.6rem,3.6vw,2.8rem)",
-              lineHeight: 1.4,
-              color: "#FFF7F2",
-              margin: 0,
-              fontWeight: 300,
-            }}
-          >
-            Deine <span style={{ color: "#E9B8C8" }}>Auszeit</span>.
-            Deine <span className="dv-gold">Schönheit</span>.
-            Dein <span style={{ color: "#E9B8C8" }}>Moment</span>.
-          </p>
-          <p
             className="dm"
             style={{
-              marginTop: 18,
               color: "rgba(255,247,242,0.55)",
               fontSize: 12,
               letterSpacing: "3px",
               textTransform: "uppercase",
+              margin: "0 0 20px",
             }}
           >
             Divine Beauty &amp; Nails Studio
           </p>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: 14,
+              color: C.gold,
+              opacity: 0.85,
+            }}
+          >
+            <span style={{ width: 40, height: 1, background: "linear-gradient(90deg,transparent,#D6B76D)" }} />
+            <span style={{ fontSize: 12, letterSpacing: "3px" }}>✦ ✦ ✦</span>
+            <span style={{ width: 40, height: 1, background: "linear-gradient(90deg,#D6B76D,transparent)" }} />
+          </div>
         </div>
       </section>
 
