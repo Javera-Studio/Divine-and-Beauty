@@ -715,7 +715,7 @@ export default function App() {
             <img
   src={logo}
   alt="Divine Beauty Logo"
-  style={{ width: 68, height: 68, borderRadius: "50%", objectFit: "cover" }}
+  style={{ width: 82, height: 82, borderRadius: "50%", objectFit: "cover" }}
 />
             <div>
               <div className="pf" style={{ color: C.text, fontSize: 16, fontWeight: 600, lineHeight: 1.1 }}>
