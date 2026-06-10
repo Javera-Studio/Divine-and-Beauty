@@ -1284,20 +1284,6 @@ export default function App() {
                     </span>
                   </div>
                 )}
-                <div
-                  style={{
-                    position: "absolute",
-                    bottom: 0,
-                    left: 0,
-                    right: 0,
-                    padding: "28px 16px 14px",
-                    background: "linear-gradient(transparent,rgba(43,32,39,0.38))",
-                  }}
-                >
-                  <span className="dm" style={{ color: "#fff", fontSize: 13 }}>
-                    {img.label}
-                  </span>
-                </div>
               </div>
             ))}
           </div>
