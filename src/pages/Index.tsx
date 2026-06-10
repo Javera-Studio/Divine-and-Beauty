@@ -1335,16 +1335,16 @@ export default function App() {
           <div className="dv-team-g" style={{ marginBottom: 48 }}>
             {[
               {
-                img: "/daca1.jpg",
-                name: "Danijela",
-                role: "Inhaberin & Beauty-Expertin",
-                text: "Mit viel Leidenschaft, Präzision und Liebe zum Detail führt Danijela Divine Beauty – und sorgt dafür, dass sich jede Kundin rundum wohlfühlt.",
-              },
-              {
                 img: "/gloria1.jpg",
                 name: "Gloria",
                 role: "Beauty-Expertin",
                 text: "Gloria begeistert mit ihrer freundlichen Art und ihrem Gespür für schöne, natürliche Ergebnisse – stets mit einem Lächeln.",
+              },
+              {
+                img: "/daca1.jpg",
+                name: "Danijela",
+                role: "Inhaberin & Beauty-Expertin",
+                text: "Mit viel Leidenschaft, Präzision und Liebe zum Detail führt Danijela Divine Beauty – und sorgt dafür, dass sich jede Kundin rundum wohlfühlt.",
               },
               {
                 img: "/nina1.jpg",
