@@ -1212,11 +1212,6 @@ export default function App() {
             </div>
           </div>
         </W>
-        <div style={{ marginTop: 48, display: "flex", justifyContent: "center", padding: "0 24px" }}>
-          <a href={WA_URL} target="_blank" rel="noreferrer" className="btn-pk" style={{ padding: "13px 30px", borderRadius: 999, fontSize: 14, fontWeight: 500, textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 8 }}>
-            <span style={{ color: C.gold }}>✦</span> Termin anfragen via WhatsApp
-          </a>
-        </div>
       </section>
 
       {/* ── WARUM DIVINE — hell, weiß ─────────────────────────────────────── */}
@@ -1272,11 +1267,6 @@ export default function App() {
             ))}
           </div>
         </W>
-        <div style={{ marginTop: 48, display: "flex", justifyContent: "center", padding: "0 24px" }}>
-          <a href={WA_URL} target="_blank" rel="noreferrer" className="btn-pk" style={{ padding: "13px 30px", borderRadius: 999, fontSize: 14, fontWeight: 500, textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 8 }}>
-            <span style={{ color: C.gold }}>✦</span> Termin anfragen via WhatsApp
-          </a>
-        </div>
       </section>
 
       {/* ── TEAM ─────────────────────────────────────────────────────────── */}
@@ -1874,151 +1864,136 @@ export default function App() {
                 </div>
               </div>
             </div>
-            {/* Map Placeholder */}
-            <div
-              className="dv-map"
-              style={{
-                height: "100%",
-                minHeight: 420,
-                borderRadius: 26,
-                background: "linear-gradient(148deg,#FBEAF3,#F3C6DC 55%,rgba(214,183,109,0.2) 100%)",
-                border: "1px solid rgba(214,183,109,0.18)",
-                boxShadow: "0 14px 48px rgba(185,130,165,0.1)",
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "center",
-                gap: 14,
-                position: "relative",
-                overflow: "hidden",
-              }}
-            >
-              <span style={{ fontSize: 46 }}>🗺️</span>
-              <span className="dm" style={{ color: C.muted, fontSize: 14 }}>
-                Google Maps einbetten
-              </span>
-              <span className="dm" style={{ color: C.pink, fontSize: 12 }}>
-                {STUDIO.address}
-              </span>
+            {/* Studio Photo */}
+            <div style={{ position: "relative" }}>
+              <div
+                style={{
+                  borderRadius: 28,
+                  overflow: "hidden",
+                  boxShadow: "0 24px 72px rgba(185,130,165,0.16)",
+                  border: "1px solid rgba(214,183,109,0.14)",
+                  aspectRatio: "4/5",
+                }}
+              >
+                <img
+                  src="/daca1.jpg"
+                  alt="Divine Beauty & Nails Studio"
+                  style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top center", display: "block" }}
+                />
+              </div>
+              {/* Floating Badge */}
+              <div
+                style={{
+                  position: "absolute",
+                  bottom: 24,
+                  left: 24,
+                  background: "rgba(255,255,255,0.92)",
+                  backdropFilter: "blur(16px)",
+                  borderRadius: 16,
+                  padding: "14px 20px",
+                  boxShadow: "0 8px 32px rgba(185,130,165,0.14)",
+                  border: "1px solid rgba(214,183,109,0.18)",
+                }}
+              >
+                <div style={{ color: C.gold, fontSize: 8, letterSpacing: 6, marginBottom: 4 }}>✦ ✦ ✦</div>
+                <div className="pf" style={{ color: C.text, fontSize: 14, marginBottom: 2 }}>Divine Beauty Studio</div>
+                <div className="dm" style={{ color: C.muted, fontSize: 12 }}>1200 Wien</div>
+              </div>
             </div>
           </div>
         </W>
       </section>
 
-      {/* ── FOOTER — dunkel (bleibt dunkel) ──────────────────────────────── */}
+      {/* ── FOOTER — dunkel ───────────────────────────────────────────────── */}
       <footer style={{ background: C.dark1, borderTop: "1px solid rgba(214,183,109,0.14)" }}>
-        <W pad="64px 24px 40px">
-          <div className="dv-footer-g">
+        <W pad="56px 24px 36px">
+          <div style={{ display: "grid", gridTemplateColumns: "1fr auto", gap: "48px 60px", marginBottom: 40 }}>
+
+            {/* Left: Brand + Info */}
             <div>
-              <div className="pf" style={{ color: C.soft, fontSize: 26, marginBottom: 4 }}>
-                Divine Beauty
-              </div>
-              <div
-                className="dm"
-                style={{
-                  color: C.gold,
-                  fontSize: 10,
-                  letterSpacing: "2.5px",
-                  textTransform: "uppercase",
-                  marginBottom: 20,
-                }}
-              >
+              <div className="pf" style={{ color: C.soft, fontSize: 24, marginBottom: 2 }}>Divine Beauty</div>
+              <div className="dm" style={{ color: C.gold, fontSize: 10, letterSpacing: "2.5px", textTransform: "uppercase", marginBottom: 16 }}>
                 &amp; Nails Studio · Wien
               </div>
-              <p
-                className="dm"
-                style={{
-                  color: "rgba(255,255,255,0.4)",
-                  fontSize: 14,
-                  lineHeight: 1.75,
-                  maxWidth: 300,
-                  marginBottom: 24,
-                }}
-              >
-                Luxuriöses Nagelstudio &amp; Beauty in Wien. Für Nägel, Haut und Wohlgefühl.
+              <p className="dm" style={{ color: "rgba(255,255,255,0.38)", fontSize: 13.5, lineHeight: 1.75, maxWidth: 320, marginBottom: 20 }}>
+                Luxuriöses Nagelstudio &amp; Beauty in 1200 Wien. Für Nägel, Haut und Wohlgefühl.
               </p>
+
+              {/* Instagram */}
               <a
                 href={STUDIO.instagramUrl}
                 target="_blank"
                 rel="noreferrer"
                 className="dm"
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: 8,
-                  color: C.soft,
-                  textDecoration: "none",
-                  border: "1px solid rgba(243,198,220,0.22)",
-                  borderRadius: 999,
-                  padding: "8px 16px",
-                  fontSize: 13,
-                }}
+                style={{ display: "inline-flex", alignItems: "center", gap: 8, color: C.soft, textDecoration: "none", border: "1px solid rgba(243,198,220,0.2)", borderRadius: 999, padding: "7px 15px", fontSize: 13, marginBottom: 24 }}
               >
-                📸 {STUDIO.instagram}
+                <Instagram size={14} strokeWidth={1.5} />
+                {STUDIO.instagram}
+              </a>
+
+              {/* Address + Hours */}
+              <div style={{ display: "flex", flexWrap: "wrap", gap: 28, marginBottom: 20 }}>
+                <div>
+                  <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 6 }}>
+                    <MapPin size={13} strokeWidth={1.5} color={C.gold} />
+                    <span className="dm" style={{ color: "rgba(255,255,255,0.35)", fontSize: 10, letterSpacing: "1.8px", textTransform: "uppercase" }}>Adresse</span>
+                  </div>
+                  <div className="dm" style={{ color: "rgba(255,255,255,0.5)", fontSize: 13, lineHeight: 1.65 }}>
+                    {STUDIO.address}
+                  </div>
+                </div>
+                <div>
+                  <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 6 }}>
+                    <Clock size={13} strokeWidth={1.5} color={C.gold} />
+                    <span className="dm" style={{ color: "rgba(255,255,255,0.35)", fontSize: 10, letterSpacing: "1.8px", textTransform: "uppercase" }}>Öffnungszeiten</span>
+                  </div>
+                  {Object.entries(STUDIO.hours).map(([d, t]) => (
+                    <div key={d} className="dm" style={{ color: "rgba(255,255,255,0.5)", fontSize: 12.5, lineHeight: 1.75 }}>
+                      <span style={{ color: "rgba(255,255,255,0.3)", display: "inline-block", minWidth: 72 }}>{d}</span>
+                      <span>{t}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Google Maps link */}
+              <a
+                href={`https://maps.google.com/?q=${encodeURIComponent(STUDIO.address)}`}
+                target="_blank"
+                rel="noreferrer"
+                className="dm"
+                style={{ display: "inline-flex", alignItems: "center", gap: 7, color: "rgba(255,255,255,0.38)", fontSize: 12.5, textDecoration: "none", transition: "color .2s" }}
+                onMouseEnter={e => (e.currentTarget.style.color = C.gold)}
+                onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255,0.38)")}
+              >
+                <MapPin size={13} strokeWidth={1.5} />
+                Google Maps öffnen →
               </a>
             </div>
-            <div>
-              <div
-                className="dm"
-                style={{
-                  color: "rgba(255,255,255,0.4)",
-                  fontSize: 11,
-                  letterSpacing: "2px",
-                  textTransform: "uppercase",
-                  marginBottom: 20,
-                }}
-              >
-                Navigation
-              </div>
-              {NAV.map((n) =>
-                n.href ? (
-                  <Link key={n.href} to={n.href} className="dv-flink" style={{ textDecoration: "none" }}>
-                    {n.l}
-                  </Link>
-                ) : (
-                  <button key={n.id} className="dv-flink" onClick={() => go(n.id!)}>
-                    {n.l}
-                  </button>
-                )
-              )}
-            </div>
-            <div>
-              <div
-                className="dm"
-                style={{
-                  color: "rgba(255,255,255,0.4)",
-                  fontSize: 11,
-                  letterSpacing: "2px",
-                  textTransform: "uppercase",
-                  marginBottom: 20,
-                }}
-              >
+
+            {/* Right: Legal */}
+            <div style={{ minWidth: 140 }}>
+              <div className="dm" style={{ color: "rgba(255,255,255,0.35)", fontSize: 10, letterSpacing: "1.8px", textTransform: "uppercase", marginBottom: 16 }}>
                 Rechtliches
               </div>
               {[
                 { n: "Impressum", to: "/impressum" },
                 { n: "Datenschutz", to: "/datenschutz" },
               ].map(({ n, to }) => (
-                <Link key={n} to={to} className="dv-flink">
-                  {n}
-                </Link>
+                <Link key={n} to={to} className="dv-flink">{n}</Link>
               ))}
             </div>
           </div>
-          {/* Gold-Rosé Divider Line */}
-          <div
-            style={{
-              height: 1,
-              background:
-                "linear-gradient(90deg,transparent,rgba(214,183,109,0.28),rgba(243,198,220,0.18),transparent)",
-              marginBottom: 24,
-            }}
-          />
-          <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", gap: 10 }}>
-            <span className="dm" style={{ color: "rgba(255,255,255,0.28)", fontSize: 12 }}>
-              © {new Date().getFullYear()} Divine Beauty &amp; Nails Studio · Wien · Alle Rechte vorbehalten
+
+          {/* Divider */}
+          <div style={{ height: 1, background: "linear-gradient(90deg,transparent,rgba(214,183,109,0.22),rgba(243,198,220,0.14),transparent)", marginBottom: 22 }} />
+
+          {/* Copyright */}
+          <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", gap: 8 }}>
+            <span className="dm" style={{ color: "rgba(255,255,255,0.25)", fontSize: 12 }}>
+              © {new Date().getFullYear()} Divine Beauty &amp; Nails Studio · Wien
             </span>
-            <span className="dm" style={{ color: "rgba(255,255,255,0.28)", fontSize: 12 }}>
+            <span className="dm" style={{ color: "rgba(255,255,255,0.25)", fontSize: 12 }}>
               Made with <span style={{ color: C.soft }}>♥</span> in Wien
             </span>
           </div>
