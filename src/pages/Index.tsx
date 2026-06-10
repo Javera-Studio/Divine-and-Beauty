@@ -527,6 +527,22 @@ body { overflow-x: hidden; background: #FFF7F2; }
 @media (prefers-reduced-motion: reduce) {
   .lux-tags-track { animation: none; }
 }
+
+/* ── Scroll Reveal ───────────────────────────────────────────────────────── */
+[data-r] {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity .65s cubic-bezier(.4,0,.2,1),
+              transform .65s cubic-bezier(.4,0,.2,1);
+}
+[data-r].rv { opacity: 1; transform: none; }
+[data-r][data-d="1"] { transition-delay: 90ms; }
+[data-r][data-d="2"] { transition-delay: 180ms; }
+[data-r][data-d="3"] { transition-delay: 270ms; }
+[data-r][data-d="4"] { transition-delay: 360ms; }
+@media (prefers-reduced-motion: reduce) {
+  [data-r] { opacity: 1; transform: none; transition: none; }
+}
 `;
 
 export default function App() {
@@ -544,6 +560,15 @@ export default function App() {
       const s = document.getElementById("dv-css");
       if (s) s.remove();
     };
+  }, []);
+
+  useEffect(() => {
+    const io = new IntersectionObserver(
+      (entries) => entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("rv"); io.unobserve(e.target); } }),
+      { threshold: 0.08, rootMargin: "0px 0px -48px 0px" }
+    );
+    document.querySelectorAll("[data-r]").forEach((el) => io.observe(el));
+    return () => io.disconnect();
   }, []);
 
   const go = (id) => {
@@ -676,7 +701,7 @@ export default function App() {
             <img
   src={logo}
   alt="Divine Beauty Logo"
-  style={{ width: 44, height: 44, borderRadius: "50%", objectFit: "cover" }}
+  style={{ width: 57, height: 57, borderRadius: "50%", objectFit: "cover" }}
 />
             <div>
               <div className="pf" style={{ color: C.text, fontSize: 16, fontWeight: 600, lineHeight: 1.1 }}>
@@ -1106,9 +1131,11 @@ export default function App() {
               { title: "Wimpernlifting", img: "/Wimpernlifting.jpg", desc: "Schöner Schwung, mehr Länge und ein wacher Blick." },
               { title: "Waxing", img: "/Waxing.jpg", desc: "Sanfte Haarentfernung für seidig glatte Haut." },
               { title: "Nägel", img: "/Gelmodellage.jpg", desc: "Maniküre, Gel-Nägel, Acrylnägel, Nail-Art & mehr." },
-            ].map((s) => (
+            ].map((s, i) => (
               <div
                 key={s.title}
+                data-r
+                data-d={i}
                 className="lux-card"
                 style={{
                   borderRadius: 22,
@@ -1256,9 +1283,11 @@ export default function App() {
             Von Nageldesign bis Gesichtsbehandlung – professionell, präzise, mit Liebe fürs Detail.
           </p>
           <div className="dv-svc-g">
-            {SERVICES.map((s) => (
+            {SERVICES.map((s, i) => (
               <div
                 key={s.title}
+                data-r
+                data-d={i % 3}
                 className="lux-card"
                 style={{ padding: "28px 26px", borderRadius: 22, background: C.white }}
               >
@@ -1380,7 +1409,7 @@ export default function App() {
         />
         <W>
           <div className="dv-about-g">
-            <div style={{ position: "relative" }}>
+            <div data-r style={{ position: "relative" }}>
               <div
                 style={{
                   height: 500,
@@ -1439,7 +1468,7 @@ export default function App() {
                 </div>
               </div>
             </div>
-            <div>
+            <div data-r data-d="1">
               <Divider />
               <Label>Über uns</Label>
               <h2
@@ -1508,9 +1537,11 @@ export default function App() {
                 title: "Stilvolle Atmosphäre",
                 desc: "Ein Ort zum Entspannen, Verwöhnen und Wohlfühlen – dein kleines Luxus-Refugium.",
               },
-            ].map((a) => (
+            ].map((a, i) => (
               <div
                 key={a.title}
+                data-r
+                data-d={i}
                 className="lux-card"
                 style={{ padding: "36px 28px", borderRadius: 22, textAlign: "center", background: C.white }}
               >
@@ -1630,6 +1661,7 @@ export default function App() {
               return (
                 <div
                   className="rev-feat"
+                  data-r
                   style={{
                     borderRadius: 24,
                     padding: "32px 30px",
@@ -1701,6 +1733,8 @@ export default function App() {
               {REVIEWS.filter((r) => !r.featured).map((r, i) => (
                 <div
                   key={r.id}
+                  data-r
+                  data-d={i % 2}
                   className="rev-sm"
                   style={{ borderRadius: 20, padding: "22px 20px", marginTop: i % 2 === 1 ? 22 : 0 }}
                 >

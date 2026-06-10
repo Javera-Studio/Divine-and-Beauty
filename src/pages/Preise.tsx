@@ -144,6 +144,11 @@ body { overflow-x: hidden; background: #FFF7F2; }
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: #FFF7F2; }
 ::-webkit-scrollbar-thumb { background: linear-gradient(#DFA7C6,#D6B76D); border-radius: 2px; }
+[data-r] { opacity: 0; transform: translateY(32px); transition: opacity .65s cubic-bezier(.4,0,.2,1), transform .65s cubic-bezier(.4,0,.2,1); }
+[data-r].rv { opacity: 1; transform: none; }
+[data-r][data-d="1"] { transition-delay: 90ms; }
+[data-r][data-d="2"] { transition-delay: 180ms; }
+@media (prefers-reduced-motion: reduce) { [data-r] { opacity: 1; transform: none; transition: none; } }
 `;
 
 export default function Preise() {
@@ -159,6 +164,15 @@ export default function Preise() {
     el.textContent = CSS;
     return () => { document.getElementById("pr-css")?.remove(); };
   }, []);
+
+  useEffect(() => {
+    const io = new IntersectionObserver(
+      (entries) => entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("rv"); io.unobserve(e.target); } }),
+      { threshold: 0.08, rootMargin: "0px 0px -48px 0px" }
+    );
+    document.querySelectorAll("[data-r]").forEach((el) => io.observe(el));
+    return () => io.disconnect();
+  }, [active]);
 
   const visible = active === "Alle" ? PRICES : PRICES.filter((p) => p.category === active);
 
@@ -219,9 +233,11 @@ export default function Preise() {
       <section style={{ padding: "64px 0 96px", background: C.bg1 }}>
         <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 24px" }}>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(300px,1fr))", gap: 20 }}>
-            {visible.map((cat) => (
+            {visible.map((cat, i) => (
               <div
                 key={cat.category}
+                data-r
+                data-d={i % 3}
                 style={{
                   background: C.white,
                   borderRadius: 22,
