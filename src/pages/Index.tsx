@@ -1332,7 +1332,7 @@ export default function App() {
                 text: "Gloria begeistert mit ihrer freundlichen Art und ihrem Gespür für schöne, natürliche Ergebnisse – stets mit einem Lächeln.",
               },
               {
-                img: "/daca1.jpg",
+                img: "/daca3.png",
                 name: "Danijela",
                 role: "Inhaberin & Beauty-Expertin",
                 text: "Mit viel Leidenschaft, Präzision und Liebe zum Detail führt Danijela Divine Beauty – und sorgt dafür, dass sich jede Kundin rundum wohlfühlt.",
