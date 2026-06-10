@@ -39,7 +39,7 @@ const SERVICES = [
   },
   {
     icon: "🌸",
-    img: "/Shellac.jpg",
+    img: "/nagel5.png",
     title: "Shellac",
     desc: "Der Klassiker mit Hochglanz-Finish und bis zu drei Wochen Haltbarkeit – ohne Abstumpfung, ohne Chips.",
   },
@@ -150,15 +150,18 @@ const PRICES = [
 
 // ── Galerie: Soft Rosé + Champagne Gold Verläufe ──────────────────────────────
 const GALLERY = [
-  { id: 1, label: "Gelmodellage", src: "/Gelmodellage.png", g: "linear-gradient(145deg,#FBEAF3,#F3C6DC 55%,#DFA7C6)" },
-  { id: 2, label: "Shellac", src: "/Shellac.png", g: "linear-gradient(145deg,#FFF7FA,#F3C6DC)" },
-  { id: 3, label: "Pediküre", src: "/Pedikuere.png", g: "linear-gradient(145deg,#FBEAF3,#e8d4b0 60%,#D6B76D)" },
-  { id: 4, label: "Wimpernlifting", src: "/Wimpernlifting.png", g: "linear-gradient(145deg,#FFF7FA,#DFA7C6 55%,#D6B76D)" },
-  { id: 5, label: "Powderbrows", src: "/Powderbrows.png", g: "linear-gradient(145deg,#FBEAF3,#d4b0c8)" },
-  { id: 6, label: "Make-up", src: "/Make-up.png", g: "linear-gradient(145deg,#FFF7FA,#F3C6DC 45%,#ead5a8)" },
-  { id: 7, label: "Maniküre", src: "/Manikuere.png", g: "linear-gradient(145deg,#FBEAF3,#DFA7C6)" },
-  { id: 8, label: "Gesichtsbehandlung", src: "/Gesichtsbehandlung.png", g: "linear-gradient(145deg,#FFF7FA,#D6B76D 40%,#DFA7C6)" },
-  { id: 9, label: "Lippenschattierung", src: "/Lippenschattierung.png", g: "linear-gradient(145deg,#FFF7FA,#F3C6DC 55%,#DFA7C6)" },
+  { id: 1,  label: "Gelmodellage",      src: "/Gelmodellage.png",      g: "linear-gradient(145deg,#FBEAF3,#F3C6DC 55%,#DFA7C6)" },
+  { id: 2,  label: "Nägel",             src: "/nagel1.jpg",            g: "linear-gradient(145deg,#FFF7FA,#F3C6DC)" },
+  { id: 3,  label: "Pediküre",          src: "/Pedikuere.png",         g: "linear-gradient(145deg,#FBEAF3,#e8d4b0 60%,#D6B76D)" },
+  { id: 4,  label: "Augen",             src: "/augen1.png",            g: "linear-gradient(145deg,#FFF7FA,#DFA7C6 55%,#D6B76D)" },
+  { id: 5,  label: "Powderbrows",       src: "/Powderbrows.png",       g: "linear-gradient(145deg,#FBEAF3,#d4b0c8)" },
+  { id: 6,  label: "Nägel",             src: "/nagel2.png",            g: "linear-gradient(145deg,#FFF7FA,#F3C6DC 45%,#ead5a8)" },
+  { id: 7,  label: "Maniküre",          src: "/Manikuere.png",         g: "linear-gradient(145deg,#FBEAF3,#DFA7C6)" },
+  { id: 8,  label: "Augen",             src: "/augen2.png",            g: "linear-gradient(145deg,#FFF7FA,#D6B76D 40%,#DFA7C6)" },
+  { id: 9,  label: "Lippenschattierung",src: "/Lippenschattierung.png",g: "linear-gradient(145deg,#FFF7FA,#F3C6DC 55%,#DFA7C6)" },
+  { id: 10, label: "Nägel",             src: "/nagel4.png",            g: "linear-gradient(145deg,#FBEAF3,#F3C6DC 55%,#DFA7C6)" },
+  { id: 11, label: "Make-up",           src: "/Make-up.png",           g: "linear-gradient(145deg,#FFF7FA,#F3C6DC 45%,#ead5a8)" },
+  { id: 12, label: "Gesichtsbehandlung",src: "/Gesichtsbehandlung.png",g: "linear-gradient(145deg,#FFF7FA,#D6B76D 40%,#DFA7C6)" },
 ];
 
 const REVIEWS = [
