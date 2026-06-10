@@ -959,7 +959,7 @@ export default function App() {
               >
                 Erstklassige Behandlungen in stilvollem Ambiente — weil du es verdienst.
               </p>
-              <div style={{ display: "flex", alignItems: "center", gap: 18, flexWrap: "wrap", marginBottom: 36 }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 18, flexWrap: "wrap" }}>
                 <a
                   href={WA_URL}
                   target="_blank"
@@ -996,51 +996,11 @@ export default function App() {
                   Termin buchen
                 </a>
               </div>
-              <div style={{ marginLeft: -8, marginRight: -8 }}>
-                {(() => {
-                  const SVC = [
-                    { l: "Nageldesign", s: "lg" },
-                    { l: "Waxing" },
-                    { l: "Pediküre", s: "sm", v: "nude" },
-                    { l: "Make-up", v: "cham" },
-                    { l: "Wimpernlifting", s: "lg", v: "ivory" },
-                    { l: "PMU", s: "sm" },
-                    { l: "Laser", v: "blush" },
-                    { l: "Facials", v: "nude" },
-                    { l: "Brows", s: "sm" },
-                    { l: "Lashes", v: "cham" },
-                    { l: "Skin Treatments", s: "lg", v: "ivory" },
-                    { l: "Academy", v: "blush" },
-                  ];
-                  const rows = [
-                    { cls: "lux-tags-row-a", items: [0, 3, 6, 9, 1, 4, 7, 10] },
-                    { cls: "lux-tags-row-b", items: [2, 5, 8, 11, 0, 4, 9, 6] },
-                  ];
-                  return rows.map((row, ri) => (
-                    <div key={ri} className={`lux-tags ${row.cls}`} style={{ marginTop: ri === 0 ? 0 : 10 }}>
-                      <div className="lux-tags-track">
-                        {[0, 1].map((dup) =>
-                          row.items.map((i, idx) => {
-                            const t = SVC[i];
-                            const cls = ["lux-tag", t.s ? `is-${t.s}` : "", t.v ? `is-${t.v}` : ""].join(" ");
-                            return (
-                              <span key={`${dup}-${idx}`} className={cls} aria-hidden={dup === 1 ? true : undefined}>
-                                <span className="lux-dot" />
-                                {t.l}
-                              </span>
-                            );
-                          })
-                        )}
-                      </div>
-                    </div>
-                  ));
-                })()}
-              </div>
             </div>
-            <div className="dv-hero-img" style={{ position: "relative", marginTop: -80, marginBottom: -80, minWidth: 0 }}>
+            <div className="dv-hero-img" style={{ position: "relative", marginTop: -40, marginBottom: -40, minWidth: 0 }}>
               <div
                 style={{
-                  height: 820,
+                  height: 680,
                   position: "relative",
                   overflow: "visible",
                   width: "100%",
@@ -1067,52 +1027,6 @@ export default function App() {
                 />
               </div>
 
-              {/* Floating Info-Card */}
-              <div
-                className="dv-float"
-                style={{
-                  position: "absolute",
-                  bottom: -24,
-                  left: -28,
-                  background: "rgba(255,255,255,0.98)",
-                  borderRadius: 20,
-                  padding: "18px 24px",
-                  boxShadow: "0 20px 50px rgba(185,130,165,0.18)",
-                  border: "1px solid rgba(214,183,109,0.22)",
-                }}
-              >
-                <div
-                  className="dm"
-                  style={{
-                    color: C.gold,
-                    fontSize: 10,
-                    letterSpacing: "1.5px",
-                    textTransform: "uppercase",
-                    marginBottom: 4,
-                  }}
-                >
-                  Premium Studio
-                </div>
-                <div className="pf" style={{ color: C.text, fontSize: 17 }}>
-                  Divine Beauty
-                </div>
-                <div className="dm" style={{ color: C.muted, fontSize: 12, marginTop: 2 }}>
-                  1200 Wien
-                </div>
-              </div>
-              {/* Gold Dot */}
-              <div
-                style={{
-                  position: "absolute",
-                  top: -12,
-                  right: -12,
-                  width: 22,
-                  height: 22,
-                  borderRadius: "50%",
-                  background: "linear-gradient(135deg,#D6B76D,#f0d090)",
-                  boxShadow: "0 0 16px rgba(214,183,109,0.65)",
-                }}
-              />
             </div>
           </div>
         </W>
@@ -1275,7 +1189,7 @@ export default function App() {
       </section>
 
       {/* ── LEISTUNGEN — hell ─────────────────────────────────────────────── */}
-      <section id="leistungen" style={{ padding: "96px 0", background: C.bg1 }}>
+      <section id="leistungen" style={{ padding: "48px 0 96px", background: C.bg1 }}>
         <W>
           <Divider />
           <Label>Was wir für dich tun</Label>
