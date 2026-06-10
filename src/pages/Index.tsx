@@ -2,6 +2,7 @@ import logo from "@/assets/logo.png";
 import { Link } from "react-router-dom";
 import studioHero from "@/assets/divinesalon.png";
 import { useState, useEffect } from "react";
+import { MessageCircle, Diamond, Sparkles, Flower2, Star, Award, Heart, MapPin, Clock, Mail, Phone, Instagram } from "lucide-react";
 
 // ══════════════════════════════════════════════════════════════════════════════
 // KONFIGURATION — Inhalte hier anpassen
@@ -163,57 +164,48 @@ const GALLERY = [
 const REVIEWS = [
   {
     id: 1,
-    name: "Sophie M.",
+    name: "Vanessa K.",
     stars: 5,
-    initial: "S",
+    initial: "V",
     featured: true,
     category: "Gelmodellage",
-    text: "Ich bin absolut begeistert! Meine Nägel sehen traumhaft aus und halten schon seit Wochen perfekt. Das Team ist so herzlich und die Atmosphäre des Studios einfach wunderschön – ich fühle mich hier wie in einer anderen Welt.",
+    text: "Ich gehe seit 4 Jahren hier Nägel machen und bin immer begeistert. Die Mädels leisten tolle Arbeit und sind sehr schnell und genau. Ich bekomme immer genau das, was ich mir wünsche. Die Farbauswahl ist riesig und es gibt ständig neue Farben.",
   },
   {
     id: 2,
-    name: "Laura K.",
+    name: "Natasa E.",
+    stars: 5,
+    initial: "N",
+    featured: false,
+    category: "Nägel",
+    text: "Ich bin seit über fünf Jahren zufriedene Kundin und kann Danijela und ihr Team nur weiterempfehlen. Immer nett, professionell und zuverlässig. Die Feilarbeiten sind wunderschön und die Farbauswahl lässt keine Wünsche offen.",
+  },
+  {
+    id: 3,
+    name: "Sandra M.",
+    stars: 5,
+    initial: "S",
+    featured: false,
+    category: "Atmosphäre",
+    text: "Entspannte Atmosphäre, sauberes Studio und ein wirklich herzliches Team. Man fühlt sich vom ersten Moment an wohl. Gerne immer wieder!",
+  },
+  {
+    id: 4,
+    name: "Julia B.",
+    stars: 5,
+    initial: "J",
+    featured: false,
+    category: "Beratung",
+    text: "Tolle Beratung, saubere Arbeit und die Nägel halten wirklich lange. Ich würde hier nie mehr weggehen – absolut empfehlenswert.",
+  },
+  {
+    id: 5,
+    name: "Leonie H.",
     stars: 5,
     initial: "L",
     featured: false,
     category: "Shellac",
-    text: "Der Shellac hält jetzt schon über drei Wochen und sieht noch immer frisch und makellos aus. Komme definitiv wieder!",
-  },
-  {
-    id: 3,
-    name: "Anna R.",
-    stars: 5,
-    initial: "A",
-    featured: false,
-    category: "Pediküre",
-    text: "Die Pediküre war ein echter Verwöhnmoment – so entspannend und das Ergebnis einfach makellos. Absolute Empfehlung!",
-  },
-  {
-    id: 4,
-    name: "Julia S.",
-    stars: 5,
-    initial: "J",
-    featured: false,
-    category: "Waxing",
-    text: "Das Waxing war viel angenehmer als erwartet. Sehr professionell und einfühlsam. Das Ergebnis spricht für sich – gerne wieder!",
-  },
-  {
-    id: 5,
-    name: "Mia B.",
-    stars: 5,
-    initial: "M",
-    featured: false,
-    category: "Wimpernlifting",
-    text: "Das Wimpernlifting hat mein Gesicht komplett verändert – auf die beste Art! Supersaubere Arbeit, sehr zu empfehlen.",
-  },
-  {
-    id: 6,
-    name: "Elena V.",
-    stars: 5,
-    initial: "E",
-    featured: false,
-    category: "Maniküre",
-    text: "Stilvolles Studio, herzliches Team und top Qualität. Ich fühle mich hier jedes Mal wie eine echte Königin. Danke!",
+    text: "Der Shellac hält perfekt und sieht noch nach Wochen makellos aus. Sehr professionelles Team, das genau auf die eigenen Wünsche eingeht.",
   },
 ];
 
@@ -1073,7 +1065,7 @@ export default function App() {
       </section>
 
       {/* ── FEATURED SERVICE CARDS — direkt unter Hero (wie Referenz) ───── */}
-      <section style={{ background: C.bg1, padding: "72px 0 32px" }}>
+      <section style={{ background: C.bg1, padding: "96px 0" }}>
         <W>
           <div
             className="dv-feat-g"
@@ -1167,7 +1159,7 @@ export default function App() {
       <section
         style={{
           position: "relative",
-          padding: "80px 24px",
+          padding: "96px 24px",
           background: "linear-gradient(135deg,#2A2528 0%,#3a3033 100%)",
           overflow: "hidden",
         }}
@@ -1228,7 +1220,7 @@ export default function App() {
       </section>
 
       {/* ── LEISTUNGEN — hell ─────────────────────────────────────────────── */}
-      <section id="leistungen" style={{ padding: "108px 0", background: C.bg1 }}>
+      <section id="leistungen" style={{ padding: "96px 0", background: C.bg1 }}>
         <W>
           <Divider />
           <Label>Was wir für dich tun</Label>
@@ -1280,7 +1272,7 @@ export default function App() {
       </section>
 
       {/* ── GALERIE — hell, Ivory ─────────────────────────────────────────── */}
-      <section id="galerie" style={{ padding: "108px 0 80px", background: C.white, overflow: "hidden" }}>
+      <section id="galerie" style={{ padding: "96px 0", background: C.white, overflow: "hidden" }}>
         <W style={{ marginBottom: 52 }}>
           <Divider />
           <Label>Portfolio</Label>
@@ -1347,7 +1339,7 @@ export default function App() {
       {/* ── ÜBER UNS — Rosé hell ──────────────────────────────────────────── */}
       <section
         id="ueber"
-        style={{ padding: "108px 0", background: C.bg2, position: "relative", overflow: "hidden" }}
+        style={{ padding: "96px 0", background: C.bg2, position: "relative", overflow: "hidden" }}
       >
         <div
           style={{
@@ -1460,7 +1452,7 @@ export default function App() {
       </section>
 
       {/* ── WARUM DIVINE — hell, weiß ─────────────────────────────────────── */}
-      <section style={{ padding: "108px 0", background: C.white }}>
+      <section style={{ padding: "96px 0", background: C.white }}>
         <W>
           <div style={{ textAlign: "center", marginBottom: 64 }}>
             <Divider />
@@ -1472,22 +1464,22 @@ export default function App() {
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(240px,1fr))", gap: 20 }}>
             {[
               {
-                icon: "💬",
+                Icon: MessageCircle,
                 title: "Individuelle Beratung",
                 desc: "Dein Wunsch, dein Look. Wir hören zu und beraten dich persönlich und ehrlich.",
               },
               {
-                icon: "✨",
+                Icon: Diamond,
                 title: "Saubere & präzise Arbeit",
                 desc: "Hygiene und Präzision sind für uns keine Option – sie sind Selbstverständlichkeit.",
               },
               {
-                icon: "🌟",
+                Icon: Sparkles,
                 title: "Moderne Behandlungen",
                 desc: "Aktuelle Techniken, hochwertige Produkte und echte Leidenschaft fürs Handwerk.",
               },
               {
-                icon: "🏛️",
+                Icon: Flower2,
                 title: "Stilvolle Atmosphäre",
                 desc: "Ein Ort zum Entspannen, Verwöhnen und Wohlfühlen – dein kleines Luxus-Refugium.",
               },
@@ -1497,7 +1489,9 @@ export default function App() {
                 className="lux-card"
                 style={{ padding: "36px 28px", borderRadius: 22, textAlign: "center", background: C.white }}
               >
-                <div style={{ fontSize: 36, marginBottom: 18 }}>{a.icon}</div>
+                <div style={{ display: "flex", justifyContent: "center", marginBottom: 18 }}>
+                  <a.Icon size={22} strokeWidth={1.5} color={C.gold} />
+                </div>
                 <h3 className="pf" style={{ color: C.text, fontSize: 18, marginBottom: 12 }}>
                   {a.title}
                 </h3>
@@ -1515,71 +1509,8 @@ export default function App() {
         </div>
       </section>
 
-      {/* ── ABLAUF — Ivory Rosé ───────────────────────────────────────────── */}
-      <section style={{ padding: "108px 0", background: C.bg1 }}>
-        <W>
-          <Divider />
-          <Label>Wie es funktioniert</Label>
-          <h2 className="pf" style={{ fontSize: "clamp(2rem,4vw,3rem)", color: C.text, marginBottom: 60 }}>
-            Dein Weg zu <em style={{ color: C.pink }}>Divine Beauty</em>
-          </h2>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(280px,1fr))", gap: 22 }}>
-            {[
-              {
-                num: "01",
-                title: "Termin anfragen",
-                desc: "Schreib uns auf Instagram oder ruf an – wir finden gemeinsam den perfekten Termin für dich.",
-              },
-              {
-                num: "02",
-                title: "Behandlung wählen",
-                desc: "Lass dich beraten und wähle die Behandlung, die am besten zu dir und deinen Wünschen passt.",
-              },
-              {
-                num: "03",
-                title: "Entspannen & strahlen",
-                desc: "Lehn dich zurück, genieße die Atmosphäre und verlass das Studio mit einem strahlenden Lächeln.",
-              },
-            ].map((s) => (
-              <div
-                key={s.num}
-                className="lux-card"
-                style={{ padding: "36px 30px", borderRadius: 22, background: C.white }}
-              >
-                {/* Große Zahl in Gold */}
-                <div
-                  className="cg"
-                  style={{
-                    fontSize: 80,
-                    lineHeight: 0.9,
-                    fontWeight: 300,
-                    marginBottom: 16,
-                    background: "linear-gradient(135deg,rgba(214,183,109,0.18),rgba(214,183,109,0.06))",
-                    WebkitBackgroundClip: "text",
-                    color: "rgba(214,183,109,0.35)",
-                  }}
-                >
-                  {s.num}
-                </div>
-                <h3 className="pf" style={{ color: C.text, fontSize: 20, marginBottom: 12 }}>
-                  {s.title}
-                </h3>
-                <p className="dm" style={{ color: C.muted, fontSize: 14, lineHeight: 1.78 }}>
-                  {s.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-        </W>
-        <div style={{ marginTop: 48, display: "flex", justifyContent: "center", padding: "0 24px" }}>
-          <a href={WA_URL} target="_blank" rel="noreferrer" className="btn-pk" style={{ padding: "13px 30px", borderRadius: 999, fontSize: 14, fontWeight: 500, textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 8 }}>
-            <span style={{ color: C.gold }}>✦</span> Termin anfragen via WhatsApp
-          </a>
-        </div>
-      </section>
-
       {/* ── PREISE — hell, weiße Cards, goldene Details ───────────────────── */}
-      <section id="preise" style={{ padding: "108px 0", background: C.bg2 }}>
+      <section id="preise" style={{ padding: "96px 0", background: C.bg2 }}>
         <W>
           <Divider />
           <Label>Transparente Preise</Label>
@@ -1629,7 +1560,7 @@ export default function App() {
       {/* ── BEWERTUNGEN — hell, weiß ──────────────────────────────────────── */}
       <section
         id="bewertungen"
-        style={{ padding: "108px 0", background: C.white, position: "relative", overflow: "hidden" }}
+        style={{ padding: "96px 0", background: C.white, position: "relative", overflow: "hidden" }}
       >
         {/* Dekorative Soft-Blobs */}
         <div
@@ -1658,44 +1589,34 @@ export default function App() {
         />
         <W>
           <Divider />
-          <div
-            style={{
-              display: "flex",
-              flexWrap: "wrap",
-              alignItems: "flex-end",
-              justifyContent: "space-between",
-              gap: 24,
-              marginBottom: 52,
-            }}
-          >
-            <div>
-              <Label>Kundenmeinungen</Label>
-              <h2 className="pf" style={{ fontSize: "clamp(2rem,4vw,3rem)", color: C.text }}>
-                Was unsere <em style={{ color: C.pink }}>Kundinnen</em> sagen
-              </h2>
-            </div>
+          <div style={{ marginBottom: 48 }}>
+            <Label>Kundenmeinungen</Label>
+            <h2 className="pf" style={{ fontSize: "clamp(2rem,4vw,3rem)", color: C.text, marginBottom: 28 }}>
+              Was unsere <em style={{ color: C.pink }}>Kundinnen</em> sagen
+            </h2>
             <div style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
               {[
-                { icon: "💅", label: "300+ zufriedene Kundinnen" },
-                { icon: "⭐", label: "4,7 ★ Google Bewertungen" },
-                { icon: "📍", label: "Beauty & Nails Studio Wien" },
+                { Icon: Star, label: "4,7 / 5 Google · 114 Rezensionen" },
+                { Icon: Award, label: "4,7 / 5 Treatwell · 327 Rezensionen" },
+                { Icon: Heart, label: "Seit über 5 Jahren die erste Wahl" },
               ].map((b) => (
                 <div
                   key={b.label}
                   className="dm"
                   style={{
-                    display: "flex",
+                    display: "inline-flex",
                     alignItems: "center",
                     gap: 8,
-                    padding: "8px 16px",
+                    padding: "9px 18px",
                     borderRadius: 999,
-                    background: C.bg1,
-                    border: "1px solid rgba(214,183,109,0.16)",
-                    fontSize: 12,
-                    color: C.muted,
+                    background: "rgba(251,234,243,0.55)",
+                    border: "1px solid rgba(223,167,198,0.22)",
+                    fontSize: 12.5,
+                    color: C.text,
+                    letterSpacing: "0.2px",
                   }}
                 >
-                  <span style={{ fontSize: 14 }}>{b.icon}</span>
+                  <b.Icon size={14} strokeWidth={1.5} color={C.gold} />
                   <span>{b.label}</span>
                 </div>
               ))}
@@ -1709,12 +1630,12 @@ export default function App() {
                 <div
                   className="rev-feat"
                   style={{
-                    borderRadius: 28,
-                    padding: "40px 36px",
+                    borderRadius: 24,
+                    padding: "32px 30px",
                     display: "flex",
                     flexDirection: "column",
                     justifyContent: "space-between",
-                    minHeight: 390,
+                    minHeight: 300,
                   }}
                 >
                   <div
@@ -1822,7 +1743,7 @@ export default function App() {
       </section>
 
       {/* ── KONTAKT — Ivory Rosé ──────────────────────────────────────────── */}
-      <section id="kontakt" style={{ padding: "108px 0", background: C.bg1 }}>
+      <section id="kontakt" style={{ padding: "96px 0", background: C.bg1 }}>
         <W>
           <Divider />
           <div className="dv-contact-g">
@@ -1852,7 +1773,7 @@ export default function App() {
                     width: "fit-content",
                   }}
                 >
-                  <span style={{ fontSize: 20 }}>📸</span>
+                  <Instagram size={18} strokeWidth={1.5} />
                   <span>Termin via Instagram</span>
                   <span style={{ opacity: 0.75 }}>{STUDIO.instagram}</span>
                 </a>
@@ -1870,7 +1791,7 @@ export default function App() {
                     width: "fit-content",
                   }}
                 >
-                  <span style={{ fontSize: 18 }}>📞</span>
+                  <Phone size={16} strokeWidth={1.5} />
                   <span>{STUDIO.phone}</span>
                 </a>
                 <a
@@ -1887,7 +1808,7 @@ export default function App() {
                     width: "fit-content",
                   }}
                 >
-                  <span style={{ fontSize: 18 }}>✉️</span>
+                  <Mail size={16} strokeWidth={1.5} />
                   <span>{STUDIO.email}</span>
                 </a>
               </div>
@@ -1902,7 +1823,7 @@ export default function App() {
                     border: "1px solid rgba(214,183,109,0.14)",
                   }}
                 >
-                  <div style={{ color: C.gold, fontSize: 20, marginBottom: 10 }}>📍</div>
+                  <div style={{ marginBottom: 10 }}><MapPin size={18} strokeWidth={1.5} color={C.gold} /></div>
                   <div className="dm" style={{ color: C.muted, fontSize: 13, lineHeight: 1.65 }}>
                     {STUDIO.address}
                   </div>
@@ -1917,7 +1838,7 @@ export default function App() {
                     border: "1px solid rgba(214,183,109,0.14)",
                   }}
                 >
-                  <div style={{ color: C.gold, fontSize: 20, marginBottom: 10 }}>🕐</div>
+                  <div style={{ marginBottom: 10 }}><Clock size={18} strokeWidth={1.5} color={C.gold} /></div>
                   {Object.entries(STUDIO.hours).map(([d, t]) => (
                     <div
                       key={d}
