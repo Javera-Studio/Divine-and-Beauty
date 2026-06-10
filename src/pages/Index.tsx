@@ -636,7 +636,7 @@ export default function App() {
 
   // Divider mit mehr Gold
   const Divider = () => (
-    <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 12, marginBottom: 68 }}>
+    <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 12, margin: "10px 0 20px" }}>
       <div style={{ width: 60, height: 1, background: "linear-gradient(90deg,transparent,#D6B76D)" }} />
       <span style={{ color: C.gold, fontSize: 11, opacity: 0.9, letterSpacing: 6 }}>✦ ✦ ✦</span>
       <div style={{ width: 60, height: 1, background: "linear-gradient(90deg,#D6B76D,transparent)" }} />
@@ -1184,8 +1184,8 @@ export default function App() {
               </div>
             </div>
             <div data-r data-d="1">
-              <Divider />
               <Label>Über uns</Label>
+              <Divider />
               <h2
                 className="pf"
                 style={{ fontSize: "clamp(1.8rem,3.5vw,2.8rem)", color: C.text, lineHeight: 1.2, marginBottom: 22 }}
@@ -1219,8 +1219,8 @@ export default function App() {
       <section style={{ padding: "96px 0", background: C.white }}>
         <W>
           <div style={{ textAlign: "center", marginBottom: 64 }}>
-            <Divider />
             <Label>Warum wir?</Label>
+            <Divider />
             <h2 className="pf" style={{ fontSize: "clamp(2rem,4vw,3rem)", color: C.text }}>
               Warum <em style={{ color: C.pink }}>Divine?</em>
             </h2>
@@ -1293,8 +1293,8 @@ export default function App() {
         <W style={{ zIndex: 1 }}>
           {/* Header */}
           <div style={{ textAlign: "center", marginBottom: 56 }}>
-            <Divider />
             <Label>Unser Team</Label>
+            <Divider />
             <h2 className="pf" style={{ fontSize: "clamp(2rem,4vw,3rem)", color: C.text }}>
               Lerne unser <em style={{ color: C.pink }}>Team</em> kennen
             </h2>
@@ -1431,8 +1431,8 @@ export default function App() {
       {/* ── LEISTUNGEN — hell ─────────────────────────────────────────────── */}
       <section id="leistungen" style={{ padding: "96px 0", background: C.bg1 }}>
         <W>
-          <Divider />
           <Label>Was wir für dich tun</Label>
+          <Divider />
           <h2 className="pf" style={{ fontSize: "clamp(2rem,4vw,3rem)", color: C.text, marginBottom: 14 }}>
             Unsere <em style={{ color: C.pink }}>Leistungen</em>
           </h2>
@@ -1486,8 +1486,8 @@ export default function App() {
       {/* ── GALERIE — hell, Ivory ─────────────────────────────────────────── */}
       <section id="galerie" style={{ padding: "96px 0", background: C.white, overflow: "hidden" }}>
         <W style={{ marginBottom: 52 }}>
-          <Divider />
           <Label>Portfolio</Label>
+          <Divider />
           <h2 className="pf" style={{ fontSize: "clamp(2rem,4vw,3rem)", color: C.text, marginBottom: 14 }}>
             Unsere <em style={{ color: C.pink }}>Galerie</em>
           </h2>
@@ -1526,8 +1526,8 @@ export default function App() {
       <section style={{ padding: "80px 0", background: C.bg2 }}>
         <W>
           <div style={{ textAlign: "center" }}>
-            <Divider />
             <Label>Transparente Preise</Label>
+            <Divider />
             <h2 className="pf" style={{ fontSize: "clamp(1.6rem,3vw,2.4rem)", color: C.text, marginBottom: 14 }}>
               Alle Preise auf einen <em style={{ color: C.pink }}>Blick</em>
             </h2>
@@ -1577,9 +1577,9 @@ export default function App() {
           }}
         />
         <W>
-          <Divider />
           <div style={{ marginBottom: 48 }}>
             <Label>Kundenmeinungen</Label>
+            <Divider />
             <h2 className="pf" style={{ fontSize: "clamp(2rem,4vw,3rem)", color: C.text, marginBottom: 28 }}>
               Was unsere <em style={{ color: C.pink }}>Kundinnen</em> sagen
             </h2>
@@ -1752,10 +1752,10 @@ export default function App() {
           }}
         />
         <W style={{ position: "relative", zIndex: 1 }}>
-          <Divider />
           <div className="dv-contact-g">
             <div>
               <Label>Kontakt</Label>
+              <Divider />
               <h2
                 className="pf"
                 style={{ fontSize: "clamp(2rem,4vw,3rem)", color: C.text, lineHeight: 1.2, marginBottom: 36 }}
