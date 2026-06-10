@@ -634,12 +634,15 @@ export default function App() {
     </div>
   );
 
-  // Divider mit mehr Gold
   const Divider = () => (
-    <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 12, margin: "10px 0 20px" }}>
-      <div style={{ width: 60, height: 1, background: "linear-gradient(90deg,transparent,#D6B76D)" }} />
-      <span style={{ color: C.gold, fontSize: 11, opacity: 0.9, letterSpacing: 6 }}>✦ ✦ ✦</span>
-      <div style={{ width: 60, height: 1, background: "linear-gradient(90deg,#D6B76D,transparent)" }} />
+    <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 14, margin: "10px 0 20px" }}>
+      <div style={{ width: 64, height: 1, background: "linear-gradient(90deg,transparent,#D6B76D)" }} />
+      <div style={{ display: "flex", gap: 5 }}>
+        <span style={{ width: 4, height: 4, borderRadius: "50%", background: C.gold, display: "block", opacity: 0.85 }} />
+        <span style={{ width: 4, height: 4, borderRadius: "50%", background: C.gold, display: "block", opacity: 0.85 }} />
+        <span style={{ width: 4, height: 4, borderRadius: "50%", background: C.gold, display: "block", opacity: 0.85 }} />
+      </div>
+      <div style={{ width: 64, height: 1, background: "linear-gradient(90deg,#D6B76D,transparent)" }} />
     </div>
   );
 
@@ -1065,20 +1068,14 @@ export default function App() {
           }}
         />
         <div style={{ position: "relative", maxWidth: 900, margin: "0 auto", textAlign: "center" }}>
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              gap: 14,
-              marginBottom: 24,
-              color: C.gold,
-              opacity: 0.85,
-            }}
-          >
-            <span style={{ width: 40, height: 1, background: "linear-gradient(90deg,transparent,#D6B76D)" }} />
-            <span style={{ fontSize: 12, letterSpacing: "3px" }}>✦ ✦ ✦</span>
-            <span style={{ width: 40, height: 1, background: "linear-gradient(90deg,#D6B76D,transparent)" }} />
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 14, marginBottom: 24 }}>
+            <span style={{ width: 64, height: 1, background: "linear-gradient(90deg,transparent,rgba(214,183,109,0.7))", display: "block" }} />
+            <div style={{ display: "flex", gap: 5 }}>
+              <span style={{ width: 4, height: 4, borderRadius: "50%", background: C.gold, display: "block", opacity: 0.75 }} />
+              <span style={{ width: 4, height: 4, borderRadius: "50%", background: C.gold, display: "block", opacity: 0.75 }} />
+              <span style={{ width: 4, height: 4, borderRadius: "50%", background: C.gold, display: "block", opacity: 0.75 }} />
+            </div>
+            <span style={{ width: 64, height: 1, background: "linear-gradient(90deg,rgba(214,183,109,0.7),transparent)", display: "block" }} />
           </div>
           <p
             className="pf"
@@ -1093,19 +1090,14 @@ export default function App() {
           >
             Deine Auszeit. Deine Schönheit. Dein Moment.
           </p>
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              gap: 14,
-              color: C.gold,
-              opacity: 0.85,
-            }}
-          >
-            <span style={{ width: 40, height: 1, background: "linear-gradient(90deg,transparent,#D6B76D)" }} />
-            <span style={{ fontSize: 12, letterSpacing: "3px" }}>✦ ✦ ✦</span>
-            <span style={{ width: 40, height: 1, background: "linear-gradient(90deg,#D6B76D,transparent)" }} />
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 14 }}>
+            <span style={{ width: 64, height: 1, background: "linear-gradient(90deg,transparent,rgba(214,183,109,0.7))", display: "block" }} />
+            <div style={{ display: "flex", gap: 5 }}>
+              <span style={{ width: 4, height: 4, borderRadius: "50%", background: C.gold, display: "block", opacity: 0.75 }} />
+              <span style={{ width: 4, height: 4, borderRadius: "50%", background: C.gold, display: "block", opacity: 0.75 }} />
+              <span style={{ width: 4, height: 4, borderRadius: "50%", background: C.gold, display: "block", opacity: 0.75 }} />
+            </div>
+            <span style={{ width: 64, height: 1, background: "linear-gradient(90deg,rgba(214,183,109,0.7),transparent)", display: "block" }} />
           </div>
         </div>
       </section>
