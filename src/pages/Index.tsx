@@ -1153,27 +1153,6 @@ export default function App() {
                   style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top center", display: "block" }}
                 />
               </div>
-              <div
-                className="dv-float"
-                style={{
-                  position: "absolute",
-                  top: -20,
-                  right: -22,
-                  background: C.white,
-                  borderRadius: 18,
-                  padding: "16px 20px",
-                  boxShadow: "0 14px 36px rgba(185,130,165,0.12)",
-                  border: "1px solid rgba(214,183,109,0.18)",
-                }}
-              >
-                <div style={{ color: C.gold, fontSize: 20, marginBottom: 6 }}>✦</div>
-                <div className="pf" style={{ color: C.text, fontSize: 15 }}>
-                  Wohlfühlen ist Pflicht
-                </div>
-                <div className="dm" style={{ color: C.muted, fontSize: 11, marginTop: 2 }}>
-                  Divine Beauty Studio
-                </div>
-              </div>
             </div>
             <div data-r data-d="1">
               <Label>Über uns</Label>
@@ -1477,13 +1456,13 @@ export default function App() {
 
       {/* ── GALERIE — hell, Ivory ─────────────────────────────────────────── */}
       <section id="galerie" style={{ padding: "96px 0", background: C.white, overflow: "hidden" }}>
-        <W style={{ marginBottom: 52 }}>
+        <W style={{ marginBottom: 52, textAlign: "center" }}>
           <Label>Portfolio</Label>
           <Divider />
           <h2 className="pf" style={{ fontSize: "clamp(2rem,4vw,3rem)", color: C.text, marginBottom: 14 }}>
             Unsere <em style={{ color: C.pink }}>Galerie</em>
           </h2>
-          <p className="dm" style={{ color: C.muted, fontSize: 16, maxWidth: 440, lineHeight: 1.8 }}>
+          <p className="dm" style={{ color: C.muted, fontSize: 16, maxWidth: 440, lineHeight: 1.8, margin: "0 auto" }}>
             Einblicke in unsere Arbeit – jedes Ergebnis ein kleines Kunstwerk.
           </p>
         </W>
@@ -1575,7 +1554,7 @@ export default function App() {
             <h2 className="pf" style={{ fontSize: "clamp(2rem,4vw,3rem)", color: C.text, marginBottom: 28 }}>
               Was unsere <em style={{ color: C.pink }}>Kundinnen</em> sagen
             </h2>
-            <div style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: 10, justifyContent: "center" }}>
               {[
                 { Icon: Star, label: "4,7 / 5 Google · 114 Rezensionen" },
                 { Icon: Award, label: "4,7 / 5 Treatwell · 327 Rezensionen" },
@@ -1746,14 +1725,16 @@ export default function App() {
         <W style={{ position: "relative", zIndex: 1 }}>
           <div className="dv-contact-g">
             <div>
-              <Label>Kontakt</Label>
-              <Divider />
-              <h2
-                className="pf"
-                style={{ fontSize: "clamp(2rem,4vw,3rem)", color: C.text, lineHeight: 1.2, marginBottom: 36 }}
-              >
-                Bereit für dein <em style={{ color: C.pink }}>Beauty-Erlebnis?</em>
-              </h2>
+              <div style={{ textAlign: "center" }}>
+                <Label>Kontakt</Label>
+                <Divider />
+                <h2
+                  className="pf"
+                  style={{ fontSize: "clamp(2rem,4vw,3rem)", color: C.text, lineHeight: 1.2, marginBottom: 36 }}
+                >
+                  Bereit für dein <em style={{ color: C.pink }}>Beauty-Erlebnis?</em>
+                </h2>
+              </div>
 
               {/* Kontakt-Buttons */}
               <div style={{ display: "flex", flexDirection: "column", gap: 12, marginBottom: 44 }}>
@@ -1767,9 +1748,9 @@ export default function App() {
                   <Instagram size={18} strokeWidth={1.5} />
                   <span>Termin via Instagram</span>
                 </a>
-                <a href={`tel:${STUDIO.phone}`} className="btn-ol-light" style={{ textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 12, padding: "13px 24px", borderRadius: 16, fontSize: 14, width: "fit-content" }}>
-                  <Phone size={16} strokeWidth={1.5} />
-                  <span>{STUDIO.phone}</span>
+                <a href="https://wa.me/436763633721" target="_blank" rel="noreferrer" className="btn-ol-light" style={{ textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 12, padding: "13px 24px", borderRadius: 16, fontSize: 14, width: "fit-content" }}>
+                  <MessageCircle size={16} strokeWidth={1.5} />
+                  <span>Termin via WhatsApp</span>
                 </a>
                 <a href={`mailto:${STUDIO.email}`} className="btn-ol-light" style={{ textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 12, padding: "13px 24px", borderRadius: 16, fontSize: 14, width: "fit-content" }}>
                   <Mail size={16} strokeWidth={1.5} />
@@ -1804,20 +1785,21 @@ export default function App() {
             </div>
 
             {/* Studio Photo */}
-            <div>
+            <div style={{ display: "flex", alignItems: "center" }}>
               <div
                 style={{
                   borderRadius: 28,
                   overflow: "hidden",
                   boxShadow: "0 24px 72px rgba(185,130,165,0.16)",
                   border: "1px solid rgba(214,183,109,0.14)",
-                  aspectRatio: "4/5",
+                  width: "100%",
+                  maxHeight: 360,
                 }}
               >
                 <img
                   src="/daca1.jpg"
                   alt="Divine Beauty & Nails Studio"
-                  style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top center", display: "block" }}
+                  style={{ width: "100%", height: "360px", objectFit: "cover", objectPosition: "top center", display: "block" }}
                 />
               </div>
             </div>
@@ -1836,9 +1818,6 @@ export default function App() {
               <div className="dm" style={{ color: C.gold, fontSize: 10, letterSpacing: "2.5px", textTransform: "uppercase", marginBottom: 16 }}>
                 &amp; Nails Studio · Wien
               </div>
-              <p className="dm" style={{ color: "rgba(255,255,255,0.38)", fontSize: 13.5, lineHeight: 1.75, maxWidth: 320, marginBottom: 20 }}>
-                Luxuriöses Nagelstudio &amp; Beauty in 1200 Wien. Für Nägel, Haut und Wohlgefühl.
-              </p>
 
               {/* Instagram */}
               <a
@@ -1914,9 +1893,29 @@ export default function App() {
             <span className="dm" style={{ color: "rgba(255,255,255,0.25)", fontSize: 12 }}>
               © {new Date().getFullYear()} Divine Beauty &amp; Nails Studio · Wien
             </span>
-            <span className="dm" style={{ color: "rgba(255,255,255,0.25)", fontSize: 12 }}>
-              Made with <span style={{ color: C.soft }}>♥</span> in Wien
-            </span>
+          </div>
+          <div style={{ marginTop: 18, textAlign: "center" }}>
+            <a
+              href="https://javera-studio.at"
+              target="_blank"
+              rel="noreferrer"
+              className="dm"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 7,
+                color: "rgba(255,255,255,0.2)",
+                textDecoration: "none",
+                fontSize: 11,
+                letterSpacing: "1.5px",
+                transition: "color 0.3s ease",
+              }}
+              onMouseEnter={e => (e.currentTarget.style.color = "rgba(255,255,255,0.45)")}
+              onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255,0.2)")}
+            >
+              <img src="/Javera.logo.rund.png" alt="JAVERA STUDIO" style={{ width: 16, height: 16, opacity: 0.55, borderRadius: "50%" }} />
+              <span>Webdesign by <span style={{ letterSpacing: "2px" }}>JAVERA STUDIO</span></span>
+            </a>
           </div>
         </W>
       </footer>
