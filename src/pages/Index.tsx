@@ -1,4 +1,5 @@
 import logo from "@/assets/logo.png";
+import javeraLogo from "@/assets/Javera.logo.rund.png";
 import { Link } from "react-router-dom";
 import studioHero from "@/assets/divinesalon.png";
 import { useState, useEffect } from "react";
@@ -1136,11 +1137,21 @@ export default function App() {
           }}
         />
         <W style={{ position: "relative", zIndex: 1 }}>
-          <div className="dv-about-g">
+          <div style={{ textAlign: "center", marginBottom: 48 }}>
+            <Label>Über uns</Label>
+            <Divider />
+            <h2
+              className="pf"
+              style={{ fontSize: "clamp(1.8rem,3.5vw,2.8rem)", color: C.text, lineHeight: 1.2 }}
+            >
+              Beauty mit <em style={{ color: C.pink }}>Leidenschaft</em> &amp; Präzision
+            </h2>
+          </div>
+          <div className="dv-about-g" style={{ alignItems: "stretch" }}>
             <div data-r style={{ position: "relative" }}>
               <div
                 style={{
-                  height: 500,
+                  height: "100%",
                   borderRadius: 28,
                   overflow: "hidden",
                   border: "1px solid rgba(214,183,109,0.16)",
@@ -1155,14 +1166,6 @@ export default function App() {
               </div>
             </div>
             <div data-r data-d="1">
-              <Label>Über uns</Label>
-              <Divider />
-              <h2
-                className="pf"
-                style={{ fontSize: "clamp(1.8rem,3.5vw,2.8rem)", color: C.text, lineHeight: 1.2, marginBottom: 22 }}
-              >
-                Beauty mit <em style={{ color: C.pink }}>Leidenschaft</em> &amp; Präzision
-              </h2>
               <p className="dm" style={{ color: C.muted, fontSize: 16, lineHeight: 1.88, marginBottom: 20 }}>
                 Bei <strong style={{ color: C.text }}>Divine Beauty &amp; Nails Studio</strong> steht dein Wohlgefühl im
                 Mittelpunkt. In stilvoller, entspannter Atmosphäre entstehen individuelle Looks – von gepflegten Nägeln
@@ -1279,7 +1282,7 @@ export default function App() {
             data-r
             style={{
               margin: "0 auto 64px",
-              maxWidth: 780,
+              maxWidth: 468,
               borderRadius: 28,
               overflow: "hidden",
               boxShadow: "0 24px 80px rgba(185,130,165,0.14)",
@@ -1402,14 +1405,16 @@ export default function App() {
       {/* ── LEISTUNGEN — hell ─────────────────────────────────────────────── */}
       <section id="leistungen" style={{ padding: "96px 0", background: C.bg1 }}>
         <W>
-          <Label>Was wir für dich tun</Label>
-          <Divider />
-          <h2 className="pf" style={{ fontSize: "clamp(2rem,4vw,3rem)", color: C.text, marginBottom: 14 }}>
-            Unsere <em style={{ color: C.pink }}>Leistungen</em>
-          </h2>
-          <p className="dm" style={{ color: C.muted, fontSize: 16, maxWidth: 480, lineHeight: 1.8, marginBottom: 60 }}>
-            Von Nageldesign bis Gesichtsbehandlung – professionell, präzise, mit Liebe fürs Detail.
-          </p>
+          <div style={{ textAlign: "center", marginBottom: 60 }}>
+            <Label>Was wir für dich tun</Label>
+            <Divider />
+            <h2 className="pf" style={{ fontSize: "clamp(2rem,4vw,3rem)", color: C.text, marginBottom: 14 }}>
+              Unsere <em style={{ color: C.pink }}>Leistungen</em>
+            </h2>
+            <p className="dm" style={{ color: C.muted, fontSize: 16, lineHeight: 1.8 }}>
+              Von Nageldesign bis Gesichtsbehandlung – professionell, präzise, mit Liebe fürs Detail.
+            </p>
+          </div>
           <div className="dv-svc-g">
             {SERVICES.map((s, i) => (
               <div
@@ -1462,7 +1467,7 @@ export default function App() {
           <h2 className="pf" style={{ fontSize: "clamp(2rem,4vw,3rem)", color: C.text, marginBottom: 14 }}>
             Unsere <em style={{ color: C.pink }}>Galerie</em>
           </h2>
-          <p className="dm" style={{ color: C.muted, fontSize: 16, maxWidth: 440, lineHeight: 1.8, margin: "0 auto" }}>
+          <p className="dm" style={{ color: C.muted, fontSize: 16, lineHeight: 1.8, whiteSpace: "nowrap" }}>
             Einblicke in unsere Arbeit – jedes Ergebnis ein kleines Kunstwerk.
           </p>
         </W>
@@ -1913,7 +1918,7 @@ export default function App() {
               onMouseEnter={e => (e.currentTarget.style.color = "rgba(255,255,255,0.45)")}
               onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255,0.2)")}
             >
-              <img src="/Javera.logo.rund.png" alt="JAVERA STUDIO" style={{ width: 16, height: 16, opacity: 0.55, borderRadius: "50%" }} />
+              <img src={javeraLogo} alt="JAVERA STUDIO" style={{ width: 16, height: 16, opacity: 0.55, borderRadius: "50%" }} />
               <span>Webdesign by <span style={{ letterSpacing: "2px" }}>JAVERA STUDIO</span></span>
             </a>
           </div>
