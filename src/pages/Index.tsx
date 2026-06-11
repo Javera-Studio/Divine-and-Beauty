@@ -660,25 +660,6 @@ export default function App() {
     <div style={{ maxWidth: 1280, margin: "0 auto", padding: pad, ...style }}>{children}</div>
   );
 
-  // Kategorie-Heading in Preiskarten mit Gold-Underline
-  const PriceHeading = ({ children }) => (
-    <h3
-      className="pf"
-      style={{
-        color: C.text,
-        fontSize: 17,
-        marginBottom: 16,
-        paddingBottom: 12,
-        borderBottom: "1px solid rgba(214,183,109,0.22)",
-        display: "flex",
-        alignItems: "center",
-        gap: 8,
-      }}
-    >
-      <span style={{ color: C.gold, fontSize: 10 }}>✦</span>
-      {children}
-    </h3>
-  );
 
   const NAV: { l: string; id?: string; href?: string }[] = [
     { l: "Home", id: "home" },
