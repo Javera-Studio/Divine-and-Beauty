@@ -1137,12 +1137,12 @@ export default function App() {
           }}
         />
         <W style={{ position: "relative", zIndex: 1 }}>
-          <div style={{ textAlign: "center", marginBottom: 48 }}>
-            <Label>Über uns</Label>
+          <div style={{ textAlign: "center", marginBottom: 48, width: "100%" }}>
+            <div style={{ textAlign: "center" }}><Label>Über uns</Label></div>
             <Divider />
             <h2
               className="pf"
-              style={{ fontSize: "clamp(1.8rem,3.5vw,2.8rem)", color: C.text, lineHeight: 1.2 }}
+              style={{ fontSize: "clamp(1.8rem,3.5vw,2.8rem)", color: C.text, lineHeight: 1.2, textAlign: "center" }}
             >
               Beauty mit <em style={{ color: C.pink }}>Leidenschaft</em> &amp; Präzision
             </h2>
@@ -1552,11 +1552,11 @@ export default function App() {
             pointerEvents: "none",
           }}
         />
-        <W>
+        <W style={{ position: "relative", zIndex: 1, textAlign: "center" }}>
           <div style={{ marginBottom: 48 }}>
-            <Label>Kundenmeinungen</Label>
+            <div style={{ textAlign: "center" }}><Label>Kundenmeinungen</Label></div>
             <Divider />
-            <h2 className="pf" style={{ fontSize: "clamp(2rem,4vw,3rem)", color: C.text, marginBottom: 28 }}>
+            <h2 className="pf" style={{ fontSize: "clamp(2rem,4vw,3rem)", color: C.text, marginBottom: 28, textAlign: "center" }}>
               Was unsere <em style={{ color: C.pink }}>Kundinnen</em> sagen
             </h2>
             <div style={{ display: "flex", flexWrap: "wrap", gap: 10, justifyContent: "center" }}>
@@ -1587,7 +1587,7 @@ export default function App() {
               ))}
             </div>
           </div>
-          <div className="dv-rev-g">
+          <div className="dv-rev-g" style={{ textAlign: "left" }}>
             {(() => {
               const f = REVIEWS.find((r) => r.featured);
               if (!f) return null;
@@ -1728,18 +1728,18 @@ export default function App() {
           }}
         />
         <W style={{ position: "relative", zIndex: 1 }}>
+          <div style={{ textAlign: "center", marginBottom: 48 }}>
+            <Label>Kontakt</Label>
+            <Divider />
+            <h2
+              className="pf"
+              style={{ fontSize: "clamp(2rem,4vw,3rem)", color: C.text, lineHeight: 1.2, textAlign: "center" }}
+            >
+              Bereit für dein <em style={{ color: C.pink }}>Beauty-Erlebnis?</em>
+            </h2>
+          </div>
           <div className="dv-contact-g">
             <div>
-              <div style={{ textAlign: "center" }}>
-                <Label>Kontakt</Label>
-                <Divider />
-                <h2
-                  className="pf"
-                  style={{ fontSize: "clamp(2rem,4vw,3rem)", color: C.text, lineHeight: 1.2, marginBottom: 36 }}
-                >
-                  Bereit für dein <em style={{ color: C.pink }}>Beauty-Erlebnis?</em>
-                </h2>
-              </div>
 
               {/* Kontakt-Buttons */}
               <div style={{ display: "flex", flexDirection: "column", gap: 12, marginBottom: 44 }}>
@@ -1798,13 +1798,13 @@ export default function App() {
                   boxShadow: "0 24px 72px rgba(185,130,165,0.16)",
                   border: "1px solid rgba(214,183,109,0.14)",
                   width: "100%",
-                  maxHeight: 360,
+                  maxHeight: 504,
                 }}
               >
                 <img
                   src="/daca1.jpg"
                   alt="Divine Beauty & Nails Studio"
-                  style={{ width: "100%", height: "360px", objectFit: "cover", objectPosition: "top center", display: "block" }}
+                  style={{ width: "100%", height: "504px", objectFit: "cover", objectPosition: "top center", display: "block" }}
                 />
               </div>
             </div>
