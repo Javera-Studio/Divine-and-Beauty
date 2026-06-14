@@ -2,6 +2,8 @@ import logo from "@/assets/logo.png";
 import javeraLogo from "@/assets/Javera.logo.rund.png";
 import { Link } from "react-router-dom";
 import studioHero from "@/assets/studio5.png";
+import teamHero from "@/assets/teamnew.jpeg";
+import dacaNew from "@/assets/dacanew.jpeg";
 import { useState, useEffect } from "react";
 import { MessageCircle, Diamond, Sparkles, Flower2, Star, Award, Heart, MapPin, Clock, Mail, Phone, Instagram } from "lucide-react";
 
@@ -1146,7 +1148,7 @@ export default function App() {
               }}
             >
               <img
-                src="/team.jpg"
+                src={teamHero}
                 alt="Das Team von Divine Beauty & Nails Studio"
                 style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top center", display: "block", minHeight: 294 }}
               />
@@ -1192,7 +1194,7 @@ export default function App() {
                 text: "Gloria begeistert mit ihrer freundlichen Art und ihrem Gespür für schöne, natürliche Ergebnisse – stets mit einem Lächeln.",
               },
               {
-                img: "/daca3.png",
+                img: dacaNew,
                 name: "Danijela",
                 role: "Inhaberin & Beauty-Expertin",
                 text: "Mit viel Leidenschaft, Präzision und Liebe zum Detail führt Danijela Divine Beauty – und sorgt dafür, dass sich jede Kundin rundum wohlfühlt.",
