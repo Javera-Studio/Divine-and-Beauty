@@ -1,7 +1,7 @@
 import logo from "@/assets/logo.png";
 import javeraLogo from "@/assets/Javera.logo.rund.png";
 import { Link } from "react-router-dom";
-import studioHero from "@/assets/divinesalon.png";
+import studioHero from "@/assets/studio5.png";
 import { useState, useEffect } from "react";
 import { MessageCircle, Diamond, Sparkles, Flower2, Star, Award, Heart, MapPin, Clock, Mail, Phone, Instagram } from "lucide-react";
 
