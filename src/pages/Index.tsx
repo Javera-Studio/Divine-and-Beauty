@@ -663,7 +663,7 @@ export default function App() {
   const NAV: { l: string; id?: string; href?: string }[] = [
     { l: "Home", id: "home" },
     { l: "Über uns", id: "ueber" },
-    { l: "Leistungen", id: "leistungen" },
+    { l: "Leistungen", href: "/leistungen" },
     { l: "Galerie", id: "galerie" },
     { l: "Preise", href: "/preise" },
     { l: "Kontakt", id: "kontakt" },
@@ -1382,61 +1382,59 @@ export default function App() {
         </W>
       </section>
 
-      {/* ── LEISTUNGEN — hell ─────────────────────────────────────────────── */}
+      {/* ── LEISTUNGEN — kompakte Übersicht ──────────────────────────────── */}
       <section id="leistungen" style={{ padding: "96px 0", background: C.bg1 }}>
         <W>
-          <div style={{ textAlign: "center", marginBottom: 60 }}>
+          <div style={{ textAlign: "center", marginBottom: 56 }}>
             <Label>Was wir für dich tun</Label>
             <Divider />
             <h2 className="pf" style={{ fontSize: "clamp(2rem,4vw,3rem)", color: C.text, marginBottom: 14 }}>
               Unsere <em style={{ color: C.pink }}>Leistungen</em>
             </h2>
-            <p className="dm" style={{ color: C.muted, fontSize: 16, lineHeight: 1.8 }}>
-              Von Nageldesign bis Gesichtsbehandlung – professionell, präzise, mit Liebe fürs Detail.
+            <p className="dm" style={{ color: C.muted, fontSize: 16, lineHeight: 1.8, maxWidth: 560, margin: "0 auto" }}>
+              Von Nageldesign bis Gesichtsbehandlung – professionelle Beauty-Behandlungen für jeden Anlass.
             </p>
           </div>
-          <div className="dv-svc-g">
+
+          {/* Kompakte Service-Kacheln */}
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(190px, 1fr))", gap: 14, marginBottom: 52 }}>
             {SERVICES.map((s, i) => (
-              <div
+              <Link
                 key={s.title}
+                to="/leistungen"
                 data-r
                 data-d={i % 3}
-                className="lux-card"
-                style={{ padding: "28px 26px", borderRadius: 22, background: C.white, textAlign: "center" }}
+                style={{
+                  background: C.white,
+                  borderRadius: 16,
+                  padding: "20px 18px",
+                  border: "1px solid rgba(214,183,109,0.13)",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 12,
+                  textDecoration: "none",
+                  transition: "box-shadow .25s, border-color .25s, transform .25s",
+                  boxShadow: "0 2px 12px rgba(185,130,165,0.05)",
+                }}
+                onMouseEnter={e => { e.currentTarget.style.boxShadow = "0 8px 28px rgba(185,130,165,0.13)"; e.currentTarget.style.borderColor = "rgba(214,183,109,0.35)"; e.currentTarget.style.transform = "translateY(-2px)"; }}
+                onMouseLeave={e => { e.currentTarget.style.boxShadow = "0 2px 12px rgba(185,130,165,0.05)"; e.currentTarget.style.borderColor = "rgba(214,183,109,0.13)"; e.currentTarget.style.transform = "none"; }}
               >
-                {s.img && (
-                  <img src={s.img} alt={s.title} style={{ width: "100%", height: 160, objectFit: "cover", borderRadius: 14, marginBottom: 14 }} />
-                )}
-                <h3 className="pf" style={{ color: C.text, fontSize: 19, marginBottom: 10 }}>
-                  {s.title}
-                </h3>
-                <p className="dm" style={{ color: C.muted, fontSize: 14, lineHeight: 1.78 }}>
-                  {s.desc}
-                </p>
-                <div style={{ display: "flex", justifyContent: "center", marginTop: 20 }}>
-                  <button
-                    className="btn-pk"
-                    onClick={() => go("leistungen")}
-                    style={{
-                      padding: "10px 22px",
-                      borderRadius: 999,
-                      fontSize: 12,
-                      letterSpacing: "1.5px",
-                      textTransform: "uppercase",
-                    }}
-                  >
-                    Mehr erfahren
-                  </button>
-                </div>
-              </div>
+                <span style={{ fontSize: 20, flexShrink: 0 }}>{s.icon}</span>
+                <span className="pf" style={{ color: C.text, fontSize: 14.5, lineHeight: 1.3 }}>{s.title}</span>
+              </Link>
             ))}
           </div>
+
+          <div style={{ textAlign: "center" }}>
+            <Link
+              to="/leistungen"
+              className="btn-pk"
+              style={{ padding: "13px 34px", borderRadius: 999, fontSize: 13, letterSpacing: "1.5px", textTransform: "uppercase", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 10 }}
+            >
+              <span style={{ color: C.gold }}>✦</span> Alle Leistungen entdecken
+            </Link>
+          </div>
         </W>
-        <div style={{ marginTop: 48, display: "flex", justifyContent: "center", padding: "0 24px" }}>
-          <a href={WA_URL} target="_blank" rel="noreferrer" className="btn-pk" style={{ padding: "13px 30px", borderRadius: 999, fontSize: 14, fontWeight: 500, textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 8 }}>
-            <span style={{ color: C.gold }}>✦</span> Termin anfragen via WhatsApp
-          </a>
-        </div>
       </section>
 
       {/* ── GALERIE — hell, Ivory ─────────────────────────────────────────── */}
