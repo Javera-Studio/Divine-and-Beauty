@@ -541,7 +541,7 @@ body { overflow-x: hidden; background: #FFF7F2; }
 .dv-team-g { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
 @media (max-width: 900px) { .dv-team-g { grid-template-columns: repeat(2,1fr); } }
 @media (max-width: 560px) { .dv-team-g { grid-template-columns: 1fr; max-width: 380px; margin: 0 auto; } }
-.dv-team-split { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+.dv-team-split { display: grid; grid-template-columns: 0.7fr 1fr; gap: 64px; align-items: center; }
 @media (max-width: 860px) { .dv-team-split { grid-template-columns: 1fr; gap: 40px; } }
 
 /* ── Scroll Reveal ───────────────────────────────────────────────────────── */
@@ -1142,7 +1142,7 @@ export default function App() {
               <img
                 src="/team.jpg"
                 alt="Das Team von Divine Beauty & Nails Studio"
-                style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top center", display: "block", minHeight: 420 }}
+                style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top center", display: "block", minHeight: 294 }}
               />
             </div>
 
