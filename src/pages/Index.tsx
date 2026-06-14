@@ -14,7 +14,7 @@ const STUDIO = {
   phone: "+43 676 3633721",
   instagram: "@divine.beauty.nails.studio",
   instagramUrl: "https://www.instagram.com/divine.beauty.nails.studio",
-  address: "Klosterneuburgerstraße 98, 1200 Wien",
+  address: "Klosterneuburger Straße 98/5, 1200 Wien",
   email: "divine.beauty.nails@gmail.com",
   hours: {
     "Mo – Fr": "09:00 – 19:00 Uhr",
@@ -422,6 +422,7 @@ body { overflow-x: hidden; background: #FFF7F2; }
 .dv-about-g   { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
 .dv-contact-g { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; }
 .dv-footer-g  { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 60px; margin-bottom: 56px; }
+.dv-footer-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 28px; }
 .dv-rev-g     { display: grid; grid-template-columns: 5fr 7fr; gap: 24px; }
 .dv-reg-rev   { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .dv-svc-g     { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
@@ -433,7 +434,7 @@ body { overflow-x: hidden; background: #FFF7F2; }
   .dv-rev-g   { grid-template-columns: 1fr; }
 }
 @media (max-width: 768px) {
-  .dv-hero-g, .dv-about-g, .dv-contact-g, .dv-footer-g { grid-template-columns: 1fr !important; gap: 40px !important; }
+  .dv-hero-g, .dv-about-g, .dv-contact-g, .dv-footer-g, .dv-footer-cards { grid-template-columns: 1fr !important; gap: 16px !important; }
   .dv-reg-rev { grid-template-columns: 1fr; }
   .dv-hero-img { display: block !important; }
   .dv-nd { display: none !important; }
@@ -1795,112 +1796,104 @@ export default function App() {
 
       {/* ── FOOTER — dunkel ───────────────────────────────────────────────── */}
       <footer style={{ background: C.dark1, borderTop: "1px solid rgba(214,183,109,0.14)" }}>
-        <W pad="56px 24px 36px">
-          <div style={{ display: "grid", gridTemplateColumns: "1fr auto", gap: "48px 60px", marginBottom: 40 }}>
+        <W pad="40px 24px 0">
 
-            {/* Left: Brand + Info */}
-            <div>
-              <div className="pf" style={{ color: C.soft, fontSize: 24, marginBottom: 2 }}>Divine Beauty</div>
-              <div className="dm" style={{ color: C.gold, fontSize: 10, letterSpacing: "2.5px", textTransform: "uppercase", marginBottom: 16 }}>
-                &amp; Nails Studio · Wien
-              </div>
+          {/* Two Cards */}
+          <div className="dv-footer-cards">
 
-              {/* Instagram */}
+            {/* LEFT: Studio Info */}
+            <div style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(214,183,109,0.18)", borderRadius: 12, padding: "28px 28px 24px" }}>
+              <div className="pf" style={{ color: C.soft, fontSize: 20, marginBottom: 2 }}>Divine Beauty &amp; Nails Studio</div>
               <a
                 href={STUDIO.instagramUrl}
                 target="_blank"
                 rel="noreferrer"
                 className="dm"
-                style={{ display: "inline-flex", alignItems: "center", gap: 8, color: C.soft, textDecoration: "none", border: "1px solid rgba(243,198,220,0.2)", borderRadius: 999, padding: "7px 15px", fontSize: 13, marginBottom: 24 }}
+                style={{ display: "inline-flex", alignItems: "center", gap: 7, color: "rgba(243,198,220,0.65)", textDecoration: "none", fontSize: 12, marginBottom: 20, marginTop: 6 }}
               >
-                <Instagram size={14} strokeWidth={1.5} />
+                <Instagram size={12} strokeWidth={1.5} />
                 {STUDIO.instagram}
               </a>
 
-              {/* Address + Hours */}
-              <div style={{ display: "flex", flexWrap: "wrap", gap: 28, marginBottom: 20 }}>
-                <div>
-                  <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 6 }}>
-                    <MapPin size={13} strokeWidth={1.5} color={C.gold} />
-                    <span className="dm" style={{ color: "rgba(255,255,255,0.35)", fontSize: 10, letterSpacing: "1.8px", textTransform: "uppercase" }}>Adresse</span>
-                  </div>
-                  <div className="dm" style={{ color: "rgba(255,255,255,0.5)", fontSize: 13, lineHeight: 1.65 }}>
-                    {STUDIO.address}
-                  </div>
+              <div style={{ display: "flex", gap: 6, marginBottom: 6 }}>
+                <MapPin size={13} strokeWidth={1.5} color={C.gold} style={{ flexShrink: 0, marginTop: 2 }} />
+                <div className="dm" style={{ color: "rgba(255,255,255,0.45)", fontSize: 12.5, lineHeight: 1.7 }}>
+                  Klosterneuburger Straße 98/5<br />1200 Wien
                 </div>
-                <div>
-                  <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 6 }}>
-                    <Clock size={13} strokeWidth={1.5} color={C.gold} />
-                    <span className="dm" style={{ color: "rgba(255,255,255,0.35)", fontSize: 10, letterSpacing: "1.8px", textTransform: "uppercase" }}>Öffnungszeiten</span>
-                  </div>
+              </div>
+
+              <div style={{ display: "flex", gap: 6, marginBottom: 20 }}>
+                <Clock size={13} strokeWidth={1.5} color={C.gold} style={{ flexShrink: 0, marginTop: 2 }} />
+                <div className="dm" style={{ fontSize: 12.5, lineHeight: 1.8 }}>
                   {Object.entries(STUDIO.hours).map(([d, t]) => (
-                    <div key={d} className="dm" style={{ color: "rgba(255,255,255,0.5)", fontSize: 12.5, lineHeight: 1.75 }}>
-                      <span style={{ color: "rgba(255,255,255,0.3)", display: "inline-block", minWidth: 72 }}>{d}</span>
-                      <span>{t}</span>
+                    <div key={d}>
+                      <span style={{ color: "rgba(255,255,255,0.3)", display: "inline-block", minWidth: 80 }}>{d}</span>
+                      <span style={{ color: "rgba(255,255,255,0.5)" }}>{t}</span>
                     </div>
                   ))}
                 </div>
               </div>
 
-              {/* Google Maps link */}
               <a
                 href={`https://maps.google.com/?q=${encodeURIComponent(STUDIO.address)}`}
                 target="_blank"
                 rel="noreferrer"
                 className="dm"
-                style={{ display: "inline-flex", alignItems: "center", gap: 7, color: "rgba(255,255,255,0.38)", fontSize: 12.5, textDecoration: "none", transition: "color .2s" }}
-                onMouseEnter={e => (e.currentTarget.style.color = C.gold)}
-                onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255,0.38)")}
+                style={{ display: "inline-flex", alignItems: "center", gap: 6, color: C.gold, fontSize: 12, textDecoration: "none", opacity: 0.7, transition: "opacity .2s" }}
+                onMouseEnter={e => (e.currentTarget.style.opacity = "1")}
+                onMouseLeave={e => (e.currentTarget.style.opacity = "0.7")}
               >
-                <MapPin size={13} strokeWidth={1.5} />
+                <MapPin size={12} strokeWidth={1.5} />
                 Google Maps öffnen →
               </a>
             </div>
 
-            {/* Right: Legal */}
-            <div style={{ minWidth: 140 }}>
-              <div className="dm" style={{ color: "rgba(255,255,255,0.35)", fontSize: 10, letterSpacing: "1.8px", textTransform: "uppercase", marginBottom: 16 }}>
-                Rechtliches
+            {/* RIGHT: Kontakt & Rechtliches */}
+            <div style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(243,198,220,0.12)", borderRadius: 12, padding: "28px 28px 24px" }}>
+              <div className="dm" style={{ color: "rgba(255,255,255,0.3)", fontSize: 10, letterSpacing: "2px", textTransform: "uppercase", marginBottom: 18 }}>Kontakt &amp; Rechtliches</div>
+
+              <div style={{ display: "flex", gap: 8, alignItems: "center", marginBottom: 10 }}>
+                <Phone size={13} strokeWidth={1.5} color={C.gold} />
+                <a href={`tel:${STUDIO.phone}`} className="dm" style={{ color: "rgba(255,255,255,0.55)", fontSize: 13, textDecoration: "none" }}>{STUDIO.phone}</a>
               </div>
-              {[
-                { n: "Impressum", to: "/impressum" },
-                { n: "Datenschutz", to: "/datenschutz" },
-              ].map(({ n, to }) => (
-                <Link key={n} to={to} className="dv-flink">{n}</Link>
+              <div style={{ display: "flex", gap: 8, alignItems: "center", marginBottom: 28 }}>
+                <Mail size={13} strokeWidth={1.5} color={C.gold} />
+                <a href={`mailto:${STUDIO.email}`} className="dm" style={{ color: "rgba(255,255,255,0.55)", fontSize: 13, textDecoration: "none" }}>{STUDIO.email}</a>
+              </div>
+
+              <div style={{ height: 1, background: "rgba(214,183,109,0.12)", marginBottom: 20 }} />
+
+              {[{ n: "Impressum", to: "/impressum" }, { n: "Datenschutz", to: "/datenschutz" }].map(({ n, to }) => (
+                <Link
+                  key={n}
+                  to={to}
+                  className="dm"
+                  style={{ display: "block", color: "rgba(255,255,255,0.35)", fontSize: 12.5, textDecoration: "none", marginBottom: 10, transition: "color .2s" }}
+                  onMouseEnter={e => (e.currentTarget.style.color = "rgba(255,255,255,0.7)")}
+                  onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255,0.35)")}
+                >
+                  {n}
+                </Link>
               ))}
             </div>
           </div>
 
-          {/* Divider */}
-          <div style={{ height: 1, background: "linear-gradient(90deg,transparent,rgba(214,183,109,0.22),rgba(243,198,220,0.14),transparent)", marginBottom: 22 }} />
-
-          {/* Copyright */}
-          <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", gap: 8 }}>
-            <span className="dm" style={{ color: "rgba(255,255,255,0.25)", fontSize: 12 }}>
+          {/* Bottom Bar */}
+          <div style={{ borderTop: "1px solid rgba(214,183,109,0.1)", padding: "16px 0 20px", display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: 10 }}>
+            <span className="dm" style={{ color: "rgba(255,255,255,0.22)", fontSize: 11.5 }}>
               © {new Date().getFullYear()} Divine Beauty &amp; Nails Studio · Wien
             </span>
-          </div>
-          <div style={{ marginTop: 18, textAlign: "center" }}>
             <a
               href="https://javera-studio.at"
               target="_blank"
               rel="noreferrer"
               className="dm"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: 7,
-                color: "rgba(255,255,255,0.2)",
-                textDecoration: "none",
-                fontSize: 11,
-                letterSpacing: "1.5px",
-                transition: "color 0.3s ease",
-              }}
+              style={{ display: "inline-flex", alignItems: "center", gap: 6, color: "rgba(255,255,255,0.2)", textDecoration: "none", fontSize: 11, letterSpacing: "1.5px", transition: "color 0.3s ease" }}
               onMouseEnter={e => (e.currentTarget.style.color = "rgba(255,255,255,0.45)")}
               onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255,0.2)")}
             >
-              <img src={javeraLogo} alt="JAVERA STUDIO" style={{ width: 16, height: 16, opacity: 0.55, borderRadius: "50%" }} />
-              <span>Webdesign by <span style={{ letterSpacing: "2px" }}>JAVERA STUDIO</span></span>
+              <img src={javeraLogo} alt="JAVERA STUDIO" style={{ width: 14, height: 14, opacity: 0.5, borderRadius: "50%" }} />
+              Webdesign by <span style={{ letterSpacing: "2px" }}>JAVERA STUDIO</span>
             </a>
           </div>
         </W>
