@@ -288,6 +288,20 @@ export default function Leistungen() {
                   </>
                 )}
               </div>
+
+              {/* 3er-Bildgrid unter Make-up */}
+              {s.title === "Make-up" && (
+                <div data-r style={{ marginTop: 48, display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 16 }}>
+                  {["/makeup2.png", "/braut2.jpg", "/makeup1.jpg"].map((src) => (
+                    <img
+                      key={src}
+                      src={src}
+                      alt="Make-up"
+                      style={{ width: "100%", height: 300, objectFit: "cover", borderRadius: 20, display: "block", boxShadow: "0 8px 28px rgba(42,37,40,0.08)" }}
+                    />
+                  ))}
+                </div>
+              )}
             </W>
           </section>
         );
