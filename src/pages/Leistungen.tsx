@@ -201,22 +201,19 @@ export default function Leistungen() {
         return (
           <section key={s.title} style={{ background: bg, padding: "88px 0" }}>
             <W>
-              <div className="lsv-row" data-r>
+              <div className="lsv-row">
                 {isEven ? (
                   <>
                     {/* Image left */}
-                    <div style={{ position: "relative" }}>
+                    <div data-r>
                       <img
                         src={s.img}
                         alt={s.title}
                         style={{ width: "100%", height: 420, objectFit: "cover", borderRadius: 24, display: "block", boxShadow: "0 16px 56px rgba(42,37,40,0.10)" }}
                       />
-                      <div style={{ position: "absolute", bottom: 20, left: 20, background: "rgba(42,37,40,0.72)", backdropFilter: "blur(8px)", borderRadius: 12, padding: "8px 16px" }}>
-                        <span className="dm" style={{ color: C.gold, fontSize: 11, letterSpacing: "2px", textTransform: "uppercase" }}>Divine Beauty</span>
-                      </div>
                     </div>
                     {/* Text right */}
-                    <div>
+                    <div data-r data-d="1">
                       <div className="dm" style={{ color: C.pink, fontSize: 11, letterSpacing: "3px", textTransform: "uppercase", marginBottom: 10 }}>
                         0{i + 1}
                       </div>
@@ -234,15 +231,23 @@ export default function Leistungen() {
                           </div>
                         ))}
                       </div>
-                      <a href={WA_URL} target="_blank" rel="noreferrer" className="btn-pk" style={{ padding: "12px 28px", borderRadius: 999, fontSize: 13, letterSpacing: "1.5px", textTransform: "uppercase", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 8 }}>
-                        Termin buchen
-                      </a>
+                      <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
+                        <a href={WA_URL} target="_blank" rel="noreferrer" className="btn-pk" style={{ padding: "12px 28px", borderRadius: 999, fontSize: 13, letterSpacing: "1.5px", textTransform: "uppercase", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 8 }}>
+                          Termin buchen
+                        </a>
+                        <Link to="/preise" className="btn-pk" style={{ padding: "12px 28px", borderRadius: 999, fontSize: 13, letterSpacing: "1.5px", textTransform: "uppercase", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 8, background: "transparent", border: "1.5px solid rgba(42,37,40,0.18)", color: C.text, boxShadow: "none" }}
+                          onMouseEnter={e => { e.currentTarget.style.borderColor = C.gold; e.currentTarget.style.color = C.text; }}
+                          onMouseLeave={e => { e.currentTarget.style.borderColor = "rgba(42,37,40,0.18)"; e.currentTarget.style.color = C.text; }}
+                        >
+                          Preise ansehen
+                        </Link>
+                      </div>
                     </div>
                   </>
                 ) : (
                   <>
                     {/* Text left */}
-                    <div>
+                    <div data-r>
                       <div className="dm" style={{ color: C.pink, fontSize: 11, letterSpacing: "3px", textTransform: "uppercase", marginBottom: 10 }}>
                         0{i + 1}
                       </div>
@@ -260,20 +265,25 @@ export default function Leistungen() {
                           </div>
                         ))}
                       </div>
-                      <a href={WA_URL} target="_blank" rel="noreferrer" className="btn-pk" style={{ padding: "12px 28px", borderRadius: 999, fontSize: 13, letterSpacing: "1.5px", textTransform: "uppercase", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 8 }}>
-                        Termin buchen
-                      </a>
+                      <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
+                        <a href={WA_URL} target="_blank" rel="noreferrer" className="btn-pk" style={{ padding: "12px 28px", borderRadius: 999, fontSize: 13, letterSpacing: "1.5px", textTransform: "uppercase", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 8 }}>
+                          Termin buchen
+                        </a>
+                        <Link to="/preise" className="btn-pk" style={{ padding: "12px 28px", borderRadius: 999, fontSize: 13, letterSpacing: "1.5px", textTransform: "uppercase", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 8, background: "transparent", border: "1.5px solid rgba(42,37,40,0.18)", color: C.text, boxShadow: "none" }}
+                          onMouseEnter={e => { e.currentTarget.style.borderColor = C.gold; e.currentTarget.style.color = C.text; }}
+                          onMouseLeave={e => { e.currentTarget.style.borderColor = "rgba(42,37,40,0.18)"; e.currentTarget.style.color = C.text; }}
+                        >
+                          Preise ansehen
+                        </Link>
+                      </div>
                     </div>
                     {/* Image right */}
-                    <div style={{ position: "relative" }}>
+                    <div data-r data-d="1">
                       <img
                         src={s.img}
                         alt={s.title}
                         style={{ width: "100%", height: 420, objectFit: "cover", borderRadius: 24, display: "block", boxShadow: "0 16px 56px rgba(42,37,40,0.10)" }}
                       />
-                      <div style={{ position: "absolute", bottom: 20, right: 20, background: "rgba(42,37,40,0.72)", backdropFilter: "blur(8px)", borderRadius: 12, padding: "8px 16px" }}>
-                        <span className="dm" style={{ color: C.gold, fontSize: 11, letterSpacing: "2px", textTransform: "uppercase" }}>Divine Beauty</span>
-                      </div>
                     </div>
                   </>
                 )}

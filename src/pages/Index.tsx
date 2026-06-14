@@ -1770,7 +1770,7 @@ export default function App() {
             </div>
 
             {/* Studio Photo */}
-            <div style={{ display: "flex", alignItems: "center" }}>
+            <div data-r data-d="1" style={{ display: "flex", alignItems: "center" }}>
               <div
                 style={{
                   borderRadius: 28,
