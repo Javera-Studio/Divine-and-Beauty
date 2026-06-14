@@ -1,6 +1,9 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
+import braut2Img from "@/assets/braut2.jpg";
+import makeup2Img from "@/assets/makeup2.jpg";
+import makeup3Img from "@/assets/makeup3.jpg";
 
 const WA_URL =
   "https://wa.me/436763633721?text=" +
@@ -320,7 +323,7 @@ export default function Leistungen() {
               {/* 3er-Bildgrid unter Make-up */}
               {s.title === "Make-up" && (
                 <div data-r style={{ marginTop: 48, display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 16 }}>
-                  {["/makeup2.png", "/braut2.jpg", "/makeup1.jpg"].map((src) => (
+                  {[braut2Img, makeup2Img, makeup3Img].map((src) => (
                     <img
                       key={src}
                       src={src}
