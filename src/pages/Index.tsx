@@ -155,11 +155,9 @@ const GALLERY = [
   { id: 2,  label: "Nägel",             src: "/nagel1.jpg",            g: "linear-gradient(145deg,#FFF7FA,#F3C6DC)" },
   { id: 3,  label: "Pediküre",          src: "/Pedikuere.png",         g: "linear-gradient(145deg,#FBEAF3,#e8d4b0 60%,#D6B76D)" },
   { id: 4,  label: "Augen",             src: "/augen1.png",            g: "linear-gradient(145deg,#FFF7FA,#DFA7C6 55%,#D6B76D)" },
-  { id: 5,  label: "Powderbrows",       src: "/Powderbrows.png",       g: "linear-gradient(145deg,#FBEAF3,#d4b0c8)" },
   { id: 6,  label: "Nägel",             src: "/nagel2.png",            g: "linear-gradient(145deg,#FFF7FA,#F3C6DC 45%,#ead5a8)" },
   { id: 7,  label: "Maniküre",          src: "/Manikuere.png",         g: "linear-gradient(145deg,#FBEAF3,#DFA7C6)" },
   { id: 8,  label: "Augen",             src: "/augen2.png",            g: "linear-gradient(145deg,#FFF7FA,#D6B76D 40%,#DFA7C6)" },
-  { id: 9,  label: "Lippenschattierung",src: "/Lippenschattierung.png",g: "linear-gradient(145deg,#FFF7FA,#F3C6DC 55%,#DFA7C6)" },
   { id: 10, label: "Nägel",             src: "/nagel4.png",            g: "linear-gradient(145deg,#FBEAF3,#F3C6DC 55%,#DFA7C6)" },
   { id: 11, label: "Make-up",           src: "/Make-up.png",           g: "linear-gradient(145deg,#FFF7FA,#F3C6DC 45%,#ead5a8)" },
   { id: 12, label: "Gesichtsbehandlung",src: "/Gesichtsbehandlung.png",g: "linear-gradient(145deg,#FFF7FA,#D6B76D 40%,#DFA7C6)" },
@@ -1545,7 +1543,7 @@ export default function App() {
               {[
                 { Icon: Star, label: "4,7 / 5 Google · 114 Rezensionen" },
                 { Icon: Award, label: "4,7 / 5 Treatwell · 327 Rezensionen" },
-                { Icon: Heart, label: "Seit über 5 Jahren die erste Wahl" },
+                { Icon: Heart, label: "Seit 2018 die erste Wahl" },
               ].map((b) => (
                 <div
                   key={b.label}
@@ -1856,9 +1854,13 @@ export default function App() {
                 <Phone size={13} strokeWidth={1.5} color={C.gold} />
                 <a href={`tel:${STUDIO.phone}`} className="dm" style={{ color: "rgba(255,255,255,0.55)", fontSize: 13, textDecoration: "none" }}>{STUDIO.phone}</a>
               </div>
-              <div style={{ display: "flex", gap: 8, alignItems: "center", marginBottom: 28 }}>
+              <div style={{ display: "flex", gap: 8, alignItems: "center", marginBottom: 10 }}>
                 <Mail size={13} strokeWidth={1.5} color={C.gold} />
                 <a href={`mailto:${STUDIO.email}`} className="dm" style={{ color: "rgba(255,255,255,0.55)", fontSize: 13, textDecoration: "none" }}>{STUDIO.email}</a>
+              </div>
+              <div style={{ display: "flex", gap: 8, alignItems: "center", marginBottom: 28 }}>
+                <Instagram size={13} strokeWidth={1.5} color={C.gold} />
+                <a href={STUDIO.instagramUrl} target="_blank" rel="noreferrer" className="dm" style={{ color: "rgba(255,255,255,0.55)", fontSize: 13, textDecoration: "none" }}>{STUDIO.instagram}</a>
               </div>
 
               <div style={{ height: 1, background: "rgba(214,183,109,0.12)", marginBottom: 20 }} />

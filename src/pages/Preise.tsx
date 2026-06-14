@@ -26,9 +26,9 @@ const PRICES = [
     category: "Gelmodellage",
     items: [
       { name: "Neues Set / Camouflage", price: "50 €" },
-      { name: "Neues Set inkl. Farbe", price: "50 €" },
-      { name: "Neues Set (mit Gel)", price: "58 €" },
-      { name: "French / Babyboomer", price: "auf Anfrage" },
+      { name: "Neues Set inkl. Farbe", price: "56 €" },
+      { name: "Neues Set French", price: "58 €" },
+      { name: "Neues Set Babyboomer", price: "60 €" },
     ],
   },
   {
@@ -58,7 +58,7 @@ const PRICES = [
   {
     category: "Maniküre",
     items: [
-      { name: "Maniküre", price: "25 €" },
+      { name: "Maniküre Classic", price: "25 €" },
       { name: "Lackieren", price: "8 €" },
       { name: "Verwöhnpflege", price: "13 €" },
       { name: "Maniküre inkl. Shellac", price: "30 €" },
@@ -75,12 +75,13 @@ const PRICES = [
       { name: "Peeling inkl. Hydra Global Mask", price: "45 €" },
     ],
   },
-  { category: "Make-up", items: [{ name: "Make-up", price: "ab 51 €" }] },
+  { category: "Make-up", items: [{ name: "Make-up", price: "ab 50 €" }] },
   {
     category: "Waxing",
     items: [
       { name: "Gesicht komplett", price: "25 €" },
       { name: "Oberlippe", price: "10 €" },
+      { name: "Augenbrauen", price: "10 €" },
       { name: "Arme komplett (Schultern bis Hände)", price: "35 €" },
       { name: "Beine komplett (Oberschenkel–Unterschenkel)", price: "49 €" },
       { name: "Unterschenkel (Knie bis Knöchel)", price: "29 €" },
