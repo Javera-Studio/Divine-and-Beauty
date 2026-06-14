@@ -4,6 +4,13 @@ import { Link } from "react-router-dom";
 import studioHero from "@/assets/studio5.png";
 import teamHero from "@/assets/teamnew.jpeg";
 import dacaNew from "@/assets/dacanew.jpeg";
+import new1Img from "@/assets/new1.jpg";
+import new2Img from "@/assets/new2.png";
+import studio4Img from "@/assets/studio4.png";
+import studio7Img from "@/assets/studio7.png";
+import studio9Img from "@/assets/studio9.png";
+import studio12Img from "@/assets/studio12.png";
+import pedi1Img from "@/assets/pedi1.png";
 import { useState, useEffect } from "react";
 import { MessageCircle, Diamond, Sparkles, Flower2, Star, Award, Heart, MapPin, Clock, Mail, Phone, Instagram } from "lucide-react";
 
@@ -165,12 +172,13 @@ const GALLERY = [
   { id: 12, label: "Gesichtsbehandlung",src: "/Gesichtsbehandlung.png",g: "linear-gradient(145deg,#FFF7FA,#D6B76D 40%,#DFA7C6)" },
   { id: 13, label: "Make-up",           src: "/makeup2.png",           g: "linear-gradient(145deg,#FBEAF3,#F3C6DC 55%,#DFA7C6)" },
   { id: 14, label: "Make-up",           src: "/makeup3.png",           g: "linear-gradient(145deg,#FFF7FA,#e8d4b0 55%,#D6B76D)" },
-  { id: 15, label: "Studio",            src: "/studio4.jpg",           g: "linear-gradient(145deg,#FFF7F2,#e8d4b0 55%,#D6B76D)" },
-  { id: 16, label: "Studio",            src: "/studio7.jpg",           g: "linear-gradient(145deg,#FBEAF3,#F3C6DC 55%,#DFA7C6)" },
-  { id: 17, label: "Studio",            src: "/studio9.jpg",           g: "linear-gradient(145deg,#FFF7FA,#DFA7C6 55%,#D6B76D)" },
-  { id: 18, label: "Studio",            src: "/studio12.jpg",          g: "linear-gradient(145deg,#FFF7F2,#e8d4b0 60%,#D6B76D)" },
-  { id: 19, label: "Pediküre",          src: "/pedi1.jpg",             g: "linear-gradient(145deg,#FBEAF3,#e8d4b0 60%,#D6B76D)" },
-  { id: 20, label: "Pediküre",          src: "/pedi6.jpg",             g: "linear-gradient(145deg,#FFF7FA,#F3C6DC 45%,#ead5a8)" },
+  { id: 15, label: "Studio",            src: studio4Img,               g: "linear-gradient(145deg,#FFF7F2,#e8d4b0 55%,#D6B76D)" },
+  { id: 16, label: "Studio",            src: studio7Img,               g: "linear-gradient(145deg,#FBEAF3,#F3C6DC 55%,#DFA7C6)" },
+  { id: 17, label: "Studio",            src: studio9Img,               g: "linear-gradient(145deg,#FFF7FA,#DFA7C6 55%,#D6B76D)" },
+  { id: 18, label: "Studio",            src: studio12Img,              g: "linear-gradient(145deg,#FFF7F2,#e8d4b0 60%,#D6B76D)" },
+  { id: 19, label: "Pediküre",          src: pedi1Img,                 g: "linear-gradient(145deg,#FBEAF3,#e8d4b0 60%,#D6B76D)" },
+  { id: 21, label: "Nägel",             src: new1Img,                  g: "linear-gradient(145deg,#FBEAF3,#F3C6DC 55%,#DFA7C6)" },
+  { id: 22, label: "Nägel",             src: new2Img,                  g: "linear-gradient(145deg,#FFF7FA,#e8d4b0 55%,#D6B76D)" },
 ];
 
 const REVIEWS = [
@@ -1029,7 +1037,7 @@ export default function App() {
                 }}
               >
                 <img
-                  src={dacaNew}
+                  src="/daca1.jpg"
                   alt="Danijela — Divine Beauty & Nails Studio"
                   style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top center", display: "block" }}
                 />
