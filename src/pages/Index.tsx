@@ -1396,8 +1396,8 @@ export default function App() {
             </p>
           </div>
 
-          {/* Kompakte Service-Kacheln */}
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(190px, 1fr))", gap: 14, marginBottom: 52 }}>
+          {/* 3×3 Foto-Grid */}
+          <div className="dv-svc-g" style={{ marginBottom: 52 }}>
             {SERVICES.map((s, i) => (
               <Link
                 key={s.title}
@@ -1406,21 +1406,23 @@ export default function App() {
                 data-d={i % 3}
                 style={{
                   background: C.white,
-                  borderRadius: 16,
-                  padding: "20px 18px",
-                  border: "1px solid rgba(214,183,109,0.13)",
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 12,
+                  borderRadius: 20,
+                  overflow: "hidden",
+                  border: "1px solid rgba(214,183,109,0.12)",
+                  boxShadow: "0 4px 20px rgba(185,130,165,0.07)",
                   textDecoration: "none",
-                  transition: "box-shadow .25s, border-color .25s, transform .25s",
-                  boxShadow: "0 2px 12px rgba(185,130,165,0.05)",
+                  display: "block",
+                  transition: "box-shadow .25s, transform .25s",
                 }}
-                onMouseEnter={e => { e.currentTarget.style.boxShadow = "0 8px 28px rgba(185,130,165,0.13)"; e.currentTarget.style.borderColor = "rgba(214,183,109,0.35)"; e.currentTarget.style.transform = "translateY(-2px)"; }}
-                onMouseLeave={e => { e.currentTarget.style.boxShadow = "0 2px 12px rgba(185,130,165,0.05)"; e.currentTarget.style.borderColor = "rgba(214,183,109,0.13)"; e.currentTarget.style.transform = "none"; }}
+                onMouseEnter={e => { e.currentTarget.style.boxShadow = "0 10px 32px rgba(185,130,165,0.15)"; e.currentTarget.style.transform = "translateY(-3px)"; }}
+                onMouseLeave={e => { e.currentTarget.style.boxShadow = "0 4px 20px rgba(185,130,165,0.07)"; e.currentTarget.style.transform = "none"; }}
               >
-                <span style={{ fontSize: 20, flexShrink: 0 }}>{s.icon}</span>
-                <span className="pf" style={{ color: C.text, fontSize: 14.5, lineHeight: 1.3 }}>{s.title}</span>
+                {s.img && (
+                  <img src={s.img} alt={s.title} style={{ width: "100%", height: 130, objectFit: "cover", display: "block" }} />
+                )}
+                <div style={{ padding: "14px 16px", textAlign: "center" }}>
+                  <span className="pf" style={{ color: C.text, fontSize: 15 }}>{s.title}</span>
+                </div>
               </Link>
             ))}
           </div>
