@@ -1418,7 +1418,7 @@ export default function App() {
                 onMouseLeave={e => { e.currentTarget.style.boxShadow = "0 4px 20px rgba(185,130,165,0.07)"; e.currentTarget.style.transform = "none"; }}
               >
                 {s.img && (
-                  <img src={s.img} alt={s.title} style={{ width: "100%", height: 130, objectFit: "cover", display: "block" }} />
+                  <img src={s.img} alt={s.title} style={{ width: "100%", height: 288, objectFit: "cover", display: "block" }} />
                 )}
                 <div style={{ padding: "14px 16px", textAlign: "center" }}>
                   <span className="pf" style={{ color: C.text, fontSize: 15 }}>{s.title}</span>
