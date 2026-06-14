@@ -822,207 +822,87 @@ export default function App() {
         )}
       </nav>
 
-      {/* ── HERO — hell, Ivory + Soft Cream + Rosé ───────────────────────── */}
+      {/* ── HERO — Full-Bleed Foto ────────────────────────────────────────── */}
       <section
         id="home"
         style={{
           minHeight: "100vh",
-          paddingTop: 80,
-          paddingBottom: 80,
-          display: "flex",
-          alignItems: "flex-end",
           position: "relative",
           overflow: "hidden",
-          background: "linear-gradient(135deg,#FFF7F2 0%,#F7EDE7 45%,#FBEAF3 100%)",
+          display: "flex",
+          alignItems: "flex-end",
         }}
       >
-        {/* Soft Glow Blobs */}
-        <div
-          className="dv-softglow"
+        {/* Vollflächiges Foto */}
+        <img
+          src={studioHero}
+          alt="Divine Beauty & Nails Studio"
           style={{
             position: "absolute",
-            top: "-12%",
-            right: "-6%",
-            width: 520,
-            height: 520,
-            pointerEvents: "none",
-            background: "radial-gradient(circle,rgba(233,184,200,0.45) 0%,transparent 65%)",
+            inset: 0,
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            objectPosition: "center",
+            display: "block",
           }}
         />
+        {/* Dunkles Gradient-Overlay für Lesbarkeit */}
         <div
-          className="dv-softglow"
           style={{
             position: "absolute",
-            bottom: "-10%",
-            left: "-4%",
-            width: 420,
-            height: 420,
-            pointerEvents: "none",
-            background: "radial-gradient(circle,rgba(214,183,109,0.22) 0%,transparent 65%)",
-            animationDelay: "2.5s",
+            inset: 0,
+            background:
+              "linear-gradient(to top, rgba(42,37,40,0.82) 0%, rgba(42,37,40,0.38) 50%, rgba(42,37,40,0.06) 100%)",
           }}
         />
-        {/* Dekorative Gold-Sterne */}
-        <div
-          style={{
-            position: "absolute",
-            top: "18%",
-            right: "10%",
-            color: C.gold,
-            fontSize: 9,
-            opacity: 0.55,
-            letterSpacing: 18,
-          }}
-        >
-          ✦ ✦ ✦
-        </div>
-        <div
-          style={{
-            position: "absolute",
-            bottom: "22%",
-            left: "7%",
-            color: C.pink,
-            fontSize: 7,
-            opacity: 0.35,
-            letterSpacing: 14,
-          }}
-        >
-          · · · · ·
-        </div>
-        <W pad="80px 24px" style={{ width: "100%" }}>
-          <div className="dv-hero-g" style={{ alignItems: "flex-end" }}>
-            <div className="dv-fadeup">
-              <div
-                className="dm"
-                style={{
-                  color: C.muted,
-                  fontSize: 12,
-                  letterSpacing: "4px",
-                  textTransform: "uppercase",
-                  marginBottom: 8,
-                }}
-              >
-                Willkommen bei
-              </div>
-              <h1
-                className="pf"
-                style={{ margin: "0 0 4px", color: C.dark1, lineHeight: 0.95 }}
-              >
-                <span
-                  className="gv"
-                  style={{
-                    display: "block",
-                    color: C.pink,
-                    fontSize: "clamp(4rem,9vw,7.5rem)",
-                    lineHeight: 1,
-                    fontWeight: 400,
-                  }}
-                >
-                  Divine
-                </span>
-                <span
-                  style={{
-                    display: "block",
-                    fontSize: "clamp(1.6rem,3vw,2.4rem)",
-                    fontWeight: 400,
-                    letterSpacing: "0.5px",
-                    marginTop: 4,
-                  }}
-                >
-                  Beauty &amp; Nails Studio
-                </span>
-              </h1>
-              <p
-                className="pf"
-                style={{
-                  fontStyle: "italic",
-                  color: C.pink,
-                  fontSize: "clamp(1rem,1.4vw,1.2rem)",
-                  margin: "22px 0 18px",
-                }}
-              >
-                Schöne Nägel sind kein Zufall.
-              </p>
-              <p
-                className="dm"
-                style={{
-                  color: C.muted,
-                  fontSize: 15.5,
-                  lineHeight: 1.75,
-                  maxWidth: 460,
-                  marginBottom: 30,
-                }}
-              >
-                Erstklassige Behandlungen in stilvollem Ambiente — weil du es verdienst.
-              </p>
-              <div style={{ display: "flex", alignItems: "center", gap: 18, flexWrap: "wrap" }}>
-                <a
-                  href={WA_URL}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="btn-pk"
-                  style={{
-                    padding: "14px 30px",
-                    borderRadius: 999,
-                    fontSize: 13,
-                    fontWeight: 500,
-                    letterSpacing: "2px",
-                    textTransform: "uppercase",
-                    textDecoration: "none",
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: 10,
-                  }}
-                >
-                  <span
-                    aria-hidden
-                    style={{
-                      width: 22,
-                      height: 22,
-                      borderRadius: "50%",
-                      background: "rgba(255,255,255,0.12)",
-                      display: "inline-flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      fontSize: 12,
-                    }}
-                  >
-                    💬
-                  </span>
-                  Termin buchen
-                </a>
-              </div>
+        {/* Text-Inhalt */}
+        <W pad="80px 24px" style={{ width: "100%", position: "relative", zIndex: 1 }}>
+          <div className="dv-fadeup" style={{ maxWidth: 700 }}>
+            <div
+              className="dm"
+              style={{ color: "rgba(255,255,255,0.55)", fontSize: 12, letterSpacing: "4px", textTransform: "uppercase", marginBottom: 8 }}
+            >
+              Willkommen bei
             </div>
-            <div className="dv-hero-img" style={{ position: "relative", marginTop: -40, marginBottom: -40, minWidth: 0 }}>
-              <div
-                style={{
-                  height: 680,
-                  position: "relative",
-                  overflow: "visible",
-                  width: "100%",
-                }}
+            <h1 className="pf" style={{ margin: "0 0 4px", lineHeight: 0.95 }}>
+              <span
+                className="gv"
+                style={{ display: "block", color: C.soft, fontSize: "clamp(4rem,9vw,7.5rem)", lineHeight: 1, fontWeight: 400 }}
               >
-                <img
-                  src={studioHero}
-                  alt="Divine Beauty & Nails Studio Interieur"
-                  style={{
-                    position: "absolute",
-                    top: 0,
-                    right: 0,
-                    bottom: 0,
-                    height: "100%",
-                    width: "auto",
-                    maxWidth: "none",
-                    display: "block",
-                    pointerEvents: "none",
-                    WebkitMaskImage:
-                      "linear-gradient(to right, rgba(0,0,0,0.12) 0%, rgba(0,0,0,0.5) 22%, rgba(0,0,0,0.8) 42%, #000 62%)",
-                    maskImage:
-                      "linear-gradient(to right, rgba(0,0,0,0.12) 0%, rgba(0,0,0,0.5) 22%, rgba(0,0,0,0.8) 42%, #000 62%)",
-                  }}
-                />
-              </div>
-
+                Divine
+              </span>
+              <span
+                style={{ display: "block", color: "rgba(255,255,255,0.88)", fontSize: "clamp(1.6rem,3vw,2.4rem)", fontWeight: 400, letterSpacing: "0.5px", marginTop: 4 }}
+              >
+                Beauty &amp; Nails Studio
+              </span>
+            </h1>
+            <p
+              className="pf"
+              style={{ fontStyle: "italic", color: C.soft, fontSize: "clamp(1rem,1.4vw,1.2rem)", margin: "22px 0 18px" }}
+            >
+              Schöne Nägel sind kein Zufall.
+            </p>
+            <p
+              className="dm"
+              style={{ color: "rgba(255,255,255,0.65)", fontSize: 15.5, lineHeight: 1.75, maxWidth: 460, marginBottom: 30 }}
+            >
+              Erstklassige Behandlungen in stilvollem Ambiente — weil du es verdienst.
+            </p>
+            <div style={{ display: "flex", alignItems: "center", gap: 18, flexWrap: "wrap" }}>
+              <a
+                href={WA_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="btn-pk"
+                style={{ padding: "14px 30px", borderRadius: 999, fontSize: 13, fontWeight: 500, letterSpacing: "2px", textTransform: "uppercase", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 10 }}
+              >
+                <span aria-hidden style={{ width: 22, height: 22, borderRadius: "50%", background: "rgba(255,255,255,0.12)", display: "inline-flex", alignItems: "center", justifyContent: "center", fontSize: 12 }}>
+                  💬
+                </span>
+                Termin buchen
+              </a>
             </div>
           </div>
         </W>
