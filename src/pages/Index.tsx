@@ -1347,7 +1347,7 @@ export default function App() {
             }}
           >
             {[
-              { Icon: Award, text: "Über 5 Jahre Erfahrung" },
+              { Icon: Award, text: "Über 8 Jahre Erfahrung" },
               { Icon: Heart, text: "Hunderte zufriedene Kundinnen" },
               { Icon: MessageCircle, text: "Persönliche Beratung" },
               { Icon: Sparkles, text: "Liebe zum Detail" },
