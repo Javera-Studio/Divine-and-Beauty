@@ -1029,7 +1029,7 @@ export default function App() {
                 }}
               >
                 <img
-                  src="/daca3.png"
+                  src={dacaNew}
                   alt="Danijela — Divine Beauty & Nails Studio"
                   style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top center", display: "block" }}
                 />
