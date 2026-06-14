@@ -155,6 +155,8 @@ body { overflow-x: hidden; background: #FFF7F2; }
 export default function Preise() {
   const [active, setActive] = useState("Alle");
 
+  useEffect(() => { window.scrollTo(0, 0); }, []);
+
   useEffect(() => {
     let el = document.getElementById("pr-css");
     if (!el) {
