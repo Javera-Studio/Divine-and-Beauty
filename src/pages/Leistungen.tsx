@@ -133,6 +133,8 @@ const W = ({ children, style = {} }: { children: React.ReactNode; style?: React.
 );
 
 export default function Leistungen() {
+  useEffect(() => { window.scrollTo(0, 0); }, []);
+
   useEffect(() => {
     let el = document.getElementById("lsv-css");
     if (!el) {
