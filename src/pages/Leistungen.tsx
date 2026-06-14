@@ -235,9 +235,9 @@ export default function Leistungen() {
                         <a href={WA_URL} target="_blank" rel="noreferrer" className="btn-pk" style={{ padding: "12px 28px", borderRadius: 999, fontSize: 13, letterSpacing: "1.5px", textTransform: "uppercase", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 8 }}>
                           Termin buchen
                         </a>
-                        <Link to="/preise" className="btn-pk" style={{ padding: "12px 28px", borderRadius: 999, fontSize: 13, letterSpacing: "1.5px", textTransform: "uppercase", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 8, background: "transparent", border: "1.5px solid rgba(42,37,40,0.18)", color: C.text, boxShadow: "none" }}
-                          onMouseEnter={e => { e.currentTarget.style.borderColor = C.gold; e.currentTarget.style.color = C.text; }}
-                          onMouseLeave={e => { e.currentTarget.style.borderColor = "rgba(42,37,40,0.18)"; e.currentTarget.style.color = C.text; }}
+                        <Link to="/preise" style={{ padding: "12px 28px", borderRadius: 999, fontSize: 13, letterSpacing: "1.5px", textTransform: "uppercase", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 8, background: C.white, color: C.dark1, boxShadow: "0 4px 18px rgba(42,37,40,0.10)", borderBottom: "1.5px solid rgba(214,183,109,0.4)", fontFamily: "'DM Sans', sans-serif", transition: "background .2s" }}
+                          onMouseEnter={e => { e.currentTarget.style.background = "#f5f0ee"; }}
+                          onMouseLeave={e => { e.currentTarget.style.background = C.white; }}
                         >
                           Preise ansehen
                         </Link>
@@ -269,9 +269,9 @@ export default function Leistungen() {
                         <a href={WA_URL} target="_blank" rel="noreferrer" className="btn-pk" style={{ padding: "12px 28px", borderRadius: 999, fontSize: 13, letterSpacing: "1.5px", textTransform: "uppercase", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 8 }}>
                           Termin buchen
                         </a>
-                        <Link to="/preise" className="btn-pk" style={{ padding: "12px 28px", borderRadius: 999, fontSize: 13, letterSpacing: "1.5px", textTransform: "uppercase", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 8, background: "transparent", border: "1.5px solid rgba(42,37,40,0.18)", color: C.text, boxShadow: "none" }}
-                          onMouseEnter={e => { e.currentTarget.style.borderColor = C.gold; e.currentTarget.style.color = C.text; }}
-                          onMouseLeave={e => { e.currentTarget.style.borderColor = "rgba(42,37,40,0.18)"; e.currentTarget.style.color = C.text; }}
+                        <Link to="/preise" style={{ padding: "12px 28px", borderRadius: 999, fontSize: 13, letterSpacing: "1.5px", textTransform: "uppercase", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 8, background: C.white, color: C.dark1, boxShadow: "0 4px 18px rgba(42,37,40,0.10)", borderBottom: "1.5px solid rgba(214,183,109,0.4)", fontFamily: "'DM Sans', sans-serif", transition: "background .2s" }}
+                          onMouseEnter={e => { e.currentTarget.style.background = "#f5f0ee"; }}
+                          onMouseLeave={e => { e.currentTarget.style.background = C.white; }}
                         >
                           Preise ansehen
                         </Link>
