@@ -541,6 +541,8 @@ body { overflow-x: hidden; background: #FFF7F2; }
 .dv-team-g { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
 @media (max-width: 900px) { .dv-team-g { grid-template-columns: repeat(2,1fr); } }
 @media (max-width: 560px) { .dv-team-g { grid-template-columns: 1fr; max-width: 380px; margin: 0 auto; } }
+.dv-team-split { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+@media (max-width: 860px) { .dv-team-split { grid-template-columns: 1fr; gap: 40px; } }
 
 /* ── Scroll Reveal ───────────────────────────────────────────────────────── */
 [data-r] {
@@ -1125,39 +1127,57 @@ export default function App() {
           }}
         />
         <W style={{ zIndex: 1 }}>
-          {/* Header */}
-          <div style={{ textAlign: "center", marginBottom: 56 }}>
-            <Label>Unser Team</Label>
-            <Divider />
-            <h2 className="pf" style={{ fontSize: "clamp(2rem,4vw,3rem)", color: C.text }}>
-              Lerne unser <em style={{ color: C.pink }}>Team</em> kennen
-            </h2>
-            <p className="dm" style={{ color: C.muted, fontSize: 16, lineHeight: 1.8, maxWidth: 560, margin: "20px auto 0" }}>
-              Hinter Divine Beauty steht ein herzliches Team aus erfahrenen Beauty-Expertinnen mit Leidenschaft für Schönheit, Präzision und Wohlbefinden.
-            </p>
-          </div>
+          {/* Split: Foto links — Inhalt rechts */}
+          <div className="dv-team-split" style={{ marginBottom: 80 }}>
+            {/* Linke Spalte: Gruppenfoto */}
+            <div
+              data-r
+              style={{
+                borderRadius: 28,
+                overflow: "hidden",
+                boxShadow: "0 24px 80px rgba(185,130,165,0.14)",
+                border: "1px solid rgba(214,183,109,0.13)",
+              }}
+            >
+              <img
+                src="/team.jpg"
+                alt="Das Team von Divine Beauty & Nails Studio"
+                style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top center", display: "block", minHeight: 420 }}
+              />
+            </div>
 
-          {/* Team hero photo */}
-          <div
-            data-r
-            style={{
-              margin: "0 auto 64px",
-              maxWidth: 468,
-              borderRadius: 28,
-              overflow: "hidden",
-              boxShadow: "0 24px 80px rgba(185,130,165,0.14)",
-              border: "1px solid rgba(214,183,109,0.13)",
-            }}
-          >
-            <img
-              src="/team.jpg"
-              alt="Das Team von Divine Beauty & Nails Studio"
-              style={{ width: "100%", height: "auto", display: "block" }}
-            />
+            {/* Rechte Spalte: Text + Badges */}
+            <div data-r data-d="1">
+              <Label>Unser Team</Label>
+              <Divider />
+              <h2 className="pf" style={{ fontSize: "clamp(2rem,4vw,3rem)", color: C.text, marginBottom: 20 }}>
+                Lerne unser <em style={{ color: C.pink }}>Team</em> kennen
+              </h2>
+              <p className="dm" style={{ color: C.muted, fontSize: 16, lineHeight: 1.8, marginBottom: 36 }}>
+                Hinter Divine Beauty steht ein herzliches Team aus erfahrenen Beauty-Expertinnen mit Leidenschaft für Schönheit, Präzision und Wohlbefinden.
+              </p>
+
+              {/* Badges */}
+              <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
+                {[
+                  { Icon: Award, text: "Über 8 Jahre Erfahrung" },
+                  { Icon: Heart, text: "Hunderte zufriedene Kundinnen" },
+                  { Icon: MessageCircle, text: "Persönliche Beratung" },
+                  { Icon: Sparkles, text: "Liebe zum Detail" },
+                ].map((h) => (
+                  <div key={h.text} style={{ display: "flex", alignItems: "center", gap: 14 }}>
+                    <div style={{ width: 40, height: 40, borderRadius: 12, background: "rgba(251,234,243,0.8)", border: "1px solid rgba(223,167,198,0.18)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                      <h.Icon size={16} strokeWidth={1.5} color={C.gold} />
+                    </div>
+                    <span className="dm" style={{ color: C.text, fontSize: 15, fontWeight: 500 }}>{h.text}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
 
           {/* Person cards */}
-          <div className="dv-team-g" style={{ marginBottom: 48 }}>
+          <div className="dv-team-g">
             {[
               {
                 img: "/gloria1.jpg",
@@ -1210,52 +1230,6 @@ export default function App() {
                     {p.text}
                   </p>
                 </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Highlight values */}
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fill,minmax(210px,1fr))",
-              gap: 14,
-              background: "rgba(255,255,255,0.65)",
-              borderRadius: 22,
-              padding: "30px 26px",
-              border: "1px solid rgba(214,183,109,0.12)",
-            }}
-          >
-            {[
-              { Icon: Award, text: "Über 8 Jahre Erfahrung" },
-              { Icon: Heart, text: "Hunderte zufriedene Kundinnen" },
-              { Icon: MessageCircle, text: "Persönliche Beratung" },
-              { Icon: Sparkles, text: "Liebe zum Detail" },
-            ].map((h, i) => (
-              <div
-                key={h.text}
-                data-r
-                data-d={i % 3}
-                style={{ display: "flex", alignItems: "center", gap: 12, padding: "8px 4px" }}
-              >
-                <div
-                  style={{
-                    width: 38,
-                    height: 38,
-                    borderRadius: 12,
-                    background: "rgba(251,234,243,0.7)",
-                    border: "1px solid rgba(223,167,198,0.15)",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    flexShrink: 0,
-                  }}
-                >
-                  <h.Icon size={16} strokeWidth={1.5} color={C.gold} />
-                </div>
-                <span className="dm" style={{ color: C.text, fontSize: 14, fontWeight: 500 }}>
-                  {h.text}
-                </span>
               </div>
             ))}
           </div>
