@@ -1154,7 +1154,7 @@ export default function App() {
 
             {/* Rechte Spalte: Text + Badges */}
             <div data-r data-d="1">
-              <Label>Unser Team</Label>
+              <div style={{ textAlign: "center" }}><Label>Unser Team</Label></div>
               <Divider />
               <h2 className="pf" style={{ fontSize: "clamp(2rem,4vw,3rem)", color: C.text, marginBottom: 20 }}>
                 Lerne unser <em style={{ color: C.pink }}>Team</em> kennen
