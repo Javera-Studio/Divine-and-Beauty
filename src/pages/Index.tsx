@@ -6,10 +6,13 @@ import teamHero from "@/assets/teamnew.jpeg";
 import dacaNew from "@/assets/dacanew.jpeg";
 import new1Img from "@/assets/new1.jpg";
 import new2Img from "@/assets/new2.png";
+import studio2Img from "@/assets/studio2.png";
 import studio4Img from "@/assets/studio4.png";
 import studio7Img from "@/assets/studio7.png";
 import studio9Img from "@/assets/studio9.png";
 import studio12Img from "@/assets/studio12.png";
+import studio14Img from "@/assets/studio14.png";
+import studio15Img from "@/assets/studio15.png";
 import pedi1Img from "@/assets/pedi1.png";
 import { useState, useEffect } from "react";
 import { MessageCircle, Diamond, Sparkles, Flower2, Star, Award, Heart, MapPin, Clock, Mail, Phone, Instagram } from "lucide-react";
@@ -1025,11 +1028,10 @@ export default function App() {
               Beauty mit <em style={{ color: C.pink }}>Leidenschaft</em> &amp; Präzision
             </h2>
           </div>
-          <div className="dv-about-g" style={{ alignItems: "stretch" }}>
-            <div data-r style={{ position: "relative" }}>
+          <div className="dv-about-g" style={{ alignItems: "center", marginBottom: 56 }}>
+            <div data-r>
               <div
                 style={{
-                  height: "100%",
                   borderRadius: 28,
                   overflow: "hidden",
                   border: "1px solid rgba(214,183,109,0.16)",
@@ -1039,9 +1041,12 @@ export default function App() {
                 <img
                   src="/daca1.jpg"
                   alt="Danijela — Divine Beauty & Nails Studio"
-                  style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top center", display: "block" }}
+                  style={{ width: "100%", height: 360, objectFit: "cover", objectPosition: "top center", display: "block" }}
                 />
               </div>
+              <p className="pf" style={{ textAlign: "center", color: C.muted, fontSize: 15, fontStyle: "italic", marginTop: 18 }}>
+                Ein Ort zum Entspannen, Wohlfühlen und Schönwerden.
+              </p>
             </div>
             <div data-r data-d="1">
               <p className="dm" style={{ color: C.muted, fontSize: 16, lineHeight: 1.88, marginBottom: 20 }}>
@@ -1063,6 +1068,18 @@ export default function App() {
                 Termin vereinbaren →
               </a>
             </div>
+          </div>
+
+          {/* Studio-Grid */}
+          <div data-r style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 14 }}>
+            {[studio14Img, studio4Img, studio15Img, studio2Img].map((src, i) => (
+              <img
+                key={i}
+                src={src}
+                alt="Divine Beauty Studio"
+                style={{ width: "100%", height: 220, objectFit: "cover", borderRadius: 18, display: "block", boxShadow: "0 8px 28px rgba(42,37,40,0.08)" }}
+              />
+            ))}
           </div>
         </W>
       </section>
