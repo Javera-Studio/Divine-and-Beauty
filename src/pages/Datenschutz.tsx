@@ -6,15 +6,22 @@ const TEXT = "#2A2528";
 const MUTED = "#7A6E72";
 const BG = "#FFF7F2";
 
-const SECTIONS = [
-  { t: "1. Verantwortliche Person", c: "Divine Beauty & Nails Studio, Klosterneuburgerstraße 98, 1200 Wien – Inhaberin: [VORNAME NACHNAME eintragen] – divine.beauty.nails@gmail.com – ist verantwortliche Person im Sinne der DSGVO." },
-  { t: "2. Erhobene Daten & Zweck", c: "Beim Besuch werden technisch notwendige Daten erhoben. Bei freiwilliger Kontaktaufnahme (E-Mail, Instagram) werden die Daten ausschließlich zur Terminvergabe verwendet." },
-  { t: "3. Rechtsgrundlage", c: "Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung) sowie Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an sicherer Website-Bereitstellung)." },
-  { t: "4. Datenweitergabe", c: "Keine Weitergabe an Dritte, soweit nicht gesetzlich verpflichtet." },
-  { t: "5. Deine Rechte (DSGVO)", c: "Auskunft (Art. 15), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung (Art. 18), Übertragbarkeit (Art. 20), Widerspruch (Art. 21). Kontakt: divine.beauty.nails@gmail.com" },
-  { t: "6. Instagram / Social Media", c: "Verlinkungen zu Instagram (Meta Platforms Ireland Ltd.) – beim Klick gelten die Datenschutzbestimmungen von Meta." },
-  { t: "7. Beschwerderecht", c: "Österreichische Datenschutzbehörde: Barichgasse 40–42, 1030 Wien – dsb.gv.at" },
-];
+const heading: React.CSSProperties = {
+  fontFamily: "'Playfair Display', serif",
+  color: PINK,
+  fontSize: 16,
+  marginBottom: 10,
+  marginTop: 0,
+};
+
+const body: React.CSSProperties = {
+  color: MUTED,
+  fontSize: 13,
+  lineHeight: 1.88,
+  margin: 0,
+};
+
+const section: React.CSSProperties = { marginBottom: 32 };
 
 export default function Datenschutz() {
   return (
@@ -23,16 +30,99 @@ export default function Datenschutz() {
         <Link to="/" style={{ color: PINK, fontSize: 13, textDecoration: "none", letterSpacing: 1.5, textTransform: "uppercase" }}>
           ← Zurück zur Startseite
         </Link>
-        <h1 style={{ fontFamily: "'Playfair Display', serif", color: TEXT, fontSize: 36, margin: "24px 0 10px" }}>Datenschutzerklärung</h1>
-        <div style={{ background: "rgba(255,255,255,0.7)", border: `1px solid ${GOLD}44`, borderRadius: 10, padding: "12px 16px", color: MUTED, fontSize: 12, lineHeight: 1.6, marginBottom: 36 }}>
-          ⚠️ Platzhalter – bitte vor Veröffentlichung rechtlich prüfen lassen (DSGVO / österreichisches DSG). Stand: [DATUM einfügen].
+        <h1 style={{ fontFamily: "'Playfair Display', serif", color: TEXT, fontSize: 36, margin: "24px 0 6px" }}>
+          Datenschutzerklärung
+        </h1>
+        <p style={{ ...body, marginBottom: 36 }}>
+          Der Schutz Ihrer persönlichen Daten ist uns ein besonderes Anliegen. Wir verarbeiten Ihre Daten daher ausschließlich auf Grundlage der gesetzlichen Bestimmungen (DSGVO, TKG).
+        </p>
+
+        <div style={section}>
+          <h3 style={heading}>1. Verantwortliche</h3>
+          <p style={body}>
+            Danijela Bošković<br />
+            Klosterneuburger Straße 98/5<br />
+            1200 Wien<br />
+            Österreich<br /><br />
+            E-Mail: divine.beauty.nails@gmail.com<br />
+            Telefon: +43 676 3633721
+          </p>
         </div>
-        {SECTIONS.map((s) => (
-          <div key={s.t} style={{ marginBottom: 28 }}>
-            <h3 style={{ fontFamily: "'Playfair Display', serif", color: PINK, fontSize: 16, marginBottom: 10 }}>{s.t}</h3>
-            <p style={{ color: MUTED, fontSize: 13, lineHeight: 1.88 }}>{s.c}</p>
-          </div>
-        ))}
+
+        <div style={section}>
+          <h3 style={heading}>2. Zugriffsdaten und Hosting</h3>
+          <p style={body}>
+            Beim Besuch dieser Website werden automatisch Informationen durch den Hosting-Anbieter gespeichert. Dazu gehören insbesondere:
+          </p>
+          <ul style={{ ...body, paddingLeft: 20, marginTop: 8 }}>
+            <li>IP-Adresse</li>
+            <li>Datum und Uhrzeit des Zugriffs</li>
+            <li>aufgerufene Seiten</li>
+            <li>Browsertyp und Betriebssystem</li>
+          </ul>
+          <p style={{ ...body, marginTop: 8 }}>
+            Diese Daten dienen ausschließlich der technischen Bereitstellung und Sicherheit der Website.
+          </p>
+        </div>
+
+        <div style={section}>
+          <h3 style={heading}>3. Kontaktaufnahme</h3>
+          <p style={body}>
+            Wenn Sie per E-Mail Kontakt mit uns aufnehmen, werden die von Ihnen angegebenen Daten ausschließlich zur Bearbeitung Ihrer Anfrage verwendet.<br /><br />
+            Die Daten werden nicht ohne Ihre Einwilligung weitergegeben.
+          </p>
+        </div>
+
+        <div style={section}>
+          <h3 style={heading}>4. Instagram</h3>
+          <p style={body}>
+            Auf dieser Website befinden sich Links zu Instagram.<br />
+            Beim Anklicken des Links werden Sie auf die Plattform Instagram weitergeleitet. Dabei können Daten durch Meta Platforms verarbeitet werden.<br /><br />
+            Weitere Informationen finden Sie unter:{" "}
+            <a href="https://privacycenter.instagram.com/" target="_blank" rel="noopener noreferrer" style={{ color: PINK }}>
+              privacycenter.instagram.com
+            </a>
+          </p>
+        </div>
+
+        <div style={section}>
+          <h3 style={heading}>5. Google Maps</h3>
+          <p style={body}>
+            Auf dieser Website ist Google Maps zur Darstellung unseres Standorts eingebunden.<br />
+            Beim Aufruf der Karte können personenbezogene Daten, insbesondere Ihre IP-Adresse, an Google übermittelt werden.<br /><br />
+            Anbieter:<br />
+            Google Ireland Limited<br />
+            Gordon House, Barrow Street<br />
+            Dublin 4, Irland<br /><br />
+            Weitere Informationen:{" "}
+            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" style={{ color: PINK }}>
+              policies.google.com/privacy
+            </a>
+          </p>
+        </div>
+
+        <div style={section}>
+          <h3 style={heading}>6. Ihre Rechte</h3>
+          <p style={body}>Ihnen stehen grundsätzlich die Rechte auf:</p>
+          <ul style={{ ...body, paddingLeft: 20, marginTop: 8 }}>
+            <li>Auskunft</li>
+            <li>Berichtigung</li>
+            <li>Löschung</li>
+            <li>Einschränkung der Verarbeitung</li>
+            <li>Datenübertragbarkeit</li>
+            <li>Widerruf</li>
+            <li>Widerspruch</li>
+          </ul>
+          <p style={{ ...body, marginTop: 12 }}>
+            Wenn Sie glauben, dass die Verarbeitung Ihrer Daten gegen das Datenschutzrecht verstößt, können Sie sich bei der österreichischen Datenschutzbehörde beschweren.<br /><br />
+            Österreichische Datenschutzbehörde<br />
+            Barichgasse 40–42<br />
+            1030 Wien<br />
+            <a href="https://www.dsb.gv.at" target="_blank" rel="noopener noreferrer" style={{ color: PINK }}>
+              www.dsb.gv.at
+            </a>
+          </p>
+        </div>
       </div>
     </div>
   );

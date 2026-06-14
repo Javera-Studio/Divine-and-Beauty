@@ -8,14 +8,15 @@ const BG = "#FFF7F2";
 
 const ROWS: [string, string][] = [
   ["Unternehmensname", "Divine Beauty & Nails Studio"],
-  ["Inhaberin", "[VORNAME NACHNAME eintragen]"],
-  ["Adresse", "Klosterneuburgerstraße 98, 1200 Wien, Österreich"],
+  ["Inhaberin", "Danijela Bošković"],
+  ["Adresse", "Klosterneuburger Straße 98/5, 1200 Wien, Österreich"],
   ["Telefon", "+43 676 3633721"],
   ["E-Mail", "divine.beauty.nails@gmail.com"],
-  ["UID-Nummer", "[ATU XXXXXXXX – falls vorhanden, sonst weglassen]"],
-  ["Gewerbebehörde", "Magistrat der Stadt Wien / Wirtschaftskammer Wien (WKW)"],
+  ["Gewerbe", "Modellieren von Fingernägeln (Nagelstudio)"],
+  ["GISA-Zahl", "30468269"],
+  ["Mitglied bei", "Wirtschaftskammer Wien"],
+  ["Gewerbebehörde", "Magistratisches Bezirksamt der Stadt Wien"],
   ["Berufsrecht", "Gewerbeordnung 1994 (GewO) – www.ris.bka.gv.at"],
-  ["Gewerbe", "Kosmetikgewerbe / Nagelstudio / Beauty-Dienstleistungen"],
 ];
 
 export default function Impressum() {
@@ -26,9 +27,9 @@ export default function Impressum() {
           ← Zurück zur Startseite
         </Link>
         <h1 style={{ fontFamily: "'Playfair Display', serif", color: TEXT, fontSize: 36, margin: "24px 0 10px" }}>Impressum</h1>
-        <div style={{ background: "rgba(255,255,255,0.7)", border: `1px solid ${GOLD}44`, borderRadius: 10, padding: "12px 16px", color: MUTED, fontSize: 12, lineHeight: 1.6, marginBottom: 32 }}>
-          ⚠️ Platzhalter – bitte vor Veröffentlichung rechtlich prüfen lassen (österreichisches Recht / Wien).
-        </div>
+        <p style={{ color: MUTED, fontSize: 13, lineHeight: 1.6, marginBottom: 32 }}>
+          Angaben gemäß § 5 ECG
+        </p>
         {ROWS.map(([k, v]) => (
           <div key={k} style={{ display: "flex", flexWrap: "wrap", gap: 14, padding: "10px 0", borderBottom: "1px solid rgba(42,37,40,0.07)" }}>
             <span style={{ color: MUTED, fontSize: 13, minWidth: 200 }}>{k}</span>
@@ -36,6 +37,7 @@ export default function Impressum() {
           </div>
         ))}
         <p style={{ color: MUTED, fontSize: 13, lineHeight: 1.8, marginTop: 28 }}>
+          <strong style={{ color: TEXT }}>Haftung für Inhalte</strong><br />
           Trotz sorgfältiger Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt verlinkter Seiten sind ausschließlich deren Betreiber verantwortlich.
         </p>
       </div>
