@@ -888,36 +888,24 @@ export default function App() {
         {/* Text-Inhalt */}
         <W pad="48px 24px" style={{ width: "100%", position: "relative", zIndex: 1, textAlign: "center" }}>
           <div className="dv-fadeup" style={{ userSelect: "none", cursor: "default" }}>
-            <div
-              className="dm"
-              style={{ color: "rgba(255,255,255,0.55)", fontSize: 12, letterSpacing: "4px", textTransform: "uppercase", marginBottom: 8, textShadow: "0 2px 8px rgba(0,0,0,0.6)" }}
-            >
-              Willkommen bei
-            </div>
-            <h1 className="pf" style={{ margin: "0 0 4px", lineHeight: 0.95 }}>
+            <h1 className="pf" style={{ margin: "0 0 8px", lineHeight: 0.95 }}>
               <span
                 className="gv"
-                style={{ display: "block", color: C.soft, fontSize: "clamp(4rem,9vw,7.5rem)", lineHeight: 1, fontWeight: 400, textShadow: "0 4px 20px rgba(0,0,0,0.55)" }}
+                style={{ display: "block", color: C.dark1, fontSize: "clamp(4rem,9vw,7.5rem)", lineHeight: 1, fontWeight: 400 }}
               >
                 Divine
               </span>
               <span
-                style={{ display: "block", color: "rgba(255,255,255,0.88)", fontSize: "clamp(1.6rem,3vw,2.4rem)", fontWeight: 400, letterSpacing: "0.5px", marginTop: 4, textShadow: "0 2px 12px rgba(0,0,0,0.5)" }}
+                style={{ display: "block", color: C.text, fontSize: "clamp(1.4rem,2.5vw,2.2rem)", fontWeight: 400, letterSpacing: "0.5px", marginTop: 6 }}
               >
                 Beauty &amp; Nails Studio
               </span>
             </h1>
             <p
-              className="pf"
-              style={{ fontStyle: "italic", color: C.soft, fontSize: "clamp(1rem,1.4vw,1.2rem)", margin: "22px 0 18px", textShadow: "0 2px 10px rgba(0,0,0,0.5)" }}
-            >
-              Schöne Nägel sind kein Zufall.
-            </p>
-            <p
               className="dm"
-              style={{ color: "rgba(255,255,255,0.65)", fontSize: 15.5, lineHeight: 1.75, maxWidth: 460, margin: "0 auto", textShadow: "0 1px 8px rgba(0,0,0,0.5)" }}
+              style={{ color: C.muted, fontSize: 14, letterSpacing: "2px", textTransform: "uppercase", marginTop: 18 }}
             >
-              Erstklassige Behandlungen in stilvollem Ambiente — weil du es verdienst.
+              Seit 2018 in Wien
             </p>
           </div>
         </W>
