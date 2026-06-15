@@ -99,9 +99,8 @@ const PRICES = [
     category: "Gelmodellage",
     items: [
       { name: "Neues Set / Camouflage", price: "50 €" },
-      { name: "Neues Set inkl. Farbe", price: "50 €" },
-      { name: "Neues Set (mit Gel)", price: "58 €" },
-      { name: "French / Babyboomer", price: "auf Anfrage" },
+      { name: "Neues Set inkl. Farbe", price: "56 €" },
+      { name: "Neues Set French/Babyboomer", price: "58 €" },
     ],
   },
   {
@@ -134,7 +133,7 @@ const PRICES = [
       { name: "Maniküre", price: "25 €" },
       { name: "Lackieren", price: "8 €" },
       { name: "Verwöhnpflege", price: "13 €" },
-      { name: "Maniküre inkl. Shellac", price: "30 €" },
+      { name: "Maniküre inkl. Paraffinbad", price: "30 €" },
     ],
   },
   { category: "Wimpernlifting", items: [{ name: "Inkl. Farben & Keratin", price: "55 €" }] },
