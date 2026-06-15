@@ -875,37 +875,21 @@ export default function App() {
           background: C.bg1,
         }}
       >
-        {/* Video — Originalformat, Kanten per Mask weich ausgeblendet */}
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          poster={studioHero}
-          style={{
-            position: "absolute",
-            inset: 0,
-            width: "100%",
-            height: "100%",
-            objectFit: "contain",
-            objectPosition: "center",
-            display: "block",
-            WebkitMaskImage: "linear-gradient(to right, transparent 0%, black 9%, black 91%, transparent 100%)",
-            maskImage: "linear-gradient(to right, transparent 0%, black 9%, black 91%, transparent 100%)",
-          } as React.CSSProperties}
-        >
-          <source src="/herovid.mp4" type="video/mp4" />
-          <img src={studioHero} alt="Divine Beauty & Nails Studio" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }} />
-        </video>
-
-        {/* Overlay — nur über dem Video, selbe Mask */}
-        <div style={{
-          position: "absolute", inset: 0,
-          background: "rgba(22,14,14,0.45)",
-          pointerEvents: "none",
-          WebkitMaskImage: "linear-gradient(to right, transparent 0%, black 9%, black 91%, transparent 100%)",
-          maskImage: "linear-gradient(to right, transparent 0%, black 9%, black 91%, transparent 100%)",
-        } as React.CSSProperties} />
+        {/* Video-Wrapper: portrait-zentriert, Overlay NUR über dem Video */}
+        <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center" }}>
+          <div style={{ position: "relative", height: "100%", aspectRatio: "9/16" }}>
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+            >
+              <source src="/herovid.mp4" type="video/mp4" />
+            </video>
+            <div style={{ position: "absolute", inset: 0, background: "rgba(22,14,14,0.45)", pointerEvents: "none" }} />
+          </div>
+        </div>
 
         {/* Text — zentriert, leicht nach oben */}
         <W pad="0 24px" style={{ width: "100%", position: "relative", zIndex: 1, textAlign: "center" }}>
