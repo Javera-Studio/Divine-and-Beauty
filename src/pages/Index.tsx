@@ -884,13 +884,9 @@ export default function App() {
               loop
               playsInline
               poster={studioHero}
-              style={{
-                height: "100%", width: "auto", display: "block",
-                transform: "scaleY(1.22)",
-                transformOrigin: "center center",
-              }}
+              style={{ height: "100%", width: "auto", display: "block" }}
             >
-              <source src="/herovidnew.mp4" type="video/mp4" />
+              <source src="/herovid.mp4" type="video/mp4" />
             </video>
             <div style={{ position: "absolute", inset: 0, background: "rgba(22,14,14,0.45)", pointerEvents: "none" }} />
             {/* Schmaler starker Fade links und rechts an den Videokanten */}
