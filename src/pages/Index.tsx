@@ -885,10 +885,9 @@ export default function App() {
               playsInline
               poster={studioHero}
               style={{
-                position: "absolute",
-                top: "50%", left: "50%",
-                transform: "translate(-50%, -50%)",
-                height: "120%", width: "auto", display: "block",
+                height: "100%", width: "auto", display: "block",
+                transform: "scaleY(1.22)",
+                transformOrigin: "center center",
               }}
             >
               <source src="/herovidnew.mp4" type="video/mp4" />
