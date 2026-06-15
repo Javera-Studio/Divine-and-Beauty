@@ -352,14 +352,9 @@ export default function Leistungen() {
               {/* 3er-Bildgrid unter Wimpernlifting */}
               {s.title === "Wimpernlifting" && (
                 <div data-r className="lsv-img-grid">
-                  {[lashlift1Img, lashlift2Img, lashlift3Img].map((src) => (
-                    <img
-                      key={src}
-                      src={src}
-                      alt="Wimpernlifting"
-                      style={{ width: "100%", height: 300, objectFit: "cover", borderRadius: 20, display: "block", boxShadow: "0 8px 28px rgba(42,37,40,0.08)" }}
-                    />
-                  ))}
+                  <img src={lashlift1Img} alt="Wimpernlifting" style={{ width: "100%", height: 300, objectFit: "cover", objectPosition: "center 0%", borderRadius: 20, display: "block", boxShadow: "0 8px 28px rgba(42,37,40,0.08)" }} />
+                  <img src={lashlift2Img} alt="Wimpernlifting" style={{ width: "100%", height: 300, objectFit: "cover", borderRadius: 20, display: "block", boxShadow: "0 8px 28px rgba(42,37,40,0.08)" }} />
+                  <img src={lashlift3Img} alt="Wimpernlifting" style={{ width: "100%", height: 300, objectFit: "cover", borderRadius: 20, display: "block", boxShadow: "0 8px 28px rgba(42,37,40,0.08)" }} />
                 </div>
               )}
 
