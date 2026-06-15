@@ -892,19 +892,19 @@ export default function App() {
             <h1 className="pf" style={{ margin: "0 0 8px", lineHeight: 0.95 }}>
               <span
                 className="gv"
-                style={{ display: "block", color: C.dark1, fontSize: "clamp(4rem,9vw,7.5rem)", lineHeight: 1, fontWeight: 400 }}
+                style={{ display: "block", color: C.soft, fontSize: "clamp(4rem,9vw,7.5rem)", lineHeight: 1, fontWeight: 400 }}
               >
                 Divine
               </span>
               <span
-                style={{ display: "block", color: C.text, fontSize: "clamp(1.4rem,2.5vw,2.2rem)", fontWeight: 400, letterSpacing: "0.5px", marginTop: 6 }}
+                style={{ display: "block", color: "rgba(255,255,255,0.9)", fontSize: "clamp(1.4rem,2.5vw,2.2rem)", fontWeight: 400, letterSpacing: "0.5px", marginTop: 6 }}
               >
                 Beauty &amp; Nails Studio
               </span>
             </h1>
             <p
               className="dm"
-              style={{ color: C.muted, fontSize: 14, letterSpacing: "2px", textTransform: "uppercase", marginTop: 18 }}
+              style={{ color: "rgba(255,255,255,0.65)", fontSize: 14, letterSpacing: "2px", textTransform: "uppercase", marginTop: 18 }}
             >
               Seit 2018 in Wien
             </p>
