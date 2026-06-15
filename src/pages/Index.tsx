@@ -862,6 +862,7 @@ export default function App() {
           overflow: "hidden",
           display: "flex",
           alignItems: "flex-end",
+          background: "#1a1618",
         }}
       >
         {/* Vollflächiges Video */}
@@ -875,7 +876,7 @@ export default function App() {
             inset: 0,
             width: "100%",
             height: "100%",
-            objectFit: "cover",
+            objectFit: "contain",
             objectPosition: "center",
             display: "block",
           }}
@@ -889,57 +890,44 @@ export default function App() {
             position: "absolute",
             inset: 0,
             background:
-              "linear-gradient(to top, rgba(42,37,40,0.82) 0%, rgba(42,37,40,0.38) 50%, rgba(42,37,40,0.06) 100%)",
+              "linear-gradient(to top, rgba(42,37,40,0.88) 0%, rgba(42,37,40,0.45) 45%, rgba(42,37,40,0.1) 100%)",
+            pointerEvents: "none",
           }}
         />
         {/* Text-Inhalt */}
-        <W pad="80px 24px" style={{ width: "100%", position: "relative", zIndex: 1 }}>
-          <div className="dv-fadeup" style={{ maxWidth: 700 }}>
+        <W pad="48px 24px" style={{ width: "100%", position: "relative", zIndex: 1 }}>
+          <div className="dv-fadeup" style={{ maxWidth: 700, userSelect: "none", cursor: "default" }}>
             <div
               className="dm"
-              style={{ color: "rgba(255,255,255,0.55)", fontSize: 12, letterSpacing: "4px", textTransform: "uppercase", marginBottom: 8 }}
+              style={{ color: "rgba(255,255,255,0.55)", fontSize: 12, letterSpacing: "4px", textTransform: "uppercase", marginBottom: 8, textShadow: "0 2px 8px rgba(0,0,0,0.6)" }}
             >
               Willkommen bei
             </div>
             <h1 className="pf" style={{ margin: "0 0 4px", lineHeight: 0.95 }}>
               <span
                 className="gv"
-                style={{ display: "block", color: C.soft, fontSize: "clamp(4rem,9vw,7.5rem)", lineHeight: 1, fontWeight: 400 }}
+                style={{ display: "block", color: C.soft, fontSize: "clamp(4rem,9vw,7.5rem)", lineHeight: 1, fontWeight: 400, textShadow: "0 4px 20px rgba(0,0,0,0.55)" }}
               >
                 Divine
               </span>
               <span
-                style={{ display: "block", color: "rgba(255,255,255,0.88)", fontSize: "clamp(1.6rem,3vw,2.4rem)", fontWeight: 400, letterSpacing: "0.5px", marginTop: 4 }}
+                style={{ display: "block", color: "rgba(255,255,255,0.88)", fontSize: "clamp(1.6rem,3vw,2.4rem)", fontWeight: 400, letterSpacing: "0.5px", marginTop: 4, textShadow: "0 2px 12px rgba(0,0,0,0.5)" }}
               >
                 Beauty &amp; Nails Studio
               </span>
             </h1>
             <p
               className="pf"
-              style={{ fontStyle: "italic", color: C.soft, fontSize: "clamp(1rem,1.4vw,1.2rem)", margin: "22px 0 18px" }}
+              style={{ fontStyle: "italic", color: C.soft, fontSize: "clamp(1rem,1.4vw,1.2rem)", margin: "22px 0 18px", textShadow: "0 2px 10px rgba(0,0,0,0.5)" }}
             >
               Schöne Nägel sind kein Zufall.
             </p>
             <p
               className="dm"
-              style={{ color: "rgba(255,255,255,0.65)", fontSize: 15.5, lineHeight: 1.75, maxWidth: 460, marginBottom: 30 }}
+              style={{ color: "rgba(255,255,255,0.65)", fontSize: 15.5, lineHeight: 1.75, maxWidth: 460, textShadow: "0 1px 8px rgba(0,0,0,0.5)" }}
             >
               Erstklassige Behandlungen in stilvollem Ambiente — weil du es verdienst.
             </p>
-            <div style={{ display: "flex", alignItems: "center", gap: 18, flexWrap: "wrap" }}>
-              <a
-                href={WA_URL}
-                target="_blank"
-                rel="noreferrer"
-                className="btn-pk"
-                style={{ padding: "14px 30px", borderRadius: 999, fontSize: 13, fontWeight: 500, letterSpacing: "2px", textTransform: "uppercase", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 10 }}
-              >
-                <span aria-hidden style={{ width: 22, height: 22, borderRadius: "50%", background: "rgba(255,255,255,0.12)", display: "inline-flex", alignItems: "center", justifyContent: "center", fontSize: 12 }}>
-                  💬
-                </span>
-                Termin buchen
-              </a>
-            </div>
           </div>
         </W>
       </section>
