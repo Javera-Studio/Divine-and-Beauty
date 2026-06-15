@@ -337,9 +337,9 @@ export default function Leistungen() {
               {/* 3er-Bildgrid unter Shellac */}
               {s.title === "Shellac" && (
                 <div data-r style={{ marginTop: 48, display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 16 }}>
-                  <img src={shellack1Img} alt="Shellac" style={{ width: "100%", height: 300, objectFit: "cover", objectPosition: "center 30%", borderRadius: 20, display: "block", boxShadow: "0 8px 28px rgba(42,37,40,0.08)" }} />
+                  <img src={shellack1Img} alt="Shellac" style={{ width: "100%", height: 300, objectFit: "cover", objectPosition: "center 70%", borderRadius: 20, display: "block", boxShadow: "0 8px 28px rgba(42,37,40,0.08)" }} />
                   <img src={nagel9Img}    alt="Shellac" style={{ width: "100%", height: 300, objectFit: "cover", borderRadius: 20, display: "block", boxShadow: "0 8px 28px rgba(42,37,40,0.08)" }} />
-                  <img src={nagel5Img}    alt="Shellac" style={{ width: "100%", height: 300, objectFit: "cover", objectPosition: "center 30%", borderRadius: 20, display: "block", boxShadow: "0 8px 28px rgba(42,37,40,0.08)" }} />
+                  <img src={nagel5Img}    alt="Shellac" style={{ width: "100%", height: 300, objectFit: "cover", objectPosition: "center 70%", borderRadius: 20, display: "block", boxShadow: "0 8px 28px rgba(42,37,40,0.08)" }} />
                 </div>
               )}
 

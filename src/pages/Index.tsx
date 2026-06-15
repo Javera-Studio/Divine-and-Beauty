@@ -289,7 +289,7 @@ body { overflow-x: hidden; background: #FFF7F2; }
 
 .dv-marquee-track {
   display: flex; width: max-content; gap: 18px;
-  animation: dv-marquee 42s linear infinite;
+  animation: dv-marquee 60s linear infinite;
 }
 .dv-marquee-wrap:hover .dv-marquee-track { animation-play-state: paused; }
 .dv-float   { animation: dv-float 6s ease-in-out infinite; }
@@ -1050,7 +1050,7 @@ export default function App() {
                 <img
                   src={dacaNew1}
                   alt="Danijela — Divine Beauty & Nails Studio"
-                  style={{ width: "80%", display: "block", margin: "0 auto" }}
+                  style={{ width: "56%", display: "block", margin: "0 auto" }}
                 />
               </div>
               <p className="pf" style={{ textAlign: "center", color: C.muted, fontSize: 15, fontStyle: "italic", marginTop: 18 }}>
