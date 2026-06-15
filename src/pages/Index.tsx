@@ -866,16 +866,15 @@ export default function App() {
       <section
         id="home"
         style={{
-          height: "clamp(550px, 65vh, 620px)",
+          height: "clamp(550px, 70vh, 650px)",
           position: "relative",
           overflow: "hidden",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          background: C.bg1,
         }}
       >
-        {/* Video — Originalformat, kein Stretch */}
+        {/* Video — vollflächig, dominiert den Hero */}
         <video
           autoPlay
           muted
@@ -887,7 +886,7 @@ export default function App() {
             inset: 0,
             width: "100%",
             height: "100%",
-            objectFit: "contain",
+            objectFit: "cover",
             objectPosition: "center",
             display: "block",
           }}
@@ -896,32 +895,33 @@ export default function App() {
           <img src={studioHero} alt="Divine Beauty & Nails Studio" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }} />
         </video>
 
-        {/* Linker Fade — Video weich in Hintergrund auslaufen lassen */}
-        <div style={{ position: "absolute", top: 0, left: 0, bottom: 0, width: "28%", background: `linear-gradient(to right, ${C.bg1} 0%, transparent 100%)`, pointerEvents: "none", zIndex: 1 }} />
-        {/* Rechter Fade */}
-        <div style={{ position: "absolute", top: 0, right: 0, bottom: 0, width: "28%", background: `linear-gradient(to left, ${C.bg1} 0%, transparent 100%)`, pointerEvents: "none", zIndex: 1 }} />
-        {/* Dezentes dunkles Overlay für Textlesbarkeit */}
-        <div style={{ position: "absolute", inset: 0, background: "rgba(30,20,20,0.18)", pointerEvents: "none", zIndex: 1 }} />
+        {/* Overlay — 45% Deckkraft für Lesbarkeit */}
+        <div style={{ position: "absolute", inset: 0, background: "rgba(22,14,14,0.45)", pointerEvents: "none" }} />
 
-        {/* Text — zentriert, leicht nach oben verschoben */}
-        <W pad="0 24px" style={{ width: "100%", position: "relative", zIndex: 2, textAlign: "center" }}>
-          <div className="dv-fadeup" style={{ userSelect: "none", cursor: "default", transform: "translateY(-50px)" }}>
-            <h1 className="pf" style={{ margin: "0 0 8px", lineHeight: 0.95 }}>
+        {/* Text — zentriert, leicht nach oben */}
+        <W pad="0 24px" style={{ width: "100%", position: "relative", zIndex: 1, textAlign: "center" }}>
+          <div className="dv-fadeup" style={{ userSelect: "none", cursor: "default", transform: "translateY(-40px)" }}>
+            <h1 className="pf" style={{ margin: "0 0 10px", lineHeight: 0.95 }}>
               <span
                 className="gv"
-                style={{ display: "block", color: C.soft, fontSize: "clamp(4rem,9vw,7.5rem)", lineHeight: 1, fontWeight: 400 }}
+                style={{ display: "block", color: C.soft, fontSize: "clamp(4.5rem,9vw,8rem)", lineHeight: 1, fontWeight: 400, textShadow: "0 4px 24px rgba(0,0,0,0.4)" }}
               >
                 Divine
               </span>
               <span
-                style={{ display: "block", color: "rgba(255,255,255,0.9)", fontSize: "clamp(1.4rem,2.5vw,2.2rem)", fontWeight: 400, letterSpacing: "0.5px", marginTop: 6 }}
+                style={{ display: "block", color: "#ffffff", fontSize: "clamp(1.4rem,2.5vw,2.2rem)", fontWeight: 400, letterSpacing: "2px", textTransform: "uppercase", marginTop: 10, textShadow: "0 2px 12px rgba(0,0,0,0.5)" }}
               >
                 Beauty &amp; Nails Studio
               </span>
             </h1>
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 14, margin: "22px 0" }}>
+              <span style={{ width: 48, height: 1, background: "linear-gradient(90deg,transparent,rgba(214,183,109,0.8))", display: "block" }} />
+              <Diamond size={11} strokeWidth={1.5} color={C.gold} />
+              <span style={{ width: 48, height: 1, background: "linear-gradient(90deg,rgba(214,183,109,0.8),transparent)", display: "block" }} />
+            </div>
             <p
               className="dm"
-              style={{ color: "rgba(255,255,255,0.6)", fontSize: 13, letterSpacing: "3px", textTransform: "uppercase", marginTop: 20 }}
+              style={{ color: "rgba(255,255,255,0.75)", fontSize: 12, letterSpacing: "4px", textTransform: "uppercase", textShadow: "0 1px 8px rgba(0,0,0,0.5)" }}
             >
               Seit 2018 in Wien
             </p>
