@@ -862,7 +862,6 @@ export default function App() {
           overflow: "hidden",
           display: "flex",
           alignItems: "flex-end",
-          background: C.bg2,
         }}
       >
         {/* Vollflächiges Video */}
@@ -877,8 +876,8 @@ export default function App() {
             inset: 0,
             width: "100%",
             height: "100%",
-            objectFit: "contain",
-            objectPosition: "right center",
+            objectFit: "cover",
+            objectPosition: "center",
             display: "block",
           }}
         >
@@ -895,18 +894,9 @@ export default function App() {
             pointerEvents: "none",
           }}
         />
-        {/* Linkes Fade — Video sanft in Hintergrund überblenden */}
-        <div
-          style={{
-            position: "absolute",
-            inset: 0,
-            background: "linear-gradient(to right, rgba(247,237,231,0.96) 0%, rgba(247,237,231,0.6) 35%, transparent 65%)",
-            pointerEvents: "none",
-          }}
-        />
         {/* Text-Inhalt */}
-        <W pad="48px 24px" style={{ width: "100%", position: "relative", zIndex: 1 }}>
-          <div className="dv-fadeup" style={{ maxWidth: 700, userSelect: "none", cursor: "default" }}>
+        <W pad="48px 24px" style={{ width: "100%", position: "relative", zIndex: 1, textAlign: "center" }}>
+          <div className="dv-fadeup" style={{ userSelect: "none", cursor: "default" }}>
             <div
               className="dm"
               style={{ color: "rgba(255,255,255,0.55)", fontSize: 12, letterSpacing: "4px", textTransform: "uppercase", marginBottom: 8, textShadow: "0 2px 8px rgba(0,0,0,0.6)" }}
@@ -934,7 +924,7 @@ export default function App() {
             </p>
             <p
               className="dm"
-              style={{ color: "rgba(255,255,255,0.65)", fontSize: 15.5, lineHeight: 1.75, maxWidth: 460, textShadow: "0 1px 8px rgba(0,0,0,0.5)" }}
+              style={{ color: "rgba(255,255,255,0.65)", fontSize: 15.5, lineHeight: 1.75, maxWidth: 460, margin: "0 auto", textShadow: "0 1px 8px rgba(0,0,0,0.5)" }}
             >
               Erstklassige Behandlungen in stilvollem Ambiente — weil du es verdienst.
             </p>
