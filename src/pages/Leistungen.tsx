@@ -10,6 +10,9 @@ import gel3Img from "@/assets/gel3.jpeg";
 import lashlift1Img from "@/assets/lashlift1.jpeg";
 import lashlift2Img from "@/assets/lashlift2.jpeg";
 import lashlift3Img from "@/assets/lashlift3.jpg";
+import shellack1Img from "@/assets/shellack1.jpeg";
+import nagel9Img from "@/assets/nagel9.jpg";
+import nagel5Img from "@/assets/nagel5.jpg";
 
 const WA_URL =
   "https://wa.me/436763633721?text=" +
@@ -306,6 +309,20 @@ export default function Leistungen() {
                       key={src}
                       src={src}
                       alt="Gelmodellage"
+                      style={{ width: "100%", height: 300, objectFit: "cover", borderRadius: 20, display: "block", boxShadow: "0 8px 28px rgba(42,37,40,0.08)" }}
+                    />
+                  ))}
+                </div>
+              )}
+
+              {/* 3er-Bildgrid unter Shellac */}
+              {s.title === "Shellac" && (
+                <div data-r style={{ marginTop: 48, display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 16 }}>
+                  {[shellack1Img, nagel9Img, nagel5Img].map((src) => (
+                    <img
+                      key={src}
+                      src={src}
+                      alt="Shellac"
                       style={{ width: "100%", height: 300, objectFit: "cover", borderRadius: 20, display: "block", boxShadow: "0 8px 28px rgba(42,37,40,0.08)" }}
                     />
                   ))}
