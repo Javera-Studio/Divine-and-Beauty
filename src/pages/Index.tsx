@@ -862,7 +862,7 @@ export default function App() {
           overflow: "hidden",
           display: "flex",
           alignItems: "flex-end",
-          background: "#1a1618",
+          background: C.bg2,
         }}
       >
         {/* Vollflächiges Video */}
@@ -871,13 +871,14 @@ export default function App() {
           muted
           loop
           playsInline
+          poster={studioHero}
           style={{
             position: "absolute",
             inset: 0,
             width: "100%",
             height: "100%",
             objectFit: "contain",
-            objectPosition: "center",
+            objectPosition: "right center",
             display: "block",
           }}
         >
@@ -891,6 +892,15 @@ export default function App() {
             inset: 0,
             background:
               "linear-gradient(to top, rgba(42,37,40,0.88) 0%, rgba(42,37,40,0.45) 45%, rgba(42,37,40,0.1) 100%)",
+            pointerEvents: "none",
+          }}
+        />
+        {/* Linkes Fade — Video sanft in Hintergrund überblenden */}
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            background: "linear-gradient(to right, rgba(247,237,231,0.96) 0%, rgba(247,237,231,0.6) 35%, transparent 65%)",
             pointerEvents: "none",
           }}
         />
