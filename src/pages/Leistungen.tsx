@@ -4,6 +4,12 @@ import logo from "@/assets/logo.png";
 import braut2Img from "@/assets/braut2.jpg";
 import makeup2Img from "@/assets/makeup2.jpg";
 import makeup3Img from "@/assets/makeup3.jpg";
+import gel1Img from "@/assets/gel1.jpeg";
+import gel2Img from "@/assets/gel2.jpeg";
+import gel3Img from "@/assets/gel3.jpeg";
+import lashlift1Img from "@/assets/lashlift1.jpeg";
+import lashlift2Img from "@/assets/lashlift2.jpeg";
+import lashlift3Img from "@/assets/lashlift3.jpg";
 
 const WA_URL =
   "https://wa.me/436763633721?text=" +
@@ -295,7 +301,7 @@ export default function Leistungen() {
               {/* 3er-Bildgrid unter Gelmodellage */}
               {s.title === "Gelmodellage" && (
                 <div data-r style={{ marginTop: 48, display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 16 }}>
-                  {["/gel3.jpg", "/gel2.jpg", "/gel1.jpg"].map((src) => (
+                  {[gel3Img, gel2Img, gel1Img].map((src) => (
                     <img
                       key={src}
                       src={src}
@@ -309,7 +315,7 @@ export default function Leistungen() {
               {/* 3er-Bildgrid unter Wimpernlifting */}
               {s.title === "Wimpernlifting" && (
                 <div data-r style={{ marginTop: 48, display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 16 }}>
-                  {["/lashlift1.jpg", "/lashlift2.jpg", "/lashlift3.jpg"].map((src) => (
+                  {[lashlift1Img, lashlift2Img, lashlift3Img].map((src) => (
                     <img
                       key={src}
                       src={src}
