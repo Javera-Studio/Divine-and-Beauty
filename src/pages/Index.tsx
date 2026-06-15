@@ -857,15 +857,16 @@ export default function App() {
       <section
         id="home"
         style={{
-          minHeight: "100vh",
+          height: "clamp(550px, 65vh, 620px)",
           position: "relative",
           overflow: "hidden",
           display: "flex",
-          alignItems: "flex-end",
-          background: "#F2DDD8",
+          alignItems: "center",
+          justifyContent: "center",
+          background: C.bg1,
         }}
       >
-        {/* Vollflächiges Video */}
+        {/* Video — Originalformat, kein Stretch */}
         <video
           autoPlay
           muted
@@ -885,10 +886,17 @@ export default function App() {
           <source src="/herovid.mp4" type="video/mp4" />
           <img src={studioHero} alt="Divine Beauty & Nails Studio" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }} />
         </video>
-        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(rgba(30,20,20,0.35), rgba(30,20,20,0.35))", pointerEvents: "none" }} />
-        {/* Text-Inhalt */}
-        <W pad="48px 24px" style={{ width: "100%", position: "relative", zIndex: 1, textAlign: "center" }}>
-          <div className="dv-fadeup" style={{ userSelect: "none", cursor: "default" }}>
+
+        {/* Linker Fade — Video weich in Hintergrund auslaufen lassen */}
+        <div style={{ position: "absolute", top: 0, left: 0, bottom: 0, width: "28%", background: `linear-gradient(to right, ${C.bg1} 0%, transparent 100%)`, pointerEvents: "none", zIndex: 1 }} />
+        {/* Rechter Fade */}
+        <div style={{ position: "absolute", top: 0, right: 0, bottom: 0, width: "28%", background: `linear-gradient(to left, ${C.bg1} 0%, transparent 100%)`, pointerEvents: "none", zIndex: 1 }} />
+        {/* Dezentes dunkles Overlay für Textlesbarkeit */}
+        <div style={{ position: "absolute", inset: 0, background: "rgba(30,20,20,0.18)", pointerEvents: "none", zIndex: 1 }} />
+
+        {/* Text — zentriert, leicht nach oben verschoben */}
+        <W pad="0 24px" style={{ width: "100%", position: "relative", zIndex: 2, textAlign: "center" }}>
+          <div className="dv-fadeup" style={{ userSelect: "none", cursor: "default", transform: "translateY(-50px)" }}>
             <h1 className="pf" style={{ margin: "0 0 8px", lineHeight: 0.95 }}>
               <span
                 className="gv"
@@ -904,7 +912,7 @@ export default function App() {
             </h1>
             <p
               className="dm"
-              style={{ color: "rgba(255,255,255,0.65)", fontSize: 14, letterSpacing: "2px", textTransform: "uppercase", marginTop: 18 }}
+              style={{ color: "rgba(255,255,255,0.6)", fontSize: 13, letterSpacing: "3px", textTransform: "uppercase", marginTop: 20 }}
             >
               Seit 2018 in Wien
             </p>
