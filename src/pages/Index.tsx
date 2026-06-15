@@ -885,6 +885,7 @@ export default function App() {
           <source src="/herovid.mp4" type="video/mp4" />
           <img src={studioHero} alt="Divine Beauty & Nails Studio" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }} />
         </video>
+        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(rgba(30,20,20,0.35), rgba(30,20,20,0.35))", pointerEvents: "none" }} />
         {/* Text-Inhalt */}
         <W pad="48px 24px" style={{ width: "100%", position: "relative", zIndex: 1, textAlign: "center" }}>
           <div className="dv-fadeup" style={{ userSelect: "none", cursor: "default" }}>
@@ -1021,7 +1022,7 @@ export default function App() {
                 }}
               >
                 <img
-                  src="/daca1.jpg"
+                  src="/daca2.png"
                   alt="Danijela — Divine Beauty & Nails Studio"
                   style={{ width: "100%", height: 360, objectFit: "cover", objectPosition: "top center", display: "block" }}
                 />
