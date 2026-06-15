@@ -866,15 +866,16 @@ export default function App() {
       <section
         id="home"
         style={{
-          height: "clamp(550px, 70vh, 650px)",
+          minHeight: "100vh",
           position: "relative",
           overflow: "hidden",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
+          background: C.bg1,
         }}
       >
-        {/* Video — vollflächig, dominiert den Hero */}
+        {/* Video — Originalformat, Kanten per Mask weich ausgeblendet */}
         <video
           autoPlay
           muted
@@ -886,17 +887,25 @@ export default function App() {
             inset: 0,
             width: "100%",
             height: "100%",
-            objectFit: "cover",
+            objectFit: "contain",
             objectPosition: "center",
             display: "block",
-          }}
+            WebkitMaskImage: "linear-gradient(to right, transparent 0%, black 9%, black 91%, transparent 100%)",
+            maskImage: "linear-gradient(to right, transparent 0%, black 9%, black 91%, transparent 100%)",
+          } as React.CSSProperties}
         >
           <source src="/herovid.mp4" type="video/mp4" />
           <img src={studioHero} alt="Divine Beauty & Nails Studio" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }} />
         </video>
 
-        {/* Overlay — 45% Deckkraft für Lesbarkeit */}
-        <div style={{ position: "absolute", inset: 0, background: "rgba(22,14,14,0.45)", pointerEvents: "none" }} />
+        {/* Overlay — nur über dem Video, selbe Mask */}
+        <div style={{
+          position: "absolute", inset: 0,
+          background: "rgba(22,14,14,0.45)",
+          pointerEvents: "none",
+          WebkitMaskImage: "linear-gradient(to right, transparent 0%, black 9%, black 91%, transparent 100%)",
+          maskImage: "linear-gradient(to right, transparent 0%, black 9%, black 91%, transparent 100%)",
+        } as React.CSSProperties} />
 
         {/* Text — zentriert, leicht nach oben */}
         <W pad="0 24px" style={{ width: "100%", position: "relative", zIndex: 1, textAlign: "center" }}>
