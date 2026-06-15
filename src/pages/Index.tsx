@@ -893,6 +893,11 @@ export default function App() {
               <source src="/herovidnew.mp4" type="video/mp4" />
             </video>
             <div style={{ position: "absolute", inset: 0, background: "rgba(22,14,14,0.45)", pointerEvents: "none" }} />
+            {/* Schmaler starker Fade links und rechts an den Videokanten */}
+            <div style={{
+              position: "absolute", inset: 0, pointerEvents: "none",
+              background: `linear-gradient(to right, ${C.bg1} 0%, transparent 6%, transparent 94%, ${C.bg1} 100%)`,
+            }} />
           </div>
         </div>
 
