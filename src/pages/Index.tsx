@@ -862,6 +862,7 @@ export default function App() {
           overflow: "hidden",
           display: "flex",
           alignItems: "flex-end",
+          background: "#F2DDD8",
         }}
       >
         {/* Vollflächiges Video */}
@@ -876,7 +877,7 @@ export default function App() {
             inset: 0,
             width: "100%",
             height: "100%",
-            objectFit: "cover",
+            objectFit: "contain",
             objectPosition: "center",
             display: "block",
           }}
