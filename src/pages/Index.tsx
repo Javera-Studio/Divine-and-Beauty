@@ -892,7 +892,7 @@ export default function App() {
             {/* Schmaler starker Fade links und rechts an den Videokanten */}
             <div style={{
               position: "absolute", inset: 0, pointerEvents: "none",
-              background: `linear-gradient(to right, ${C.bg1} 0%, transparent 6%, transparent 94%, ${C.bg1} 100%)`,
+              background: `linear-gradient(to right, ${C.bg1} 0%, transparent 3.5%, transparent 96.5%, ${C.bg1} 100%)`,
             }} />
           </div>
         </div>
