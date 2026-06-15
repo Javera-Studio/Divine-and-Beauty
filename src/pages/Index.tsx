@@ -1050,7 +1050,7 @@ export default function App() {
                 <img
                   src={dacaNew1}
                   alt="Danijela — Divine Beauty & Nails Studio"
-                  style={{ width: "100%", height: 360, objectFit: "cover", objectPosition: "top center", display: "block" }}
+                  style={{ width: "80%", display: "block", margin: "0 auto" }}
                 />
               </div>
               <p className="pf" style={{ textAlign: "center", color: C.muted, fontSize: 15, fontStyle: "italic", marginTop: 18 }}>
