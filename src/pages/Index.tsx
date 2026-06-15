@@ -1226,7 +1226,7 @@ export default function App() {
 
           {/* Person cards */}
           <div className="dv-team-g">
-            [
+            {[
               {
                 img: dacaNew,
                 name: "Danijela",
