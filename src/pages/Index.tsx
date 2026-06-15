@@ -934,7 +934,7 @@ export default function App() {
       <section
         style={{
           position: "relative",
-          padding: "52px 24px",
+          padding: "36px 24px",
           background: "linear-gradient(135deg,#2A2528 0%,#3a3033 100%)",
           overflow: "hidden",
         }}
@@ -1069,17 +1069,6 @@ export default function App() {
             </div>
           </div>
 
-          {/* Studio-Grid */}
-          <div data-r style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 14 }}>
-            {[studio14Img, studio4Img, studio15Img, studio2Img].map((src, i) => (
-              <img
-                key={i}
-                src={src}
-                alt="Divine Beauty Studio"
-                style={{ width: "100%", height: 220, objectFit: "cover", borderRadius: 18, display: "block", boxShadow: "0 8px 28px rgba(42,37,40,0.08)" }}
-              />
-            ))}
-          </div>
         </W>
       </section>
 
@@ -1133,6 +1122,18 @@ export default function App() {
                   {a.desc}
                 </p>
               </div>
+            ))}
+          </div>
+
+          {/* Studio-Grid unter den Badges */}
+          <div data-r style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 14, marginTop: 48 }}>
+            {[studio14Img, studio4Img, studio15Img, studio2Img].map((src, i) => (
+              <img
+                key={i}
+                src={src}
+                alt="Divine Beauty Studio"
+                style={{ width: "100%", height: 220, objectFit: "cover", borderRadius: 18, display: "block", boxShadow: "0 8px 28px rgba(42,37,40,0.08)" }}
+              />
             ))}
           </div>
         </W>
