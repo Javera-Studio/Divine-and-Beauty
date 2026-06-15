@@ -877,14 +877,14 @@ export default function App() {
       >
         {/* Video-Wrapper: portrait-zentriert, Overlay NUR über dem Video */}
         <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center" }}>
-          <div style={{ position: "relative", height: "100%", aspectRatio: "9/16" }}>
+          <div style={{ position: "relative", height: "100%" }}>
             <video
               autoPlay
               muted
               loop
               playsInline
               poster={studioHero}
-              style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+              style={{ height: "100%", width: "auto", display: "block" }}
             >
               <source src="/herovid.mp4" type="video/mp4" />
             </video>
