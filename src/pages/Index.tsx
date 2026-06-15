@@ -883,6 +883,7 @@ export default function App() {
               muted
               loop
               playsInline
+              poster={studioHero}
               style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
             >
               <source src="/herovid.mp4" type="video/mp4" />
