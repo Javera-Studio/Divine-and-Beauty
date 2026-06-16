@@ -18,6 +18,10 @@ import nagel8Img from "@/assets/nagel8.jpg";
 import nagel11Img from "@/assets/nagel11.jpeg";
 import pedi1Img from "@/assets/pedi1.png";
 import pedi2Img from "@/assets/pedi2.jpeg";
+import pedi3Img from "@/assets/pedi3.jpg";
+import gesicht1Img from "@/assets/gesicht1.jpeg";
+import gesicht2Img from "@/assets/gesicht2.jpeg";
+import gesicht3Img from "@/assets/gesicht3.jpeg";
 
 const WA_URL =
   "https://wa.me/436763633721?text=" +
@@ -345,7 +349,7 @@ export default function Leistungen() {
                 <div data-r className="lsv-img-grid">
                   <img src={pedi1Img} alt="Pediküre" style={{ width: "100%", height: 300, objectFit: "cover", borderRadius: 20, display: "block", boxShadow: "0 8px 28px rgba(42,37,40,0.08)" }} />
                   <img src={pedi2Img} alt="Pediküre" style={{ width: "100%", height: 300, objectFit: "cover", borderRadius: 20, display: "block", boxShadow: "0 8px 28px rgba(42,37,40,0.08)" }} />
-                  <div style={{ width: "100%", height: 300, borderRadius: 20, background: "rgba(214,183,109,0.07)", border: "1px dashed rgba(214,183,109,0.25)" }} />
+                  <img src={pedi3Img} alt="Pediküre" style={{ width: "100%", height: 300, objectFit: "cover", borderRadius: 20, display: "block", boxShadow: "0 8px 28px rgba(42,37,40,0.08)" }} />
                 </div>
               )}
 
@@ -369,6 +373,15 @@ export default function Leistungen() {
                       style={{ width: "100%", height: 300, objectFit: "cover", borderRadius: 20, display: "block", boxShadow: "0 8px 28px rgba(42,37,40,0.08)" }}
                     />
                   ))}
+                </div>
+              )}
+
+              {/* 3er-Bildgrid unter Gesichtsbehandlung */}
+              {s.title === "Gesichtsbehandlung" && (
+                <div data-r className="lsv-img-grid">
+                  <img src={gesicht1Img} alt="Gesichtsbehandlung" style={{ width: "100%", height: 300, objectFit: "cover", borderRadius: 20, display: "block", boxShadow: "0 8px 28px rgba(42,37,40,0.08)" }} />
+                  <img src={gesicht2Img} alt="Gesichtsbehandlung" style={{ width: "100%", height: 300, objectFit: "cover", borderRadius: 20, display: "block", boxShadow: "0 8px 28px rgba(42,37,40,0.08)" }} />
+                  <img src={gesicht3Img} alt="Gesichtsbehandlung" style={{ width: "100%", height: 300, objectFit: "cover", borderRadius: 20, display: "block", boxShadow: "0 8px 28px rgba(42,37,40,0.08)" }} />
                 </div>
               )}
             </W>
