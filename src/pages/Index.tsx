@@ -299,7 +299,7 @@ body { overflow-x: hidden; background: #FFF7F2; }
 
 .dv-marquee-track {
   display: flex; width: max-content; gap: 18px;
-  animation: dv-marquee 60s linear infinite;
+  animation: dv-marquee 120s linear infinite;
 }
 .dv-marquee-wrap:hover .dv-marquee-track { animation-play-state: paused; }
 .dv-float   { animation: dv-float 6s ease-in-out infinite; }
