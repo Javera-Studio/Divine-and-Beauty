@@ -44,7 +44,7 @@ export default function Datenschutz() {
             Klosterneuburger Straße 98/5<br />
             1200 Wien<br />
             Österreich<br /><br />
-            E-Mail: divine.beauty.nails@gmail.com<br />
+            E-Mail: kontakt@divinenails.at<br />
             Telefon: +43 676 3633721
           </p>
         </div>

@@ -11,7 +11,7 @@ const ROWS: [string, string][] = [
   ["Inhaberin", "Danijela Bošković"],
   ["Adresse", "Klosterneuburger Straße 98/5, 1200 Wien, Österreich"],
   ["Telefon", "+43 676 3633721"],
-  ["E-Mail", "divine.beauty.nails@gmail.com"],
+  ["E-Mail", "kontakt@divinenails.at"],
   ["Gewerbe", "Modellieren von Fingernägeln (Nagelstudio)"],
   ["GISA-Zahl", "30468269"],
   ["Mitglied bei", "Wirtschaftskammer Wien"],

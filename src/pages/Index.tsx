@@ -31,7 +31,8 @@ import gesicht1Img from "@/assets/gesicht1.jpeg";
 import gesicht2Img from "@/assets/gesicht2.jpeg";
 import gesicht3Img from "@/assets/gesicht3.jpeg";
 import { useState, useEffect } from "react";
-import { MessageCircle, Diamond, Sparkles, Flower2, Star, Award, Heart, MapPin, Clock, Mail, Phone, Instagram } from "lucide-react";
+import { MessageCircle, Diamond, Sparkles, Flower2, Star, Award, Heart, MapPin, Clock, Mail, Phone, Instagram, Send } from "lucide-react";
+import { toast } from "sonner";
 
 // ══════════════════════════════════════════════════════════════════════════════
 // KONFIGURATION — Inhalte hier anpassen
@@ -43,7 +44,7 @@ const STUDIO = {
   instagram: "@divine.beauty.nails.studio",
   instagramUrl: "https://www.instagram.com/divine.beauty.nails.studio",
   address: "Klosterneuburger Straße 98/5, 1200 Wien",
-  email: "divine.beauty.nails@gmail.com",
+  email: "kontakt@divinenails.at",
   hours: {
     "Mo – Fr": "09:00 – 19:00 Uhr",
     Samstag: "09:00 – 17:00 Uhr",
@@ -610,6 +611,36 @@ body { overflow-x: hidden; background: #FFF7F2; }
 
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [cform, setCform] = useState({ name: "", email: "", betreff: "", nachricht: "" });
+  const [cSending, setCsending] = useState(false);
+
+  const handleContactSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setCsending(true);
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          access_key: "DEIN_WEB3FORMS_KEY",
+          name: cform.name,
+          email: cform.email,
+          subject: cform.betreff,
+          message: cform.nachricht,
+        }),
+      });
+      if (res.ok) {
+        toast.success("Nachricht gesendet! Wir melden uns bald bei dir.");
+        setCform({ name: "", email: "", betreff: "", nachricht: "" });
+      } else {
+        throw new Error();
+      }
+    } catch {
+      toast.error("Fehler beim Senden. Bitte versuche es erneut.");
+    } finally {
+      setCsending(false);
+    }
+  };
 
   useEffect(() => {
     let el = document.getElementById("dv-css");
@@ -1665,22 +1696,78 @@ export default function App() {
               </div>
             </div>
 
-            {/* Studio Photo */}
-            <div data-r data-d="1" style={{ display: "flex", alignItems: "center" }}>
-              <div
-                style={{
-                  borderRadius: 28,
-                  overflow: "hidden",
-                  boxShadow: "0 24px 72px rgba(185,130,165,0.16)",
-                  border: "1px solid rgba(214,183,109,0.14)",
-                  width: "100%",
-                  maxHeight: 504,
-                }}
+            {/* Rechts: Formular + Foto */}
+            <div data-r data-d="1" style={{ display: "flex", flexDirection: "column", gap: 20 }}>
+
+              {/* Kontaktformular */}
+              <form
+                onSubmit={handleContactSubmit}
+                style={{ background: C.bg2, borderRadius: 20, border: "1px solid rgba(214,183,109,0.18)", padding: "28px 24px" }}
               >
+                <div className="dm" style={{ color: C.muted, fontSize: 11, letterSpacing: "2px", textTransform: "uppercase", marginBottom: 20 }}>Schreib uns</div>
+                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginBottom: 12 }}>
+                  <div>
+                    <div className="dm" style={{ color: C.muted, fontSize: 11, letterSpacing: "1px", textTransform: "uppercase", marginBottom: 6 }}>Name</div>
+                    <input
+                      type="text"
+                      required
+                      value={cform.name}
+                      onChange={e => setCform(p => ({ ...p, name: e.target.value }))}
+                      placeholder="Dein Name"
+                      style={{ width: "100%", background: C.bg1, border: "1px solid rgba(214,183,109,0.22)", borderRadius: 10, padding: "10px 14px", fontSize: 14, color: C.text, fontFamily: "DM Sans, sans-serif", outline: "none", boxSizing: "border-box" }}
+                    />
+                  </div>
+                  <div>
+                    <div className="dm" style={{ color: C.muted, fontSize: 11, letterSpacing: "1px", textTransform: "uppercase", marginBottom: 6 }}>E-Mail</div>
+                    <input
+                      type="email"
+                      required
+                      value={cform.email}
+                      onChange={e => setCform(p => ({ ...p, email: e.target.value }))}
+                      placeholder="deine@email.at"
+                      style={{ width: "100%", background: C.bg1, border: "1px solid rgba(214,183,109,0.22)", borderRadius: 10, padding: "10px 14px", fontSize: 14, color: C.text, fontFamily: "DM Sans, sans-serif", outline: "none", boxSizing: "border-box" }}
+                    />
+                  </div>
+                </div>
+                <div style={{ marginBottom: 12 }}>
+                  <div className="dm" style={{ color: C.muted, fontSize: 11, letterSpacing: "1px", textTransform: "uppercase", marginBottom: 6 }}>Betreff</div>
+                  <input
+                    type="text"
+                    required
+                    value={cform.betreff}
+                    onChange={e => setCform(p => ({ ...p, betreff: e.target.value }))}
+                    placeholder="Worum geht's?"
+                    style={{ width: "100%", background: C.bg1, border: "1px solid rgba(214,183,109,0.22)", borderRadius: 10, padding: "10px 14px", fontSize: 14, color: C.text, fontFamily: "DM Sans, sans-serif", outline: "none", boxSizing: "border-box" }}
+                  />
+                </div>
+                <div style={{ marginBottom: 20 }}>
+                  <div className="dm" style={{ color: C.muted, fontSize: 11, letterSpacing: "1px", textTransform: "uppercase", marginBottom: 6 }}>Nachricht</div>
+                  <textarea
+                    required
+                    rows={4}
+                    value={cform.nachricht}
+                    onChange={e => setCform(p => ({ ...p, nachricht: e.target.value }))}
+                    placeholder="Deine Nachricht…"
+                    style={{ width: "100%", background: C.bg1, border: "1px solid rgba(214,183,109,0.22)", borderRadius: 10, padding: "10px 14px", fontSize: 14, color: C.text, fontFamily: "DM Sans, sans-serif", outline: "none", resize: "vertical", boxSizing: "border-box" }}
+                  />
+                </div>
+                <button
+                  type="submit"
+                  disabled={cSending}
+                  className="btn-pk"
+                  style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "12px 24px", borderRadius: 12, fontSize: 14, fontWeight: 500, cursor: cSending ? "not-allowed" : "pointer", opacity: cSending ? 0.7 : 1 }}
+                >
+                  <Send size={15} strokeWidth={1.5} />
+                  <span>{cSending ? "Wird gesendet…" : "Nachricht senden"}</span>
+                </button>
+              </form>
+
+              {/* Studio Photo */}
+              <div style={{ borderRadius: 20, overflow: "hidden", boxShadow: "0 12px 40px rgba(185,130,165,0.14)", border: "1px solid rgba(214,183,109,0.14)" }}>
                 <img
                   src="/daca2.png"
                   alt="Divine Beauty & Nails Studio"
-                  style={{ width: "100%", height: "504px", objectFit: "cover", objectPosition: "top center", display: "block" }}
+                  style={{ width: "100%", height: "220px", objectFit: "cover", objectPosition: "top center", display: "block" }}
                 />
               </div>
             </div>
