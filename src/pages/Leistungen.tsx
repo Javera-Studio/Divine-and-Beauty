@@ -320,11 +320,9 @@ export default function Leistungen() {
               {/* 3er-Bildgrid unter Gelmodellage */}
               {s.title === "Gelmodellage" && (
                 <div data-r className="lsv-img-grid">
-                  {[gel3Img, gel2Img, gel1Img].map((src) => (
-                    <div key={src} className="lsv-img-wrap">
-                      <img src={src} alt="Gelmodellage" />
-                    </div>
-                  ))}
+                  <div className="lsv-img-wrap"><img src={gel3Img} alt="Gelmodellage" /></div>
+                  <div className="lsv-img-wrap"><img src={gel2Img} alt="Gelmodellage" style={{ objectPosition: "center 70%" }} /></div>
+                  <div className="lsv-img-wrap"><img src={gel1Img} alt="Gelmodellage" style={{ objectPosition: "center 70%" }} /></div>
                 </div>
               )}
 
