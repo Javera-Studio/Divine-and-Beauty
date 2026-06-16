@@ -1753,17 +1753,17 @@ export default function App() {
               </div>
 
               {/* Buttons in einer Zeile */}
-              <div style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
-                <a href={STUDIO.instagramUrl} target="_blank" rel="noreferrer" className="btn-pk" style={{ textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 10, padding: "11px 18px", borderRadius: 12, fontSize: 13, fontWeight: 500 }}>
-                  <Instagram size={15} strokeWidth={1.5} />
+              <div style={{ display: "flex", flexWrap: "nowrap", gap: 8 }}>
+                <a href={STUDIO.instagramUrl} target="_blank" rel="noreferrer" className="btn-pk" style={{ textDecoration: "none", display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 8, padding: "10px 12px", borderRadius: 12, fontSize: 12, fontWeight: 500, flex: 1 }}>
+                  <Instagram size={13} strokeWidth={1.5} style={{ flexShrink: 0 }} />
                   <span>Termin via Instagram</span>
                 </a>
-                <a href="https://wa.me/436763633721" target="_blank" rel="noreferrer" className="btn-ol-light" style={{ textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 10, padding: "11px 18px", borderRadius: 12, fontSize: 13 }}>
-                  <MessageCircle size={15} strokeWidth={1.5} />
+                <a href="https://wa.me/436763633721" target="_blank" rel="noreferrer" className="btn-ol-light" style={{ textDecoration: "none", display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 8, padding: "10px 12px", borderRadius: 12, fontSize: 12, flex: 1 }}>
+                  <MessageCircle size={13} strokeWidth={1.5} style={{ flexShrink: 0 }} />
                   <span>Termin via WhatsApp</span>
                 </a>
-                <a href={`mailto:${STUDIO.email}`} className="btn-ol-light" style={{ textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 10, padding: "11px 18px", borderRadius: 12, fontSize: 13 }}>
-                  <Mail size={15} strokeWidth={1.5} />
+                <a href={`mailto:${STUDIO.email}`} className="btn-ol-light" style={{ textDecoration: "none", display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 8, padding: "10px 12px", borderRadius: 12, fontSize: 12, flex: 1 }}>
+                  <Mail size={13} strokeWidth={1.5} style={{ flexShrink: 0 }} />
                   <span>{STUDIO.email}</span>
                 </a>
               </div>
