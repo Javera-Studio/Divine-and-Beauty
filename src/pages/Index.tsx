@@ -609,6 +609,10 @@ body { overflow-x: hidden; background: #FFF7F2; }
 }
 `;
 
+const W = ({ children, pad = "0 24px", style = {} }: any) => (
+  <div style={{ maxWidth: 1280, margin: "0 auto", padding: pad, ...style }}>{children}</div>
+);
+
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [cform, setCform] = useState({ name: "", email: "", betreff: "", nachricht: "", datenschutz: false });
@@ -735,11 +739,6 @@ export default function App() {
       {children}
     </div>
   );
-
-  const W = ({ children, pad = "0 24px", style = {} }: any) => (
-    <div style={{ maxWidth: 1280, margin: "0 auto", padding: pad, ...style }}>{children}</div>
-  );
-
 
   const NAV: { l: string; id?: string; href?: string }[] = [
     { l: "Home", id: "home" },
