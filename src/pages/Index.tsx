@@ -1401,7 +1401,7 @@ export default function App() {
         <div style={{ marginTop: 48, display: "flex", justifyContent: "center", padding: "0 24px" }}>
           <a href={STUDIO.instagramUrl} target="_blank" rel="noreferrer" className="btn-pk" style={{ padding: "15px 48px", borderRadius: 999, fontSize: 15, fontWeight: 500, textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 10 }}>
             <Instagram size={17} strokeWidth={1.5} />
-            <span>Folge uns auf Instagram – mehr von unserer Arbeit</span>
+            <span>Entdecke unsere neuesten Ergebnisse auf Instagram</span>
           </a>
         </div>
       </section>
