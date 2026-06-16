@@ -132,6 +132,11 @@ body { overflow-x: hidden; background: #FFF7F2; }
 @media (max-width: 860px) { .lsv-row { grid-template-columns: 1fr; gap: 36px; } }
 .lsv-img-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-top: 48px; }
 @media (max-width: 640px) { .lsv-img-grid { grid-template-columns: 1fr; } }
+@media (max-width: 768px) {
+  .pf { word-break: break-word; overflow-wrap: break-word; }
+  h1.pf { font-size: clamp(1.7rem, 6vw, 3.8rem) !important; }
+  h2.pf { font-size: clamp(1.4rem, 5vw, 2.6rem) !important; }
+}
 .lsv-img-wrap { overflow: hidden; border-radius: 20px; box-shadow: 0 8px 28px rgba(42,37,40,0.08); }
 .lsv-img-wrap img { width: 100%; height: 300px; object-fit: cover; display: block; transition: transform 0.45s ease; }
 .lsv-img-wrap img:hover { transform: scale(1.3); }

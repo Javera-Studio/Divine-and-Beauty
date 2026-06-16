@@ -488,19 +488,29 @@ body { overflow-x: hidden; background: #FFF7F2; }
   .dv-nb { display: flex !important; }
   .dv-sticky-wa { display: inline-flex !important; }
 
+  /* Überschriften — kein Überlauf */
+  .pf { word-break: break-word; overflow-wrap: break-word; }
+  h2.pf { font-size: clamp(1.5rem, 5.5vw, 2rem) !important; }
+  .dv-hero-title-main { font-size: clamp(2.5rem, 9vw, 8rem) !important; }
+  .dv-hero-title-sub { font-size: clamp(0.85rem, 3vw, 2.2rem) !important; letter-spacing: 1px !important; }
+
+  /* Service-Fotos kompakter */
+  .dv-svc-img { height: 180px !important; }
+
+  /* Kontakt innere Grids / Flex */
+  .dv-cform-row { grid-template-columns: 1fr !important; }
+  .dv-cbtns { flex-direction: column !important; }
+  .dv-cinfo { grid-template-columns: 1fr !important; }
+
   /* Kontakt-Section mobil edler */
   #kontakt { padding: 64px 0 120px !important; }
   #kontakt .btn-pk, #kontakt .btn-ol-light {
     width: 100% !important;
     justify-content: center !important;
-    flex-wrap: wrap;
     text-align: center;
     padding: 14px 18px !important;
   }
-  #kontakt .btn-pk > span:last-child { width: 100%; opacity: 0.7 !important; font-size: 12px; margin-top: 2px; }
   #kontakt .dv-kcards { grid-template-columns: 1fr !important; gap: 14px !important; }
-  #kontakt .dv-kcards .dm { font-size: 14px !important; }
-  #kontakt .dv-kcards .dv-hours-row { display: grid !important; grid-template-columns: 90px 1fr !important; gap: 8px; font-size: 13px !important; }
   #kontakt .dv-map { min-height: 240px !important; }
   body { padding-bottom: 80px; }
 }
@@ -942,12 +952,13 @@ export default function App() {
           <div className="dv-fadeup" style={{ userSelect: "none", cursor: "default", transform: "translateY(-40px)" }}>
             <h1 className="pf" style={{ margin: "0 0 10px", lineHeight: 0.95 }}>
               <span
-                className="gv"
+                className="gv dv-hero-title-main"
                 style={{ display: "block", color: C.soft, fontSize: "clamp(4.5rem,9vw,8rem)", lineHeight: 1, fontWeight: 400, textShadow: "0 4px 24px rgba(0,0,0,0.4)" }}
               >
                 Divine
               </span>
               <span
+                className="dv-hero-title-sub"
                 style={{ display: "block", color: "#ffffff", fontSize: "clamp(1.4rem,2.5vw,2.2rem)", fontWeight: 400, letterSpacing: "2px", textTransform: "uppercase", marginTop: 10, textShadow: "0 2px 12px rgba(0,0,0,0.5)" }}
               >
                 Beauty &amp; Nails Studio
@@ -1345,7 +1356,7 @@ export default function App() {
                 onMouseLeave={e => { e.currentTarget.style.boxShadow = "0 4px 20px rgba(185,130,165,0.07)"; e.currentTarget.style.transform = "none"; }}
               >
                 {s.img && (
-                  <img src={s.img} alt={s.title} style={{ width: "100%", height: 288, objectFit: "cover", display: "block" }} />
+                  <img src={s.img} alt={s.title} className="dv-svc-img" style={{ width: "100%", height: 220, objectFit: "cover", display: "block" }} />
                 )}
                 <div style={{ padding: "14px 16px", textAlign: "center" }}>
                   <span className="pf" style={{ color: C.text, fontSize: 15 }}>{s.title}</span>
@@ -1374,7 +1385,7 @@ export default function App() {
           <h2 className="pf" style={{ fontSize: "clamp(2rem,4vw,3rem)", color: C.text, marginBottom: 14 }}>
             Unsere <em style={{ color: C.pink }}>Galerie</em>
           </h2>
-          <p className="dm" style={{ color: C.muted, fontSize: 16, lineHeight: 1.8, whiteSpace: "nowrap" }}>
+          <p className="dm" style={{ color: C.muted, fontSize: 16, lineHeight: 1.8 }}>
             Einblicke in unsere Arbeit – jedes Ergebnis ein kleines Kunstwerk.
           </p>
         </W>
@@ -1657,7 +1668,7 @@ export default function App() {
                 style={{ background: C.bg2, borderRadius: 20, border: "1px solid rgba(214,183,109,0.18)", padding: "28px 24px" }}
               >
                 <div className="dm" style={{ color: C.muted, fontSize: 11, letterSpacing: "2px", textTransform: "uppercase", marginBottom: 20 }}>Schreib uns</div>
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginBottom: 12 }}>
+                <div className="dv-cform-row" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginBottom: 12 }}>
                   <div>
                     <div className="dm" style={{ color: C.muted, fontSize: 11, letterSpacing: "1px", textTransform: "uppercase", marginBottom: 6 }}>Name</div>
                     <input
@@ -1744,7 +1755,7 @@ export default function App() {
               </div>
 
               {/* Buttons in einer Zeile */}
-              <div style={{ display: "flex", flexWrap: "nowrap", gap: 8 }}>
+              <div className="dv-cbtns" style={{ display: "flex", flexWrap: "nowrap", gap: 8 }}>
                 <a href={STUDIO.instagramUrl} target="_blank" rel="noreferrer" className="btn-pk" style={{ textDecoration: "none", display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 8, padding: "10px 12px", borderRadius: 12, fontSize: 12, fontWeight: 500, flex: 1 }}>
                   <Instagram size={13} strokeWidth={1.5} style={{ flexShrink: 0 }} />
                   <span>Termin via Instagram</span>
@@ -1760,7 +1771,7 @@ export default function App() {
               </div>
 
               {/* Adresse + Öffnungszeiten nebeneinander */}
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24 }}>
+              <div className="dv-cinfo" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24 }}>
                 <div>
                   <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 10 }}>
                     <MapPin size={15} strokeWidth={1.5} color={C.gold} />
