@@ -16,7 +16,7 @@ import nagel5Img from "@/assets/nagel5.jpg";
 import nagel6Img from "@/assets/nagel6.jpg";
 import nagel8Img from "@/assets/nagel8.jpg";
 import nagel11Img from "@/assets/nagel11.jpeg";
-import pedi1Img from "@/assets/pedi1.png";
+import pedi1Img from "@/assets/pedi1.jpeg";
 import pedi2Img from "@/assets/pedi2.jpeg";
 import pedi3Img from "@/assets/pedi3.jpg";
 import gesicht1Img from "@/assets/gesicht1.jpeg";

@@ -24,7 +24,7 @@ import studio9Img from "@/assets/studio9.png";
 import studio12Img from "@/assets/studio12.png";
 import studio14Img from "@/assets/studio14.png";
 import studio15Img from "@/assets/studio15.png";
-import pedi1Img from "@/assets/pedi1.png";
+import pedi1Img from "@/assets/pedi1.jpeg";
 import pedi2Img from "@/assets/pedi2.jpeg";
 import pedi3Img from "@/assets/pedi3.jpg";
 import gesicht1Img from "@/assets/gesicht1.jpeg";
@@ -622,7 +622,7 @@ export default function App() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          access_key: "DEIN_WEB3FORMS_KEY",
+          access_key: import.meta.env.VITE_WEB3FORMS_KEY,
           name: cform.name,
           email: cform.email,
           subject: cform.betreff,
