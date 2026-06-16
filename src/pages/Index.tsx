@@ -1714,29 +1714,29 @@ export default function App() {
                 </button>
               </form>
 
-              {/* Adresse */}
-              <div>
-                <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 10 }}>
-                  <MapPin size={15} strokeWidth={1.5} color={C.gold} />
-                  <span className="dm" style={{ color: C.muted, fontSize: 11, letterSpacing: "2px", textTransform: "uppercase" }}>Adresse</span>
-                </div>
-                <div className="dm" style={{ color: C.text, fontSize: 15, lineHeight: 1.75 }}>
-                  Klosterneuburgerstraße 98<br />1200 Wien
-                </div>
-              </div>
-
-              {/* Öffnungszeiten */}
-              <div>
-                <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 12 }}>
-                  <Clock size={15} strokeWidth={1.5} color={C.gold} />
-                  <span className="dm" style={{ color: C.muted, fontSize: 11, letterSpacing: "2px", textTransform: "uppercase" }}>Öffnungszeiten</span>
-                </div>
-                {Object.entries(STUDIO.hours).map(([d, t]) => (
-                  <div key={d} style={{ display: "flex", gap: 16, marginBottom: 6 }}>
-                    <span className="dm" style={{ color: C.muted, fontSize: 14, minWidth: 80 }}>{d}</span>
-                    <span className="dm" style={{ color: C.text, fontSize: 14 }}>{t}</span>
+              {/* Adresse + Öffnungszeiten nebeneinander */}
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24 }}>
+                <div>
+                  <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 10 }}>
+                    <MapPin size={15} strokeWidth={1.5} color={C.gold} />
+                    <span className="dm" style={{ color: C.muted, fontSize: 11, letterSpacing: "2px", textTransform: "uppercase" }}>Adresse</span>
                   </div>
-                ))}
+                  <div className="dm" style={{ color: C.text, fontSize: 15, lineHeight: 1.75 }}>
+                    Klosterneuburgerstraße 98<br />1200 Wien
+                  </div>
+                </div>
+                <div>
+                  <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 12 }}>
+                    <Clock size={15} strokeWidth={1.5} color={C.gold} />
+                    <span className="dm" style={{ color: C.muted, fontSize: 11, letterSpacing: "2px", textTransform: "uppercase" }}>Öffnungszeiten</span>
+                  </div>
+                  {Object.entries(STUDIO.hours).map(([d, t]) => (
+                    <div key={d} style={{ display: "flex", gap: 12, marginBottom: 6 }}>
+                      <span className="dm" style={{ color: C.muted, fontSize: 13, minWidth: 72 }}>{d}</span>
+                      <span className="dm" style={{ color: C.text, fontSize: 13 }}>{t}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
 
