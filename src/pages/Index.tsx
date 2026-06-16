@@ -611,7 +611,7 @@ body { overflow-x: hidden; background: #FFF7F2; }
 
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [cform, setCform] = useState({ name: "", email: "", betreff: "", nachricht: "" });
+  const [cform, setCform] = useState({ name: "", email: "", betreff: "", nachricht: "", datenschutz: false });
   const [cSending, setCsending] = useState(false);
 
   const handleContactSubmit = async (e: React.FormEvent) => {
@@ -627,11 +627,12 @@ export default function App() {
           email: cform.email,
           subject: cform.betreff,
           message: cform.nachricht,
+          "Datenschutz akzeptiert": "Ja",
         }),
       });
       if (res.ok) {
         toast.success("Nachricht gesendet! Wir melden uns bald bei dir.");
-        setCform({ name: "", email: "", betreff: "", nachricht: "" });
+        setCform({ name: "", email: "", betreff: "", nachricht: "", datenschutz: false });
       } else {
         throw new Error();
       }
@@ -1702,6 +1703,21 @@ export default function App() {
                     placeholder="Deine Nachricht…"
                     style={{ width: "100%", background: C.bg1, border: "1px solid rgba(214,183,109,0.22)", borderRadius: 10, padding: "10px 14px", fontSize: 14, color: C.text, fontFamily: "DM Sans, sans-serif", outline: "none", resize: "vertical", boxSizing: "border-box" }}
                   />
+                </div>
+                <div style={{ marginBottom: 20, display: "flex", alignItems: "flex-start", gap: 10 }}>
+                  <input
+                    type="checkbox"
+                    id="dsgvo"
+                    required
+                    checked={cform.datenschutz}
+                    onChange={e => setCform(p => ({ ...p, datenschutz: e.target.checked }))}
+                    style={{ marginTop: 3, accentColor: C.pink, flexShrink: 0, width: 15, height: 15, cursor: "pointer" }}
+                  />
+                  <label htmlFor="dsgvo" className="dm" style={{ color: C.muted, fontSize: 12, lineHeight: 1.6, cursor: "pointer" }}>
+                    Ich habe die{" "}
+                    <Link to="/datenschutz" style={{ color: C.pink, textDecoration: "underline" }}>Datenschutzerklärung</Link>
+                    {" "}gelesen und stimme der Verarbeitung meiner Angaben zur Bearbeitung meiner Anfrage zu.
+                  </label>
                 </div>
                 <button
                   type="submit"
