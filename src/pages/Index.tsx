@@ -1647,8 +1647,8 @@ export default function App() {
           </div>
           <div className="dv-contact-g">
 
-            {/* LINKS: Formular + Buttons */}
-            <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
+            {/* LINKS: Formular + Adresse + Öffnungszeiten */}
+            <div style={{ display: "flex", flexDirection: "column", gap: 28 }}>
 
               {/* Kontaktformular */}
               <form
@@ -1713,35 +1713,6 @@ export default function App() {
                 </button>
               </form>
 
-              {/* Kontakt-Buttons */}
-              <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-                <a href={STUDIO.instagramUrl} target="_blank" rel="noreferrer" className="btn-pk" style={{ textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 12, padding: "13px 24px", borderRadius: 14, fontSize: 14, fontWeight: 500, width: "fit-content" }}>
-                  <Instagram size={16} strokeWidth={1.5} />
-                  <span>Termin via Instagram</span>
-                </a>
-                <a href="https://wa.me/436763633721" target="_blank" rel="noreferrer" className="btn-ol-light" style={{ textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 12, padding: "13px 24px", borderRadius: 14, fontSize: 14, width: "fit-content" }}>
-                  <MessageCircle size={16} strokeWidth={1.5} />
-                  <span>Termin via WhatsApp</span>
-                </a>
-                <a href={`mailto:${STUDIO.email}`} className="btn-ol-light" style={{ textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 12, padding: "13px 24px", borderRadius: 14, fontSize: 14, width: "fit-content" }}>
-                  <Mail size={16} strokeWidth={1.5} />
-                  <span>{STUDIO.email}</span>
-                </a>
-              </div>
-            </div>
-
-            {/* RECHTS: Foto + Adresse + Öffnungszeiten */}
-            <div data-r data-d="1" style={{ display: "flex", flexDirection: "column", gap: 28 }}>
-
-              {/* Studio Photo */}
-              <div style={{ borderRadius: 24, overflow: "hidden", boxShadow: "0 24px 72px rgba(185,130,165,0.16)", border: "1px solid rgba(214,183,109,0.14)" }}>
-                <img
-                  src="/daca2.png"
-                  alt="Divine Beauty & Nails Studio"
-                  style={{ width: "100%", height: "300px", objectFit: "cover", objectPosition: "top center", display: "block" }}
-                />
-              </div>
-
               {/* Adresse */}
               <div>
                 <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 10 }}>
@@ -1765,6 +1736,35 @@ export default function App() {
                     <span className="dm" style={{ color: C.text, fontSize: 14 }}>{t}</span>
                   </div>
                 ))}
+              </div>
+            </div>
+
+            {/* RECHTS: Foto + Buttons in einer Zeile */}
+            <div data-r data-d="1" style={{ display: "flex", flexDirection: "column", gap: 20 }}>
+
+              {/* Studio Photo */}
+              <div style={{ borderRadius: 24, overflow: "hidden", boxShadow: "0 24px 72px rgba(185,130,165,0.16)", border: "1px solid rgba(214,183,109,0.14)" }}>
+                <img
+                  src="/daca2.png"
+                  alt="Divine Beauty & Nails Studio"
+                  style={{ width: "100%", height: "340px", objectFit: "cover", objectPosition: "top center", display: "block" }}
+                />
+              </div>
+
+              {/* Buttons in einer Zeile */}
+              <div style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
+                <a href={STUDIO.instagramUrl} target="_blank" rel="noreferrer" className="btn-pk" style={{ textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 10, padding: "11px 18px", borderRadius: 12, fontSize: 13, fontWeight: 500 }}>
+                  <Instagram size={15} strokeWidth={1.5} />
+                  <span>Termin via Instagram</span>
+                </a>
+                <a href="https://wa.me/436763633721" target="_blank" rel="noreferrer" className="btn-ol-light" style={{ textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 10, padding: "11px 18px", borderRadius: 12, fontSize: 13 }}>
+                  <MessageCircle size={15} strokeWidth={1.5} />
+                  <span>Termin via WhatsApp</span>
+                </a>
+                <a href={`mailto:${STUDIO.email}`} className="btn-ol-light" style={{ textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 10, padding: "11px 18px", borderRadius: 12, fontSize: 13 }}>
+                  <Mail size={15} strokeWidth={1.5} />
+                  <span>{STUDIO.email}</span>
+                </a>
               </div>
             </div>
           </div>

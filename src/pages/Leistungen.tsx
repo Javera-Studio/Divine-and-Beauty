@@ -132,6 +132,10 @@ body { overflow-x: hidden; background: #FFF7F2; }
 @media (max-width: 860px) { .lsv-row { grid-template-columns: 1fr; gap: 36px; } }
 .lsv-img-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-top: 48px; }
 @media (max-width: 640px) { .lsv-img-grid { grid-template-columns: 1fr; } }
+.lsv-img-wrap { overflow: hidden; border-radius: 20px; box-shadow: 0 8px 28px rgba(42,37,40,0.08); }
+.lsv-img-wrap img { width: 100%; height: 300px; object-fit: cover; display: block; transition: transform 0.45s ease; }
+.lsv-img-wrap img:hover { transform: scale(1.3); }
+.lsv-img-wrap.contain img { object-fit: contain; background: #FFF7F2; }
 `;
 
 const Divider = () => (
@@ -317,12 +321,9 @@ export default function Leistungen() {
               {s.title === "Gelmodellage" && (
                 <div data-r className="lsv-img-grid">
                   {[gel3Img, gel2Img, gel1Img].map((src) => (
-                    <img
-                      key={src}
-                      src={src}
-                      alt="Gelmodellage"
-                      style={{ width: "100%", height: 300, objectFit: "cover", borderRadius: 20, display: "block", boxShadow: "0 8px 28px rgba(42,37,40,0.08)" }}
-                    />
+                    <div key={src} className="lsv-img-wrap">
+                      <img src={src} alt="Gelmodellage" />
+                    </div>
                   ))}
                 </div>
               )}
@@ -330,49 +331,45 @@ export default function Leistungen() {
               {/* 3er-Bildgrid unter Nachfüllung */}
               {s.title === "Nachfüllung" && (
                 <div data-r className="lsv-img-grid">
-                  <img src={nagel11Img} alt="Nachfüllung" style={{ width: "100%", height: 300, objectFit: "cover", borderRadius: 20, display: "block", boxShadow: "0 8px 28px rgba(42,37,40,0.08)" }} />
-                  <img src={nagel6Img}  alt="Nachfüllung" style={{ width: "100%", height: 300, objectFit: "cover", borderRadius: 20, display: "block", boxShadow: "0 8px 28px rgba(42,37,40,0.08)" }} />
-                  <img src={nagel8Img}  alt="Nachfüllung" style={{ width: "100%", height: 300, objectFit: "cover", borderRadius: 20, display: "block", boxShadow: "0 8px 28px rgba(42,37,40,0.08)" }} />
+                  <div className="lsv-img-wrap"><img src={nagel11Img} alt="Nachfüllung" /></div>
+                  <div className="lsv-img-wrap"><img src={nagel6Img}  alt="Nachfüllung" /></div>
+                  <div className="lsv-img-wrap"><img src={nagel8Img}  alt="Nachfüllung" /></div>
                 </div>
               )}
 
               {/* 3er-Bildgrid unter Shellac */}
               {s.title === "Shellac" && (
                 <div data-r className="lsv-img-grid">
-                  <img src={shellack1Img} alt="Shellac" style={{ width: "100%", height: 300, objectFit: "cover", objectPosition: "center 88%", borderRadius: 20, display: "block", boxShadow: "0 8px 28px rgba(42,37,40,0.08)" }} />
-                  <img src={nagel9Img}    alt="Shellac" style={{ width: "100%", height: 300, objectFit: "cover", borderRadius: 20, display: "block", boxShadow: "0 8px 28px rgba(42,37,40,0.08)" }} />
-                  <img src={nagel5Img}    alt="Shellac" style={{ width: "100%", height: 300, objectFit: "cover", objectPosition: "center 88%", borderRadius: 20, display: "block", boxShadow: "0 8px 28px rgba(42,37,40,0.08)" }} />
+                  <div className="lsv-img-wrap"><img src={shellack1Img} alt="Shellac" style={{ objectPosition: "center 88%" }} /></div>
+                  <div className="lsv-img-wrap"><img src={nagel9Img}    alt="Shellac" /></div>
+                  <div className="lsv-img-wrap"><img src={nagel5Img}    alt="Shellac" style={{ objectPosition: "center 88%" }} /></div>
                 </div>
               )}
 
               {/* 3er-Bildgrid unter Pediküre */}
               {s.title === "Pediküre" && (
                 <div data-r className="lsv-img-grid">
-                  <img src={pedi1Img} alt="Pediküre" style={{ width: "100%", height: 300, objectFit: "cover", borderRadius: 20, display: "block", boxShadow: "0 8px 28px rgba(42,37,40,0.08)" }} />
-                  <img src={pedi2Img} alt="Pediküre" style={{ width: "100%", height: 300, objectFit: "cover", borderRadius: 20, display: "block", boxShadow: "0 8px 28px rgba(42,37,40,0.08)" }} />
-                  <img src={pedi3Img} alt="Pediküre" style={{ width: "100%", height: 300, objectFit: "cover", borderRadius: 20, display: "block", boxShadow: "0 8px 28px rgba(42,37,40,0.08)" }} />
+                  <div className="lsv-img-wrap"><img src={pedi1Img} alt="Pediküre" /></div>
+                  <div className="lsv-img-wrap"><img src={pedi2Img} alt="Pediküre" /></div>
+                  <div className="lsv-img-wrap"><img src={pedi3Img} alt="Pediküre" /></div>
                 </div>
               )}
 
               {/* 3er-Bildgrid unter Wimpernlifting */}
               {s.title === "Wimpernlifting" && (
                 <div data-r className="lsv-img-grid">
-                  <img src={lashlift1Img} alt="Wimpernlifting" style={{ width: "100%", height: 300, objectFit: "cover", objectPosition: "center 0%", borderRadius: 20, display: "block", boxShadow: "0 8px 28px rgba(42,37,40,0.08)" }} />
-                  <img src={lashlift2Img} alt="Wimpernlifting" style={{ width: "100%", height: 300, objectFit: "cover", borderRadius: 20, display: "block", boxShadow: "0 8px 28px rgba(42,37,40,0.08)" }} />
-                  <img src={lashlift3Img} alt="Wimpernlifting" style={{ width: "100%", height: 300, objectFit: "cover", borderRadius: 20, display: "block", boxShadow: "0 8px 28px rgba(42,37,40,0.08)" }} />
+                  <div className="lsv-img-wrap"><img src={lashlift1Img} alt="Wimpernlifting" style={{ objectPosition: "center 30%" }} /></div>
+                  <div className="lsv-img-wrap"><img src={lashlift2Img} alt="Wimpernlifting" /></div>
+                  <div className="lsv-img-wrap"><img src={lashlift3Img} alt="Wimpernlifting" /></div>
                 </div>
               )}
 
               {/* 3er-Bildgrid unter Make-up */}
               {s.title === "Make-up" && (
                 <div data-r className="lsv-img-grid">
-                  {[braut2Img, makeup2Img, makeup5Img].map((src) => (
-                    <img
-                      key={src}
-                      src={src}
-                      alt="Make-up"
-                      style={{ width: "100%", height: 300, objectFit: "cover", borderRadius: 20, display: "block", boxShadow: "0 8px 28px rgba(42,37,40,0.08)" }}
-                    />
+                  <div className="lsv-img-wrap contain"><img src={braut2Img} alt="Make-up" /></div>
+                  {[makeup2Img, makeup5Img].map((src) => (
+                    <div key={src} className="lsv-img-wrap"><img src={src} alt="Make-up" /></div>
                   ))}
                 </div>
               )}
@@ -380,9 +377,9 @@ export default function Leistungen() {
               {/* 3er-Bildgrid unter Gesichtsbehandlung */}
               {s.title === "Gesichtsbehandlung" && (
                 <div data-r className="lsv-img-grid">
-                  <img src={gesicht1Img} alt="Gesichtsbehandlung" style={{ width: "100%", height: 300, objectFit: "cover", borderRadius: 20, display: "block", boxShadow: "0 8px 28px rgba(42,37,40,0.08)" }} />
-                  <img src={gesicht2Img} alt="Gesichtsbehandlung" style={{ width: "100%", height: 300, objectFit: "cover", borderRadius: 20, display: "block", boxShadow: "0 8px 28px rgba(42,37,40,0.08)" }} />
-                  <img src={gesicht3Img} alt="Gesichtsbehandlung" style={{ width: "100%", height: 300, objectFit: "cover", borderRadius: 20, display: "block", boxShadow: "0 8px 28px rgba(42,37,40,0.08)" }} />
+                  <div className="lsv-img-wrap"><img src={gesicht1Img} alt="Gesichtsbehandlung" /></div>
+                  <div className="lsv-img-wrap"><img src={gesicht2Img} alt="Gesichtsbehandlung" /></div>
+                  <div className="lsv-img-wrap"><img src={gesicht3Img} alt="Gesichtsbehandlung" /></div>
                 </div>
               )}
             </W>
