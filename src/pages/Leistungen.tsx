@@ -356,7 +356,7 @@ export default function Leistungen() {
               {/* 3er-Bildgrid unter Wimpernlifting */}
               {s.title === "Wimpernlifting" && (
                 <div data-r className="lsv-img-grid">
-                  <div className="lsv-img-wrap"><img src={lashlift1Img} alt="Wimpernlifting" style={{ objectPosition: "center 20%" }} /></div>
+                  <div className="lsv-img-wrap"><img src={lashlift1Img} alt="Wimpernlifting" style={{ objectPosition: "center 80%" }} /></div>
                   <div className="lsv-img-wrap"><img src={lashlift2Img} alt="Wimpernlifting" /></div>
                   <div className="lsv-img-wrap"><img src={lashlift3Img} alt="Wimpernlifting" /></div>
                 </div>
