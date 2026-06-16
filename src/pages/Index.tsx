@@ -1399,8 +1399,9 @@ export default function App() {
           </div>
         </div>
         <div style={{ marginTop: 48, display: "flex", justifyContent: "center", padding: "0 24px" }}>
-          <a href={WA_URL} target="_blank" rel="noreferrer" className="btn-pk" style={{ padding: "13px 30px", borderRadius: 999, fontSize: 14, fontWeight: 500, textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 8 }}>
-            <span style={{ color: C.gold }}>✦</span> Termin anfragen via WhatsApp
+          <a href={STUDIO.instagramUrl} target="_blank" rel="noreferrer" className="btn-pk" style={{ padding: "15px 48px", borderRadius: 999, fontSize: 15, fontWeight: 500, textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 10 }}>
+            <Instagram size={17} strokeWidth={1.5} />
+            <span>Folge uns auf Instagram – mehr von unserer Arbeit</span>
           </a>
         </div>
       </section>
