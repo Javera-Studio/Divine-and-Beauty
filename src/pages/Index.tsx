@@ -1649,7 +1649,7 @@ export default function App() {
           </div>
           <div className="dv-contact-g">
 
-            {/* LINKS: Formular + Adresse + Öffnungszeiten */}
+            {/* LINKS: Formular */}
             <div style={{ display: "flex", flexDirection: "column", gap: 28 }}>
 
               {/* Kontaktformular */}
@@ -1730,33 +1730,9 @@ export default function App() {
                 </button>
               </form>
 
-              {/* Adresse + Öffnungszeiten nebeneinander */}
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24 }}>
-                <div>
-                  <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 10 }}>
-                    <MapPin size={15} strokeWidth={1.5} color={C.gold} />
-                    <span className="dm" style={{ color: C.muted, fontSize: 11, letterSpacing: "2px", textTransform: "uppercase" }}>Adresse</span>
-                  </div>
-                  <div className="dm" style={{ color: C.text, fontSize: 15, lineHeight: 1.75 }}>
-                    Klosterneuburgerstraße 98<br />1200 Wien
-                  </div>
-                </div>
-                <div>
-                  <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 12 }}>
-                    <Clock size={15} strokeWidth={1.5} color={C.gold} />
-                    <span className="dm" style={{ color: C.muted, fontSize: 11, letterSpacing: "2px", textTransform: "uppercase" }}>Öffnungszeiten</span>
-                  </div>
-                  {Object.entries(STUDIO.hours).map(([d, t]) => (
-                    <div key={d} style={{ display: "flex", gap: 12, marginBottom: 6 }}>
-                      <span className="dm" style={{ color: C.muted, fontSize: 13, minWidth: 72 }}>{d}</span>
-                      <span className="dm" style={{ color: C.text, fontSize: 13 }}>{t}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
             </div>
 
-            {/* RECHTS: Foto + Buttons in einer Zeile */}
+            {/* RECHTS: Foto + Buttons + Adresse + Öffnungszeiten */}
             <div data-r data-d="1" style={{ display: "flex", flexDirection: "column", gap: 20 }}>
 
               {/* Studio Photo */}
@@ -1782,6 +1758,31 @@ export default function App() {
                   <Mail size={13} strokeWidth={1.5} style={{ flexShrink: 0 }} />
                   <span>{STUDIO.email}</span>
                 </a>
+              </div>
+
+              {/* Adresse + Öffnungszeiten nebeneinander */}
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24 }}>
+                <div>
+                  <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 10 }}>
+                    <MapPin size={15} strokeWidth={1.5} color={C.gold} />
+                    <span className="dm" style={{ color: C.muted, fontSize: 11, letterSpacing: "2px", textTransform: "uppercase" }}>Adresse</span>
+                  </div>
+                  <div className="dm" style={{ color: C.text, fontSize: 15, lineHeight: 1.75 }}>
+                    Klosterneuburgerstraße 98<br />1200 Wien
+                  </div>
+                </div>
+                <div>
+                  <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 12 }}>
+                    <Clock size={15} strokeWidth={1.5} color={C.gold} />
+                    <span className="dm" style={{ color: C.muted, fontSize: 11, letterSpacing: "2px", textTransform: "uppercase" }}>Öffnungszeiten</span>
+                  </div>
+                  {Object.entries(STUDIO.hours).map(([d, t]) => (
+                    <div key={d} style={{ display: "flex", gap: 12, marginBottom: 6 }}>
+                      <span className="dm" style={{ color: C.muted, fontSize: 13, minWidth: 72 }}>{d}</span>
+                      <span className="dm" style={{ color: C.text, fontSize: 13 }}>{t}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
