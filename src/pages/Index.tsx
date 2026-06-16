@@ -1646,58 +1646,9 @@ export default function App() {
             </h2>
           </div>
           <div className="dv-contact-g">
-            <div>
 
-              {/* Kontakt-Buttons */}
-              <div style={{ display: "flex", flexDirection: "column", gap: 12, marginBottom: 44 }}>
-                <a
-                  href={STUDIO.instagramUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="btn-pk"
-                  style={{ textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 12, padding: "15px 26px", borderRadius: 16, fontSize: 15, fontWeight: 500, width: "fit-content" }}
-                >
-                  <Instagram size={18} strokeWidth={1.5} />
-                  <span>Termin via Instagram</span>
-                </a>
-                <a href="https://wa.me/436763633721" target="_blank" rel="noreferrer" className="btn-ol-light" style={{ textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 12, padding: "13px 24px", borderRadius: 16, fontSize: 14, width: "fit-content" }}>
-                  <MessageCircle size={16} strokeWidth={1.5} />
-                  <span>Termin via WhatsApp</span>
-                </a>
-                <a href={`mailto:${STUDIO.email}`} className="btn-ol-light" style={{ textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 12, padding: "13px 24px", borderRadius: 16, fontSize: 14, width: "fit-content" }}>
-                  <Mail size={16} strokeWidth={1.5} />
-                  <span>{STUDIO.email}</span>
-                </a>
-              </div>
-
-              {/* Adresse */}
-              <div style={{ marginBottom: 32 }}>
-                <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 10 }}>
-                  <MapPin size={15} strokeWidth={1.5} color={C.gold} />
-                  <span className="dm" style={{ color: C.muted, fontSize: 11, letterSpacing: "2px", textTransform: "uppercase" }}>Adresse</span>
-                </div>
-                <div className="dm" style={{ color: C.text, fontSize: 15, lineHeight: 1.75 }}>
-                  Klosterneuburgerstraße 98<br />1200 Wien
-                </div>
-              </div>
-
-              {/* Öffnungszeiten */}
-              <div>
-                <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 12 }}>
-                  <Clock size={15} strokeWidth={1.5} color={C.gold} />
-                  <span className="dm" style={{ color: C.muted, fontSize: 11, letterSpacing: "2px", textTransform: "uppercase" }}>Öffnungszeiten</span>
-                </div>
-                {Object.entries(STUDIO.hours).map(([d, t]) => (
-                  <div key={d} style={{ display: "flex", gap: 16, marginBottom: 6 }}>
-                    <span className="dm" style={{ color: C.muted, fontSize: 14, minWidth: 80 }}>{d}</span>
-                    <span className="dm" style={{ color: C.text, fontSize: 14 }}>{t}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Rechts: Formular + Foto */}
-            <div data-r data-d="1" style={{ display: "flex", flexDirection: "column", gap: 20 }}>
+            {/* LINKS: Formular + Buttons */}
+            <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
 
               {/* Kontaktformular */}
               <form
@@ -1762,13 +1713,58 @@ export default function App() {
                 </button>
               </form>
 
+              {/* Kontakt-Buttons */}
+              <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+                <a href={STUDIO.instagramUrl} target="_blank" rel="noreferrer" className="btn-pk" style={{ textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 12, padding: "13px 24px", borderRadius: 14, fontSize: 14, fontWeight: 500, width: "fit-content" }}>
+                  <Instagram size={16} strokeWidth={1.5} />
+                  <span>Termin via Instagram</span>
+                </a>
+                <a href="https://wa.me/436763633721" target="_blank" rel="noreferrer" className="btn-ol-light" style={{ textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 12, padding: "13px 24px", borderRadius: 14, fontSize: 14, width: "fit-content" }}>
+                  <MessageCircle size={16} strokeWidth={1.5} />
+                  <span>Termin via WhatsApp</span>
+                </a>
+                <a href={`mailto:${STUDIO.email}`} className="btn-ol-light" style={{ textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 12, padding: "13px 24px", borderRadius: 14, fontSize: 14, width: "fit-content" }}>
+                  <Mail size={16} strokeWidth={1.5} />
+                  <span>{STUDIO.email}</span>
+                </a>
+              </div>
+            </div>
+
+            {/* RECHTS: Foto + Adresse + Öffnungszeiten */}
+            <div data-r data-d="1" style={{ display: "flex", flexDirection: "column", gap: 28 }}>
+
               {/* Studio Photo */}
-              <div style={{ borderRadius: 20, overflow: "hidden", boxShadow: "0 12px 40px rgba(185,130,165,0.14)", border: "1px solid rgba(214,183,109,0.14)" }}>
+              <div style={{ borderRadius: 24, overflow: "hidden", boxShadow: "0 24px 72px rgba(185,130,165,0.16)", border: "1px solid rgba(214,183,109,0.14)" }}>
                 <img
                   src="/daca2.png"
                   alt="Divine Beauty & Nails Studio"
-                  style={{ width: "100%", height: "220px", objectFit: "cover", objectPosition: "top center", display: "block" }}
+                  style={{ width: "100%", height: "300px", objectFit: "cover", objectPosition: "top center", display: "block" }}
                 />
+              </div>
+
+              {/* Adresse */}
+              <div>
+                <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 10 }}>
+                  <MapPin size={15} strokeWidth={1.5} color={C.gold} />
+                  <span className="dm" style={{ color: C.muted, fontSize: 11, letterSpacing: "2px", textTransform: "uppercase" }}>Adresse</span>
+                </div>
+                <div className="dm" style={{ color: C.text, fontSize: 15, lineHeight: 1.75 }}>
+                  Klosterneuburgerstraße 98<br />1200 Wien
+                </div>
+              </div>
+
+              {/* Öffnungszeiten */}
+              <div>
+                <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 12 }}>
+                  <Clock size={15} strokeWidth={1.5} color={C.gold} />
+                  <span className="dm" style={{ color: C.muted, fontSize: 11, letterSpacing: "2px", textTransform: "uppercase" }}>Öffnungszeiten</span>
+                </div>
+                {Object.entries(STUDIO.hours).map(([d, t]) => (
+                  <div key={d} style={{ display: "flex", gap: 16, marginBottom: 6 }}>
+                    <span className="dm" style={{ color: C.muted, fontSize: 14, minWidth: 80 }}>{d}</span>
+                    <span className="dm" style={{ color: C.text, fontSize: 14 }}>{t}</span>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
