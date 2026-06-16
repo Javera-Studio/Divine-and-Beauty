@@ -4,6 +4,7 @@ import logo from "@/assets/logo.png";
 import braut2Img from "@/assets/braut2.jpg";
 import makeup2Img from "@/assets/makeup2.jpg";
 import makeup3Img from "@/assets/makeup3.jpg";
+import makeup5Img from "@/assets/makeup5.jpeg";
 import gel1Img from "@/assets/gel1.jpeg";
 import gel2Img from "@/assets/gel2.jpeg";
 import gel3Img from "@/assets/gel3.jpeg";
@@ -365,7 +366,7 @@ export default function Leistungen() {
               {/* 3er-Bildgrid unter Make-up */}
               {s.title === "Make-up" && (
                 <div data-r className="lsv-img-grid">
-                  {[braut2Img, makeup2Img, makeup3Img].map((src) => (
+                  {[braut2Img, makeup2Img, makeup5Img].map((src) => (
                     <img
                       key={src}
                       src={src}
