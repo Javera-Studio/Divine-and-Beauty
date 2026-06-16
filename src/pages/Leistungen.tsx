@@ -4,6 +4,20 @@ import logo from "@/assets/logo.png";
 import braut2Img from "@/assets/braut2.jpg";
 import makeup2Img from "@/assets/makeup2.jpg";
 import makeup3Img from "@/assets/makeup3.jpg";
+import gel1Img from "@/assets/gel1.jpeg";
+import gel2Img from "@/assets/gel2.jpeg";
+import gel3Img from "@/assets/gel3.jpeg";
+import lashlift1Img from "@/assets/lashlift1.jpeg";
+import lashlift2Img from "@/assets/lashlift2.jpeg";
+import lashlift3Img from "@/assets/lashlift3.jpg";
+import shellack1Img from "@/assets/shellack1.jpeg";
+import nagel9Img from "@/assets/nagel9.jpg";
+import nagel5Img from "@/assets/nagel5.jpg";
+import nagel6Img from "@/assets/nagel6.jpg";
+import nagel8Img from "@/assets/nagel8.jpg";
+import nagel11Img from "@/assets/nagel11.jpeg";
+import pedi1Img from "@/assets/pedi1.png";
+import pedi2Img from "@/assets/pedi2.jpeg";
 
 const WA_URL =
   "https://wa.me/436763633721?text=" +
@@ -111,6 +125,8 @@ body { overflow-x: hidden; background: #FFF7F2; }
 @media (prefers-reduced-motion: reduce) { [data-r] { opacity: 1; transform: none; transition: none; } }
 .lsv-row { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
 @media (max-width: 860px) { .lsv-row { grid-template-columns: 1fr; gap: 36px; } }
+.lsv-img-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-top: 48px; }
+@media (max-width: 640px) { .lsv-img-grid { grid-template-columns: 1fr; } }
 `;
 
 const Divider = () => (
@@ -294,8 +310,8 @@ export default function Leistungen() {
 
               {/* 3er-Bildgrid unter Gelmodellage */}
               {s.title === "Gelmodellage" && (
-                <div data-r style={{ marginTop: 48, display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 16 }}>
-                  {["/gel3.jpg", "/gel2.jpg", "/gel1.jpg"].map((src) => (
+                <div data-r className="lsv-img-grid">
+                  {[gel3Img, gel2Img, gel1Img].map((src) => (
                     <img
                       key={src}
                       src={src}
@@ -306,23 +322,45 @@ export default function Leistungen() {
                 </div>
               )}
 
+              {/* 3er-Bildgrid unter Nachfüllung */}
+              {s.title === "Nachfüllung" && (
+                <div data-r className="lsv-img-grid">
+                  <img src={nagel11Img} alt="Nachfüllung" style={{ width: "100%", height: 300, objectFit: "cover", borderRadius: 20, display: "block", boxShadow: "0 8px 28px rgba(42,37,40,0.08)" }} />
+                  <img src={nagel6Img}  alt="Nachfüllung" style={{ width: "100%", height: 300, objectFit: "cover", borderRadius: 20, display: "block", boxShadow: "0 8px 28px rgba(42,37,40,0.08)" }} />
+                  <img src={nagel8Img}  alt="Nachfüllung" style={{ width: "100%", height: 300, objectFit: "cover", borderRadius: 20, display: "block", boxShadow: "0 8px 28px rgba(42,37,40,0.08)" }} />
+                </div>
+              )}
+
+              {/* 3er-Bildgrid unter Shellac */}
+              {s.title === "Shellac" && (
+                <div data-r className="lsv-img-grid">
+                  <img src={shellack1Img} alt="Shellac" style={{ width: "100%", height: 300, objectFit: "cover", objectPosition: "center 88%", borderRadius: 20, display: "block", boxShadow: "0 8px 28px rgba(42,37,40,0.08)" }} />
+                  <img src={nagel9Img}    alt="Shellac" style={{ width: "100%", height: 300, objectFit: "cover", borderRadius: 20, display: "block", boxShadow: "0 8px 28px rgba(42,37,40,0.08)" }} />
+                  <img src={nagel5Img}    alt="Shellac" style={{ width: "100%", height: 300, objectFit: "cover", objectPosition: "center 88%", borderRadius: 20, display: "block", boxShadow: "0 8px 28px rgba(42,37,40,0.08)" }} />
+                </div>
+              )}
+
+              {/* 3er-Bildgrid unter Pediküre */}
+              {s.title === "Pediküre" && (
+                <div data-r className="lsv-img-grid">
+                  <img src={pedi1Img} alt="Pediküre" style={{ width: "100%", height: 300, objectFit: "cover", borderRadius: 20, display: "block", boxShadow: "0 8px 28px rgba(42,37,40,0.08)" }} />
+                  <img src={pedi2Img} alt="Pediküre" style={{ width: "100%", height: 300, objectFit: "cover", borderRadius: 20, display: "block", boxShadow: "0 8px 28px rgba(42,37,40,0.08)" }} />
+                  <div style={{ width: "100%", height: 300, borderRadius: 20, background: "rgba(214,183,109,0.07)", border: "1px dashed rgba(214,183,109,0.25)" }} />
+                </div>
+              )}
+
               {/* 3er-Bildgrid unter Wimpernlifting */}
               {s.title === "Wimpernlifting" && (
-                <div data-r style={{ marginTop: 48, display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 16 }}>
-                  {["/lashlift1.jpg", "/lashlift2.jpg", "/lashlift3.jpg"].map((src) => (
-                    <img
-                      key={src}
-                      src={src}
-                      alt="Wimpernlifting"
-                      style={{ width: "100%", height: 300, objectFit: "cover", borderRadius: 20, display: "block", boxShadow: "0 8px 28px rgba(42,37,40,0.08)" }}
-                    />
-                  ))}
+                <div data-r className="lsv-img-grid">
+                  <img src={lashlift1Img} alt="Wimpernlifting" style={{ width: "100%", height: 300, objectFit: "cover", objectPosition: "center 0%", borderRadius: 20, display: "block", boxShadow: "0 8px 28px rgba(42,37,40,0.08)" }} />
+                  <img src={lashlift2Img} alt="Wimpernlifting" style={{ width: "100%", height: 300, objectFit: "cover", borderRadius: 20, display: "block", boxShadow: "0 8px 28px rgba(42,37,40,0.08)" }} />
+                  <img src={lashlift3Img} alt="Wimpernlifting" style={{ width: "100%", height: 300, objectFit: "cover", borderRadius: 20, display: "block", boxShadow: "0 8px 28px rgba(42,37,40,0.08)" }} />
                 </div>
               )}
 
               {/* 3er-Bildgrid unter Make-up */}
               {s.title === "Make-up" && (
-                <div data-r style={{ marginTop: 48, display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 16 }}>
+                <div data-r className="lsv-img-grid">
                   {[braut2Img, makeup2Img, makeup3Img].map((src) => (
                     <img
                       key={src}

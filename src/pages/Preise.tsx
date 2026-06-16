@@ -23,11 +23,11 @@ const C = {
 
 const PRICES = [
   {
-    category: "Gelmodellage",
+    category: "Neues Set",
     items: [
-      { name: "Neues Set / Camouflage", price: "50 €" },
-      { name: "Neues Set inkl. Farbe", price: "56 €" },
-      { name: "Neues Set French/Babyboomer", price: "58 €" },
+      { name: "Camouflage", price: "50 €" },
+      { name: "Inkl. Farbe", price: "56 €" },
+      { name: "French/Babyboomer", price: "58 €" },
     ],
   },
   {

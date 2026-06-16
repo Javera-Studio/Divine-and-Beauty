@@ -4,8 +4,19 @@ import { Link } from "react-router-dom";
 import studioHero from "@/assets/studio5.png";
 import teamHero from "@/assets/teamnew.jpeg";
 import dacaNew from "@/assets/dacanew.jpeg";
+import dacaNew1 from "@/assets/dacanew1.jpg";
+import gal1Img from "@/assets/gal1.jpg";
+import gal2Img from "@/assets/gal2.jpg";
+import gal3Img from "@/assets/gal3.jpg";
+import gal4Img from "@/assets/gal4.jpg";
 import new1Img from "@/assets/new1.jpg";
 import new2Img from "@/assets/new2.png";
+import new3Img from "@/assets/new3.jpg";
+import new4Img from "@/assets/new4.png";
+import new5Img from "@/assets/new5.png";
+import gel3Img from "@/assets/gel3.jpeg";
+import nagel6Img from "@/assets/nagel6.jpg";
+import studio11Img from "@/assets/studio11.png";
 import studio2Img from "@/assets/studio2.png";
 import studio4Img from "@/assets/studio4.png";
 import studio7Img from "@/assets/studio7.png";
@@ -167,29 +178,38 @@ const PRICES = [
 
 // ── Galerie: Soft Rosé + Champagne Gold Verläufe ──────────────────────────────
 const GALLERY = [
-  { id: 1,  label: "Gelmodellage",      src: "/Gelmodellage.png",      g: "linear-gradient(145deg,#FBEAF3,#F3C6DC 55%,#DFA7C6)" },
-  { id: 2,  label: "Nägel",             src: "/nagel1.jpg",            g: "linear-gradient(145deg,#FFF7FA,#F3C6DC)" },
-  { id: 3,  label: "Pediküre",          src: pedi2Img,                 g: "linear-gradient(145deg,#FBEAF3,#e8d4b0 60%,#D6B76D)" },
-  { id: 4,  label: "Augen",             src: "/augen1.png",            g: "linear-gradient(145deg,#FFF7FA,#DFA7C6 55%,#D6B76D)" },
-  { id: 6,  label: "Nägel",             src: "/nagel2.png",            g: "linear-gradient(145deg,#FFF7FA,#F3C6DC 45%,#ead5a8)" },
-  { id: 7,  label: "Maniküre",          src: "/Manikuere.png",         g: "linear-gradient(145deg,#FBEAF3,#DFA7C6)" },
-  { id: 8,  label: "Augen",             src: "/augen2.png",            g: "linear-gradient(145deg,#FFF7FA,#D6B76D 40%,#DFA7C6)" },
-  { id: 10, label: "Nägel",             src: "/nagel4.png",            g: "linear-gradient(145deg,#FBEAF3,#F3C6DC 55%,#DFA7C6)" },
-  { id: 11, label: "Make-up",           src: "/Make-up.png",           g: "linear-gradient(145deg,#FFF7FA,#F3C6DC 45%,#ead5a8)" },
-  { id: 12, label: "Gesichtsbehandlung",src: "/Gesichtsbehandlung.png",g: "linear-gradient(145deg,#FFF7FA,#D6B76D 40%,#DFA7C6)" },
-  { id: 24, label: "Gesichtsbehandlung",src: gesicht1Img,              g: "linear-gradient(145deg,#FFF7FA,#D6B76D 40%,#DFA7C6)" },
-  { id: 25, label: "Gesichtsbehandlung",src: gesicht2Img,              g: "linear-gradient(145deg,#FFF7FA,#D6B76D 40%,#DFA7C6)" },
-  { id: 26, label: "Gesichtsbehandlung",src: gesicht3Img,              g: "linear-gradient(145deg,#FFF7FA,#D6B76D 40%,#DFA7C6)" },
-  { id: 13, label: "Make-up",           src: "/makeup2.png",           g: "linear-gradient(145deg,#FBEAF3,#F3C6DC 55%,#DFA7C6)" },
-  { id: 14, label: "Make-up",           src: "/makeup3.png",           g: "linear-gradient(145deg,#FFF7FA,#e8d4b0 55%,#D6B76D)" },
-  { id: 15, label: "Studio",            src: studio4Img,               g: "linear-gradient(145deg,#FFF7F2,#e8d4b0 55%,#D6B76D)" },
-  { id: 16, label: "Studio",            src: studio7Img,               g: "linear-gradient(145deg,#FBEAF3,#F3C6DC 55%,#DFA7C6)" },
-  { id: 17, label: "Studio",            src: studio9Img,               g: "linear-gradient(145deg,#FFF7FA,#DFA7C6 55%,#D6B76D)" },
-  { id: 18, label: "Studio",            src: studio12Img,              g: "linear-gradient(145deg,#FFF7F2,#e8d4b0 60%,#D6B76D)" },
-  { id: 19, label: "Pediküre",          src: pedi1Img,                 g: "linear-gradient(145deg,#FBEAF3,#e8d4b0 60%,#D6B76D)" },
-  { id: 23, label: "Pediküre",          src: pedi3Img,                 g: "linear-gradient(145deg,#FBEAF3,#e8d4b0 60%,#D6B76D)" },
-  { id: 21, label: "Nägel",             src: new1Img,                  g: "linear-gradient(145deg,#FBEAF3,#F3C6DC 55%,#DFA7C6)" },
-  { id: 22, label: "Nägel",             src: new2Img,                  g: "linear-gradient(145deg,#FFF7FA,#e8d4b0 55%,#D6B76D)" },
+  { id: 1,  label: "Nägel",             src: gal1Img,              g: "linear-gradient(145deg,#FBEAF3,#F3C6DC 55%,#DFA7C6)" },
+  { id: 2,  label: "Studio",            src: studio11Img,          g: "linear-gradient(145deg,#FFF7F2,#e8d4b0 55%,#D6B76D)" },
+  { id: 3,  label: "Nägel",             src: new3Img,              g: "linear-gradient(145deg,#FFF7FA,#F3C6DC)" },
+  { id: 4,  label: "Gelmodellage",      src: gel3Img,              g: "linear-gradient(145deg,#FFF7FA,#F3C6DC 45%,#ead5a8)" },
+  { id: 5,  label: "Nägel",             src: gal2Img,              g: "linear-gradient(145deg,#FBEAF3,#F3C6DC 55%,#DFA7C6)" },
+  { id: 6,  label: "Pediküre",          src: pedi2Img,             g: "linear-gradient(145deg,#FBEAF3,#e8d4b0 60%,#D6B76D)" },
+  { id: 7,  label: "Studio",            src: studio4Img,           g: "linear-gradient(145deg,#FFF7F2,#e8d4b0 55%,#D6B76D)" },
+  { id: 8,  label: "Nägel",             src: "/nagel4.png",        g: "linear-gradient(145deg,#FBEAF3,#F3C6DC 55%,#DFA7C6)" },
+  { id: 9,  label: "Nägel",             src: gal3Img,              g: "linear-gradient(145deg,#FFF7FA,#e8d4b0 55%,#D6B76D)" },
+  { id: 10, label: "Augen",             src: "/augen2.png",        g: "linear-gradient(145deg,#FFF7FA,#D6B76D 40%,#DFA7C6)" },
+  { id: 11, label: "Nägel",             src: new1Img,              g: "linear-gradient(145deg,#FBEAF3,#F3C6DC 55%,#DFA7C6)" },
+  { id: 12, label: "Studio",            src: studio2Img,           g: "linear-gradient(145deg,#FFF7FA,#e8d4b0 55%,#D6B76D)" },
+  { id: 13, label: "Nägel",             src: gal4Img,              g: "linear-gradient(145deg,#FBEAF3,#F3C6DC 55%,#DFA7C6)" },
+  { id: 14, label: "Maniküre",          src: "/Manikuere.png",     g: "linear-gradient(145deg,#FBEAF3,#DFA7C6)" },
+  { id: 15, label: "Nägel",             src: nagel6Img,            g: "linear-gradient(145deg,#FFF7FA,#F3C6DC 45%,#ead5a8)" },
+  { id: 16, label: "Studio",            src: studio7Img,           g: "linear-gradient(145deg,#FBEAF3,#F3C6DC 55%,#DFA7C6)" },
+  { id: 17, label: "Make-up",           src: "/makeup2.png",       g: "linear-gradient(145deg,#FBEAF3,#F3C6DC 55%,#DFA7C6)" },
+  { id: 18, label: "Nägel",             src: new4Img,              g: "linear-gradient(145deg,#FFF7FA,#DFA7C6 55%,#D6B76D)" },
+  { id: 19, label: "Augen",             src: "/augen1.png",        g: "linear-gradient(145deg,#FFF7FA,#DFA7C6 55%,#D6B76D)" },
+  { id: 20, label: "Gelmodellage",      src: "/Gelmodellage.png",  g: "linear-gradient(145deg,#FBEAF3,#F3C6DC 55%,#DFA7C6)" },
+  { id: 21, label: "Nägel",             src: new5Img,              g: "linear-gradient(145deg,#FFF7FA,#e8d4b0 55%,#D6B76D)" },
+  { id: 22, label: "Studio",            src: studio9Img,           g: "linear-gradient(145deg,#FFF7FA,#DFA7C6 55%,#D6B76D)" },
+  { id: 23, label: "Make-up",           src: "/makeup3.png",       g: "linear-gradient(145deg,#FFF7FA,#e8d4b0 55%,#D6B76D)" },
+  { id: 24, label: "Nägel",             src: "/nagel2.png",        g: "linear-gradient(145deg,#FFF7FA,#F3C6DC 45%,#ead5a8)" },
+  { id: 25, label: "Pediküre",          src: pedi1Img,             g: "linear-gradient(145deg,#FBEAF3,#e8d4b0 60%,#D6B76D)" },
+  { id: 26, label: "Studio",            src: studio12Img,          g: "linear-gradient(145deg,#FFF7F2,#e8d4b0 60%,#D6B76D)" },
+  { id: 27, label: "Nägel",             src: new2Img,              g: "linear-gradient(145deg,#FFF7FA,#e8d4b0 55%,#D6B76D)" },
+  { id: 28, label: "Nägel",             src: "/nagel1.jpg",        g: "linear-gradient(145deg,#FFF7FA,#F3C6DC)" },
+  { id: 29, label: "Pediküre",          src: pedi3Img,             g: "linear-gradient(145deg,#FBEAF3,#e8d4b0 60%,#D6B76D)" },
+  { id: 30, label: "Gesichtsbehandlung",src: gesicht1Img,          g: "linear-gradient(145deg,#FFF7FA,#D6B76D 40%,#DFA7C6)" },
+  { id: 31, label: "Gesichtsbehandlung",src: gesicht2Img,          g: "linear-gradient(145deg,#FFF7FA,#D6B76D 40%,#DFA7C6)" },
+  { id: 32, label: "Gesichtsbehandlung",src: gesicht3Img,          g: "linear-gradient(145deg,#FFF7FA,#D6B76D 40%,#DFA7C6)" },
 ];
 
 const REVIEWS = [
@@ -278,7 +298,7 @@ body { overflow-x: hidden; background: #FFF7F2; }
 
 .dv-marquee-track {
   display: flex; width: max-content; gap: 18px;
-  animation: dv-marquee 42s linear infinite;
+  animation: dv-marquee 60s linear infinite;
 }
 .dv-marquee-wrap:hover .dv-marquee-track { animation-play-state: paused; }
 .dv-float   { animation: dv-float 6s ease-in-out infinite; }
@@ -851,7 +871,7 @@ export default function App() {
         )}
       </nav>
 
-      {/* ── HERO — Full-Bleed Foto ────────────────────────────────────────── */}
+      {/* ── HERO — Full-Bleed Video ───────────────────────────────────────── */}
       <section
         id="home"
         style={{
@@ -859,80 +879,60 @@ export default function App() {
           position: "relative",
           overflow: "hidden",
           display: "flex",
-          alignItems: "flex-end",
+          alignItems: "center",
+          justifyContent: "center",
+          background: C.bg1,
         }}
       >
-        {/* Vollflächiges Foto */}
-        <img
-          src={studioHero}
-          alt="Divine Beauty & Nails Studio"
-          style={{
-            position: "absolute",
-            inset: 0,
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-            objectPosition: "center",
-            display: "block",
-          }}
-        />
-        {/* Dunkles Gradient-Overlay für Lesbarkeit */}
-        <div
-          style={{
-            position: "absolute",
-            inset: 0,
-            background:
-              "linear-gradient(to top, rgba(42,37,40,0.82) 0%, rgba(42,37,40,0.38) 50%, rgba(42,37,40,0.06) 100%)",
-          }}
-        />
-        {/* Text-Inhalt */}
-        <W pad="80px 24px" style={{ width: "100%", position: "relative", zIndex: 1 }}>
-          <div className="dv-fadeup" style={{ maxWidth: 700 }}>
-            <div
-              className="dm"
-              style={{ color: "rgba(255,255,255,0.55)", fontSize: 12, letterSpacing: "4px", textTransform: "uppercase", marginBottom: 8 }}
+        {/* Video-Wrapper: portrait-zentriert, Overlay NUR über dem Video */}
+        <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center" }}>
+          <div style={{ position: "relative", height: "100%", overflow: "hidden" }}>
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              poster={studioHero}
+              style={{ height: "100%", width: "auto", display: "block" }}
             >
-              Willkommen bei
-            </div>
-            <h1 className="pf" style={{ margin: "0 0 4px", lineHeight: 0.95 }}>
+              <source src="/herovid.mp4" type="video/mp4" />
+            </video>
+            <div style={{ position: "absolute", inset: 0, background: "rgba(22,14,14,0.45)", pointerEvents: "none" }} />
+            {/* Schmaler starker Fade links und rechts an den Videokanten */}
+            <div style={{
+              position: "absolute", inset: 0, pointerEvents: "none",
+              background: `linear-gradient(to right, ${C.bg1} 0%, transparent 3.5%, transparent 96.5%, ${C.bg1} 100%)`,
+            }} />
+          </div>
+        </div>
+
+        {/* Text — zentriert, leicht nach oben */}
+        <W pad="0 24px" style={{ width: "100%", position: "relative", zIndex: 1, textAlign: "center" }}>
+          <div className="dv-fadeup" style={{ userSelect: "none", cursor: "default", transform: "translateY(-40px)" }}>
+            <h1 className="pf" style={{ margin: "0 0 10px", lineHeight: 0.95 }}>
               <span
                 className="gv"
-                style={{ display: "block", color: C.soft, fontSize: "clamp(4rem,9vw,7.5rem)", lineHeight: 1, fontWeight: 400 }}
+                style={{ display: "block", color: C.soft, fontSize: "clamp(4.5rem,9vw,8rem)", lineHeight: 1, fontWeight: 400, textShadow: "0 4px 24px rgba(0,0,0,0.4)" }}
               >
                 Divine
               </span>
               <span
-                style={{ display: "block", color: "rgba(255,255,255,0.88)", fontSize: "clamp(1.6rem,3vw,2.4rem)", fontWeight: 400, letterSpacing: "0.5px", marginTop: 4 }}
+                style={{ display: "block", color: "#ffffff", fontSize: "clamp(1.4rem,2.5vw,2.2rem)", fontWeight: 400, letterSpacing: "2px", textTransform: "uppercase", marginTop: 10, textShadow: "0 2px 12px rgba(0,0,0,0.5)" }}
               >
                 Beauty &amp; Nails Studio
               </span>
             </h1>
-            <p
-              className="pf"
-              style={{ fontStyle: "italic", color: C.soft, fontSize: "clamp(1rem,1.4vw,1.2rem)", margin: "22px 0 18px" }}
-            >
-              Schöne Nägel sind kein Zufall.
-            </p>
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 14, margin: "22px 0" }}>
+              <span style={{ width: 48, height: 1, background: "linear-gradient(90deg,transparent,rgba(214,183,109,0.8))", display: "block" }} />
+              <Diamond size={11} strokeWidth={1.5} color={C.gold} />
+              <span style={{ width: 48, height: 1, background: "linear-gradient(90deg,rgba(214,183,109,0.8),transparent)", display: "block" }} />
+            </div>
             <p
               className="dm"
-              style={{ color: "rgba(255,255,255,0.65)", fontSize: 15.5, lineHeight: 1.75, maxWidth: 460, marginBottom: 30 }}
+              style={{ color: "rgba(255,255,255,0.75)", fontSize: 12, letterSpacing: "4px", textTransform: "uppercase", textShadow: "0 1px 8px rgba(0,0,0,0.5)" }}
             >
-              Erstklassige Behandlungen in stilvollem Ambiente — weil du es verdienst.
+              Seit 2018 in Wien
             </p>
-            <div style={{ display: "flex", alignItems: "center", gap: 18, flexWrap: "wrap" }}>
-              <a
-                href={WA_URL}
-                target="_blank"
-                rel="noreferrer"
-                className="btn-pk"
-                style={{ padding: "14px 30px", borderRadius: 999, fontSize: 13, fontWeight: 500, letterSpacing: "2px", textTransform: "uppercase", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 10 }}
-              >
-                <span aria-hidden style={{ width: 22, height: 22, borderRadius: "50%", background: "rgba(255,255,255,0.12)", display: "inline-flex", alignItems: "center", justifyContent: "center", fontSize: 12 }}>
-                  💬
-                </span>
-                Termin buchen
-              </a>
-            </div>
           </div>
         </W>
       </section>
@@ -943,7 +943,7 @@ export default function App() {
       <section
         style={{
           position: "relative",
-          padding: "52px 24px",
+          padding: "36px 24px",
           background: "linear-gradient(135deg,#2A2528 0%,#3a3033 100%)",
           overflow: "hidden",
         }}
@@ -1047,9 +1047,9 @@ export default function App() {
                 }}
               >
                 <img
-                  src="/daca1.jpg"
+                  src={dacaNew1}
                   alt="Danijela — Divine Beauty & Nails Studio"
-                  style={{ width: "100%", height: 360, objectFit: "cover", objectPosition: "top center", display: "block" }}
+                  style={{ width: "56%", display: "block", margin: "0 auto" }}
                 />
               </div>
               <p className="pf" style={{ textAlign: "center", color: C.muted, fontSize: 15, fontStyle: "italic", marginTop: 18 }}>
@@ -1078,17 +1078,6 @@ export default function App() {
             </div>
           </div>
 
-          {/* Studio-Grid */}
-          <div data-r style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 14 }}>
-            {[studio14Img, studio4Img, studio15Img, studio2Img].map((src, i) => (
-              <img
-                key={i}
-                src={src}
-                alt="Divine Beauty Studio"
-                style={{ width: "100%", height: 220, objectFit: "cover", borderRadius: 18, display: "block", boxShadow: "0 8px 28px rgba(42,37,40,0.08)" }}
-              />
-            ))}
-          </div>
         </W>
       </section>
 
@@ -1142,6 +1131,18 @@ export default function App() {
                   {a.desc}
                 </p>
               </div>
+            ))}
+          </div>
+
+          {/* Studio-Grid unter den Badges */}
+          <div data-r style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 14, marginTop: 48 }}>
+            {[studio14Img, studio4Img, studio15Img, studio2Img].map((src, i) => (
+              <img
+                key={i}
+                src={src}
+                alt="Divine Beauty Studio"
+                style={{ width: "100%", height: 220, objectFit: "cover", borderRadius: 18, display: "block", boxShadow: "0 8px 28px rgba(42,37,40,0.08)" }}
+              />
             ))}
           </div>
         </W>
@@ -1221,22 +1222,22 @@ export default function App() {
           <div className="dv-team-g">
             {[
               {
-                img: "/gloria1.jpg",
-                name: "Gloria",
-                role: "Beauty-Expertin",
-                text: "Gloria begeistert mit ihrer freundlichen Art und ihrem Gespür für schöne, natürliche Ergebnisse – stets mit einem Lächeln.",
-              },
-              {
                 img: dacaNew,
                 name: "Danijela",
                 role: "Inhaberin & Beauty-Expertin",
-                text: "Mit viel Leidenschaft, Präzision und Liebe zum Detail führt Danijela Divine Beauty – und sorgt dafür, dass sich jede Kundin rundum wohlfühlt.",
+                text: "Seit 2018 führt Danijela Divine Beauty & Nails mit viel Leidenschaft, Präzision und Liebe zum Detail. Ihr ist besonders wichtig, dass sich jede Kundin rundum wohlfühlt und individuell betreut wird.",
               },
               {
                 img: "/nina1.jpg",
                 name: "Nina",
                 role: "Beauty-Expertin",
                 text: "Nina arbeitet mit viel Feingefühl und Präzision – und bringt mit ihrer ruhigen, aufmerksamen Art das Beste in jeder Behandlung heraus.",
+              },
+              {
+                img: "/gloria1.jpg",
+                name: "Gloria",
+                role: "Beauty-Expertin",
+                text: "Gloria begeistert mit ihrer freundlichen Art und ihrem Gespür für schöne, natürliche Ergebnisse – stets mit einem Lächeln.",
               },
             ].map((p, i) => (
               <div
