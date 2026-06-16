@@ -14,6 +14,11 @@ import studio12Img from "@/assets/studio12.png";
 import studio14Img from "@/assets/studio14.png";
 import studio15Img from "@/assets/studio15.png";
 import pedi1Img from "@/assets/pedi1.png";
+import pedi2Img from "@/assets/pedi2.jpeg";
+import pedi3Img from "@/assets/pedi3.jpg";
+import gesicht1Img from "@/assets/gesicht1.jpeg";
+import gesicht2Img from "@/assets/gesicht2.jpeg";
+import gesicht3Img from "@/assets/gesicht3.jpeg";
 import { useState, useEffect } from "react";
 import { MessageCircle, Diamond, Sparkles, Flower2, Star, Award, Heart, MapPin, Clock, Mail, Phone, Instagram } from "lucide-react";
 
@@ -164,7 +169,7 @@ const PRICES = [
 const GALLERY = [
   { id: 1,  label: "Gelmodellage",      src: "/Gelmodellage.png",      g: "linear-gradient(145deg,#FBEAF3,#F3C6DC 55%,#DFA7C6)" },
   { id: 2,  label: "Nägel",             src: "/nagel1.jpg",            g: "linear-gradient(145deg,#FFF7FA,#F3C6DC)" },
-  { id: 3,  label: "Pediküre",          src: "/Pedikuere.png",         g: "linear-gradient(145deg,#FBEAF3,#e8d4b0 60%,#D6B76D)" },
+  { id: 3,  label: "Pediküre",          src: pedi2Img,                 g: "linear-gradient(145deg,#FBEAF3,#e8d4b0 60%,#D6B76D)" },
   { id: 4,  label: "Augen",             src: "/augen1.png",            g: "linear-gradient(145deg,#FFF7FA,#DFA7C6 55%,#D6B76D)" },
   { id: 6,  label: "Nägel",             src: "/nagel2.png",            g: "linear-gradient(145deg,#FFF7FA,#F3C6DC 45%,#ead5a8)" },
   { id: 7,  label: "Maniküre",          src: "/Manikuere.png",         g: "linear-gradient(145deg,#FBEAF3,#DFA7C6)" },
@@ -172,6 +177,9 @@ const GALLERY = [
   { id: 10, label: "Nägel",             src: "/nagel4.png",            g: "linear-gradient(145deg,#FBEAF3,#F3C6DC 55%,#DFA7C6)" },
   { id: 11, label: "Make-up",           src: "/Make-up.png",           g: "linear-gradient(145deg,#FFF7FA,#F3C6DC 45%,#ead5a8)" },
   { id: 12, label: "Gesichtsbehandlung",src: "/Gesichtsbehandlung.png",g: "linear-gradient(145deg,#FFF7FA,#D6B76D 40%,#DFA7C6)" },
+  { id: 24, label: "Gesichtsbehandlung",src: gesicht1Img,              g: "linear-gradient(145deg,#FFF7FA,#D6B76D 40%,#DFA7C6)" },
+  { id: 25, label: "Gesichtsbehandlung",src: gesicht2Img,              g: "linear-gradient(145deg,#FFF7FA,#D6B76D 40%,#DFA7C6)" },
+  { id: 26, label: "Gesichtsbehandlung",src: gesicht3Img,              g: "linear-gradient(145deg,#FFF7FA,#D6B76D 40%,#DFA7C6)" },
   { id: 13, label: "Make-up",           src: "/makeup2.png",           g: "linear-gradient(145deg,#FBEAF3,#F3C6DC 55%,#DFA7C6)" },
   { id: 14, label: "Make-up",           src: "/makeup3.png",           g: "linear-gradient(145deg,#FFF7FA,#e8d4b0 55%,#D6B76D)" },
   { id: 15, label: "Studio",            src: studio4Img,               g: "linear-gradient(145deg,#FFF7F2,#e8d4b0 55%,#D6B76D)" },
@@ -179,6 +187,7 @@ const GALLERY = [
   { id: 17, label: "Studio",            src: studio9Img,               g: "linear-gradient(145deg,#FFF7FA,#DFA7C6 55%,#D6B76D)" },
   { id: 18, label: "Studio",            src: studio12Img,              g: "linear-gradient(145deg,#FFF7F2,#e8d4b0 60%,#D6B76D)" },
   { id: 19, label: "Pediküre",          src: pedi1Img,                 g: "linear-gradient(145deg,#FBEAF3,#e8d4b0 60%,#D6B76D)" },
+  { id: 23, label: "Pediküre",          src: pedi3Img,                 g: "linear-gradient(145deg,#FBEAF3,#e8d4b0 60%,#D6B76D)" },
   { id: 21, label: "Nägel",             src: new1Img,                  g: "linear-gradient(145deg,#FBEAF3,#F3C6DC 55%,#DFA7C6)" },
   { id: 22, label: "Nägel",             src: new2Img,                  g: "linear-gradient(145deg,#FFF7FA,#e8d4b0 55%,#D6B76D)" },
 ];
@@ -1668,7 +1677,7 @@ export default function App() {
                 }}
               >
                 <img
-                  src="/daca1.jpg"
+                  src="/daca2.png"
                   alt="Divine Beauty & Nails Studio"
                   style={{ width: "100%", height: "504px", objectFit: "cover", objectPosition: "top center", display: "block" }}
                 />
