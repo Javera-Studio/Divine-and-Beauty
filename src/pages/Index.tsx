@@ -9,6 +9,7 @@ import gal1Img from "@/assets/gal1.jpg";
 import gal2Img from "@/assets/gal2.jpg";
 import gal3Img from "@/assets/gal3.jpg";
 import gal4Img from "@/assets/gal4.jpg";
+import gal5Img from "@/assets/gal5.jpg";
 import new1Img from "@/assets/new1.jpg";
 import new2Img from "@/assets/new2.png";
 import new3Img from "@/assets/new3.jpg";
@@ -211,6 +212,7 @@ const GALLERY = [
   { id: 30, label: "Gesichtsbehandlung",src: gesicht1Img,          g: "linear-gradient(145deg,#FFF7FA,#D6B76D 40%,#DFA7C6)" },
   { id: 31, label: "Gesichtsbehandlung",src: gesicht2Img,          g: "linear-gradient(145deg,#FFF7FA,#D6B76D 40%,#DFA7C6)" },
   { id: 32, label: "Gesichtsbehandlung",src: gesicht3Img,          g: "linear-gradient(145deg,#FFF7FA,#D6B76D 40%,#DFA7C6)" },
+  { id: 33, label: "Nägel",             src: gal5Img,              g: "linear-gradient(145deg,#FBEAF3,#F3C6DC 55%,#DFA7C6)" },
 ];
 
 const REVIEWS = [
