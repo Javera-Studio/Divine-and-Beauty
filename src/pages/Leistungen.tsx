@@ -14,6 +14,9 @@ import lashlift3Img from "@/assets/lashlift3.jpg";
 import shellack01Img from "@/assets/shellack01.jpeg";
 import shellack02Img from "@/assets/shellack02.jpeg";
 import shellack03Img from "@/assets/shellack03.jpeg";
+import wax1Img from "@/assets/wax1.png";
+import wax2Img from "@/assets/wax2.png";
+import wax3Img from "@/assets/wax3.png";
 import nagel6Img from "@/assets/nagel6.jpg";
 import nagel8Img from "@/assets/nagel8.jpg";
 import nagel11Img from "@/assets/nagel11.jpeg";
@@ -355,6 +358,15 @@ export default function Leistungen() {
                   <div className="lsv-img-wrap"><img src={pedi1Img} alt="Pediküre" /></div>
                   <div className="lsv-img-wrap"><img src={pedi2Img} alt="Pediküre" /></div>
                   <div className="lsv-img-wrap"><img src={pedi3Img} alt="Pediküre" /></div>
+                </div>
+              )}
+
+              {/* 3er-Bildgrid unter Waxing */}
+              {s.title === "Waxing" && (
+                <div data-r className="lsv-img-grid">
+                  <div className="lsv-img-wrap"><img src={wax1Img} alt="Waxing" /></div>
+                  <div className="lsv-img-wrap"><img src={wax2Img} alt="Waxing" /></div>
+                  <div className="lsv-img-wrap"><img src={wax3Img} alt="Waxing" /></div>
                 </div>
               )}
 
