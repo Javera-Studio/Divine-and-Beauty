@@ -44,10 +44,10 @@ const STUDIO = {
   phone: "+43 676 3633721",
   instagram: "@divine.beauty.nails.studio",
   instagramUrl: "https://www.instagram.com/divine.beauty.nails.studio",
-  address: "Klosterneuburger Straße 98/5, 1200 Wien",
+  address: "Klosterneuburger Straße 98, 1200 Wien",
   email: "kontakt@divinenails.at",
   hours: {
-    "Mo – Fr": "09:00 – 19:00 Uhr",
+    "Mo – Fr": "08:00 – 19:00 Uhr",
     Samstag: "09:00 – 17:00 Uhr",
     Sonntag: "Auf Anfrage",
   },
@@ -1825,7 +1825,7 @@ export default function App() {
               <div style={{ display: "flex", gap: 6, marginBottom: 6 }}>
                 <MapPin size={13} strokeWidth={1.5} color={C.gold} style={{ flexShrink: 0, marginTop: 2 }} />
                 <div className="dm" style={{ color: "rgba(255,255,255,0.45)", fontSize: 12.5, lineHeight: 1.7 }}>
-                  Klosterneuburger Straße 98/5<br />1200 Wien
+                  Klosterneuburger Straße 98<br />1200 Wien
                 </div>
               </div>
 

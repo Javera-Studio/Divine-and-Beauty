@@ -41,7 +41,7 @@ export default function Datenschutz() {
           <h3 style={heading}>1. Verantwortliche</h3>
           <p style={body}>
             Danijela Bošković<br />
-            Klosterneuburger Straße 98/5<br />
+            Klosterneuburger Straße 98<br />
             1200 Wien<br />
             Österreich<br /><br />
             E-Mail: kontakt@divinenails.at<br />
@@ -66,10 +66,18 @@ export default function Datenschutz() {
         </div>
 
         <div style={section}>
-          <h3 style={heading}>3. Kontaktaufnahme</h3>
+          <h3 style={heading}>3. Kontaktformular und Kontaktaufnahme</h3>
           <p style={body}>
-            Wenn Sie per E-Mail Kontakt mit uns aufnehmen, werden die von Ihnen angegebenen Daten ausschließlich zur Bearbeitung Ihrer Anfrage verwendet.<br /><br />
-            Die Daten werden nicht ohne Ihre Einwilligung weitergegeben.
+            Wenn Sie über das Kontaktformular oder per E-Mail Kontakt mit uns aufnehmen, werden die von Ihnen angegebenen Daten (z. B. Name, E-Mail-Adresse, Telefonnummer und Nachricht) ausschließlich zur Bearbeitung Ihrer Anfrage verarbeitet.<br /><br />
+            Die Verarbeitung erfolgt auf Grundlage Ihrer Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO bzw. zur Durchführung vorvertraglicher Maßnahmen gemäß Art. 6 Abs. 1 lit. b DSGVO.<br /><br />
+            Für das Kontaktformular verwenden wir den Dienst <strong>Web3Forms</strong>. Die über das Formular eingegebenen Daten werden zur Übermittlung Ihrer Anfrage an Web3Forms übermittelt und anschließend per E-Mail an uns weitergeleitet.<br /><br />
+            <strong>Anbieter:</strong><br />
+            Web3Forms<br /><br />
+            Weitere Informationen zur Datenverarbeitung durch Web3Forms finden Sie in der{" "}
+            <a href="https://web3forms.com/privacy" target="_blank" rel="noopener noreferrer" style={{ color: PINK }}>
+              Datenschutzerklärung des Anbieters
+            </a>.<br /><br />
+            Die Daten werden nicht ohne Ihre ausdrückliche Zustimmung an Dritte weitergegeben, sofern dies nicht zur Bearbeitung Ihrer Anfrage erforderlich ist.
           </p>
         </div>
 
