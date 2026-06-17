@@ -70,7 +70,7 @@ const SERVICES = [
   {
     title: "Maniküre",
     desc: "Klassische oder moderne Handpflege: Nagelformung, Nagelhautpflege und Lackierung nach deinem Wunsch – für gepflegte Hände.",
-    highlights: ["Maniküre Classic", "Lackieren", "Verwöhnpflege", "Inkl. Shellac"],
+    highlights: ["Maniküre Classic", "Lackieren", "Verwöhnpflege"],
     img: "/Manikuere.jpg",
   },
   {
