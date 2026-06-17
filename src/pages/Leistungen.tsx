@@ -343,9 +343,9 @@ export default function Leistungen() {
               {/* 3er-Bildgrid unter Shellac */}
               {s.title === "Shellac" && (
                 <div data-r className="lsv-img-grid">
-                  <div className="lsv-img-wrap"><img src={shellack1Img} alt="Shellac" style={{ objectPosition: "center 88%" }} /></div>
+                  <div className="lsv-img-wrap"><img src={shellack1Img} alt="Shellac" style={{ objectPosition: "center 60%" }} /></div>
                   <div className="lsv-img-wrap"><img src={nagel9Img}    alt="Shellac" /></div>
-                  <div className="lsv-img-wrap"><img src={nagel5Img}    alt="Shellac" style={{ objectPosition: "center 88%" }} /></div>
+                  <div className="lsv-img-wrap"><img src={nagel5Img}    alt="Shellac" style={{ objectPosition: "center 60%" }} /></div>
                 </div>
               )}
 
