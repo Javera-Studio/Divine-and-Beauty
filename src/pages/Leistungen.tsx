@@ -392,7 +392,7 @@ export default function Leistungen() {
               {/* 3er-Bildgrid unter Gesichtsbehandlung */}
               {s.title === "Gesichtsbehandlung" && (
                 <div data-r className="lsv-img-grid">
-                  <div className="lsv-img-wrap"><img src={gesicht1Img} alt="Gesichtsbehandlung" /></div>
+                  <div className="lsv-img-wrap contain"><img src={gesicht1Img} alt="Gesichtsbehandlung" /></div>
                   <div className="lsv-img-wrap"><img src={gesicht2Img} alt="Gesichtsbehandlung" /></div>
                   <div className="lsv-img-wrap"><img src={gesicht3Img} alt="Gesichtsbehandlung" /></div>
                 </div>

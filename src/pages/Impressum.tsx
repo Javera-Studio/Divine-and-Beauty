@@ -9,7 +9,7 @@ const BG = "#FFF7F2";
 const ROWS: [string, string][] = [
   ["Unternehmensname", "Divine Beauty & Nails Studio"],
   ["Inhaberin", "Danijela Bošković"],
-  ["Adresse", "Klosterneuburger Straße 98, 1200 Wien, Österreich"],
+  ["Adresse", "Klosterneuburger Straße 98/5, 1200 Wien, Österreich"],
   ["Telefon", "+43 676 3633721"],
   ["E-Mail", "kontakt@divinenails.at"],
   ["Gewerbe", "Modellieren von Fingernägeln (Nagelstudio)"],
