@@ -11,9 +11,9 @@ import gel3Img from "@/assets/gel3.jpeg";
 import lashlift1Img from "@/assets/lashlift1.jpeg";
 import lashlift2Img from "@/assets/lashlift2.jpeg";
 import lashlift3Img from "@/assets/lashlift3.jpg";
-import shellack1Img from "@/assets/shellack1.jpeg";
-import nagel9Img from "@/assets/nagel9.jpg";
-import nagel5Img from "@/assets/nagel5.jpg";
+import shellack01Img from "@/assets/shellack01.jpeg";
+import shellack02Img from "@/assets/shellack02.jpeg";
+import shellack03Img from "@/assets/shellack03.jpeg";
 import nagel6Img from "@/assets/nagel6.jpg";
 import nagel8Img from "@/assets/nagel8.jpg";
 import nagel11Img from "@/assets/nagel11.jpeg";
@@ -343,9 +343,9 @@ export default function Leistungen() {
               {/* 3er-Bildgrid unter Shellac */}
               {s.title === "Shellac" && (
                 <div data-r className="lsv-img-grid">
-                  <div className="lsv-img-wrap"><img src={shellack1Img} alt="Shellac" style={{ objectPosition: "center 60%" }} /></div>
-                  <div className="lsv-img-wrap"><img src={nagel9Img}    alt="Shellac" /></div>
-                  <div className="lsv-img-wrap"><img src={nagel5Img}    alt="Shellac" style={{ objectPosition: "center 60%" }} /></div>
+                  <div className="lsv-img-wrap"><img src={shellack01Img} alt="Shellac" /></div>
+                  <div className="lsv-img-wrap"><img src={shellack02Img} alt="Shellac" /></div>
+                  <div className="lsv-img-wrap"><img src={shellack03Img} alt="Shellac" /></div>
                 </div>
               )}
 
