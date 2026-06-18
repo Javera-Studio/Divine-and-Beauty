@@ -33,7 +33,7 @@ const PRICES = [
   {
     category: "Nachfüllung",
     items: [
-      { name: "Camouflage / Gelberzug", price: "40 €" },
+      { name: "Camouflage / Gelüberzug", price: "40 €" },
       { name: "Inkl. Farbe", price: "46 €" },
       { name: "Inkl. French / Babyboomer", price: "48 €" },
     ],

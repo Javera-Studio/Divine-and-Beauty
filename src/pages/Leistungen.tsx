@@ -55,7 +55,7 @@ const SERVICES = [
   {
     title: "Nachfüllung",
     desc: "Professionelle Auffrischung deiner bestehenden Gelmodellage. In kurzer Zeit wieder perfekt gepflegt, wunderschön und langanhaltend.",
-    highlights: ["Camouflage / Gelbezug", "Inkl. Farbe", "French / Babyboomer"],
+    highlights: ["Camouflage / Gelüberzug", "Inkl. Farbe", "French / Babyboomer"],
     img: "/Nachfuellung.jpg",
   },
   {
