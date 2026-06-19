@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import logo from "@/assets/logonew.png";
+import logo from "@/assets/logonewopt.jpg";
 import braut2Img from "@/assets/braut2.jpg";
 import makeup2Img from "@/assets/makeup2.jpg";
 import makeup3Img from "@/assets/makeup3.jpg";

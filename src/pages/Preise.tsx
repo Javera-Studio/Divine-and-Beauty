@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import logo from "@/assets/logonew.png";
+import logo from "@/assets/logonewopt.jpg";
 import { Diamond } from "lucide-react";
 
 const WA_URL =
