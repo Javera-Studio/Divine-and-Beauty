@@ -1,4 +1,4 @@
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logonew.png";
 import javeraLogo from "@/assets/Javera.logo.rund.png";
 import { Link } from "react-router-dom";
 import studioHero from "@/assets/studio5.png";

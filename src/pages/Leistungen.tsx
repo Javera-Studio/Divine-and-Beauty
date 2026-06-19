@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logonew.png";
 import braut2Img from "@/assets/braut2.jpg";
 import makeup2Img from "@/assets/makeup2.jpg";
 import makeup3Img from "@/assets/makeup3.jpg";
