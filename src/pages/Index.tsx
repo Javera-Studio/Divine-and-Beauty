@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import logo from "@/assets/logonew.png";
 import javeraLogo from "@/assets/Javera.logo.rund.png";
 import { Link } from "react-router-dom";
@@ -762,6 +763,12 @@ export default function App() {
   ];
 
   return (
+    <>
+      <Helmet>
+        <title>Divine Beauty &amp; Nails Studio Wien – Nägel, Beauty &amp; Waxing</title>
+        <meta name="description" content="Dein Beauty-Studio in Wien – Gelmodellage, Shellac, Pediküre, Waxing &amp; Gesichtsbehandlung. Individuelle Beratung &amp; gepflegte Ergebnisse." />
+        <link rel="canonical" href="https://divinenails.at" />
+      </Helmet>
     <div className="dm" style={{ background: C.bg1, color: C.text, minHeight: "100vh", overflowX: "hidden" }}>
       {/* ── NAVIGATION ────────────────────────────────────────────────────── */}
       <nav
@@ -1947,5 +1954,6 @@ export default function App() {
         <span>Termin anfragen</span>
       </a>
     </div>
+    </>
   );
 }

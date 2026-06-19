@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import logo from "@/assets/logonew.png";
 import braut2Img from "@/assets/braut2.jpg";
 import makeup2Img from "@/assets/makeup2.jpg";
@@ -192,6 +193,12 @@ export default function Leistungen() {
   }, []);
 
   return (
+    <>
+      <Helmet>
+        <title>Leistungen – Divine Beauty &amp; Nails Studio Wien</title>
+        <meta name="description" content="Alle Beauty-Leistungen im Überblick: Gelmodellage, Shellac, Pediküre, Wimpernlifting, Waxing, Gesichtsbehandlung &amp; Make-up in Wien 1200." />
+        <link rel="canonical" href="https://divinenails.at/leistungen" />
+      </Helmet>
     <div className="dm" style={{ background: C.bg1, color: C.text, minHeight: "100vh" }}>
 
       {/* Nav */}
@@ -431,5 +438,6 @@ export default function Leistungen() {
         </div>
       </div>
     </div>
+    </>
   );
 }

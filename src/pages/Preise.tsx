@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import logo from "@/assets/logonew.png";
 import { Diamond } from "lucide-react";
 
@@ -179,6 +180,12 @@ export default function Preise() {
   const visible = active === "Alle" ? PRICES : PRICES.filter((p) => p.category === active);
 
   return (
+    <>
+      <Helmet>
+        <title>Preise – Divine Beauty &amp; Nails Studio Wien</title>
+        <meta name="description" content="Transparente Preisliste: Gelmodellage ab 50 €, Shellac ab 37 €, Pediküre ab 44 €, Waxing ab 10 €. Divine Beauty &amp; Nails Studio Wien 1200." />
+        <link rel="canonical" href="https://divinenails.at/preise" />
+      </Helmet>
     <div className="dm" style={{ background: C.bg1, color: C.text, minHeight: "100vh" }}>
 
       {/* Nav */}
@@ -317,5 +324,6 @@ export default function Preise() {
         </span>
       </footer>
     </div>
+    </>
   );
 }

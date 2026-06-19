@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 const PINK = "#E9B8C8";
@@ -21,6 +22,13 @@ const ROWS: [string, string][] = [
 
 export default function Impressum() {
   return (
+    <>
+      <Helmet>
+        <title>Impressum – Divine Beauty &amp; Nails Studio Wien</title>
+        <meta name="description" content="Impressum: Divine Beauty &amp; Nails Studio, Inhaberin Danijela Bošković, Klosterneuburger Straße 98, 1200 Wien." />
+        <link rel="canonical" href="https://divinenails.at/impressum" />
+        <meta name="robots" content="noindex, follow" />
+      </Helmet>
     <div style={{ background: BG, minHeight: "100vh", padding: "60px 0 120px", fontFamily: "'DM Sans', sans-serif" }}>
       <div style={{ maxWidth: 860, margin: "0 auto", padding: "0 24px" }}>
         <Link to="/" style={{ color: PINK, fontSize: 13, textDecoration: "none", letterSpacing: 1.5, textTransform: "uppercase" }}>
@@ -42,5 +50,6 @@ export default function Impressum() {
         </p>
       </div>
     </div>
+    </>
   );
 }
