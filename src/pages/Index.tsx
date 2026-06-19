@@ -794,28 +794,12 @@ export default function App() {
             justifyContent: "space-between",
           }}
         >
-          <div onClick={() => go("home")} style={{ display: "flex", alignItems: "center", gap: 12, cursor: "pointer" }}>
+          <div onClick={() => go("home")} style={{ display: "flex", alignItems: "center", cursor: "pointer" }}>
             <img
-  src={logo}
-  alt="Divine Beauty Logo"
-  style={{ width: 107, height: 107, borderRadius: "50%", objectFit: "cover" }}
-/>
-            <div>
-              <div className="pf" style={{ color: C.text, fontSize: 16, fontWeight: 600, lineHeight: 1.1 }}>
-                Divine Beauty
-              </div>
-              <div
-                className="dm"
-                style={{
-                  color: C.muted,
-                  fontSize: 9,
-                  letterSpacing: "2.5px",
-                  textTransform: "uppercase",
-                }}
-              >
-                &amp; Nails Studio
-              </div>
-            </div>
+              src={logo}
+              alt="Divine Beauty Logo"
+              style={{ width: 107, height: 107, borderRadius: "50%", objectFit: "cover" }}
+            />
           </div>
           <div className="dv-nd" style={{ gap: 32 }}>
             {NAV.map((n) =>

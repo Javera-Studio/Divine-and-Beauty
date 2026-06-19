@@ -191,12 +191,8 @@ export default function Preise() {
       {/* Nav */}
       <nav style={{ background: "rgba(255,247,242,0.92)", backdropFilter: "blur(20px)", borderBottom: "1px solid rgba(42,37,40,0.08)", position: "fixed", top: 0, left: 0, right: 0, zIndex: 100 }}>
         <div style={{ maxWidth: 1280, margin: "0 auto", padding: "17px 24px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-          <Link to="/" style={{ display: "flex", alignItems: "center", gap: 12, textDecoration: "none" }}>
+          <Link to="/" style={{ display: "flex", alignItems: "center", textDecoration: "none" }}>
             <img src={logo} alt="Divine Beauty Logo" style={{ width: 40, height: 40, borderRadius: "50%", objectFit: "cover" }} />
-            <div>
-              <div className="pf" style={{ color: C.text, fontSize: 15, fontWeight: 600, lineHeight: 1.1 }}>Divine Beauty</div>
-              <div className="dm" style={{ color: C.muted, fontSize: 9, letterSpacing: "2.5px", textTransform: "uppercase" }}>&amp; Nails Studio</div>
-            </div>
           </Link>
           <Link to="/" className="dm" style={{ color: C.muted, fontSize: 13, textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 6, letterSpacing: "0.3px" }}>
             ← Zurück zur Startseite
