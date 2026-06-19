@@ -795,11 +795,13 @@ export default function App() {
           }}
         >
           <div onClick={() => go("home")} style={{ display: "flex", alignItems: "center", cursor: "pointer" }}>
-            <img
-              src={logo}
-              alt="Divine Beauty Logo"
-              style={{ width: 107, height: 107, borderRadius: "50%", objectFit: "cover" }}
-            />
+            <div style={{ width: 107, height: 107, borderRadius: "50%", background: "#fff", display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "0 2px 12px rgba(0,0,0,0.08)", overflow: "hidden", flexShrink: 0 }}>
+              <img
+                src={logo}
+                alt="Divine Beauty Logo"
+                style={{ width: "100%", height: "100%", objectFit: "contain" }}
+              />
+            </div>
           </div>
           <div className="dv-nd" style={{ gap: 32 }}>
             {NAV.map((n) =>

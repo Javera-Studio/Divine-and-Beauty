@@ -205,7 +205,9 @@ export default function Leistungen() {
       <nav style={{ background: "rgba(255,247,242,0.92)", backdropFilter: "blur(20px)", borderBottom: "1px solid rgba(42,37,40,0.08)", position: "fixed", top: 0, left: 0, right: 0, zIndex: 100 }}>
         <div style={{ maxWidth: 1200, margin: "0 auto", padding: "17px 24px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
           <Link to="/" style={{ display: "flex", alignItems: "center", textDecoration: "none" }}>
-            <img src={logo} alt="Divine Beauty Logo" style={{ width: 40, height: 40, borderRadius: "50%", objectFit: "cover" }} />
+            <div style={{ width: 40, height: 40, borderRadius: "50%", background: "#fff", display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "0 2px 8px rgba(0,0,0,0.08)", overflow: "hidden", flexShrink: 0 }}>
+              <img src={logo} alt="Divine Beauty Logo" style={{ width: "100%", height: "100%", objectFit: "contain" }} />
+            </div>
           </Link>
           <div style={{ display: "flex", alignItems: "center", gap: 24 }}>
             <Link to="/preise" className="dm" style={{ color: C.muted, fontSize: 13, textDecoration: "none", letterSpacing: "0.3px" }}>Preise</Link>
