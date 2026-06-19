@@ -490,7 +490,7 @@ body { overflow-x: hidden; background: #FFF7F2; }
   .dv-nc { display: none !important; }
   .dv-nb { display: flex !important; }
   .dv-sticky-wa { display: inline-flex !important; }
-  .dv-logo { width: 75px !important; height: 75px !important; }
+  .dv-logo { width: 64px !important; height: 64px !important; }
 
   /* Überschriften — kein Überlauf */
   .pf { word-break: break-word; overflow-wrap: break-word; }
@@ -798,7 +798,7 @@ export default function App() {
               src={logo}
               alt="Divine Beauty Logo"
               className="dv-logo"
-              style={{ width: 107, height: 107, borderRadius: "50%", objectFit: "cover" }}
+              style={{ width: 91, height: 91, borderRadius: "50%", objectFit: "cover" }}
             />
           </div>
           <div className="dv-nd" style={{ gap: 32 }}>
