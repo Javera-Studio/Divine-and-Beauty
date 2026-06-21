@@ -135,7 +135,7 @@ export function NavbarSimple() {
         </Link>
         <div style={{ display: "flex", alignItems: "center", gap: 24 }}>
           <Link href="/preise" className="dm" style={{ color: "#7D6B70", fontSize: 13, textDecoration: "none", letterSpacing: "0.3px" }}>Preise</Link>
-          <Link href="/#kontakt" className="dm" style={{ color: "#7D6B70", fontSize: 13, textDecoration: "none", letterSpacing: "0.3px" }}>Kontakt</Link>
+          <a href="/#kontakt" className="dm" style={{ color: "#7D6B70", fontSize: 13, textDecoration: "none", letterSpacing: "0.3px" }}>Kontakt</a>
           <a href={WA_URL} target="_blank" rel="noreferrer" className="btn-pk" style={{ padding: "10px 20px", borderRadius: 999, fontSize: 12, letterSpacing: "1.5px", textTransform: "uppercase", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 8 }}>
             Termin buchen
           </a>
