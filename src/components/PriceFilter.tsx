@@ -76,14 +76,14 @@ export function PriceFilter() {
           {small.length > 0 && (
             <div style={{ display: "grid", gridTemplateColumns: `repeat(${small.length},1fr)`, gap: 20 }}>
               {small.map((cat, i) => (
-                <div key={cat.category} data-r data-d={i} style={{ background: C.white, borderRadius: 18, padding: "16px 18px", boxShadow: "0 4px 24px rgba(185,130,165,0.07)", border: "1px solid rgba(214,183,109,0.12)" }}>
-                  <h3 className="pf" style={{ color: C.text, fontSize: 14, marginBottom: 12, paddingBottom: 10, borderBottom: "1px solid rgba(214,183,109,0.2)", display: "flex", alignItems: "center", gap: 6 }}>
-                    <span style={{ color: C.gold, fontSize: 8 }}>✦</span>{cat.category}
+                <div key={cat.category} data-r data-d={i} style={{ background: C.white, borderRadius: 22, padding: "28px 26px", boxShadow: "0 4px 24px rgba(185,130,165,0.07)", border: "1px solid rgba(214,183,109,0.12)" }}>
+                  <h3 className="pf" style={{ color: C.text, fontSize: 17, marginBottom: 18, paddingBottom: 14, borderBottom: "1px solid rgba(214,183,109,0.2)", display: "flex", alignItems: "center", gap: 8 }}>
+                    <span style={{ color: C.gold, fontSize: 9 }}>✦</span>{cat.category}
                   </h3>
                   {cat.items.map((item) => (
                     <div key={item.name} className="dv-prow">
-                      <span className="dm" style={{ color: C.muted, fontSize: 12 }}>{item.name}</span>
-                      <span className="dm dv-pv" style={{ color: C.gold, fontSize: 12, fontWeight: 600, transition: "color .2s" }}>{item.price}</span>
+                      <span className="dm" style={{ color: C.muted, fontSize: 14 }}>{item.name}</span>
+                      <span className="dm dv-pv" style={{ color: C.gold, fontSize: 14, fontWeight: 600, transition: "color .2s" }}>{item.price}</span>
                     </div>
                   ))}
                 </div>
