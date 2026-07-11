@@ -35,6 +35,9 @@ export default function Preise() {
           <p className="dm" style={{ color: C.muted, fontSize: 12.5, maxWidth: 440, margin: "16px auto 0", lineHeight: 1.7, opacity: 0.85 }}>
             * Preisänderungen vorbehalten. Bei individuellen Wünschen beraten wir dich gerne persönlich.
           </p>
+          <p className="dm" style={{ color: C.muted, fontSize: 11, margin: "10px auto 0", opacity: 0.6 }}>
+            Preise zuletzt aktualisiert am 12.07.2026
+          </p>
         </div>
       </section>
 
