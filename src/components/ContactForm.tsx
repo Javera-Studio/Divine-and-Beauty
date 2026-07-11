@@ -8,6 +8,7 @@ const C = { bg1: "#FFF7F2", bg2: "#F7EDE7", pink: "#D98FA8", gold: "#D6B76D", te
 
 export function ContactForm() {
   const [cform, setCform] = useState({ name: "", email: "", betreff: "", nachricht: "", datenschutz: false });
+  const [hpCompany, setHpCompany] = useState("");
   const [cSending, setCsending] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -17,7 +18,7 @@ export function ContactForm() {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name: cform.name, email: cform.email, subject: cform.betreff, message: cform.nachricht }),
+        body: JSON.stringify({ name: cform.name, email: cform.email, subject: cform.betreff, message: cform.nachricht, hp_company: hpCompany }),
       });
       if (res.ok) {
         toast.success("Nachricht gesendet! Wir melden uns bald bei dir.");
@@ -36,6 +37,16 @@ export function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} style={{ background: C.bg2, borderRadius: 20, border: "1px solid rgba(214,183,109,0.18)", padding: "28px 24px" }}>
+      <input
+        type="text"
+        name="hp_company"
+        value={hpCompany}
+        onChange={e => setHpCompany(e.target.value)}
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        style={{ position: "absolute", left: -9999, top: "auto", width: 0, height: 0, overflow: "hidden" }}
+      />
       <div className="dm" style={{ color: C.muted, fontSize: 11, letterSpacing: "2px", textTransform: "uppercase", marginBottom: 20 }}>Schreib uns</div>
       <div className="dv-cform-row" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginBottom: 12 }}>
         <div>
