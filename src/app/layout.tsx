@@ -68,7 +68,7 @@ const schemaOrg = {
   name: "Divine Beauty & Nails Studio",
   image: "https://divinenails.at/studio5opt.jpg",
   url: "https://divinenails.at",
-  telephone: "+43676363372",
+  telephone: "+436763633721",
   email: "kontakt@divinenails.at",
   address: {
     "@type": "PostalAddress",
